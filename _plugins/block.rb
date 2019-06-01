@@ -36,6 +36,7 @@ def parseM2(output)
   return blocks
 end
 
+# TODO: use spawn: https://ruby-doc.org/core-1.9.3/Kernel.html#method-i-spawn
 # Run an M2 script and return the parsed output
 def runM2(addr)
   # read the file

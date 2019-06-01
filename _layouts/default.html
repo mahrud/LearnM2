@@ -5,35 +5,37 @@
     <div class="wrap">
       <div class="masthead">
         <div class="container">
-	  <!--
+          <!--
               <h3 class="masthead-title">
               <a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a><br />
               <small>{{ site.tagline }}</small>
               </h3>
-	  -->
-	  <table class="buttons">
-	    <tr>
-	      <td>
-		<div>
-		  <!-- FIXME -->
-		  <a href="_hilbert__Samuel__Function.html">next</a> |
-		  previous |
-		  <a href="_hilbert__Samuel__Function.html">forward</a> |
-		  backward |
-		  up |
-		  top |
-		  <a href="master.html">index</a> |
-		  <a href="toc.html">toc</a> |
-		  <a href="http://www.math.uiuc.edu/Macaulay2/">Macaulay2 web site</a>
-		</div>
-	      </td>
-	    </tr>
-	  </table>
-	  <div>
-	    <a href="index.html" title="{{ page.description }}">{{ page.title }}</a> ::
-	    <a href="index.html" title="{{ page.description }}">{{ page.title }}</a>
-	  </div>
-	  <hr />
+          -->
+          <table class="buttons">
+            <tr>
+              <td>
+                <div>
+                  <!-- FIXME -->
+                  <a href="{{ page.next     }}">next    </a> |
+                  <a href="{{ page.previous }}">previous</a> |
+                  <a href="{{ page.forward  }}">forward </a> |
+                  <a href="{{ page.backward }}">backward</a> |
+                  <a href="{{ page.up       }}">up      </a> |
+                  <a href="{{ site.baseurl  }}/">top    </a> |
+                  <a href="{{ site.baseurl  }}/master.html">index</a> |
+                  <a href="{{ site.baseurl  }}/toc.html">toc</a> |
+                  <a href="/">Macaulay2 web site</a>
+                </div>
+              </td>
+            </tr>
+          </table>
+          {%- if page.path != "404.md" %}
+          <div>
+            <a href="index.html" title="{{ page.description }}">{{ page.title }}</a> ::
+            <a href="index.html" title="{{ page.description }}">{{ page.title }}</a>
+          </div>
+          {%- endif %}
+          <hr />
         </div>
       </div>
 
