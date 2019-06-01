@@ -1,11 +1,12 @@
 # Setup
-title:               Proof
-tagline:             a Jekyll Theme for Mathematical Writings
+title:               Macaulay2
+tagline:             a Software System for Research in Algebraic Geometry
 description:         >- # this means to ignore newlines until "url:"
-  Proof is a minimal Jekyll theme for collaborating and documenting mathematics.
+  Macaulay2 is a software system devoted to supporting research in algebraic
+  geometry and commutative algebra.
 url:                 https://mahrud.github.io
-baseurl:             '/proof' # the subpath of your site, e.g. /blog
-gtag:                UA-131373039-2 # Google Analytics Tag
+baseurl:             '/LearnM2' # the subpath of your site, e.g. /blog
+# gtag:                '' # Google Analytics Tag
 
 # Color scheme. Options: red, orange, magenta, cyan, blue, brown
 color-scheme:
@@ -19,7 +20,9 @@ encoding: utf-8
 
 # Collections for entries
 collections:
-  posts:
+  packages:
+    output: true
+  docs:
     output: true
 
 # Markdown specs
@@ -28,15 +31,17 @@ markdown: kramdown
 kramdown:
   footnote_backlink: "&#x21a9;&#xfe0e;"
   enable_coderay: false
-#  math_engine: null # pending https://github.com/github/pages-gem/pull/545
+  parse_block_html: true
+  math_engine: +nil+ # pending https://github.com/github/pages-gem/pull/545
 
 # Exclusions from the final site
 exclude:
-  - vendor
   - README.md
   - LICENSE.md
-  - Gemfile*
   - proof.gemspec
+  - ignore
+  - _plugins
+  - _outputs
 
 # Theme
 remote_theme: "mahrud/proof"

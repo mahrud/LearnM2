@@ -2,24 +2,38 @@
 <html lang="en-us">
 {% include head.html %}
   <body class="theme-base-{{ site.color-scheme }}">
-    {% comment %} This if statement decides which sidebar to use {% endcomment %}
-    {%- if page.toc %}
-{% include sidebar-toc.html %}
-    {% else %}
-{% include sidebar.html %}
-    {% endif -%}
-
-    <!--
-      Wrap is the content to shift when toggling the sidebar.
-      We wrap the content to avoid any CSS collisions with our real content.
-    -->
     <div class="wrap">
       <div class="masthead">
         <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a><br />
-            <small>{{ site.tagline }}</small>
-          </h3>
+	  <!--
+              <h3 class="masthead-title">
+              <a href="{{ site.baseurl }}/">{{ site.title | newline_to_br }}</a><br />
+              <small>{{ site.tagline }}</small>
+              </h3>
+	  -->
+	  <table class="buttons">
+	    <tr>
+	      <td>
+		<div>
+		  <!-- FIXME -->
+		  <a href="_hilbert__Samuel__Function.html">next</a> |
+		  previous |
+		  <a href="_hilbert__Samuel__Function.html">forward</a> |
+		  backward |
+		  up |
+		  top |
+		  <a href="master.html">index</a> |
+		  <a href="toc.html">toc</a> |
+		  <a href="http://www.math.uiuc.edu/Macaulay2/">Macaulay2 web site</a>
+		</div>
+	      </td>
+	    </tr>
+	  </table>
+	  <div>
+	    <a href="index.html" title="{{ page.description }}">{{ page.title }}</a> ::
+	    <a href="index.html" title="{{ page.description }}">{{ page.title }}</a>
+	  </div>
+	  <hr />
         </div>
       </div>
 
