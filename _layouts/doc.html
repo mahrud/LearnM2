@@ -2,7 +2,14 @@
 layout: default
 ---
 
+
+<div class="clearfix" id="x-projnav">
+  <a href="{{ site.baseurl }}/">M2:</a>
+  <span class="text-muted">{{ page.title }}</span>
+</div>
+
 <div class="page">
-  <h1 class="page-title">{{ page.title }} -- {{ page.description }}</h1>
+  <h2 class="page-title">{{ page.title }}</h2>
+
   {{ content }}
 </div>
