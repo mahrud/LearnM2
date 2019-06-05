@@ -3,15 +3,10 @@ layout: default
 title: Macaulay2 Documentation
 ---
 
-# hi.
-To start documenting, please see [the manual]({{ site.baseurl }}/manual/).
-
----
-
-## packages.
+### Packages
 {% for item in site.packages %}
 * [{{ item.title }}]({{ site.baseurl }}{{ item.url }}) by {{ item.author }}{% endfor %}
 
-## docs.
+### Index
 {% for item in site.docs %}
 * [{{ item.title }}]({{ site.baseurl }}{{ item.url }}) by {{ item.author }}{% endfor %}

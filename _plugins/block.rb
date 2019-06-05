@@ -96,25 +96,11 @@ Jekyll::Hooks.register :documents, :pre_render do |doc, payload|
   FileUtils.cp(output_addr, output_addr + ".tmp")
 end
 
-# Class of Macaulay2 block body, the stuff inside {% M2 [source] %} ... {% M2 %}
-class M2BlockBody < Liquid::BlockBody
-  def parse(tokenizer, parse_context)
-    while token = tokenizer.shift
-      if token =~ /\A\{\%\s*end#{M2tag}\s*(.*?)\%\}\z/om
-        return yield "end#{M2tag}", $1
-      end
-      @nodelist << token
-      @blank &&= !!(token =~ WhitespaceOrNothing)
-    end
-
-    yield nil, nil
-  end
-end
-
 # Class of Macaulay2 blocks, designated as {% M2 [source] %} ... {% M2 %}
-class M2Block < Liquid::Block
-  def initialize(tag_name, args, options)
-    @source = args.split[0]
+class M2Block < Liquid::Raw
+  def initialize(tag_name, markup, parse_context)
+    @source = markup.split[0]
+    markup = ''
     super
   end
 
@@ -123,12 +109,10 @@ class M2Block < Liquid::Block
     puts "Parsing M2 block in #{@source}"
     input_addr = M2dir + @source + ".input"
 
-    @body = M2BlockBody.new
-    while parse_body(@body, tokens)
-    end
+    super
 
     open(input_addr, 'a+') do |input_file|
-      input_file << nodelist.join.strip
+      input_file << @body.strip
       input_file << DELIMITER
       input_file << "\n"
       input_file.close

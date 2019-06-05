@@ -2,7 +2,35 @@
 layout: default
 ---
 
-<div class="page">
-  <h1 class="page-title">{{ page.title }} -- {{ page.description }}</h1>
+<div class="clearfix" id="x-projnav">
+  <a href="/-/M2">M2:</a>
+  <span class="text-muted">{{ page.title }}</span>
+  <span class="pull-right">
+    Version {{ page.version }}
+    <a href="#pkg-index">Index</a> <span class="text-muted">|</span>
+    <a href="#pkg-files">Files</a> <span class="text-muted">|</span>
+    <a href="#pkg-subdirectories">Directories</a>
+  </span>
+</div>
+
+<div class="package">
+  <h2 class="page-title" id="pkg-overview">package <code>{{ page.title }}</code></h2>
+  <p>{{ page.description }}.</p>
+  <pre><code class="language-m2">i0 : needsPackage "{{ page.title }}";</code></pre>
+  
+  <h3>Description</h3>
   {{ content }}
+
+  <h3>Caveat</h3>
+  {{ page.caveat }}
+
+  <h3>See Also</h3>
+  {% for item in page.SeeAlso %}{{ item }}<br />{% endfor %}
+  <!-- - [PruneComplex](../../PruneComplex/html/index.html "Pruning chain complexes over polynomial and local rings") -- Pruning chain complexes over polynomial and local rings-->
+
+  <h3>Authors</h3>
+  <h3>Version</h3>
+  This documentation describes version <b>{{ page.version }}</b> of LocalRings.
+  <h3>Source code</h3>
+  <h3>Exports</h3>
 </div>

@@ -13,32 +13,27 @@ var index = elasticlunr(function () {
 });
 
 // Add to this index the proper metadata from the Jekyll content
-{%- assign count = 0 %}
-{%- for text in site.documents %}
+{% assign count = 0 %}{% for text in site.documents %}
 index.addDoc({
-    id:      {{ count }},
-    title:   {{ text.title   | jsonify }},
-    author:  {{ text.author  | jsonify }},
-    layout:  {{ text.layout  | jsonify }},
-    content: {{ text.content | jsonify | strip_html }},
-});
-{%- assign count = count | plus: 1 %}
-{%- endfor %}
+    title: {{text.title | jsonify}},
+    author: {{text.author | jsonify}},
+    layout: {{text.layout | jsonify}},
+    content: {{text.content | jsonify | strip_html}},
+    id: {{count}}
+});{% assign count = count | plus: 1 %}{% endfor %}
+console.log( jQuery.type(index) );
 
 // Builds reference data (maybe not necessary for us, to check)
-var store = [
-{%- for text in site.documents %}
-    {
-	"title":  {{ text.title | jsonify }},
-	"author": {{ text.author | jsonify }},
-	"layout": {{ text.layout | jsonify }},
-	"link":   {{ text.url | jsonify }},
-    }
-{%- unless forloop.last %},{% endunless %}{% endfor %}
-]
+var store = [{% for text in site.documents %}{
+    "title": {{text.title | jsonify}},
+    "author": {{text.author | jsonify}},
+    "layout": {{ text.layout | jsonify }},
+    "link": {{text.url | jsonify}},
+}
+	     {% unless forloop.last %},{% endunless %}{% endfor %}]
 
 // Query
-var searchDiv = $("#x-search-query");
+var searchDiv = $("input#x-search-query");
 var resultDiv = $("#results");
 var searchParams = new URLSearchParams(window.location.search)
 if (searchParams.has('q')) {
@@ -69,9 +64,21 @@ function doSearch() {
 	resultDiv.append(searchitem);
     }
 
+    var regex = new RegExp("<mark>(.*)</mark>", "gim");
+    var content = document.getElementById("main").innerHTML;
+    document.getElementById("main").innerHTML = content.replace(regex, "$1");
+    doHighlight();
 }
 
-// something not working
+// Highlight search Query
+function doHighlight() {
+    var query = searchDiv.val();
+    // regex matches at beginning of line, end of line or word boundary
+    var regex = new RegExp("(?:^|\\b)(.{0,5})(" + query + ")(.{0,5})(?:$|\\b)", "gim");
+    var content = document.getElementById("main").innerHTML;
+    document.getElementById("main").innerHTML = content.replace(regex, "$1<mark>$2</mark>$3");
+}
+
 $(document).ready(function() {
     if (searchParams.has('q')) {
 	searchDiv.val(searchParams.get('q'));
