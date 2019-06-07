@@ -13,17 +13,17 @@
     <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&amp;display=swap" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/m2doc/atom.xml" />
 
-    <title>Proof</title>
+    <title>Macaulay2 Documentation</title>
 
     <!-- Dublin Core metadata for Zotero -->
-    <meta name="DC.title"   content="Proof" />
+    <meta name="DC.title"   content="Macaulay2 Documentation" />
     <meta name="DC.creator" content="" />
     <meta name="DC.date"    content="" />
     <meta name="DC.source"  content="Macaulay2 Documentation" />
 
     <!-- Open Graph metadata -->
     <meta property="og:type"           content="article" />
-    <meta property="og:title"          content="Proof" />
+    <meta property="og:title"          content="Macaulay2 Documentation" />
     <meta property="og:article:author" content="" />
     <meta property="og:description"    content="Macaulay2 is a software system devoted to supporting research in algebraic geometry and commutative algebra." />
     <meta property="og:url"            content="https://mahrud.github.io/m2doc/" />
@@ -36,28 +36,37 @@
       integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
       integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <!-- KaTeX auto-render extention: https://katex.org/docs/autorender.html -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
+      var macros = {
+          "\\P": "\\mathbb{P}"
+      }, delimiters = [
+          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "\\[", right: "\\]", display: true},
+          { left: "$",   right: "$",   display: false},
+          { left: "\\(", right: "\\)", display: false}
+      ];
+
       document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
+
+        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
+        // See: https://github.com/github/pages-gem/pull/545
         document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent, {
-            displayMode: false,
-            macros: {
-              "\\P": "\\mathbb{P}"
-            }
-          });
+          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
         });
 
         document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), {
-            displayMode: true,
-            macros: {
-              "\\P": "\\mathbb{P}"
-            }
-          });
+          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
         });
       });
     </script>
-    <style>.katex { font-size: 1em; }</style>
+    <!-- KaTeX copy-tex extention: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
+      integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
   </head>
 
   <body class="theme-base-">
@@ -101,7 +110,7 @@
 <h3 id="index">Index</h3>
 
 <ul>
-  <li><a href="/m2doc/docs/example/">Example</a> by Mahrud Sayrafi</li>
+  <li><a href="/m2doc/docs/example/">The Twisted Cubic</a> by Mahrud Sayrafi</li>
 </ul>
 
 <!-- ########################################################################################### -->

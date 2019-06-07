@@ -13,17 +13,17 @@
     <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&amp;display=swap" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/m2doc/atom.xml" />
 
-    <title>Example</title>
+    <title>The Twisted Cubic</title>
 
     <!-- Dublin Core metadata for Zotero -->
-    <meta name="DC.title"   content="Example" />
+    <meta name="DC.title"   content="The Twisted Cubic" />
     <meta name="DC.creator" content="Mahrud Sayrafi" />
     <meta name="DC.date"    content="" />
     <meta name="DC.source"  content="Macaulay2 Documentation" />
 
     <!-- Open Graph metadata -->
     <meta property="og:type"           content="article" />
-    <meta property="og:title"          content="Example" />
+    <meta property="og:title"          content="The Twisted Cubic" />
     <meta property="og:article:author" content="Mahrud Sayrafi" />
     <meta property="og:description"    content="Macaulay2 is a software system devoted to supporting research in algebraic geometry and commutative algebra." />
     <meta property="og:url"            content="https://mahrud.github.io/m2doc/docs/example/" />
@@ -36,28 +36,37 @@
       integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
       integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <!-- KaTeX auto-render extention: https://katex.org/docs/autorender.html -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
+      var macros = {
+          "\\P": "\\mathbb{P}"
+      }, delimiters = [
+          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "\\[", right: "\\]", display: true},
+          { left: "$",   right: "$",   display: false},
+          { left: "\\(", right: "\\)", display: false}
+      ];
+
       document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
+
+        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
+        // See: https://github.com/github/pages-gem/pull/545
         document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent, {
-            displayMode: false,
-            macros: {
-              "\\P": "\\mathbb{P}"
-            }
-          });
+          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
         });
 
         document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), {
-            displayMode: true,
-            macros: {
-              "\\P": "\\mathbb{P}"
-            }
-          });
+          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
         });
       });
     </script>
-    <style>.katex { font-size: 1em; }</style>
+    <!-- KaTeX copy-tex extention: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
+      integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
   </head>
 
   <body class="theme-base-">
@@ -92,70 +101,74 @@
 
     <div class="container" id="main">
 <!-- ########################################################################################### -->
+<div class="clearfix" id="x-projnav">
+  <a href="/m2doc/">M2:</a>
+  <span class="text-muted">The Twisted Cubic</span>
+</div>
+
 <div class="page">
-  <h1 class="page-title">Example -- The Twisted Cubic Curve</h1>
-  <h1 id="the-twisted-cubic">The Twisted Cubic</h1>
+  <h2 class="page-title">The Twisted Cubic</h2>
+
+  <p>Let’s first define the coordinate ring of ( \P^3 ), where the twisted cubic lies:</p>
+<div class="examples">
+  <pre><code class="language-m2">i1 : kk = ZZ/32003;  </code></pre>
+  <pre><code class="language-m2">i2 : R = kk[x,y,z,w]; -- this is a ring  </code></pre>
+</div>
+
+<h2 id="fixme">FIXME</h2>
+<h2 class="label" id="monomialcurveideal">monomialCurveIdeal</h2>
+
+<p>This methods yields the twisted cubic as the ideal of a projective curve given parametrically by the map:
+\[
+\begin{aligned}
+k[x,y,z] &amp;\to k[t] \cr
+x &amp;\mapsto t^3 \cr
+y &amp;\mapsto t^2 \cr
+z &amp;\mapsto t.
+ \end{aligned}
+ \]</p>
 
 <div class="examples">
-  <pre><code class="language-m2">i1 : kk = ZZ/32003
-
-o1 = kk
-
-o1 : QuotientRing  </code></pre>
-  <pre><code class="language-m2">i2 : R = kk[x,y,z,w] -- this is a ring
-
-o2 = R
-
-o2 : PolynomialRing  </code></pre>
-  <pre><code class="language-m2">i3 : I = monomialCurveIdeal(R, {1,2,3})
+  <pre><code class="language-m2">i3 : monomialCurveIdeal(R, {1,2,3})
 
              2                    2
 o3 = ideal (z  - y*w, y*z - x*w, y  - x*z)
 
 o3 : Ideal of R  </code></pre>
-  <pre><code class="language-m2">i4 : I == minors(2, matrix {{R_0, R_1, R_2},{R_1,R_2,R_3}})
-
-o4 = true  </code></pre>
-  <pre><code class="language-m2">i5 : I == kernel map(kk[s,t], R, {s^3, s^2*t, s*t^2, t^3})
-
-o5 = true  </code></pre>
 </div>
 
-<h1 id="f-purity">F-Purity</h1>
+<h2 class="label" id="determinantal-ideal">Determinantal Ideal</h2>
 
-<p>Checking that some ideals are F-pure:</p>
+<p>This method defines the twisted cubic as a determinantal ideal of $2\times 2$ minors, that is:
+\[
+I = I_2 \begin{pmatrix}
+x &amp; y &amp; z \cr
+y &amp; z &amp; w
+\end{pmatrix}\]</p>
 
 <div class="examples">
-  <pre><code class="language-m2">i6 : p = 5;  </code></pre>
-  <pre><code class="language-m2">i7 : S = ZZ/p[x,y,z];  </code></pre>
-  <pre><code class="language-m2">i8 : f = x^2+y^3+z^5+(x*y*z)^3
+  <pre><code class="language-m2">i4 : minors(2, matrix {{R_0, R_1, R_2},{R_1,R_2,R_3}})
 
-      3 3 3    5    3    2
-o8 = x y z  + z  + y  + x
+               2                        2
+o4 = ideal (- y  + x*z, - y*z + x*w, - z  + y*w)
 
-o8 : S  </code></pre>
-  <pre><code class="language-m2">i9 : m = ideal(x^p,y^p,z^p)
-
-             5   5   5
-o9 = ideal (x , y , z )
-
-o9 : Ideal of S  </code></pre>
-  <pre><code class="language-m2">i10 : f^(p-1) % m == 0
-
-o10 = true  </code></pre>
+o4 : Ideal of R  </code></pre>
 </div>
 
-<p>Can also check using <code class="highlighter-rouge">TestIdeals</code> package:</p>
+<h2 class="label" id="veronese-embedding">Veronese Embedding</h2>
+
+<p>This method defines the twisted cubic as the kernel of the Veronese embedding of degree three on the projective line.
+That is:</p>
+
+<h2 id="fixme-1">FIXME</h2>
 
 <div class="examples">
-  <pre><code class="language-m2">i11 : needsPackage "TestIdeals"
+  <pre><code class="language-m2">i5 : kernel map(kk[s,t], R, {s^3, s^2*t, s*t^2, t^3})
 
-o11 = TestIdeals
+             2                    2
+o5 = ideal (z  - y*w, y*z - x*w, y  - x*z)
 
-o11 : Package  </code></pre>
-  <pre><code class="language-m2">i12 : isFPure (S/f)
-
-o12 = false  </code></pre>
+o5 : Ideal of R  </code></pre>
 </div>
 
 </div>

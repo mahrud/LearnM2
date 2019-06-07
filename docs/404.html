@@ -36,28 +36,37 @@
       integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
       integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <!-- KaTeX auto-render extention: https://katex.org/docs/autorender.html -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
     <script>
+      var macros = {
+          "\\P": "\\mathbb{P}"
+      }, delimiters = [
+          { left: "$$",  right: "$$",  display: true}, // Technically, this does not work. See below.
+          { left: "\\[", right: "\\]", display: true},
+          { left: "$",   right: "$",   display: false},
+          { left: "\\(", right: "\\)", display: false}
+      ];
+
       document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, { delimiters: delimiters, macros: macros });
+
+        // Currently GitHub pages overrides math-engine: mathjax in _config, hence $$..$$ are converted to to scripts tags.
+        // See: https://github.com/github/pages-gem/pull/545
         document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent, {
-            displayMode: false,
-            macros: {
-              "\\P": "\\mathbb{P}"
-            }
-          });
+          el.outerHTML = katex.renderToString(el.textContent, { displayMode: false, macros: macros });
         });
 
         document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
-          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), {
-            displayMode: true,
-            macros: {
-              "\\P": "\\mathbb{P}"
-            }
-          });
+          el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true, macros: macros });
         });
       });
     </script>
-    <style>.katex { font-size: 1em; }</style>
+    <!-- KaTeX copy-tex extention: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
+      integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
   </head>
 
   <body class="theme-base-">
@@ -92,7 +101,7 @@
 
     <div class="container" id="main">
 <!-- ########################################################################################### -->
-<h1 id="404--22-times-101-is-not-a-prime-"><script type="math/tex">404 = 2^2 \times 101</script> is not a prime 😕</h1>
+<h1 id="404--22-times-101-is-not-a-prime-"><span class="kdmath">$404 = 2^2 \times 101$</span> is not a prime 😕</h1>
 
 <p>Sorry, we’ve misplaced that URL or it’s pointing to something that doesn’t exist. <br />
 <a href="/m2doc/">Head back home</a> to try finding it again.</p>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 $masthead-font: "Playfair Display SC", serif;
 $main-font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -10,7 +11,6 @@ $link-color: #841212;
 
 @import "theme";
 @import "colors";
-@import "proof";
 @import "syntax";
 */
 /*!
@@ -5375,3 +5375,148 @@ h1:hover .permalink, h2:hover .permalink, h3:hover .permalink, h4:hover .permali
   opacity: 0.54;
   text-transform: uppercase;
   font-size: 0.75em; }
+
+/*
+ * Proof Theorem Environments
+ * Based on amsthm package: https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html
+ * and https://golem.ph.utexas.edu/wiki/instiki/show/Theorems
+ */
+body {
+  counter-reset: h2 theorem lemma problem proposition conjecture corollary definition example exercise remark note; }
+
+.theorem, .lemma, .proposition, .corollary {
+  font-style: italic; }
+
+.label {
+  font-style: normal;
+  font-weight: bold; }
+
+.label* {
+  font-style: normal;
+  font-weight: bold; }
+
+.proof .label {
+  font-style: italic; }
+
+.proof:after {
+  content: " ■";
+  text-align: right; }
+
+.label:after {
+  content: "."; }
+
+.theorem .label:after {
+  content: " " counter(section) "." counter(theorem) ".";
+  counter-increment: theorem; }
+
+.lemma .label:after {
+  content: " " counter(section) "." counter(lemma) ".";
+  counter-increment: lemma; }
+
+.problem .label:after {
+  content: " " counter(section) "." counter(problem) ".";
+  counter-increment: problem; }
+
+.proposition .label:after {
+  content: " " counter(section) "." counter(proposition) ".";
+  counter-increment: proposition; }
+
+.conjecture .label:after {
+  content: " " counter(section) "." counter(conjecture) ".";
+  counter-increment: conjecture; }
+
+.corollary .label:after {
+  content: " " counter(section) "." counter(corollary) ".";
+  counter-increment: corollary; }
+
+.definition .label:after {
+  content: " " counter(section) "." counter(definition) ".";
+  counter-increment: definition; }
+
+.example .label:after {
+  content: " " counter(section) "." counter(example) ".";
+  counter-increment: example; }
+
+.exercise .label:after {
+  content: " " counter(section) "." counter(exercise) ".";
+  counter-increment: exercise; }
+
+.remark .label:after {
+  content: " " counter(section) "." counter(remark) ".";
+  counter-increment: remark; }
+
+.note .label:after {
+  content: " " counter(section) "." counter(note) ".";
+  counter-increment: note; }
+
+h2.label:before {
+  margin-right: 1em;
+  content: counter(h2) "  ";
+  counter-increment: h2;
+  counter-reset: h3; }
+
+h3.label:before {
+  margin-right: 0.8em;
+  content: counter(h2) "." counter(h3) "  ";
+  counter-increment: h3; }
+
+/*
+ * ED SPECIAL LAYOUTS, modified
+ * Copyright (c) 2016 Alex Gil.
+ */
+.centered {
+  text-align: center; }
+
+.larger {
+  font-size: 1.6rem; }
+
+.large {
+  font-size: 1.4rem; }
+
+.small {
+  font-size: 0.8rem; }
+
+.underline {
+  text-decoration: underline; }
+
+div.toc {
+  margin-bottom: 4rem; }
+
+.post .date,
+.post .byline {
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: -.5rem; }
+
+/* Footnotes styles*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+.footnotes {
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  letter-spacing: .01rem; }
+
+.footnotes .foot-block {
+  display: inline-block;
+  padding: 0 4rem 0 2rem;
+  margin-bottom: .8rem;
+  font-style: italic; }
+
+a.footnote {
+  padding-left: .1rem;
+  font-size: .66rem; }
+
+/*Bibliography styles*/
+ol.bibliography {
+  list-style-type: none;
+  padding-left: 1rem;
+  text-indent: -1rem; }

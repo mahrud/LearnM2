@@ -32,7 +32,7 @@ kramdown:
   footnote_backlink: "&#x21a9;&#xfe0e;"
   enable_coderay: false
   parse_block_html: true
-  math_engine: +nil+ # pending https://github.com/github/pages-gem/pull/545
+  math_engine: null # pending https://github.com/github/pages-gem/pull/545
 
 # Exclusions from the final site
 exclude:
