@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Proof
+title: Macaulay2 Documentation
 ---
 
 # hi.
