@@ -1,0 +1,32 @@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+	<a class="navbar-brand" href="{{ site.baseurl }}/">
+	  <img src="{{ site.baseurl }}/static/syzygy.jpg" alt="M2 Syzygy" style="width:30px; margin-right: 5px"/>
+	  <strong>{{ site.title }}</strong>
+	</a>
+	
+	<div class="collapse navbar-collapse" id="navb">
+	  <ul class="navbar-nav mr-auto">
+	    {%- assign pages_list = site.pages | sort: 'order' -%}
+	    {%- for node in pages_list -%}
+	      {%- if node.title != null and node.category == "links" -%}
+	        {%- if node.layout == "page" %}
+	    <li class="nav-item">
+              <a class="nav-link
+	      {%- if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+	    </li>
+	        {%- endif -%}
+	      {%- endif -%}
+	    {%- endfor %}
+	  </ul>
+
+	  <form class="navbar-nav navbar-form navbar-right form-inline my-2 my-lg-0" id="x-search" action="./" role="search">
+	    <input class="form-control mr-sm-2" id="x-search-query" type="text" name="q" placeholder="Search" />
+	  </form>
+	</div>
+
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+      </div>
+    </nav>

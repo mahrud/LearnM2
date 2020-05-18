@@ -57,7 +57,7 @@ end
 
 # Immediately before rendering each document, separate and run M2 blocks and
 # store parsed output in a designated folder.
-Jekyll::Hooks.register :documents, :pre_render do |doc, payload|
+def applyM2Hook(doc, payload)
   # make some local variables for convenience
   site = doc.site
   source = doc.path.match(/[^\/]*$/)[0].gsub(/.md$/, "")
@@ -94,6 +94,14 @@ Jekyll::Hooks.register :documents, :pre_render do |doc, payload|
   end
 
   FileUtils.cp(output_addr, output_addr + ".tmp")
+end
+
+# Register the hook on both pages and documents
+Jekyll::Hooks.register :documents, :pre_render do |doc, payload|
+  applyM2Hook(doc, payload)
+end
+Jekyll::Hooks.register :pages, :pre_render do |doc, payload|
+  applyM2Hook(doc, payload)
 end
 
 # Class of Macaulay2 blocks, designated as {% M2 [source] %} ... {% M2 %}

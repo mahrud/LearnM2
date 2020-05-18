@@ -3,12 +3,14 @@ all:	serve
 check:; bundle exec jekyll build -d _site
 	bundle exec htmlproofer ./_site
 
-serve:;	bundle exec jekyll serve -d _site/
+serve:;	bundle exec jekyll serve -s . -d _site/
 
-clean:;	rm -rf _site/*
+clean:; rm -rf _outputs/*.{input,output,tmp}
+	rm -rf _site/*
+	rm -rf docs
 
 build:	clean
-	bundle exec jekyll build -s . -d _site/
+	bundle exec jekyll build -s . -d docs/
 
 install:
 	gem install jekyll
