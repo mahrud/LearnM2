@@ -10,7 +10,6 @@ kk = ZZ/32003;
 R = kk[x,y,z,w]; -- this is a ring
 {% endM2 %}
 
-## FIXME
 ## monomialCurveIdeal
 {:.label}
 
@@ -50,8 +49,10 @@ minors(2, matrix {{R_0, R_1, R_2},{R_1,R_2,R_3}})
 This method defines the twisted cubic as the kernel of the Veronese embedding of degree three on the projective line.
 That is:
 
-## FIXME
-
 {% M2 example %}
 kernel map(kk[s,t], R, {s^3, s^2*t, s*t^2, t^3})
 {% endM2 %}
+
+## Resolution
+
+$$ 0 \to 2\mathcal O_{\\P^3}(-3) \to 3\mathcal O_{\\P^3}(-2) \to \mathcal O_{\\P^3} \to \mathcal O_C \to 0 $$

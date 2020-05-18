@@ -2,7 +2,7 @@
 html { background-color: whitesmoke; }
 body { background-color: white; }
 h4 { margin-top: 20px; }
-.container { max-width: 728px; }
+.container { max-width: 800px; }
 
 #x-projnav {
     min-height: 20px;
@@ -41,11 +41,14 @@ code {
 }
 
 pre {
-    color: #222;
-    overflow: auto;
-    white-space: pre;
-    word-break: normal;
-    word-wrap: normal;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .funcdecl > pre {
@@ -92,14 +95,14 @@ a, .navbar-default .navbar-brand {
     border-color: hsl(209, 51%, 88%);
 }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default > .active > a,
+.navbar-default > .active > a:hover,
+.navbar-default > .active > a:focus {
     background-color: hsl(209, 51%, 88%);
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default > li > a:hover,
+.navbar-default > li > a:focus {
     color: #000;
 }
 

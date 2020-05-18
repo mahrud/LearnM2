@@ -4,11 +4,15 @@ check: build
 	bundle exec htmlproofer ./_site/ --only-4xx --check-html --disable-external --empty-alt-ignore # --check-favicon
 
 serve:
-	bundle exec jekyll serve -d _site/proof/
+	bundle exec jekyll serve -s . -d _site/
 
-build:
-	rm -rf _site
-	bundle exec jekyll build -d _site/proof/
+clean:
+	rm -rf _outputs/*.{input,output,tmp}
+	rm -rf _site/*
+	rm -rf docs
+
+build: clean
+	bundle exec jekyll build -s . -d docs/
 
 install:
 	gem install jekyll

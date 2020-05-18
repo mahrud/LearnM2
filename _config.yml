@@ -1,5 +1,5 @@
 # Setup
-title:               Macaulay2 Documentation
+title:               Learn Macaulay2
 tagline:             a Software System for Research in Algebraic Geometry
 description:         >- # this means to ignore newlines until "url:"
   Macaulay2 is a software system devoted to supporting research in algebraic
@@ -36,12 +36,12 @@ kramdown:
 
 # Exclusions from the final site
 exclude:
+  - TODO
+  - Makefile
   - README.md
   - LICENSE.md
   - proof.gemspec
   - docs
-  - _plugins
-  - _outputs
 
 # Theme
 remote_theme: "mahrud/proof"
