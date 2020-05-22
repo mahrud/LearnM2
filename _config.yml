@@ -27,6 +27,7 @@ collections:
 
 # Markdown specs
 markdown: kramdown
+highlighter: rouge
 
 kramdown:
   # we use KaTeX
@@ -40,6 +41,9 @@ kramdown:
   # disables syntax highlighter
   #syntax_highlighter_opts:
   #  disable: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: "macaulay2"
 
 # Exclusions from the final site
 exclude:
@@ -49,6 +53,7 @@ exclude:
   - proof.gemspec
   - Makefile
   - docs
+  - _outputs
 
 # Theme
 remote_theme: "mahrud/proof"

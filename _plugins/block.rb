@@ -1,3 +1,5 @@
+# {% M2 [filename] %} is registered as a Liquid tag to run M2Block
+
 # M2 settings
 M2tag = "M2"
 M2cmd = "M2"
@@ -6,11 +8,6 @@ M2opts = "--silent --print-width 77 --stop --int --no-readline -q --no-randomize
 M2load = "needsPackage(\"LocalRings\", FileName => \"/home/mahrud/Projects/M2/M2/M2/Macaulay2/packages/LocalRings.m2\")"
 M2regex = /i+([1-9][0-9]*) : /
 DELIMITER = "--DELIMITER"
-
-# HTML
-DIV = "<div class=\"examples\">\n  <pre><code class=\"language-m2\">"
-MID = "  </code></pre>\n  <pre><code class=\"language-m2\">"
-POS = "  </code></pre>\n</div>"
 
 # Split the output into M2 blocks, and lines.
 def parseM2(output)
@@ -98,16 +95,23 @@ end
 
 # Register the hook on both pages and documents
 Jekyll::Hooks.register :documents, :pre_render do |doc, payload|
-  applyM2Hook(doc, payload)
+  if payload["page"]["parse"] then
+    applyM2Hook(doc, payload)
+  end
 end
 Jekyll::Hooks.register :pages, :pre_render do |doc, payload|
-  applyM2Hook(doc, payload)
+  if payload["page"]["parse"] then
+    applyM2Hook(doc, payload)
+  end
 end
 
 # Class of Macaulay2 blocks, designated as {% M2 [source] %} ... {% M2 %}
 class M2Block < Liquid::Raw
+  include Jekyll::Tags # HighlightBlock
+
   def initialize(tag_name, markup, parse_context)
     @source = markup.split[0]
+    @lang = 'macaulay2'
     markup = ''
     super
   end
@@ -116,7 +120,6 @@ class M2Block < Liquid::Raw
   def parse(tokens)
     puts "Parsing M2 block in #{@source}"
     input_addr = M2dir + @source + ".input"
-
     super
 
     open(input_addr, 'a+') do |input_file|
@@ -130,37 +133,66 @@ class M2Block < Liquid::Raw
   def render(context)
     output_addr = M2dir + @source + ".output.tmp"
 
-    if File.file?(output_addr) then
-      puts "Rendering M2 block in #{@source}"
+    if not File.file?(output_addr) then return end
+    puts "Rendering M2 block in #{@source}"
 
-      output = ''
-      open(output_addr, 'r') do |output_file|
-        output = output_file.readlines()
-        output_file.close
-      end
-
-      # split the output into lines
-      blocks = parseM2(output)
-
-      open(output_addr, 'w+') do |output_file|
-        blocks[1..blocks.length].each do |block|
-          output_file << block.join
-          output_file << DELIMITER
-          output_file << "\n"
-        end
-      end
-
-      entries = []
-      blocks[0].each do |block|
-        entries << block.join.strip
-      end
-
-      if blocks.length == 1 then
-        File.delete(output_addr)
-      end
-
-      "#{DIV}#{entries.join(MID)}#{POS}"
+    output = ''
+    open(output_addr, 'r') do |output_file|
+      output = output_file.readlines()
+      output_file.close
     end
+
+    # split the output into lines
+    blocks = parseM2(output)
+
+    open(output_addr, 'w+') do |output_file|
+      blocks[1..blocks.length].each do |block|
+        output_file << block.join
+        output_file << DELIMITER
+        output_file << "\n"
+      end
+    end
+
+    entries = []
+    blocks[0].each do |block|
+      entries << block.join.strip
+    end
+
+    if blocks.length == 1 then
+      File.delete(output_addr)
+    end
+
+    # Syntax highlighting
+    prefix = context["highlighter_prefix"] || ""
+    suffix = context["highlighter_suffix"] || ""
+
+    code = entries.map { |entry| render_rouge(entry) }
+    output = code.join("</code></pre><pre><code class=\"language-#{@lang}\">")
+    rendered_output = add_code_tag(output)
+
+    prefix + rendered_output + suffix
+  end
+
+  def render_rouge(code)
+    require "rouge"
+    formatter = ::Rouge::Formatters::HTMLLegacy.new(
+      :line_numbers => false,
+      :wrap         => false,
+      :css_class    => "highlight",
+      :gutter_class => "gutter",
+      :code_class   => "code"
+    )
+    lexer = ::Rouge::Lexer.find_fancy(@lang, code) || Rouge::Lexers::PlainText
+    formatter.format(lexer.lex(code))
+  end
+
+  def add_code_tag(code)
+    code_attributes = [
+      "class=\"language-#{@lang.to_s.tr("+", "-")}\"",
+      "data-lang=\"#{@lang}\"",
+    ].join(" ")
+    "<figure class=\"highlight\"><pre><code #{code_attributes}>"\
+    "#{code.chomp}</code></pre></figure>"
   end
 end
 

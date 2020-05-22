@@ -11,4 +11,4 @@ order: 2
 
 {% for item in site.docs -%}
 * [{{ item.title }}]({{ site.baseurl }}{{ item.url }})
-{%- endfor %}
+{% endfor %}
