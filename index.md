@@ -1,36 +1,47 @@
 ---
 layout: default
 title: Macaulay2 Documentation
+parse: true
 ---
 
 {::options parse_block_html="true" /}
 
 [*Macaulay2*](https://macaulay2.com/) is a interpreted, dynamically typed programming language intended to support research in [algebraic geometry] and [commutative algebra]. Development of *Macaulay2* has been funded by the National Science Foundation since 1992.
 
-<div class="container pt-sm-2">
- <div class="row">
-  <div class="col-lg-6 col-md-6 feature">
-   <h4>Code</h4>
-   Computing the Koszul complex of the regular sequence $(a,b,c,d)$.
-```
-R = ZZ/101[a..d];
-```
-```
-res ideal gens R
-```
-  </div>
+#### A First Example
+{:.label}
 
-  <div class="col-lg-6 col-md-6 feature">
-   <h4>Result</h4>
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12">
+Computing the minimal free resolution of the [Twisted Cubic](docs/example):
+</div><div class="col-lg-6 col-md-6">
+#### Code:
+```
+R = QQ[x, y, z, w];
+I = monomialCurveIdeal(R, {1, 2, 3})
+C = res I
+```
+
+#### Getting help:
+```
+help monomialCurveIdeal
+```
+</div><div class="col-lg-6 col-md-6">
+#### Result:
 {% M2 index %}
-R = ZZ/101[a..d];
-res ideal gens R
+R = QQ[x, y, z, w];
+I = monomialCurveIdeal(R, {1, 2, 3})
+C = res I
 {% endM2 %}
   </div>
  </div>
 </div>
 
-<div class="container pt-sm-2">
+#### Resources
+{:.label}
+
+<div class="container">
  <div class="row">
   <div class="col-lg-4 col-md-6 feature">
    <h4>Learn by Reading</h4>
@@ -52,10 +63,7 @@ res ideal gens R
    <h4>Write a Package</h4>
    - [M2 Style Guide](https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide)
    - Package sample
-   {% for item in site.packages -%}
-   - [{{ item.title }}]({{ site.baseurl }}{{ item.url }})
-   {%- endfor %}
-   - [`packages`e directory](packages)
+   - [`packages` directory](packages)
   </div>
 
   <div class="col-lg-4 col-md-6 feature">

@@ -1,1 +1,3 @@
 M2 input and output files collect in this folder.
+Be sure to add `parse: true` to the front matter
+of files you would like rendered by M2.
