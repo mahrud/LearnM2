@@ -116,35 +116,52 @@
 
 <p><a href="https://macaulay2.com/"><em>Macaulay2</em></a> is a interpreted, dynamically typed programming language intended to support research in <a href="http://en.wikipedia.org/wiki/Algebraic_geometry">algebraic geometry</a> and <a href="http://en.wikipedia.org/wiki/Commutative_algebra">commutative algebra</a>. Development of <em>Macaulay2</em> has been funded by the National Science Foundation since 1992.</p>
 
-<div class="container pt-sm-2">
+<h4 class="label" id="a-first-example">A First Example</h4>
+
+<div class="container">
   <div class="row">
-    <div class="col-lg-6 col-md-6 feature">
-      <h4>Code</h4>
-      <p>Computing the Koszul complex of the regular sequence $(a,b,c,d)$.</p>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>R = ZZ/101[a..d];
+    <div class="col-lg-12 col-md-12">
+      <p>Computing the minimal free resolution of the <a href="docs/example">Twisted Cubic</a>:</p>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <h4 id="code">Code:</h4>
+      <div class="language-macaulay2 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">R</span> <span class="o">=</span> <span class="n">QQ</span><span class="err">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">w</span><span class="err">]</span><span class="p">;</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">monomialCurveIdeal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="err">}</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="kd">res</span> <span class="nf">I</span>
 </code></pre></div>      </div>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>res ideal gens R
+
+      <h4 id="getting-help">Getting help:</h4>
+      <div class="language-macaulay2 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span> <span class="n">monomialCurveIdeal</span>
 </code></pre></div>      </div>
     </div>
+    <div class="col-lg-6 col-md-6">
+      <h4 id="result">Result:</h4>
 
-    <div class="col-lg-6 col-md-6 feature">
-      <h4>Result</h4>
-      <div class="examples">
-        <pre><code class="language-m2">i1 : R = ZZ/101[a..d];  </code></pre>
-        <pre><code class="language-m2">i2 : res ideal gens R
+      <figure class="highlight">
+        <pre><code class="language-macaulay2" data-lang="macaulay2"><span class="n">i1</span> <span class="p">:</span> <span class="n">R</span> <span class="o">=</span> <span class="n">QQ</span><span class="err">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">w</span><span class="err">]</span><span class="p">;</span></code></pre>
+        <pre><code class="language-macaulay2"><span class="n">i2</span> <span class="p">:</span> <span class="n">I</span> <span class="o">=</span> <span class="n">monomialCurveIdeal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="err">}</span><span class="p">)</span>
 
-      1      4      6      4      1
-o2 = R  &lt;-- R  &lt;-- R  &lt;-- R  &lt;-- R  &lt;-- 0
-                                         
-     0      1      2      3      4      5
+             <span class="mi">2</span>                    <span class="mi">2</span>
+<span class="n">o2</span> <span class="o">=</span> <span class="kd">ideal</span> <span class="p">(</span><span class="n">z</span>  <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span>  <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
 
-o2 : ChainComplex  </code></pre>
-      </div>
+<span class="n">o2</span> <span class="p">:</span> <span class="kd">Ideal</span> <span class="nf">of</span> <span class="n">R</span></code></pre>
+        <pre><code class="language-macaulay2"><span class="n">i3</span> <span class="p">:</span> <span class="n">C</span> <span class="o">=</span> <span class="kd">res</span> <span class="nf">I</span>
+
+      <span class="mi">1</span>      <span class="mi">3</span>      <span class="mi">2</span>
+<span class="n">o3</span> <span class="o">=</span> <span class="n">R</span>  <span class="o">&lt;</span><span class="c1">-- R  &lt;-- R  &lt;-- 0</span>
+                           
+     <span class="mi">0</span>      <span class="mi">1</span>      <span class="mi">2</span>      <span class="mi">3</span>
+
+<span class="n">o3</span> <span class="p">:</span> <span class="n">ChainComplex</span></code></pre>
+      </figure>
+
     </div>
   </div>
 </div>
 
-<div class="container pt-sm-2">
+<h4 class="label" id="resources">Resources</h4>
+
+<div class="container">
   <div class="row">
     <div class="col-lg-4 col-md-6 feature">
       <h4>Learn by Reading</h4>
@@ -171,8 +188,7 @@ o2 : ChainComplex  </code></pre>
       <ul>
         <li><a href="https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide">M2 Style Guide</a></li>
         <li>Package sample</li>
-        <li><a href="/m2doc/packages/LocalRings/">LocalRings</a></li>
-        <li><a href="packages"><code class="highlighter-rouge">packages</code>e directory</a></li>
+        <li><a href="packages"><code class="language-macaulay2 highlighter-rouge"><span class="n">packages</span></code> directory</a></li>
       </ul>
     </div>
 

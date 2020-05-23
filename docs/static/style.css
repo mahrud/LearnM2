@@ -11,273 +11,337 @@ $link-color: #841212;
 
 @import "theme";
 @import "colors";
-@import "syntax";
 */
-html {
-  background-color: whitesmoke; }
+.highlight .hll { background-color: #ffc; }
 
-body {
-  background-color: white; }
+.highlight .c { color: #999; }
 
-h4 {
-  margin-top: 20px; }
+/* Comment */
+.highlight .err { color: #a00; background-color: #faa; }
 
-.container {
-  max-width: 800px; }
+/* Error */
+.highlight .k { color: #069; }
 
-#x-projnav {
-  min-height: 20px;
-  margin-bottom: 20px;
-  background-color: #eee;
-  padding: 9px;
-  border-radius: 3px; }
+/* Keyword */
+.highlight .o { color: #555; }
 
-#x-footer {
-  padding-top: 14px;
-  padding-bottom: 15px;
-  margin-top: 5px;
-  background-color: #eee;
-  border-top-style: solid;
-  border-top-width: 1px; }
+/* Operator */
+.highlight .cm { color: #09f; font-style: italic; }
 
-.highlighted {
-  background-color: #FDFF9E; }
+/* Comment.Multiline */
+.highlight .cp { color: #099; }
 
-#x-pkginfo {
-  margin-top: 25px;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  margin-bottom: 15px; }
+/* Comment.Preproc */
+.highlight .c1 { color: #999; }
 
-code {
-  background-color: inherit;
-  border: none;
-  color: #222;
-  padding: 0; }
+/* Comment.Single */
+.highlight .cs { color: #999; }
 
-pre {
-  display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.42857143;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px; }
+/* Comment.Special */
+.highlight .gd { background-color: #fcc; border: 1px solid #c00; }
 
-.funcdecl > pre {
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word; }
+/* Generic.Deleted */
+.highlight .ge { font-style: italic; }
 
-pre .com {
-  color: #006600; }
+/* Generic.Emph */
+.highlight .gr { color: #f00; }
 
-.decl {
-  position: relative; }
+/* Generic.Error */
+.highlight .gh { color: #030; }
 
-.decl > a {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  display: none;
-  border: 1px solid #ccc;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  padding-left: 4px;
-  padding-right: 4px; }
+/* Generic.Heading */
+.highlight .gi { background-color: #cfc; border: 1px solid #0c0; }
 
-.decl > a:hover {
-  background-color: white;
-  text-decoration: none; }
+/* Generic.Inserted */
+.highlight .go { color: #aaa; }
 
-.decl:hover > a {
-  display: block; }
+/* Generic.Output */
+.highlight .gp { color: #009; }
 
-a, .navbar-default .navbar-brand {
-  color: #375eab; }
+/* Generic.Prompt */
+/* Generic.Strong */
+.highlight .gu { color: #030; }
 
-.navbar-default, #x-footer {
-  background-color: #e0ebf5;
-  border-color: #d1e1f0; }
+/* Generic.Subheading */
+.highlight .gt { color: #9c6; }
 
-.navbar-default > .active > a,
-.navbar-default > .active > a:hover,
-.navbar-default > .active > a:focus {
-  background-color: #d1e1f0; }
+/* Generic.Traceback */
+.highlight .kc { color: #069; }
 
-.navbar-default > li > a:hover,
-.navbar-default > li > a:focus {
-  color: #000; }
+/* Keyword.Constant */
+.highlight .kd { color: #069; }
 
-.panel-default > .panel-heading {
-  color: #333;
-  background-color: transparent; }
+/* Keyword.Declaration */
+.highlight .kn { color: #069; }
 
-a.permalink {
-  display: none; }
+/* Keyword.Namespace */
+.highlight .kp { color: #069; }
 
-a.uses {
-  display: none;
-  color: #666;
-  font-size: 0.8em; }
+/* Keyword.Pseudo */
+.highlight .kr { color: #069; }
 
-h1:hover .permalink, h2:hover .permalink, h3:hover .permalink, h4:hover .permalink, h5:hover .permalink, h6:hover .permalink, h1:hover .uses, h2:hover .uses, h3:hover .uses, h4:hover .uses, h5:hover .uses, h6:hover .uses {
-  display: inline; }
+/* Keyword.Reserved */
+.highlight .kt { color: #078; }
 
-@media (max-width: 768px) {
-  .form-control {
-    font-size: 16px; } }
-.synopsis {
-  opacity: 0.87; }
+/* Keyword.Type */
+.highlight .m { color: #f60; }
 
-.additional-info {
-  display: block;
-  opacity: 0.54;
-  text-transform: uppercase;
-  font-size: 0.75em; }
+/* Literal.Number */
+.highlight .s { color: #d44950; }
 
-/*
- * Proof Theorem Environments
- * Based on amsthm package: https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html
- * and https://golem.ph.utexas.edu/wiki/instiki/show/Theorems
- */
-body {
-  counter-reset: h2 theorem lemma problem proposition conjecture corollary definition example exercise remark note; }
+/* Literal.String */
+.highlight .na { color: #4f9fcf; }
 
-.theorem, .lemma, .proposition, .corollary {
-  font-style: italic; }
+/* Name.Attribute */
+.highlight .nb { color: #366; }
 
-.label {
-  font-style: normal;
-  font-weight: bold; }
+/* Name.Builtin */
+.highlight .nc { color: #0a8; }
 
-.label* {
-  font-style: normal;
-  font-weight: bold; }
+/* Name.Class */
+.highlight .no { color: #360; }
 
-.proof .label {
-  font-style: italic; }
+/* Name.Constant */
+.highlight .nd { color: #99f; }
 
-.proof:after {
-  content: " ■";
-  text-align: right; }
+/* Name.Decorator */
+.highlight .ni { color: #999; }
 
-.label:after {
-  content: "."; }
+/* Name.Entity */
+.highlight .ne { color: #c00; }
 
-.theorem .label:after {
-  content: " " counter(section) "." counter(theorem) ".";
-  counter-increment: theorem; }
+/* Name.Exception */
+.highlight .nf { color: #c0f; }
 
-.lemma .label:after {
-  content: " " counter(section) "." counter(lemma) ".";
-  counter-increment: lemma; }
+/* Name.Function */
+.highlight .nl { color: #99f; }
 
-.problem .label:after {
-  content: " " counter(section) "." counter(problem) ".";
-  counter-increment: problem; }
+/* Name.Label */
+.highlight .nn { color: #0cf; }
 
-.proposition .label:after {
-  content: " " counter(section) "." counter(proposition) ".";
-  counter-increment: proposition; }
+/* Name.Namespace */
+.highlight .nt { color: #2f6f9f; }
 
-.conjecture .label:after {
-  content: " " counter(section) "." counter(conjecture) ".";
-  counter-increment: conjecture; }
+/* Name.Tag */
+.highlight .nv { color: #033; }
 
-.corollary .label:after {
-  content: " " counter(section) "." counter(corollary) ".";
-  counter-increment: corollary; }
+/* Name.Variable */
+.highlight .ow { color: #000; }
 
-.definition .label:after {
-  content: " " counter(section) "." counter(definition) ".";
-  counter-increment: definition; }
+/* Operator.Word */
+.highlight .w { color: #bbb; }
 
-.example .label:after {
-  content: " " counter(section) "." counter(example) ".";
-  counter-increment: example; }
+/* Text.Whitespace */
+.highlight .mf { color: #f60; }
 
-.exercise .label:after {
-  content: " " counter(section) "." counter(exercise) ".";
-  counter-increment: exercise; }
+/* Literal.Number.Float */
+.highlight .mh { color: #f60; }
 
-.remark .label:after {
-  content: " " counter(section) "." counter(remark) ".";
-  counter-increment: remark; }
+/* Literal.Number.Hex */
+.highlight .mi { color: #f60; }
 
-.note .label:after {
-  content: " " counter(section) "." counter(note) ".";
-  counter-increment: note; }
+/* Literal.Number.Integer */
+.highlight .mo { color: #f60; }
 
-h2.label:before {
-  margin-right: 1em;
-  content: counter(h2) "  ";
-  counter-increment: h2;
-  counter-reset: h3; }
+/* Literal.Number.Oct */
+.highlight .sb { color: #c30; }
 
-h3.label:before {
-  margin-right: 0.8em;
-  content: counter(h2) "." counter(h3) "  ";
-  counter-increment: h3; }
+/* Literal.String.Backtick */
+.highlight .sc { color: #c30; }
 
-/*
- * ED SPECIAL LAYOUTS, modified
- * Copyright (c) 2016 Alex Gil.
- */
-.centered {
-  text-align: center; }
+/* Literal.String.Char */
+.highlight .sd { color: #c30; font-style: italic; }
 
-.larger {
-  font-size: 1.6rem; }
+/* Literal.String.Doc */
+.highlight .s2 { color: #c30; }
 
-.large {
-  font-size: 1.4rem; }
+/* Literal.String.Double */
+.highlight .se { color: #c30; }
 
-.small {
-  font-size: 0.8rem; }
+/* Literal.String.Escape */
+.highlight .sh { color: #c30; }
 
-.underline {
-  text-decoration: underline; }
+/* Literal.String.Heredoc */
+.highlight .si { color: #a00; }
 
-div.toc {
-  margin-bottom: 4rem; }
+/* Literal.String.Interpol */
+.highlight .sx { color: #c30; }
 
-.post .date,
-.post .byline {
-  font-style: italic;
-  font-weight: 300;
-  letter-spacing: 0;
-  margin-top: -.5rem; }
+/* Literal.String.Other */
+.highlight .sr { color: #3aa; }
+
+/* Literal.String.Regex */
+.highlight .s1 { color: #c30; }
+
+/* Literal.String.Single */
+.highlight .ss { color: #fc3; }
+
+/* Literal.String.Symbol */
+.highlight .bp { color: #366; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc { color: #033; }
+
+/* Name.Variable.Class */
+.highlight .vg { color: #033; }
+
+/* Name.Variable.Global */
+.highlight .vi { color: #033; }
+
+/* Name.Variable.Instance */
+.highlight .il { color: #f60; }
+
+/* Literal.Number.Integer.Long */
+.css .o, .css .o + .nt, .css .nt + .nt { color: #999; }
+
+/* Transfered from poole.css */
+/* Code */
+code, pre { font-family: Menlo, Monaco, "Courier New", monospace; }
+
+code { padding: .25em .5em; font-size: 85%; color: #bf616a; background-color: #f9f9f9; border-radius: 3px; }
+
+pre { display: block; margin-top: 0; margin-bottom: 1rem; padding: 1rem; font-size: .8rem; line-height: 1.4; white-space: pre; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; background-color: #f9f9f9; }
+
+pre code { padding: 0; font-size: 100%; color: inherit; background-color: transparent; }
+
+/* Gist via GitHub Pages */
+.gist .gist-file { font-family: Menlo, Monaco, "Courier New", monospace !important; }
+
+.gist .markdown-body { padding: 15px; }
+
+.gist pre { padding: 0; background-color: transparent; }
+
+.gist .gist-file .gist-data { font-size: .8rem !important; line-height: 1.4; }
+
+.gist code { padding: 0; color: inherit; background-color: transparent; border-radius: 0; }
+
+/* Pygments via Jekyll */
+.highlight { margin-bottom: 1rem; border-radius: 4px; }
+
+.highlight pre { margin-bottom: 0; }
+
+html { background-color: whitesmoke; }
+
+body { background-color: white; }
+
+h4 { margin-top: 20px; }
+
+.container { max-width: 800px; }
+
+#x-projnav { min-height: 20px; margin-bottom: 20px; background-color: #eee; padding: 9px; border-radius: 3px; }
+
+#x-footer { padding-top: 14px; padding-bottom: 15px; margin-top: 5px; background-color: #eee; border-top-style: solid; border-top-width: 1px; }
+
+.highlighted { background-color: #FDFF9E; }
+
+#x-pkginfo { margin-top: 25px; border-top: 1px solid #ccc; padding-top: 20px; margin-bottom: 15px; }
+
+code { background-color: inherit; border: none; color: #222; padding: 0; }
+
+pre { display: block; padding: 9.5px; margin: 0 0 10px; font-size: 13px; line-height: 1.42857143; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px; }
+
+.funcdecl > pre { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
+
+pre .com { color: #006600; }
+
+.decl { position: relative; }
+
+.decl > a { position: absolute; top: 0px; right: 0px; display: none; border: 1px solid #ccc; border-top-right-radius: 4px; border-bottom-left-radius: 4px; padding-left: 4px; padding-right: 4px; }
+
+.decl > a:hover { background-color: white; text-decoration: none; }
+
+.decl:hover > a { display: block; }
+
+a, .navbar-default .navbar-brand { color: #375eab; }
+
+.navbar-default, #x-footer { background-color: #e0ebf5; border-color: #d1e1f0; }
+
+.navbar-default > .active > a, .navbar-default > .active > a:hover, .navbar-default > .active > a:focus { background-color: #d1e1f0; }
+
+.navbar-default > li > a:hover, .navbar-default > li > a:focus { color: #000; }
+
+.panel-default > .panel-heading { color: #333; background-color: transparent; }
+
+a.permalink { display: none; }
+
+a.uses { display: none; color: #666; font-size: 0.8em; }
+
+h1:hover .permalink, h2:hover .permalink, h3:hover .permalink, h4:hover .permalink, h5:hover .permalink, h6:hover .permalink, h1:hover .uses, h2:hover .uses, h3:hover .uses, h4:hover .uses, h5:hover .uses, h6:hover .uses { display: inline; }
+
+@media (max-width: 768px) { .form-control { font-size: 16px; } }
+
+.synopsis { opacity: 0.87; }
+
+.additional-info { display: block; opacity: 0.54; text-transform: uppercase; font-size: 0.75em; }
+
+/* Proof Theorem Environments Based on amsthm package: https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html and https://golem.ph.utexas.edu/wiki/instiki/show/Theorems */
+body { counter-reset: h2 theorem lemma problem proposition conjecture corollary definition example exercise remark note; }
+
+.theorem, .lemma, .proposition, .corollary { font-style: italic; }
+
+.label { font-style: normal; font-weight: bold; }
+
+.label* { font-style: normal; font-weight: bold; }
+
+.proof .label { font-style: italic; }
+
+.proof:after { content: " ■"; text-align: right; }
+
+.label:after { content: "."; }
+
+.theorem .label:after { content: " " counter(section) "." counter(theorem) "."; counter-increment: theorem; }
+
+.lemma .label:after { content: " " counter(section) "." counter(lemma) "."; counter-increment: lemma; }
+
+.problem .label:after { content: " " counter(section) "." counter(problem) "."; counter-increment: problem; }
+
+.proposition .label:after { content: " " counter(section) "." counter(proposition) "."; counter-increment: proposition; }
+
+.conjecture .label:after { content: " " counter(section) "." counter(conjecture) "."; counter-increment: conjecture; }
+
+.corollary .label:after { content: " " counter(section) "." counter(corollary) "."; counter-increment: corollary; }
+
+.definition .label:after { content: " " counter(section) "." counter(definition) "."; counter-increment: definition; }
+
+.example .label:after { content: " " counter(section) "." counter(example) "."; counter-increment: example; }
+
+.exercise .label:after { content: " " counter(section) "." counter(exercise) "."; counter-increment: exercise; }
+
+.remark .label:after { content: " " counter(section) "." counter(remark) "."; counter-increment: remark; }
+
+.note .label:after { content: " " counter(section) "." counter(note) "."; counter-increment: note; }
+
+h2.label:before { margin-right: 1em; content: counter(h2) "  "; counter-increment: h2; counter-reset: h3; }
+
+h3.label:before { margin-right: 0.8em; content: counter(h2) "." counter(h3) "  "; counter-increment: h3; }
+
+/* ED SPECIAL LAYOUTS, modified Copyright (c) 2016 Alex Gil. */
+.centered { text-align: center; }
+
+.larger { font-size: 1.6rem; }
+
+.large { font-size: 1.4rem; }
+
+.small { font-size: 0.8rem; }
+
+.underline { text-decoration: underline; }
+
+div.toc { margin-bottom: 4rem; }
+
+.post .date, .post .byline { font-style: italic; font-weight: 300; letter-spacing: 0; margin-top: -.5rem; }
 
 /* Footnotes styles*/
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 
-sup {
-  top: -0.5em; }
+sup { top: -0.5em; }
 
-.footnotes {
-  line-height: 1.2rem;
-  font-size: 0.9rem;
-  letter-spacing: .01rem; }
+.footnotes { line-height: 1.2rem; font-size: 0.9rem; letter-spacing: .01rem; }
 
-.footnotes .foot-block {
-  display: inline-block;
-  padding: 0 4rem 0 2rem;
-  margin-bottom: .8rem;
-  font-style: italic; }
+.footnotes .foot-block { display: inline-block; padding: 0 4rem 0 2rem; margin-bottom: .8rem; font-style: italic; }
 
-a.footnote {
-  padding-left: .1rem;
-  font-size: .66rem; }
+a.footnote { padding-left: .1rem; font-size: .66rem; }
 
 /*Bibliography styles*/
-ol.bibliography {
-  list-style-type: none;
-  padding-left: 1rem;
-  text-indent: -1rem; }
+ol.bibliography { list-style-type: none; padding-left: 1rem; text-indent: -1rem; }
+
+/*# sourceMappingURL=style.css.map */
