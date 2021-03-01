@@ -3,20 +3,20 @@ layout: default
 ---
 
 <div class="clearfix" id="x-projnav">
-  <a href="{{ site.baseurl }}/">M2:</a>
+  <a href="{{ site.baseurl }}/packages">Packages:</a>
   <span class="text-muted">{{ page.title }}</span>
   <span class="pull-right">
-<!--    Version {{ page.version }} -->
-    <a href="#pkg-index">Index</a> <span class="text-muted">|</span>
-    <a href="#pkg-files">Files</a> <span class="text-muted">|</span>
-    <a href="#pkg-subdirectories">Directories</a>
+    v{{ page.version }}
+<!--  nextButton tag, prevButton tag, forwardButton tag, backwardButton tag, upButton tag, topButton tag,
+      indexButton(htmlDirectory, indexFileName), tocButton(htmlDirectory, tocFileName), homeButton -->
+    <span class="text-muted">|</span> <a href="#pkg-index">Index</a>
+    <span class="text-muted">|</span> <a href="#pkg-files">Files</a>
+    <span class="text-muted">|</span> <a href="#pkg-subdirectories">Directories</a>
   </span>
 </div>
 
 <div class="package">
-<!--
   <h2 class="page-title" id="pkg-overview">package <code>{{ page.title }}</code></h2>
   <pre><code class="language-macaulay2">i0 : needsPackage "{{ page.title }}";</code></pre>
--->
   {{ content }}
 </div>
