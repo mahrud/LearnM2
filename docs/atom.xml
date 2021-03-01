@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text" xml:lang="en">Learn Macaulay2</title>
-  <link type="application/atom+xml" href="https://mahrud.github.io/m2doc/atom.xml" rel="self"/>
-  <link type="text/html" href="https://mahrud.github.io/m2doc/" rel="alternate"/>
-  <updated>2020-05-23T03:00:08-05:00</updated>
+  <link type="application/atom+xml" href="https://mahrud.github.io/LearnM2/atom.xml" rel="self"/>
+  <link type="text/html" href="https://mahrud.github.io/LearnM2/" rel="alternate"/>
+  <updated>2021-03-01T01:34:12-06:00</updated>
   <id>https://mahrud.github.io</id>
   <rights>CC BY-SA</rights>
 

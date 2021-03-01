@@ -275,13 +275,13 @@ h1:hover .permalink, h2:hover .permalink, h3:hover .permalink, h4:hover .permali
 .additional-info { display: block; opacity: 0.54; text-transform: uppercase; font-size: 0.75em; }
 
 /* Proof Theorem Environments Based on amsthm package: https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Theorems.html and https://golem.ph.utexas.edu/wiki/instiki/show/Theorems */
-body { counter-reset: h2 theorem lemma problem proposition conjecture corollary definition example exercise remark note; }
+body { counter-reset: section subsection theorem lemma problem proposition conjecture corollary definition example exercise remark note; }
 
 .theorem, .lemma, .proposition, .corollary { font-style: italic; }
 
 .label { font-style: normal; font-weight: bold; }
 
-.label* { font-style: normal; font-weight: bold; }
+*.label { font-style: normal; font-weight: bold; }
 
 .proof .label { font-style: italic; }
 
@@ -311,9 +311,9 @@ body { counter-reset: h2 theorem lemma problem proposition conjecture corollary 
 
 .note .label:after { content: " " counter(section) "." counter(note) "."; counter-increment: note; }
 
-h2.label:before { margin-right: 1em; content: counter(h2) "  "; counter-increment: h2; counter-reset: h3; }
+h2.label:before { margin-right: 1em; content: counter(section) "  "; counter-increment: section; counter-reset: subsection theorem lemma problem proposition conjecture corollary definition example exercise remark note; }
 
-h3.label:before { margin-right: 0.8em; content: counter(h2) "." counter(h3) "  "; counter-increment: h3; }
+h3.label:before { margin-right: 0.8em; content: counter(section) "." counter(subsection) "  "; counter-increment: subsection; }
 
 /* ED SPECIAL LAYOUTS, modified Copyright (c) 2016 Alex Gil. */
 .centered { text-align: center; }

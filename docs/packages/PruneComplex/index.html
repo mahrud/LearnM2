@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Canonical link to help search engines -->
-    <link rel="canonical"     href="https://mahrud.github.io/m2doc/packages/PruneComplex/" />
-    <link rel="shortcut icon" type="image/x-icon" href="/m2doc/static/favicon.ico" />
-    <link rel="alternate"     type="application/rss+xml" title="RSS" href="/m2doc/atom.xml" />
+    <link rel="canonical"     href="https://mahrud.github.io/LearnM2/packages/PruneComplex/" />
+    <link rel="shortcut icon" type="image/x-icon" href="/LearnM2/static/favicon.ico" />
+    <link rel="alternate"     type="application/rss+xml" title="RSS" href="/LearnM2/atom.xml" />
     <link rel="stylesheet"    href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&amp;display=swap" />
     <link rel="stylesheet"    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet"    href="/m2doc/static/style.css" />
+    <link rel="stylesheet"    href="/LearnM2/static/style.css" />
 
     <title>PruneComplex</title>
 
@@ -28,8 +28,8 @@
     <meta property="og:title"          content="PruneComplex" />
     <meta property="og:article:author" content="" />
     <meta property="og:description"    content="Macaulay2 is a software system devoted to supporting research in algebraic geometry and commutative algebra." />
-    <meta property="og:url"            content="https://mahrud.github.io/m2doc/packages/PruneComplex/" />
-    <meta property="og:image"          content="https://mahrud.github.io/m2doc/static/open-graph-logo.png" />
+    <meta property="og:url"            content="https://mahrud.github.io/LearnM2/packages/PruneComplex/" />
+    <meta property="og:image"          content="https://mahrud.github.io/LearnM2/static/open-graph-logo.png" />
     <meta property="og:image:width"    content="200" />
     <meta property="og:image:height"   content="200" />
 
@@ -75,21 +75,18 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-	<a class="navbar-brand" href="/m2doc/">
-	  <img src="/m2doc/static/syzygy.jpg" alt="M2 Syzygy" style="width:30px; margin-right: 5px"/>
-	  <strong>Learn Macaulay2</strong>
+	<a class="navbar-brand" href="/LearnM2/packages">
+	  <img src="/LearnM2/static/syzygy.jpg" alt="M2 Syzygy" style="width:30px; margin-right: 5px"/>
+	  <strong>Package</strong><code>::PruneComplex</code>
 	</a>
-	
+
 	<div class="collapse navbar-collapse" id="navb">
 	  <ul class="navbar-nav mr-auto">
 	    <li class="nav-item">
-              <a class="nav-link" href="/m2doc/download/">Download</a>
+              <a class="nav-link" href="/LearnM2/">Home</a>
 	    </li>
 	    <li class="nav-item">
-              <a class="nav-link" href="/m2doc/documentation/">Documentation</a>
-	    </li>
-	    <li class="nav-item">
-              <a class="nav-link" href="/m2doc/packages/">Packages</a>
+              <a class="nav-link" href="/LearnM2/about/">About</a>
 	    </li>
 	  </ul>
 
@@ -113,6 +110,23 @@
 
     <div class="container" id="main">
 <!-- ########################################################################################### -->
+<div class="clearfix" id="x-projnav">
+  <a href="/LearnM2/packages">Packages:</a>
+  <span class="text-muted">PruneComplex</span>
+  <span class="pull-right">
+    v
+<!--  nextButton tag, prevButton tag, forwardButton tag, backwardButton tag, upButton tag, topButton tag,
+      indexButton(htmlDirectory, indexFileName), tocButton(htmlDirectory, tocFileName), homeButton -->
+    <span class="text-muted">|</span> <a href="#pkg-index">Index</a>
+    <span class="text-muted">|</span> <a href="#pkg-files">Files</a>
+    <span class="text-muted">|</span> <a href="#pkg-subdirectories">Directories</a>
+  </span>
+</div>
+
+<div class="package">
+  <h2 class="page-title" id="pkg-overview">package <code>PruneComplex</code></h2>
+  <pre><code class="language-macaulay2">i0 : needsPackage "PruneComplex";</code></pre>
+  
 <h1 id="prunecomplex--pruning-chain-complexes-over-polynomial-and-local-rings">PruneComplex – Pruning chain complexes over polynomial and local rings</h1>
 
 <h2 id="description">Description</h2>
@@ -120,7 +134,8 @@
 
 <p>Algorithms in this package are also implemented using C++ in e/mutablecomplex.hpp for speed.</p>
 
-<pre><code class="language-language-macaulay2">i1 : R = ZZ/32003[vars(0..17)];
+<pre class="examples"><code class="language-M2">i1 : R = ZZ/32003[vars(0..17)];
+
 i2 : m1 = genericMatrix(R,a,3,3)
 
 o2 = | a d g |
@@ -129,6 +144,7 @@ o2 = | a d g |
 
              3       3
 o2 : Matrix R  &lt;--- R
+
 i3 : m2 = genericMatrix(R,j,3,3)
 
 o3 = | j m p |
@@ -137,6 +153,7 @@ o3 = | j m p |
 
              3       3
 o3 : Matrix R  &lt;--- R
+
 i4 : I = ideal(m1*m2-m2*m1)
 
 o4 = ideal (d*k + g*l - b*m - c*p, b*j - a*k + e*k + h*l - b*n - c*q, c*j +
@@ -150,11 +167,10 @@ o4 = ideal (d*k + g*l - b*m - c*p, b*j - a*k + e*k + h*l - b*n - c*q, c*j +
      + c*p + f*q)
 
 o4 : Ideal of R
-
 </code></pre>
 <p>Here we produce an intentionally nonminimal resolution:</p>
 
-<pre><code class="language-language-macaulay2">i5 : C = res(I, FastNonminimal=&gt;true)
+<pre class="examples"><code class="language-M2">i5 : C = res(I, FastNonminimal=&gt;true)
 
       1      26      108      208      221      132      41      5
 o5 = R  &lt;-- R   &lt;-- R    &lt;-- R    &lt;-- R    &lt;-- R    &lt;-- R   &lt;-- R  &lt;-- 0
@@ -162,11 +178,10 @@ o5 = R  &lt;-- R   &lt;-- R    &lt;-- R    &lt;-- R    &lt;-- R    &lt;-- R   &l
      0      1       2        3        4        5        6       7      8
 
 o5 : ChainComplex
-
 </code></pre>
 <p>Now we prune the resolution above to get a minimal resolution:</p>
 
-<pre><code class="language-language-macaulay2">i6 : D = pruneComplex(C, UnitTest =&gt; isScalar)
+<pre class="examples"><code class="language-M2">i6 : D = pruneComplex(C, UnitTest =&gt; isScalar)
 
       1      8      33      60      61      32      5
 o6 = R  &lt;-- R  &lt;-- R   &lt;-- R   &lt;-- R   &lt;-- R   &lt;-- R
@@ -174,13 +189,14 @@ o6 = R  &lt;-- R  &lt;-- R   &lt;-- R   &lt;-- R   &lt;-- R   &lt;-- R
      0      1      2       3       4       5       6
 
 o6 : ChainComplex
+
 i7 : isCommutative D.cache.pruningMap
 
 o7 = true
+
 i8 : betti D == betti res I
 
 o8 = true
-
 </code></pre>
 
 <h2 id="caveat">Caveat</h2>
@@ -188,42 +204,67 @@ o8 = true
 
 <h2 id="see-also">See also</h2>
 
-<ol>
-  <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/LocalRings/html/index.html" title="Localizing polynomial rings at a prime ideal">LocalRings</a> – Localizing polynomial rings at a prime ideal</li>
-</ol>
+<ul>
+  <li><a title="Localizing polynomial rings at a prime ideal" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/index.html">LocalRings</a> – Localizing polynomial rings at a prime ideal</li>
+</ul>
 
 <h2 id="authors">Authors</h2>
 
-<ol>
-  <li><a href="http://ocf.berkeley.edu/~mahrud/">Mahrud Sayrafi</a> <a href="mailto:mahrud@berkeley.edumahrud@berkeley.edu">mahrud@berkeley.edumahrud@berkeley.edu</a></li>
-  <li><a href="http://www.math.cornell.edu/~mike/">Mike Stillman</a> <a href="mailto:mike@math.cornell.edumike@math.cornell.edu">mike@math.cornell.edumike@math.cornell.edu</a></li>
-</ol>
+<ul>
+  <li><a href="http://ocf.berkeley.edu/~mahrud/">Mahrud Sayrafi</a> &lt;<a href="mailto:mahrud@berkeley.edu">mahrud@berkeley.edu</a>&gt;</li>
+  <li><a href="http://www.math.cornell.edu/~mike/">Mike Stillman</a> &lt;<a href="mailto:mike@math.cornell.edu">mike@math.cornell.edu</a>&gt;</li>
+</ul>
 
 <h2 id="version">Version</h2>
 <p>This documentation describes version <strong>1.0</strong> of PruneComplex.</p>
+
 <h2 id="source-code">Source code</h2>
-<p>The source code from which this documentation is derived is in the file <a href="share/Macaulay2/PruneComplex.m2">PruneComplex.m2</a>.  The auxiliary files accompanying it are in the directory <a href="share/Macaulay2/PruneComplex/">PruneComplex/</a>.</p>
+<p>The source code from which this documentation is derived is in the file <a href="share/Macaulay2/PruneComplex.m2">PruneComplex.m2</a>. The auxiliary files accompanying it are in the directory <a href="share/Macaulay2/PruneComplex/">PruneComplex/</a>.</p>
+
 <h2 id="exports">Exports</h2>
 
-<ol class="exports">
+<ul class="exports">
   <li>Functions and commands
-    <ol>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/_is__Scalar.html" title="check whether a ring element is a scalar">isScalar</a> – check whether a ring element is a scalar</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/_prune__Complex.html" title="Prunes a chain complex or list of mutable matrices">pruneComplex</a> – Prunes a chain complex or list of mutable matrices</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/_prune__Diff.html" title="Prunes a single differential in a chain complex or list of mutable matrices">pruneDiff</a> – Prunes a single differential in a chain complex or list of mutable matrices</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/_prune__Unit.html" title="Prunes a unit of a differential in a list of mutable matrices">pruneUnit</a> – Prunes a unit of a differential in a list of mutable matrices</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/_to__Chain__Complex.html" title="Converts a list of mutable matrices into a ChainComplex.">toChainComplex</a> – Converts a list of mutable matrices into a ChainComplex.</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/_to__Mutable__Complex.html" title="Converts a chain complex into a list of mutable matrices.">toMutableComplex</a> – Converts a chain complex into a list of mutable matrices.</li>
-    </ol>
+    <ul>
+      <li><a title="check whether a ring element is a scalar" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_is__Scalar.html">isScalar</a> – check whether a ring element is a scalar</li>
+      <li><a title="Prunes a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Complex.html">pruneComplex</a> – Prunes a chain complex or list of mutable matrices</li>
+      <li><a title="Prunes a single differential in a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Diff.html">pruneDiff</a> – Prunes a single differential in a chain complex or list of mutable matrices</li>
+      <li><a title="Prunes a unit of a differential in a list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Unit.html">pruneUnit</a> – Prunes a unit of a differential in a list of mutable matrices</li>
+      <li><a title="Converts a list of mutable matrices into a ChainComplex." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_to__Chain__Complex.html">toChainComplex</a> – Converts a list of mutable matrices into a ChainComplex.</li>
+      <li><a title="Converts a chain complex into a list of mutable matrices." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_to__Mutable__Complex.html">toMutableComplex</a> – Converts a chain complex into a list of mutable matrices.</li>
+    </ul>
+  </li>
+  <li>Methods
+    <ul>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"isScalar(RingElement)"</span></code> – see <a title="check whether a ring element is a scalar" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_is__Scalar.html">isScalar</a> – check whether a ring element is a scalar</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneComplex(ChainComplex)"</span></code> – see <a title="Prunes a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Complex.html">pruneComplex</a> – Prunes a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneComplex(ChainComplex,ZZ)"</span></code> – see <a title="Prunes a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Complex.html">pruneComplex</a> – Prunes a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneComplex(List)"</span></code> – see <a title="Prunes a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Complex.html">pruneComplex</a> – Prunes a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneComplex(List,ZZ)"</span></code> – see <a title="Prunes a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Complex.html">pruneComplex</a> – Prunes a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneDiff(ChainComplex,ZZ)"</span></code> – see <a title="Prunes a single differential in a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Diff.html">pruneDiff</a> – Prunes a single differential in a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneDiff(ChainComplex,ZZ,List)"</span></code> – see <a title="Prunes a single differential in a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Diff.html">pruneDiff</a> – Prunes a single differential in a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneDiff(List,ZZ)"</span></code> – see <a title="Prunes a single differential in a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Diff.html">pruneDiff</a> – Prunes a single differential in a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneDiff(List,ZZ,List)"</span></code> – see <a title="Prunes a single differential in a chain complex or list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Diff.html">pruneDiff</a> – Prunes a single differential in a chain complex or list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"pruneUnit(List,ZZ,Sequence,List)"</span></code> – see <a title="Prunes a unit of a differential in a list of mutable matrices" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_prune__Unit.html">pruneUnit</a> – Prunes a unit of a differential in a list of mutable matrices</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"toChainComplex(List)"</span></code> – see <a title="Converts a list of mutable matrices into a ChainComplex." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_to__Chain__Complex.html">toChainComplex</a> – Converts a list of mutable matrices into a ChainComplex.</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"toChainComplex(List,Module)"</span></code> – see <a title="Converts a list of mutable matrices into a ChainComplex." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_to__Chain__Complex.html">toChainComplex</a> – Converts a list of mutable matrices into a ChainComplex.</li>
+      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"toMutableComplex(ChainComplex)"</span></code> – see <a title="Converts a chain complex into a list of mutable matrices." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/_to__Mutable__Complex.html">toMutableComplex</a> – Converts a chain complex into a list of mutable matrices.</li>
+    </ul>
   </li>
   <li>Symbols
-    <ol>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/___Direction.html" title="Determines the direction with which the matrices in the complex is pruned">Direction</a> – Determines the direction with which the matrices in the complex is pruned</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/___Pruning__Map.html" title="Whether to compute a morphism of complexes">PruningMap</a> – Whether to compute a morphism of complexes</li>
-      <li><a href="/home/mahrud/.Macaulay2/local/share/doc/Macaulay2/PruneComplex/html/___Unit__Test.html" title="Limit which units are to be pruned">UnitTest</a> – Limit which units are to be pruned</li>
-    </ol>
+    <ul>
+      <li><a title="Determines the direction with which the matrices in the complex is pruned" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/___Direction.html">Direction</a> – Determines the direction with which the matrices in the complex is pruned</li>
+      <li><a title="Whether to compute a morphism of complexes" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/___Pruning__Map.html">PruningMap</a> – Whether to compute a morphism of complexes</li>
+      <li><a title="Limit which units are to be pruned" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/___Unit__Test.html">UnitTest</a> – Limit which units are to be pruned</li>
+    </ul>
   </li>
-</ol>
+</ul>
+
+<h2 id="for-the-programmer">For the programmer</h2>
+<p class="waystouse">The object <a title="Pruning chain complexes over polynomial and local rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/PruneComplex/html/index.html">PruneComplex</a> is a <a title="the class of all packages" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/Macaulay2Doc/html/___Package.html">package</a>
+.</p>
+
+</div>
 
 <!-- ########################################################################################### -->
     </div>
@@ -234,6 +275,6 @@ o8 = true
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9.5/elasticlunr.min.js"
       integrity="sha256-cUqUYjN4U6JfE3pqo/8aqbyS/Y3T0dNljhd+R1wGUYE=" crossorigin="anonymous"></script>
-    <script src="/m2doc/static/search.js"></script>
+    <script src="/LearnM2/static/search.js"></script>
   </body>
 </html>

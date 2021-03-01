@@ -11,7 +11,7 @@ kk = ZZ/32003;
 R = kk[x,y,z,w]; -- this is a ring
 {% endM2 %}
 
-## monomialCurveIdeal
+## Parametric Curve
 {:.label}
 
 This methods yields the twisted cubic as the ideal of a projective curve given parametrically by the map:
