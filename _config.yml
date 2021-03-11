@@ -27,7 +27,6 @@ collections:
 
 # Markdown specs
 markdown: kramdown
-highlighter: rouge
 
 kramdown:
   # we use KaTeX
@@ -39,11 +38,8 @@ kramdown:
   # don't make typographical conversions like >> to »
   gfm_quirks: [paragraph_end, no_auto_typographic]
   # disables syntax highlighter
-  #syntax_highlighter_opts:
-  #  disable: true
-  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    default_lang: "macaulay2"
+    disable: "true"
 
 # Exclusions from the final site
 exclude:
