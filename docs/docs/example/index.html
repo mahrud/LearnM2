@@ -69,9 +69,18 @@
     <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
       integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
+
+    <!-- Elasticlunr for search.js -->
+    <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9.5/elasticlunr.min.js"
+      integrity="sha256-cUqUYjN4U6JfE3pqo/8aqbyS/Y3T0dNljhd+R1wGUYE=" crossorigin="anonymous"></script>
+
+    <!-- Prism -->
+    <link href="/LearnM2/static/prism.css" rel="stylesheet" type="text/css" />
+    <script src="/LearnM2/static/prism.js"></script>
+    <script src="/LearnM2/static/macaulay2.js"></script>
   </head>
 
-  <body class="theme-base-">
+  <body class="theme-base- language-Macaulay2">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -124,8 +133,8 @@
   <p>Let’s first define the coordinate ring of ( \P^3 ), where the twisted cubic lies:</p>
 
 <figure class="highlight">
-  <pre><code class="language-macaulay2" data-lang="macaulay2"><span class="n">i1</span> <span class="p">:</span> <span class="n">kk</span> <span class="o">=</span> <span class="n">ZZ</span><span class="o">/</span><span class="mi">32003</span><span class="p">;</span></code></pre>
-  <pre><code class="language-macaulay2"><span class="n">i2</span> <span class="p">:</span> <span class="n">R</span> <span class="o">=</span> <span class="n">kk</span><span class="err">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">w</span><span class="err">]</span><span class="p">;</span> <span class="c1">-- this is a ring</span></code></pre>
+  <pre><code class="language-macaulay2" data-lang="macaulay2">i1 : kk = ZZ/32003;</code></pre>
+  <pre><code class="language-macaulay2">i2 : R = kk[x,y,z,w]; -- this is a ring</code></pre>
 </figure>
 
 <h2 class="label" id="parametric-curve">Parametric Curve</h2>
@@ -141,12 +150,12 @@ z &amp;\mapsto t.
  \]</p>
 
 <figure class="highlight">
-  <pre><code class="language-macaulay2" data-lang="macaulay2"><span class="n">i3</span> <span class="p">:</span> <span class="n">monomialCurveIdeal</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="err">}</span><span class="p">)</span>
+  <pre><code class="language-macaulay2" data-lang="macaulay2">i3 : monomialCurveIdeal(R, {1,2,3})
 
-             <span class="mi">2</span>                    <span class="mi">2</span>
-<span class="n">o3</span> <span class="o">=</span> <span class="kd">ideal</span> <span class="p">(</span><span class="n">z</span>  <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span>  <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
+             2                    2
+o3 = ideal (z  - y*w, y*z - x*w, y  - x*z)
 
-<span class="n">o3</span> <span class="p">:</span> <span class="kd">Ideal</span> <span class="nf">of</span> <span class="n">R</span></code></pre>
+o3 : Ideal of R</code></pre>
 </figure>
 
 <h2 class="label" id="determinantal-ideal">Determinantal Ideal</h2>
@@ -159,12 +168,12 @@ y &amp; z &amp; w
 \end{pmatrix}\]</p>
 
 <figure class="highlight">
-  <pre><code class="language-macaulay2" data-lang="macaulay2"><span class="n">i4</span> <span class="p">:</span> <span class="n">minors</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">matrix</span> <span class="err">{{</span><span class="n">R_0</span><span class="p">,</span> <span class="n">R_1</span><span class="p">,</span> <span class="n">R_2</span><span class="err">}</span><span class="p">,</span><span class="err">{</span><span class="n">R_1</span><span class="p">,</span><span class="n">R_2</span><span class="p">,</span><span class="n">R_3</span><span class="err">}}</span><span class="p">)</span>
+  <pre><code class="language-macaulay2" data-lang="macaulay2">i4 : minors(2, matrix {{R_0, R_1, R_2},{R_1,R_2,R_3}})
 
-               <span class="mi">2</span>                        <span class="mi">2</span>
-<span class="n">o4</span> <span class="o">=</span> <span class="kd">ideal</span> <span class="p">(</span><span class="o">-</span> <span class="n">y</span>  <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="o">-</span> <span class="n">z</span>  <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">w</span><span class="p">)</span>
+               2                        2
+o4 = ideal (- y  + x*z, - y*z + x*w, - z  + y*w)
 
-<span class="n">o4</span> <span class="p">:</span> <span class="kd">Ideal</span> <span class="nf">of</span> <span class="n">R</span></code></pre>
+o4 : Ideal of R</code></pre>
 </figure>
 
 <h2 class="label" id="veronese-embedding">Veronese Embedding</h2>
@@ -173,12 +182,12 @@ y &amp; z &amp; w
 That is:</p>
 
 <figure class="highlight">
-  <pre><code class="language-macaulay2" data-lang="macaulay2"><span class="n">i5</span> <span class="p">:</span> <span class="n">kernel</span> <span class="n">map</span><span class="p">(</span><span class="n">kk</span><span class="err">[</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="err">]</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="err">{</span><span class="n">s</span><span class="err">^</span><span class="mi">3</span><span class="p">,</span> <span class="n">s</span><span class="err">^</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="err">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">t</span><span class="err">^</span><span class="mi">3</span><span class="err">}</span><span class="p">)</span>
+  <pre><code class="language-macaulay2" data-lang="macaulay2">i5 : kernel map(kk[s,t], R, {s^3, s^2*t, s*t^2, t^3})
 
-             <span class="mi">2</span>                    <span class="mi">2</span>
-<span class="n">o5</span> <span class="o">=</span> <span class="kd">ideal</span> <span class="p">(</span><span class="n">z</span>  <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span>  <span class="o">-</span> <span class="n">x</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
+             2                    2
+o5 = ideal (z  - y*w, y*z - x*w, y  - x*z)
 
-<span class="n">o5</span> <span class="p">:</span> <span class="kd">Ideal</span> <span class="nf">of</span> <span class="n">R</span></code></pre>
+o5 : Ideal of R</code></pre>
 </figure>
 
 <h2 id="resolution">Resolution</h2>

@@ -69,9 +69,18 @@
     <link href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/copy-tex.min.js"
       integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>
+
+    <!-- Elasticlunr for search.js -->
+    <script src="https://cdn.jsdelivr.net/npm/elasticlunr@0.9.5/elasticlunr.min.js"
+      integrity="sha256-cUqUYjN4U6JfE3pqo/8aqbyS/Y3T0dNljhd+R1wGUYE=" crossorigin="anonymous"></script>
+
+    <!-- Prism -->
+    <link href="/LearnM2/static/prism.css" rel="stylesheet" type="text/css" />
+    <script src="/LearnM2/static/prism.js"></script>
+    <script src="/LearnM2/static/macaulay2.js"></script>
   </head>
 
-  <body class="theme-base-">
+  <body class="theme-base- language-Macaulay2">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -234,31 +243,31 @@ o13 : ChainComplex
       <li><a title="find the pre-image (pullback) of image of a map over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Modulo.html">localModulo</a> – find the pre-image (pullback) of image of a map over a local ring</li>
       <li><a title="find a minimal presentation" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Prune.html">localPrune</a> – find a minimal presentation</li>
       <li><a title="find a resolution over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Resolution.html">localResolution</a> – find a resolution over a local ring</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localRing"</span></code></li>
+      <li><code>"localRing"</code></li>
       <li><a title="find syzygies" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_localsyz.html">localsyz</a> – find syzygies</li>
       <li><a title="set the maximal ideal for local ring methods" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_set__Max__Ideal.html">setMaxIdeal</a> – set the maximal ideal for local ring methods</li>
     </ul>
   </li>
   <li>Methods
     <ul>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"hilbertSamuelFunction(Ideal,Module,ZZ)"</span></code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"hilbertSamuelFunction(Ideal,Module,ZZ,ZZ)"</span></code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"hilbertSamuelFunction(Module,ZZ)"</span></code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"hilbertSamuelFunction(Module,ZZ,ZZ)"</span></code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"liftUp(Ideal,Ring)"</span></code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"liftUp(Matrix,Ring)"</span></code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"liftUp(Module,Ring)"</span></code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"liftUp(MutableMatrix,Ring)"</span></code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"liftUp(Thing)"</span></code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localComplement(Matrix)"</span></code> – see <a title="find the splitting of the target of a map" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Complement.html">localComplement</a> – find the splitting of the target of a map</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localMingens(Matrix)"</span></code> – see <a title="finds a minimal set of generators" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Mingens.html">localMingens</a> – finds a minimal set of generators</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localModulo(Matrix,Matrix)"</span></code> – see <a title="find the pre-image (pullback) of image of a map over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Modulo.html">localModulo</a> – find the pre-image (pullback) of image of a map over a local ring</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localPrune(Module)"</span></code> – see <a title="find a minimal presentation" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Prune.html">localPrune</a> – find a minimal presentation</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localResolution(Ideal)"</span></code> – see <a title="find a resolution over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Resolution.html">localResolution</a> – find a resolution over a local ring</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localResolution(Module)"</span></code> – see <a title="find a resolution over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Resolution.html">localResolution</a> – find a resolution over a local ring</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localRing(Ring,Ideal)"</span></code></li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"localsyz(Matrix)"</span></code> – see <a title="find syzygies" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_localsyz.html">localsyz</a> – find syzygies</li>
-      <li><code class="language-macaulay2 highlighter-rouge"><span class="s2">"setMaxIdeal(Ideal)"</span></code> – see <a title="set the maximal ideal for local ring methods" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_set__Max__Ideal.html">setMaxIdeal</a> – set the maximal ideal for local ring methods</li>
+      <li><code>"hilbertSamuelFunction(Ideal,Module,ZZ)"</code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
+      <li><code>"hilbertSamuelFunction(Ideal,Module,ZZ,ZZ)"</code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
+      <li><code>"hilbertSamuelFunction(Module,ZZ)"</code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
+      <li><code>"hilbertSamuelFunction(Module,ZZ,ZZ)"</code> – see <a title="Computes the Hilbert-Samuel Function of Modules over Local Rings" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_hilbert__Samuel__Function.html">hilbertSamuelFunction</a> – Computes the Hilbert-Samuel Function of Modules over Local Rings</li>
+      <li><code>"liftUp(Ideal,Ring)"</code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
+      <li><code>"liftUp(Matrix,Ring)"</code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
+      <li><code>"liftUp(Module,Ring)"</code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
+      <li><code>"liftUp(MutableMatrix,Ring)"</code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
+      <li><code>"liftUp(Thing)"</code> – see <a title="Lifts various objects over R_P to R." href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_lift__Up.html">liftUp</a> – Lifts various objects over R_P to R.</li>
+      <li><code>"localComplement(Matrix)"</code> – see <a title="find the splitting of the target of a map" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Complement.html">localComplement</a> – find the splitting of the target of a map</li>
+      <li><code>"localMingens(Matrix)"</code> – see <a title="finds a minimal set of generators" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Mingens.html">localMingens</a> – finds a minimal set of generators</li>
+      <li><code>"localModulo(Matrix,Matrix)"</code> – see <a title="find the pre-image (pullback) of image of a map over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Modulo.html">localModulo</a> – find the pre-image (pullback) of image of a map over a local ring</li>
+      <li><code>"localPrune(Module)"</code> – see <a title="find a minimal presentation" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Prune.html">localPrune</a> – find a minimal presentation</li>
+      <li><code>"localResolution(Ideal)"</code> – see <a title="find a resolution over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Resolution.html">localResolution</a> – find a resolution over a local ring</li>
+      <li><code>"localResolution(Module)"</code> – see <a title="find a resolution over a local ring" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_local__Resolution.html">localResolution</a> – find a resolution over a local ring</li>
+      <li><code>"localRing(Ring,Ideal)"</code></li>
+      <li><code>"localsyz(Matrix)"</code> – see <a title="find syzygies" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_localsyz.html">localsyz</a> – find syzygies</li>
+      <li><code>"setMaxIdeal(Ideal)"</code> – see <a title="set the maximal ideal for local ring methods" href="/home/mahrud/Projects/M2/M2/M2/BUILD/build/usr-dist/common/share/doc/Macaulay2/LocalRings/html/_set__Max__Ideal.html">setMaxIdeal</a> – set the maximal ideal for local ring methods</li>
     </ul>
   </li>
   <li>Symbols

@@ -27,15 +27,13 @@ collections:
 
 # Markdown specs
 markdown: kramdown
-highlighter: rouge
 
 kramdown:
   footnote_backlink: "&#x21a9;&#xfe0e;"
   parse_block_html: true
   math_engine: null # pending https://github.com/github/pages-gem/pull/545
-  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    default_lang: "macaulay2"
+    disable: "true"
 
 # Exclusions from the final site
 exclude:
