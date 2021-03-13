@@ -5,10 +5,10 @@ author: Mahrud Sayrafi
 parse: true
 ---
 
-Let's first define the coordinate ring of \( \P^3 \), where the twisted cubic lies:
+Let's first define the coordinate ring of $ \\P^3 $, where the twisted cubic lies:
 {% M2 example %}
 kk = ZZ/32003;
-R = kk[x,y,z,w]; -- this is a ring
+R = kk[w, x, y, z]; -- this is a ring
 {% endM2 %}
 
 ## Parametric Curve
@@ -17,15 +17,15 @@ R = kk[x,y,z,w]; -- this is a ring
 This methods yields the twisted cubic as the ideal of a projective curve given parametrically by the map:
 \\[
 \begin{aligned}
-k[x,y,z] &\to k[t] \cr
-x &\mapsto t^3 \cr
-y &\mapsto t^2 \cr
-z &\mapsto t.
- \end{aligned}
- \\]
+  k[x,y,z] &\to k[t] \cr
+  x &\mapsto t^3 \cr
+  y &\mapsto t^2 \cr
+  z &\mapsto t.
+\end{aligned}
+\\]
 
 {% M2 example %}
-monomialCurveIdeal(R, {1,2,3})
+monomialCurveIdeal(R, {1, 2, 3})
 {% endM2 %}
 
 
@@ -33,14 +33,15 @@ monomialCurveIdeal(R, {1,2,3})
 {:.label}
 
 This method defines the twisted cubic as a determinantal ideal of $2\times 2$ minors, that is:
-\\[
-I = I_2 \begin{pmatrix}
-x & y & z \cr
-y & z & w
-\end{pmatrix}\\]
+\\[ I = I_2
+  \begin{pmatrix}
+    x & y & z \cr
+    y & z & w
+  \end{pmatrix}
+\\]
 
 {% M2 example %}
-minors(2, matrix {{R_0, R_1, R_2},{R_1,R_2,R_3}})
+minors(2, matrix {{x, y, z}, {y, z, w}})
 {% endM2 %}
 
 
@@ -54,6 +55,12 @@ That is:
 kernel map(kk[s,t], R, {s^3, s^2*t, s*t^2, t^3})
 {% endM2 %}
 
-## Resolution
+## Resolution and Betti Table
 
-$$ 0 \to 2\mathcal O_{\\P^3}(-3) \to 3\mathcal O_{\\P^3}(-2) \to \mathcal O_{\\P^3} \to \mathcal O_C \to 0 $$
+A minimal free resolution of the ideal defining the twisted cubic:
+\\[ 0 \gets \mathcal O_C \gets \mathcal O_{\\P^3} \gets 3\mathcal O_{\\P^3}(-2) \gets 2\mathcal O_{\\P^3}(-3) \gets 0 \\]
+
+{% M2 example %}
+res oo
+betti oo
+{% endM2 %}
