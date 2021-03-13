@@ -6,131 +6,156 @@ parse: true
 
 {::options parse_block_html="true" /}
 
-[*Macaulay2*](https://macaulay2.com/) is a interpreted, dynamically typed programming language intended to support research in [algebraic geometry] and [commutative algebra]. Development of *Macaulay2* has been funded by the National Science Foundation since 1992.
+[_Macaulay2_](https://macaulay2.com/) is an interpreted, dynamically typed programming language intended to support research in [algebraic geometry] and [commutative algebra] using open sourced software.
+
+[algebraic geometry]: http://en.wikipedia.org/wiki/Algebraic_geometry
+[commutative algebra]: http://en.wikipedia.org/wiki/Commutative_algebra
+
+---
 
 #### A First Example
 {:.label}
 
-<div class="container">
 <div class="row">
-<div class="col-lg-12 col-md-12">
-Computing the minimal free resolution of the [Twisted Cubic](docs/example):
-</div><div class="col-lg-6 col-md-6">
+ <div class="col-lg-12 col-md-12">
+  Here is an example of how to compute the minimal free resolution of the [Twisted Cubic](docs/example):
+ </div><div class="col-md-6">
 #### Code:
 ```
-R = QQ[x, y, z, w];
+R = QQ[x, y, z, w]; -- defines a ring
 I = monomialCurveIdeal(R, {1, 2, 3})
-C = res I
+C = res I -- computes the resolution
 ```
+<br />
 
 #### Getting help:
 ```
+-- quick usage information
+? monomialCurveIdeal
+```
+```
+-- details and examples
 help monomialCurveIdeal
 ```
-</div><div class="col-lg-6 col-md-6">
+```
+-- documentation on the web
+viewHelp monomialCurveIdeal
+```
+
+ </div>
+ <div class="col-md-6">
 #### Result:
 {% M2 index %}
 R = QQ[x, y, z, w];
 I = monomialCurveIdeal(R, {1, 2, 3})
 C = res I
 {% endM2 %}
-  </div>
  </div>
 </div>
 
-#### Resources
-{:.label}
-
-<div class="container">
- <div class="row">
-  <div class="col-lg-4 col-md-6 feature">
-   <h4>Learn by Reading</h4>
-   - What is Macaulay2?
-   - Learning resources
-   - M2 Handbook
-   - Cheat Sheet
-  </div>
-
-  <div class="col-lg-4 col-md-6 feature">
-   <h4>Learn by Doing</h4>
-   - Try M2
-   - Download M2
-   - Packages
-   - IDEs, Editors, and Tools
-  </div>
-
-  <div class="col-lg-4 col-md-6 feature">
-   <h4>Write a Package</h4>
-   - [M2 Style Guide](https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide)
-   - Package sample
-   - [`packages` directory](packages)
-  </div>
-
-  <div class="col-lg-4 col-md-6 feature">
-   <h4>Documentation</h4>
-   - Language Reference
-   - Internal Manual
-  </div>
-
-  <div class="col-lg-4 col-md-6 feature">
-   <h4>Books and Articles</h4>
-   - Computations Book
-   - JSAG Articles
-   - M2 in arXiv
-  </div>
-
-  <div class="col-lg-4 col-md-6 feature">
-   <h4>Join the Community</h4>
-   - Macaulay2 Workshops
-   - Mailing List
-   - Github?
-  </div>
- </div>
- <br>
-
- <div class="row">
-  <div class="col-12" style="text-align: center">
-   <a class="btn btn-sm btn-outline-primary" href="/learning/code-examples/">See Macaulay2 Examples</a>
-   <a class="btn btn-sm btn-outline-primary" href="https://faculty.math.illinois.edu/Macaulay2/TryItOut/">Try M2 In Your Browser</a>
-  </div>
+<div class="row">
+ <div class="col-12" style="text-align: center">
+  <a class="btn btn-sm btn-outline-primary" href="download">Download Macaulay2</a>
+  <a class="btn btn-sm btn-outline-primary" href="http://www.unimelb-macaulay2.cloud.edu.au">Try M2 in a Browser</a>
  </div>
 </div>
 
+---
 
-TODO:
-- Editors
-  - Emacs
-  - Vim
-  - Atom
-  - vscode
-- Report bug
-- Contributing
-- [Wikis](http://wiki.macaulay2.com/)
-- [Projects](https://faculty.math.illinois.edu/Macaulay2/dev/projects/)
-- Screenshots
-- Getting started
-  - <a href="../doc/Macaulay2/share/doc/Macaulay2/BeginningMacaulay2/html/">Beginning Macaulay2</a>, Mathematicians' Introduction to <i>Macaulay2</i>, by David Eisenbud and Michael Stillman
-  - <a href="../doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_a_spfirst_sp__Macaulay2_spsession.html">a first Macaulay 2 session</a>
-  - <a href="../Book/ComputationsBook/chapters/varieties/chapter-wrapper.pdf">Ideals and Varieties</a>, by Bernd Sturmfels
-  - <a href="../Book/ComputationsBook/chapters/geometry/chapter-wrapper.pdf">Projective varieties and homological algebra</a>, by David Eisenbud
-- Jobs
-- <a href="/Macaulay2/Publications/">Publications</a>
-  - <a href="http://j-sag.org/">The Journal of Software for Algebra and Geometry</a>
-  - <a href="/Macaulay2/Book/">Computations in algebraic geometry with <i>Macaulay 2</i></a>, a book
-  - <a href="/Macaulay2/Publications/#papers">Papers</a> referring to <i>Macaulay2</i>
-  - <a href="http://www.swmath.org/software/537">Papers</a> referring to <i>Macaulay2</i> indexed by Zentralblatt
-  - <a href="/Macaulay2/Citing/">How to cite</a> <i>Macaulay2</i>
+<div class="row justify-content-around">
+ <div class="col-auto feature">
+  <h4>Learn by Reading</h4>
+  - [Beginning Macaulay2](BeginningMacaulay2) <!-- TODO: [a first Macaulay2 session](a first Macaulay2 session)? -->
+  - [Computations Book](book)
+  - [Cheat Sheet](cheatsheat)
+ </div>
 
-- Acknowledgments
-  -  <a href="/Macaulay2/Contributors/">Contributors</a>
-  -  <a href="/Macaulay2/Libraries/">Software libraries</a>
-  -  <a href="/Macaulay2/Funding/">Funding</a>
-  -  <a href="http://www.math.columbia.edu/~bayer/Macaulay/">Macaulay</a>, the predecessor of <i>Macaulay2</i>
-  -  <a href="http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay">Francis Macaulay</a>, the mathematician after whom <i>Macaulay2</i> is named
-- A random paper referring to <i>Macaulay2</i>: <script type="text/javascript">citation();</script>
-- A random <i>Macaulay2</i> documentation node: <script type="text/javascript">documentation();</script>
+ <div class="col-auto feature">
+  <h4>Learn by Doing</h4>
+  - [Project Ideas](https://faculty.math.illinois.edu/Macaulay2/dev/projects/)
+  - [Editors and Workflows](examples)
+ </div>
 
-<!-- See https://hackage.haskell.org/package/AC-Angle-1.0/docs/Data-Angle.html. -->
+ <div class="col-auto feature">
+  <h4>Write a Package</h4>
+  - [M2 Style Guide](https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide)
+  - [Package directory](packages)
+ </div>
 
-[algebraic geometry]: http://en.wikipedia.org/wiki/Algebraic_geometry
-[commutative algebra]: http://en.wikipedia.org/wiki/Commutative_algebra
+ <div class="col-auto feature">
+  <h4>Documentation</h4>
+  - [Language Reference](reference)
+  - [Internal Notes](https://github.com/Macaulay2/M2/wiki/Internals%3A-Meeting-Notes)
+  - [Source Code](https://github.com/Macaulay2/M2)
+ </div>
+
+ <div class="col-auto feature">
+  <h4>M2 in Research</h4>
+  - [Books and Articles](https://faculty.math.illinois.edu/Macaulay2/Publications)
+  - [Citing Macaulay2](citing)
+  - [JSAG](http://j-sag.org/)
+ </div>
+
+ <div class="col-auto feature">
+  <h4>Join the Community</h4>
+  - [Workshops]({{ site.baseurl }}/workshops)
+  - [Slack Workspace](https://m2internals.slack.com/)
+  - [Google Groups](http://groups.google.com/group/macaulay2)
+ </div>
+</div>
+
+---
+
+<div class="row justify-content-around align-items-center">
+ <div class="col-2 feature">
+  <a href="https://www.gnu.org/software/emacs/">
+<img style="height: 100%; width: 100%; object-fit: contain" src="https://www.gnu.org/software/emacs/images/emacs.png"/>
+  </a>
+ </div>
+
+ <div class="col feature">
+  The recommended IDE for using _Macaulay2_ in research is [Emacs](https://www.gnu.org/software/emacs/)
+  (here is a [cheat sheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)).
+  Community plugins for Vim, Atom, VSCode, and Sublime are also available.
+ </div>
+</div>
+
+<!-- TODO: Screenshots -->
+
+---
+
+<div class="row justify-content-around align-items-center">
+ <div class="col feature">
+  Development of _Macaulay2_ has been funded by the National Science Foundation since 1992.
+  We also acknowledge our [contributors](contributors),
+  [software libraries](libraries) used in _Macaulay2_, as well as
+  [Macaulay](http://www.math.columbia.edu/~bayer/Macaulay/), the predecessor of _Macaulay2_.
+
+  The namesake of _Macaulay2_ is [Francis Macaulay FRS](http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay).
+ </div>
+
+ <div class="col-2 feature">
+  <a href="https://www.nsf.gov/">
+   <img style="height: 100%; width: 100%; object-fit: contain" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg"/>
+  </a>
+ </div>
+</div>
+
+<!--
+---
+
+<div class="row justify-content-around align-items-center">
+ <div class="col feature">
+ - A random paper referring to _Macaulay2_: <script type="text/javascript">citation();</script>
+ - A random _Macaulay2_ package: <script type="text/javascript">documentation();</script>
+ </div>
+</div>
+
+---
+
+<div class="row justify-content-around align-items-center">
+ <div class="col feature">
+ </div>
+</div>
+
+-->
