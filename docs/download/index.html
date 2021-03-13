@@ -85,7 +85,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
 	<a class="navbar-brand" href="/LearnM2/">
-	  <img src="/LearnM2/static/syzygy.jpg" alt="M2 Syzygy" style="width:30px; margin-right: 5px"/>
+	  <img src="/LearnM2/static/syzygy.jpg" title="M2 Syzygy, by Courtney Gibbons" style="width:30px; margin-right: 5px"/>
 	  <strong>Learn Macaulay2</strong>
 	</a>
 	
@@ -123,14 +123,57 @@
     <div class="container" id="main">
 <!-- ########################################################################################### -->
 <div class="page">
-  <h3 class="page-title">Download</h3>
-  <ul>
-  <li>Stable version is 1.15, released December, 2019</li>
-  <li>Changelog</li>
-  <li>Public key</li>
-  <li>Source code</li>
-  <li>Website</li>
+  <h4 id="binary-distributions-">Binary distributions <a href="https://github.com/Macaulay2/M2/releases/latest"><img src="https://img.shields.io/github/v/release/Macaulay2/M2?label=stable&amp;style=flat-square" alt="release badge" /></a></h4>
+
+<p>Depending on your operating system and machine architecture, you may be able to download a prebuilt distribution of <em>Macaulay2</em>:</p>
+
+<ul>
+  <li><a href="https://github.com/Macaulay2/homebrew-tap">Homebrew tap</a>
+    <pre><code>brew tap Macaulay2/tap
+brew install M2
+</code></pre>
+  </li>
+  <li><a href="https://launchpad.net/~macaulay2/+archive/ubuntu/macaulay2">Ubuntu package via PPA</a>
+    <pre><code>sudo add-apt-repository ppa:macaulay2/macaulay2
+sudo apt install macaulay2
+</code></pre>
+  </li>
+  <li><a href="https://src.fedoraproject.org/rpms/Macaulay2">Fedora package</a>
+    <pre><code>sudo dnf install Macaulay2
+</code></pre>
+  </li>
 </ul>
+
+<hr />
+
+<h4 id="building-from-source-">Building from source <a href="https://github.com/Macaulay2/M2/actions/workflows/test_build.yml"><img src="https://github.com/Macaulay2/M2/actions/workflows/test_build.yml/badge.svg?branch=master" alt="nightly badge" /></a></h4>
+
+<p>The primary source code repository for <em>Macaulay2</em> is on <a href="https://github.com/Macaulay2/M2">GitHub</a>.
+For introductions to version control see:</p>
+<ul>
+  <li><a href="https://github.com/Macaulay2/M2/wiki/Git-for-Macaulay2-Contributors">Git for Macaulay2 Contributors</a></li>
+  <li><a href="https://github.com/Macaulay2/M2/wiki/Git-for-Workshop-participants">Git for Workshop Participants</a></li>
+</ul>
+
+<p>See the <a href="https://github.com/Macaulay2/M2/blob/master/M2/INSTALL-CMake.md">install guide</a> for detailed instructions on how to build <em>Macaulay2</em> from source.
+A quick build using CMake and Ninja involves the following steps:</p>
+<pre><code class="language-shell">git clone https://github.com/Macaulay2/M2.git --branch development
+cd M2/M2/BUILD/build
+cmake -GNinja -S ../.. -B . -DCMAKE_BUILD_TYPE=Release
+ninja build-libraries build-programs
+ninja install-packages
+ninja M2-emacs
+</code></pre>
+
+<p>A list of common issues involving the CMake build is available on the <a href="https://github.com/Macaulay2/M2/wiki/FAQ%3A-CMake-Build-Problems">GitHub Wiki</a>. If you run into a problem not listed there or among the list of issues labeled <a href="https://github.com/Macaulay2/M2/labels/build%20system">“build system”</a>, please open a <a href="https://github.com/Macaulay2/M2/issues/new">new issue</a> on GitHub.</p>
+
+<hr />
+
+<h5 id="docker">Docker</h5>
+<ul>
+  <li><a href="https://github.com/Macaulay2/M2/blob/master/M2/BUILD/docker/README.md">Dockerfiles</a></li>
+</ul>
+
 
 </div>
 
