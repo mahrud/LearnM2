@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Macaulay2 Documentation
+title: Learn Macaulay2
 parse: true
 ---
 
