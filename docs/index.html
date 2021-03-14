@@ -85,17 +85,17 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
 	<a class="navbar-brand" href="/LearnM2/">
-	  <img src="/LearnM2/static/syzygy.jpg" title="M2 Syzygy, by Courtney Gibbons" style="width:30px; margin-right: 5px"/>
-	  <strong>Learn Macaulay2</strong>
-	</a>
-	
+	  <img src="/LearnM2/static/syzygy.jpg"
+	       title="M2 Syzygy, by Courtney Gibbons" style="width:30px; margin-right: 5px"/>
+	  <strong>Learn Macaulay2</strong></a>
+
 	<div class="collapse navbar-collapse" id="navb">
 	  <ul class="navbar-nav mr-auto">
 	    <li class="nav-item">
               <a class="nav-link" href="/LearnM2/download/">Download</a>
 	    </li>
 	    <li class="nav-item">
-              <a class="nav-link" href="/LearnM2/documentation/">Documentation</a>
+              <a class="nav-link" href="/LearnM2/documentation/">Docs</a>
 	    </li>
 	    <li class="nav-item">
               <a class="nav-link" href="/LearnM2/packages/">Packages</a>
@@ -123,7 +123,7 @@
     <div class="container" id="main">
 <!-- ########################################################################################### -->
 
-<p><a href="https://macaulay2.com/"><em>Macaulay2</em></a> is an interpreted, dynamically typed programming language intended to support research in <a href="http://en.wikipedia.org/wiki/Algebraic_geometry">algebraic geometry</a> and <a href="http://en.wikipedia.org/wiki/Commutative_algebra">commutative algebra</a> using open sourced software.</p>
+<p><a href="https://macaulay2.com/"><em>Macaulay2</em></a> is an interpreted, dynamically typed programming language intended to support research in <a href="http://en.wikipedia.org/wiki/Algebraic_geometry">algebraic geometry</a> and <a href="http://en.wikipedia.org/wiki/Commutative_algebra">commutative algebra</a> through open sourced software.</p>
 
 <hr />
 
@@ -131,7 +131,7 @@
 
 <div class="row">
   <div class="col-lg-12 col-md-12">
-    <p>Here is an example of how to compute the minimal free resolution of the <a href="docs/example">Twisted Cubic</a>:</p>
+    <p>Here is an example of how to compute the minimal free resolution of the <a href="docs/example"><em>twisted cubic</em></a>:</p>
   </div>
   <div class="col-md-6">
     <h4 id="code">Code:</h4>
@@ -205,7 +205,7 @@ o3 : ChainComplex</code></pre>
   </div>
 
   <div class="col-auto feature">
-    <h4>Write a Package</h4>
+    <h4>Writing a Package</h4>
     <ul>
       <li><a href="https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide">M2 Style Guide</a></li>
       <li><a href="packages">Package directory</a></li>
@@ -222,7 +222,7 @@ o3 : ChainComplex</code></pre>
   </div>
 
   <div class="col-auto feature">
-    <h4>M2 in Research</h4>
+    <h4>Research</h4>
     <ul>
       <li><a href="https://faculty.math.illinois.edu/Macaulay2/Publications">Books and Articles</a></li>
       <li><a href="citing">Citing Macaulay2</a></li>
@@ -231,11 +231,11 @@ o3 : ChainComplex</code></pre>
   </div>
 
   <div class="col-auto feature">
-    <h4>Join the Community</h4>
+    <h4>Community</h4>
     <ul>
       <li><a href="/LearnM2/workshops">Workshops</a></li>
       <li><a href="https://m2internals.slack.com/">Slack Workspace</a></li>
-      <li><a href="http://groups.google.com/group/macaulay2">Google Groups</a></li>
+      <li><a href="https://groups.google.com/group/macaulay2">Google Groups</a></li>
     </ul>
   </div>
 </div>
@@ -244,36 +244,51 @@ o3 : ChainComplex</code></pre>
 
 <div class="row justify-content-around align-items-center">
   <div class="col-2 feature">
-    <p><a href="https://www.gnu.org/software/emacs/">
-<img style="height: 100%; width: 100%; object-fit: contain" src="https://www.gnu.org/software/emacs/images/emacs.png" />
-  </a></p>
+    <p><a href="https://www.gnu.org/software/emacs/"><img src="https://www.gnu.org/software/emacs/images/emacs.png" alt="" class="feature" /></a></p>
   </div>
 
   <div class="col feature">
-    <p>The recommended IDE for using <em>Macaulay2</em> in research is <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+    <p>The recommended IDE for using Macaulay2 in research is <a href="https://www.gnu.org/software/emacs/">Emacs</a>
   (here is a <a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf">cheat sheet</a>).
-  Community plugins for Vim, Atom, VSCode, and Sublime are also available.</p>
+  Community plugins are also available for
+  <a href="https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/editors/vim">Vim</a>,
+  <a href="https://github.com/Macaulay2/language-macaulay2">Atom</a>,
+  <a href="https://github.com/coreysharris/vscode-macaulay2">VSCode</a>, and
+  <a href="https://github.com/Macaulay2/M2/wiki/Using-Macaulay2-with-Sublime">Sublime</a>.</p>
   </div>
 </div>
 
-<!-- TODO: Screenshots -->
+<div class="row">
+  <div class="col-3 feature">
+    <p><a href="/LearnM2/static/emacs0.png"><img src="/LearnM2/static/emacs0.png" alt="" class="feature" /></a></p>
+  </div>
+  <div class="col-3 feature">
+    <p><a href="/LearnM2/static/emacs1.png"><img src="/LearnM2/static/emacs1.png" alt="" class="feature" /></a></p>
+  </div>
+  <div class="col-3 feature">
+    <p><a href="/LearnM2/static/emacs2.png"><img src="/LearnM2/static/emacs2.png" alt="" class="feature" /></a></p>
+  </div>
+  <div class="col-3 feature">
+    <p><a href="/LearnM2/static/emacs3.png"><img src="/LearnM2/static/emacs3.png" alt="" class="feature" /></a></p>
+  </div>
+</div>
 
 <hr />
 
 <div class="row justify-content-around align-items-center">
   <div class="col feature">
-    <p>Development of <em>Macaulay2</em> has been funded by the National Science Foundation since 1992.
-  We also acknowledge our <a href="contributors">contributors</a>,
-  <a href="libraries">software libraries</a> used in <em>Macaulay2</em>, as well as
-  <a href="http://www.math.columbia.edu/~bayer/Macaulay/">Macaulay</a>, the predecessor of <em>Macaulay2</em>.</p>
+    <p>Development of Macaulay2 by <a href="https://faculty.math.illinois.edu/~dan/">Daniel R. Grayson</a>
+  and <a href="https://math.cornell.edu/michael-e-stillman">Michael E. Stillman</a> has been funded
+  by the National Science Foundation since 1992. We also acknowledge our many
+  <a href="contributors">contributors</a>, <a href="libraries">software libraries</a> used by Macaulay2,
+  as well as <a href="http://www.math.columbia.edu/~bayer/Macaulay/">Macaulay</a>,
+  the predecessor of Macaulay2 written by Dave Bayer and Michael Stillman.</p>
 
-    <p>The namesake of <em>Macaulay2</em> is <a href="http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay">Francis Macaulay FRS</a>.</p>
+    <p>The namesake of Macaulay2 is <a href="http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay">Francis Macaulay FRS</a>.</p>
   </div>
 
   <div class="col-2 feature">
-    <p><a href="https://www.nsf.gov/">
-   <img style="height: 100%; width: 100%; object-fit: contain" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg" />
-  </a></p>
+    <p><a href="https://www.nsf.gov/"><img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg" alt="" class="feature" /></a></p>
   </div>
 </div>
 
@@ -282,8 +297,8 @@ o3 : ChainComplex</code></pre>
 
 <div class="row justify-content-around align-items-center">
  <div class="col feature">
- - A random paper referring to _Macaulay2_: <script type="text/javascript">citation();</script>
- - A random _Macaulay2_ package: <script type="text/javascript">documentation();</script>
+ - A random paper referring to Macaulay2: <script type="text/javascript">citation();</script>
+ - A random Macaulay2 package: <script type="text/javascript">documentation();</script>
  </div>
 </div>
 
