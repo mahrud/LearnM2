@@ -6,7 +6,7 @@ parse: true
 
 {::options parse_block_html="true" /}
 
-[_Macaulay2_](https://macaulay2.com/) is an interpreted, dynamically typed programming language intended to support research in [algebraic geometry] and [commutative algebra] using open sourced software.
+[_Macaulay2_](https://macaulay2.com/) is an interpreted, dynamically typed programming language intended to support research in [algebraic geometry] and [commutative algebra] through open sourced software.
 
 [algebraic geometry]: http://en.wikipedia.org/wiki/Algebraic_geometry
 [commutative algebra]: http://en.wikipedia.org/wiki/Commutative_algebra
@@ -18,7 +18,7 @@ parse: true
 
 <div class="row">
  <div class="col-lg-12 col-md-12">
-  Here is an example of how to compute the minimal free resolution of the [Twisted Cubic](docs/example):
+  Here is an example of how to compute the minimal free resolution of the [_twisted cubic_](docs/example):
  </div><div class="col-md-6">
 #### Code:
 ```
@@ -100,7 +100,7 @@ C = res I
   <h4>Community</h4>
   - [Workshops]({{ site.baseurl }}/workshops)
   - [Slack Workspace](https://m2internals.slack.com/)
-  - [Google Groups](http://groups.google.com/group/macaulay2)
+  - [Google Groups](https://groups.google.com/group/macaulay2)
  </div>
 </div>
 
@@ -108,15 +108,17 @@ C = res I
 
 <div class="row justify-content-around align-items-center">
  <div class="col-2 feature">
-  <a href="https://www.gnu.org/software/emacs/">
-   <img style="height: 100%; width: 100%; object-fit: contain" src="https://www.gnu.org/software/emacs/images/emacs.png"/>
-  </a>
+   [![](https://www.gnu.org/software/emacs/images/emacs.png){:.feature}](https://www.gnu.org/software/emacs/)
  </div>
 
  <div class="col feature">
-  The recommended IDE for using _Macaulay2_ in research is [Emacs](https://www.gnu.org/software/emacs/)
+  The recommended IDE for using Macaulay2 in research is [Emacs](https://www.gnu.org/software/emacs/)
   (here is a [cheat sheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)).
-  Community plugins for Vim, Atom, VSCode, and Sublime are also available.
+  Community plugins are also available for
+  [Vim](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/editors/vim),
+  [Atom](https://github.com/Macaulay2/language-macaulay2),
+  [VSCode](https://github.com/coreysharris/vscode-macaulay2), and
+  [Sublime](https://github.com/Macaulay2/M2/wiki/Using-Macaulay2-with-Sublime).
  </div>
 </div>
 
@@ -124,7 +126,7 @@ C = res I
 {%- for i in (0..3) -%}
 {%- assign screenshot = site.baseurl | append: "/static/emacs" | append: i | append: ".png" -%}
  <div class="col-3 feature">
-  [![]({{ screenshot }}){:style="height: 100%; width: 100%; object-fit: contain"}]({{ screenshot }})
+  [![]({{ screenshot }}){:.feature}]({{ screenshot }})
  </div>
 {%- endfor -%}
 </div>
@@ -133,18 +135,18 @@ C = res I
 
 <div class="row justify-content-around align-items-center">
  <div class="col feature">
-  Development of _Macaulay2_ has been funded by the National Science Foundation since 1992.
-  We also acknowledge our [contributors](contributors),
-  [software libraries](libraries) used in _Macaulay2_, as well as
-  [Macaulay](http://www.math.columbia.edu/~bayer/Macaulay/), the predecessor of _Macaulay2_.
+  Development of Macaulay2 by [Daniel R. Grayson](https://faculty.math.illinois.edu/~dan/)
+  and [Michael E. Stillman](https://math.cornell.edu/michael-e-stillman) has been funded
+  by the National Science Foundation since 1992. We also acknowledge our many
+  [contributors](contributors), [software libraries](libraries) used by Macaulay2,
+  as well as [Macaulay](http://www.math.columbia.edu/~bayer/Macaulay/),
+  the predecessor of Macaulay2 written by Dave Bayer and Michael Stillman.
 
-  The namesake of _Macaulay2_ is [Francis Macaulay FRS](http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay).
+  The namesake of Macaulay2 is [Francis Macaulay FRS](http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay).
  </div>
 
  <div class="col-2 feature">
-  <a href="https://www.nsf.gov/">
-   <img style="height: 100%; width: 100%; object-fit: contain" src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg"/>
-  </a>
+  [![](https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg){:.feature}](https://www.nsf.gov/)
  </div>
 </div>
 
@@ -153,8 +155,8 @@ C = res I
 
 <div class="row justify-content-around align-items-center">
  <div class="col feature">
- - A random paper referring to _Macaulay2_: <script type="text/javascript">citation();</script>
- - A random _Macaulay2_ package: <script type="text/javascript">documentation();</script>
+ - A random paper referring to Macaulay2: <script type="text/javascript">citation();</script>
+ - A random Macaulay2 package: <script type="text/javascript">documentation();</script>
  </div>
 </div>
 
