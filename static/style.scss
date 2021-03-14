@@ -18,10 +18,17 @@ $link-color: #841212;
 
 @import "syntax";
 @import "proof";
+@import "syzygy";
 
 html { background-color: whitesmoke; }
 body { background-color: white; }
 .container { max-width: 800px; }
+
+img.feature {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 
 #x-projnav {
     min-height: 20px;
