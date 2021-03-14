@@ -3,10 +3,9 @@ layout: default
 ---
 
 <div class="clearfix" id="x-projnav">
-  <a href="{{ site.baseurl }}/packages">Packages:</a>
-  <span class="text-muted">{{ page.title }}</span>
-  <span class="pull-right">
-    v{{ page.version }}
+  <a href="{{ site.baseurl }}/packages/">Packages:</a>
+  <tt>{{ page.title }} v{{ page.version }}</tt>
+  <span>
 <!--  nextButton tag, prevButton tag, forwardButton tag, backwardButton tag, upButton tag, topButton tag,
       indexButton(htmlDirectory, indexFileName), tocButton(htmlDirectory, tocFileName), homeButton -->
     <span class="text-muted">|</span> <a href="#pkg-index">Index</a>
@@ -16,7 +15,5 @@ layout: default
 </div>
 
 <div class="package">
-  <h2 class="page-title" id="pkg-overview">package <code>{{ page.title }}</code></h2>
-  <pre><code class="language-macaulay2">i0 : needsPackage "{{ page.title }}";</code></pre>
   {{ content }}
 </div>
