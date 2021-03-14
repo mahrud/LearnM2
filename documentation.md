@@ -5,10 +5,23 @@ category: links
 order: 2
 ---
 
-*Macaulay2* includes core algorithms for computing Gröbner bases and graded or multi-graded free resolutions of modules over quotient rings of graded or multi-graded polynomial rings with a monomial ordering. The core algorithms are accessible through a versatile high level interpreted user language with a powerful debugger supporting the creation of new classes of mathematical objects and the installation of methods for computing specifically with them.
+<iframe src="https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/"
+	frameborder="0" style="width: 100%; height: 90vh;" title="Official Macaulay2 Documentation"></iframe>
 
-*Macaulay2* can compute Betti numbers, Ext, cohomology of coherent sheaves on projective varieties, primary decomposition of ideals, integral closure of rings, and  more.
-
+{% comment %}
 {% for item in site.docs -%}
 * [{{ item.title }}]({{ site.baseurl }}{{ item.url }})
 {% endfor %}
+
+<div class="package">
+{% M2D %}
+debug Core
+X = help "Macaulay2";
+markdown TO := x -> markdown HREF{format first x, TT format first x};
+markdown TO2 := x -> markdown HREF{format first x, last x};
+markdown TOH := x -> markdown HREF{format first x, format first x};
+markdown MENU := x -> concatenate apply(x, markdown)
+<< replace("common/share/Macaulay2/Style", "../static", markdown X#4)
+{% endM2D %}
+</div>
+{% endcomment %}
