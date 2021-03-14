@@ -4,7 +4,7 @@
   <body class="theme-base-{{ site.color-scheme }} language-Macaulay2">
 
 {% case page.layout %}
-  {% when 'package' %}
+  {% when package-disabled' %}
     {%- include navbar-package.html -%}
   {% else %}
     {%- include navbar.html -%}
