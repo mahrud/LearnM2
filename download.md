@@ -7,7 +7,7 @@ order: 1
 
 #### Binary distributions [![release badge]](https://github.com/Macaulay2/M2/releases/latest)
 
-Depending on your operating system and machine architecture, you may be able to download a prebuilt distribution of _Macaulay2_:
+Depending on your operating system and machine architecture, you may be able to download a prebuilt distribution of Macaulay2:
 
 - [Homebrew tap](https://github.com/Macaulay2/homebrew-tap)
 ```
@@ -28,12 +28,12 @@ sudo dnf install Macaulay2
 
 #### Building from source [![nightly badge]](https://github.com/Macaulay2/M2/actions/workflows/test_build.yml)
 
-The primary source code repository for _Macaulay2_ is on [GitHub](https://github.com/Macaulay2/M2).
+The primary source code repository for Macaulay2 is on [GitHub](https://github.com/Macaulay2/M2).
 For introductions to version control see:
 - [Git for Macaulay2 Contributors](https://github.com/Macaulay2/M2/wiki/Git-for-Macaulay2-Contributors)
 - [Git for Workshop Participants](https://github.com/Macaulay2/M2/wiki/Git-for-Workshop-participants)
 
-See the [install guide] for detailed instructions on how to build _Macaulay2_ from source.
+See the [install guide] for detailed instructions on how to build Macaulay2 from source.
 A quick build using CMake and Ninja involves the following steps:
 ```shell
 git clone https://github.com/Macaulay2/M2.git --branch development
@@ -48,10 +48,28 @@ A list of common issues involving the CMake build is available on the [GitHub Wi
 
 ---
 
-##### Docker
-- [Dockerfiles](https://github.com/Macaulay2/M2/blob/master/M2/BUILD/docker/README.md)
+#### Using Macaulay2 with Docker
 
+Docker is a containerization program for building and running applications on different platforms.
+See [this guide](https://github.com/Macaulay2/M2/blob/master/M2/BUILD/docker/README.md) for detailed instructions
+on how to use Docker for running, developing, debugging, testing, or packaging Macaulay2 on any platform.
 
 [release badge]: https://img.shields.io/github/v/release/Macaulay2/M2?label=stable&style=flat-square
 [nightly badge]: https://github.com/Macaulay2/M2/actions/workflows/test_build.yml/badge.svg?branch=master
 [install guide]: https://github.com/Macaulay2/M2/blob/master/M2/INSTALL-CMake.md
+
+---
+
+#### Using Macaulay2 on Windows 10
+
+Macaulay2 can be used via the Windows Subsystem for Linux (WSL2).
+See this the [quickstart guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+and these [instructions](https://gist.github.com/eivan/cab0b0a29eebd91d767ea6ad7448368e)
+for setting up Macaulay2 on WSL2.
+
+---
+
+#### Using Macaulay2 remotely
+
+Using the [M2-mode](https://github.com/Macaulay2/M2-emacs) package for Emacs, it is possible to use Macaulay2
+remotely but still take advantage of syntax highlighting and auto-completion provided by the package.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Documentation
+title: Docs
 category: links
 order: 2
 ---
