@@ -1,11 +1,9 @@
 # {% M2 [filename] %} is registered as a Liquid tag to run M2Block
 
 # M2 settings
-M2tag = "M2"
 M2cmd = "M2"
 M2dir = "_outputs/"
-M2opts = "--silent --print-width 77 --stop --int --no-readline -q --no-randomize"
-M2load = "needsPackage(\"LocalRings\", FileName => \"/home/mahrud/Projects/M2/M2/M2/Macaulay2/packages/LocalRings.m2\")"
+M2opts = "--silent --print-width 0 --stop --int --no-readline -q --no-randomize"
 M2regex = /i+([1-9][0-9]*) : /
 DELIMITER = "--DELIMITER"
 
@@ -41,7 +39,7 @@ def runM2(addr)
   output = ''
 
   # run them all
-  IO.popen("#{M2cmd} #{M2opts} -e '#{M2load}' 2>&1", "r+") do |m2|
+  IO.popen("#{M2cmd} #{M2opts} 2>&1", "r+") do |m2|
     m2.puts input
     m2.puts "exit(0)"
     output = m2.readlines()
@@ -105,7 +103,7 @@ Jekyll::Hooks.register :pages, :pre_render do |doc, payload|
   end
 end
 
-# Class of Macaulay2 blocks, designated as {% M2 [source] %} ... {% M2 %}
+# Class of Macaulay2 blocks, designated as {% M2 [source] %} ... {% endM2 %}
 class M2Block < Liquid::Raw
   include Jekyll::Tags # HighlightBlock
 
@@ -197,3 +195,19 @@ class M2Block < Liquid::Raw
 end
 
 Liquid::Template.register_tag('M2', M2Block)
+
+# Class of Macaulay2 generated markdowns, designated as {% M2D %} ... {% endM2D %}
+class M2D < Liquid::Raw
+  def render(_context)
+    addr = M2dir + "input.m2"
+    open(addr, 'w+') do |input|
+      input.write @body
+      input.close
+    end
+    IO.popen("#{M2cmd} --script #{addr} 2>/dev/null", "w+") do |pipe|
+      pipe.read
+    end
+  end
+end
+
+Liquid::Template.register_tag('M2D', M2D)
