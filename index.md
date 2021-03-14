@@ -77,7 +77,7 @@ C = res I
  </div>
 
  <div class="col-auto feature">
-  <h4>Write a Package</h4>
+  <h4>Writing a Package</h4>
   - [M2 Style Guide](https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide)
   - [Package directory](packages)
  </div>
@@ -90,14 +90,14 @@ C = res I
  </div>
 
  <div class="col-auto feature">
-  <h4>M2 in Research</h4>
+  <h4>Research</h4>
   - [Books and Articles](https://faculty.math.illinois.edu/Macaulay2/Publications)
   - [Citing Macaulay2](citing)
   - [JSAG](http://j-sag.org/)
  </div>
 
  <div class="col-auto feature">
-  <h4>Join the Community</h4>
+  <h4>Community</h4>
   - [Workshops]({{ site.baseurl }}/workshops)
   - [Slack Workspace](https://m2internals.slack.com/)
   - [Google Groups](http://groups.google.com/group/macaulay2)
@@ -109,7 +109,7 @@ C = res I
 <div class="row justify-content-around align-items-center">
  <div class="col-2 feature">
   <a href="https://www.gnu.org/software/emacs/">
-<img style="height: 100%; width: 100%; object-fit: contain" src="https://www.gnu.org/software/emacs/images/emacs.png"/>
+   <img style="height: 100%; width: 100%; object-fit: contain" src="https://www.gnu.org/software/emacs/images/emacs.png"/>
   </a>
  </div>
 
@@ -120,7 +120,14 @@ C = res I
  </div>
 </div>
 
-<!-- TODO: Screenshots -->
+<div class="row">
+{%- for i in (0..3) -%}
+{%- assign screenshot = site.baseurl | append: "/static/emacs" | append: i | append: ".png" -%}
+ <div class="col-3 feature">
+  [![]({{ screenshot }}){:style="height: 100%; width: 100%; object-fit: contain"}]({{ screenshot }})
+ </div>
+{%- endfor -%}
+</div>
 
 ---
 
