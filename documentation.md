@@ -5,7 +5,7 @@ category: links
 order: 2
 ---
 
-<iframe src="https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/"
+<iframe src="http://www2.macaulay2.com/Macaulay2/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/"
 	frameborder="0" style="width: 100%; height: 90vh;" title="Official Macaulay2 Documentation"></iframe>
 
 {% comment %}
