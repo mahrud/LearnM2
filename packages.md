@@ -41,24 +41,32 @@ Here are a couple of the packages that are distributed with Macaulay2.
     {{ displayHTML SeeAlso }}
     {% endraw %}
     `);
-  function opendoc(param) {
-    var arr = /#(.+)::(.+)/.exec(param);
-    var package = arr[1];
-    var node = arr[2];
-    $.getJSON('https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/'+package+'.json', function(data) {
+  var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
+  var bucket = '{{ site.baseurl }}/static/';
+  function openNode(param) {
+    var regex = /#(.+)::(.+)$/.exec(param);
+    var node = regex[2];
+    var pkgname = regex[1];
+    // TODO: sanitize this url
+    $.getJSON(bucket+pkgname+'.json', function(data) {
       var content = template(data[node]);
       $('#content').html(content);
       anchors.add();
     });
   };
-  $("a.package").click(function () {
-    var package = $(this).text();
-    $.getJSON('https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/'+package+'.json', function(data) {
+  function openPackage(param) {
+    // TODO: sanitize this url
+    var regex = /#(.+)$/.exec(param);
+    var pkgname = regex[1];
+    $.getJSON(bucket+pkgname+'.json', function(data) {
       $('#content').html(
         `<ul>${Object.keys(data).sort().map(
-          key => `<li><a href="#${package}::${key}" onclick="opendoc(this)"><tt>${package}::${key}<tt></a></li>`
+          key => `<li><a href="#${pkgname}::${key}" onclick="openNode(this)"><tt>${pkgname}::${key}<tt></a></li>`
         ).join('')}</ul>`
       );
     });
-  });
+  };
+  $("a.package").click(function () { openPackage(this) });
+  if ( window.location.href.match(/#.+::.+$/) ) { openNode(window.location); }
+  else if ( window.location.href.match(/#.+$/) ) { openPackage(window.location); }
 </script>
