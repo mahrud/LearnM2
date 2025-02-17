@@ -13,6 +13,8 @@ Here are a couple of the packages that are distributed with Macaulay2.
 
 <div id="content"></div>
 
+<div id="toc"></div>
+
 <script>
   Handlebars.registerHelper('displayHTML',function(inputData){
     return new Handlebars.SafeString(inputData);
@@ -44,26 +46,40 @@ Here are a couple of the packages that are distributed with Macaulay2.
   var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
   var bucket = '{{ site.baseurl }}/static/';
   function openNode(param) {
-    var regex = /#(.+)::(.+)$/.exec(param);
-    var node = regex[2];
+    var regex = /#(.+)::(.+?)(#.*)?$/.exec(param);
+    var node = decodeURI(regex[2]);
     var pkgname = regex[1];
     // TODO: sanitize this url
     $.getJSON(bucket+pkgname+'.json', function(data) {
-      var content = template(data[node]);
-      $('#content').html(content);
+      $('#content').html(template(data[node]));
+      anchors.options.base = '{{ site.url }}{{ site.baseurl }}{{ page.url }}#'+pkgname+'::'+node;
       anchors.add();
+      var hash = regex[3];
+      if (hash) { $('html, body').animate( { scrollTop: $(hash).offset().top }, 500); };
+      $('#toc').html(
+	`<ul>${anchors.elements.map(
+          elt => `<li>${elt.innerText}</li>`
+        ).join('')}</ul>`);
     });
   };
   function openPackage(param) {
     // TODO: sanitize this url
-    var regex = /#(.+)$/.exec(param);
+    var regex = /#(.+?)(#.*)?$/.exec(param);
     var pkgname = regex[1];
     $.getJSON(bucket+pkgname+'.json', function(data) {
       $('#content').html(
         `<ul>${Object.keys(data).sort().map(
           key => `<li><a href="#${pkgname}::${key}" onclick="openNode(this)"><tt>${pkgname}::${key}<tt></a></li>`
-        ).join('')}</ul>`
-      );
+        ).join('')}</ul>`);
+      $('#content').append(template(data[pkgname]));
+      anchors.options.base = '{{ site.url }}{{ site.baseurl }}{{ page.url }}#'+pkgname;
+      anchors.add();
+      var hash = regex[2];
+      if (hash) { $('html, body').animate( { scrollTop: $(hash).offset().top }, 500); };
+      $('#toc').html(
+	`<ul>${anchors.elements.map(
+          elt => `<li>${elt.innerText}</li>`
+        ).join('')}</ul>`);
     });
   };
   $("a.package").click(function () { openPackage(this) });
