@@ -83,6 +83,9 @@ Here are a couple of the packages that are distributed with Macaulay2.
     });
   };
   $("a.package").click(function () { openPackage(this) });
-  if ( window.location.href.match(/#.+::.+$/) ) { openNode(window.location); }
-  else if ( window.location.href.match(/#.+$/) ) { openPackage(window.location); }
+  function updatePage(param) {
+    if ( window.location.href.match(/#.+::.+$/) ) { openNode(window.location); }
+    else if ( window.location.href.match(/#.+$/) ) { openPackage(window.location); }
+  };
+  $(window).on('hashchange', updatePage);
 </script>
