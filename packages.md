@@ -40,6 +40,14 @@ order: 3
   var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
   var bucket = '{{ site.baseurl }}/static/';
 
+  function updateSearch(data) {
+    $('.toc-list').html(
+      data.slice(0, 5).map(elt => `
+        <li class="toc-item">
+          <a class="toc-link" href="#${elt.item}">${elt.item}</a>
+        </li>`).join(''));
+  };
+
   function updateTOC(base, prefix, hash) {
     anchors.options.base = base + prefix;
     anchors.elements = [];
@@ -55,21 +63,33 @@ order: 3
         </li>`).join(''));
   };
 
-  function updateSidebar(data, prefix) {
+  var index = new Set([]);
+  const fuse = new Fuse([], { ignoreLocation: true, threshold: 0.2 });
+  function updateSidebar(data, pkgname) {
+    var prefix = pkgname ? pkgname + '::' : '';
+    if (!index.has(prefix + pkgname))
+      Object.keys(data).forEach(key => {
+        var fkey = prefix + key;
+        if (!index.has(fkey)) {
+          index.add(fkey);
+          fuse.add(fkey);
+        };
+      });
     $('.index-list').html(
       Object.keys(data).sort().map(key => `
         <li class="index-item">
-          <a href="${prefix}${key}" onclick="openNode(this)"><tt>${key}</tt></a>
+          <a href="#${prefix}${key}" onclick="openNode(this)"><tt>${key}</tt></a>
         </li>`).join(''))
   };
 
   function openNode(param) {
     var regex = /#(.+)::(.+?)(#.*)?$/.exec(param);
+    if (regex === null) return openPackage(param);
     var node = decodeURI(regex[2]);
     var pkgname = regex[1];
     // TODO: sanitize this url
     $.getJSON(bucket+pkgname+'.json', function(data) {
-      updateSidebar(data, '#'+pkgname+'::');
+      updateSidebar(data, pkgname);
       $('#content').html(template(data[node]));
       updateTOC('{{ site.url }}{{ site.baseurl }}{{ page.url }}', '#'+pkgname+'::'+node, regex[3]);
     });
@@ -80,7 +100,7 @@ order: 3
     var regex = /#(.+?)(#.*)?$/.exec(param);
     var pkgname = regex[1];
     $.getJSON(bucket+pkgname+'.json', function(data) {
-      updateSidebar(data, '#'+pkgname+'::');
+      updateSidebar(data, pkgname);
       $('#content').append(template(data[pkgname]));
       updateTOC('{{ site.url }}{{ site.baseurl }}{{ page.url }}', '#'+pkgname, regex[2]);
     });
@@ -95,6 +115,6 @@ order: 3
   $(window).on('hashchange', updatePage);
   if ( window.location.hash ) { updatePage(); } else {
     $.getJSON(bucket+'Packages.json', function(data) {
-      updateSidebar(data, '#'); });
+      updateSidebar(data, null); });
   };
 </script>
