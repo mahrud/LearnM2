@@ -1,24 +1,17 @@
 ---
-layout: page
+layout: entry
 title: Packages
 category: links
 order: 3
 ---
 
-Here are a couple of the packages that are distributed with Macaulay2.
-{% assign packages = "Saturation, Truncations" | split: ", " %}
-{% for item in packages -%}
-* [<tt>{{ item }}</tt>](#{{ item }}){: .package }
-{% endfor %}
-
 <div id="content"></div>
-
-<div id="toc"></div>
 
 <script>
   Handlebars.registerHelper('displayHTML',function(inputData){
     return new Handlebars.SafeString(inputData);
   });
+
   var template = Handlebars.compile(`
     <!--
     <div class="clearfix" id="x-projnav">
@@ -43,49 +36,65 @@ Here are a couple of the packages that are distributed with Macaulay2.
     {{ displayHTML SeeAlso }}
     {% endraw %}
     `);
+
   var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
   var bucket = '{{ site.baseurl }}/static/';
+
+  function updateTOC(base, prefix, hash) {
+    anchors.options.base = base + prefix;
+    anchors.elements = [];
+    anchors.add().remove('.index-heading, .toc-heading');
+    if (hash) {
+      $('html, body').animate(
+        { scrollTop: $(hash).offset().top }, 500);
+    };
+    $('.toc-list').html(
+      anchors.elements.map(elt => `
+        <li class="toc-item">
+          <a class="toc-link" href="${prefix}#${elt.id}">${elt.innerText}</a>
+        </li>`).join(''));
+  };
+
+  function updateSidebar(data, prefix) {
+    $('.index-list').html(
+      Object.keys(data).sort().map(key => `
+        <li class="index-item">
+          <a href="${prefix}${key}" onclick="openNode(this)"><tt>${key}</tt></a>
+        </li>`).join(''))
+  };
+
   function openNode(param) {
     var regex = /#(.+)::(.+?)(#.*)?$/.exec(param);
     var node = decodeURI(regex[2]);
     var pkgname = regex[1];
     // TODO: sanitize this url
     $.getJSON(bucket+pkgname+'.json', function(data) {
+      updateSidebar(data, '#'+pkgname+'::');
       $('#content').html(template(data[node]));
-      anchors.options.base = '{{ site.url }}{{ site.baseurl }}{{ page.url }}#'+pkgname+'::'+node;
-      anchors.add();
-      var hash = regex[3];
-      if (hash) { $('html, body').animate( { scrollTop: $(hash).offset().top }, 500); };
-      $('#toc').html(
-	`<ul>${anchors.elements.map(
-          elt => `<li>${elt.innerText}</li>`
-        ).join('')}</ul>`);
+      updateTOC('{{ site.url }}{{ site.baseurl }}{{ page.url }}', '#'+pkgname+'::'+node, regex[3]);
     });
   };
+
   function openPackage(param) {
     // TODO: sanitize this url
     var regex = /#(.+?)(#.*)?$/.exec(param);
     var pkgname = regex[1];
     $.getJSON(bucket+pkgname+'.json', function(data) {
-      $('#content').html(
-        `<ul>${Object.keys(data).sort().map(
-          key => `<li><a href="#${pkgname}::${key}" onclick="openNode(this)"><tt>${pkgname}::${key}<tt></a></li>`
-        ).join('')}</ul>`);
+      updateSidebar(data, '#'+pkgname+'::');
       $('#content').append(template(data[pkgname]));
-      anchors.options.base = '{{ site.url }}{{ site.baseurl }}{{ page.url }}#'+pkgname;
-      anchors.add();
-      var hash = regex[2];
-      if (hash) { $('html, body').animate( { scrollTop: $(hash).offset().top }, 500); };
-      $('#toc').html(
-	`<ul>${anchors.elements.map(
-          elt => `<li>${elt.innerText}</li>`
-        ).join('')}</ul>`);
+      updateTOC('{{ site.url }}{{ site.baseurl }}{{ page.url }}', '#'+pkgname, regex[2]);
     });
   };
-  $("a.package").click(function () { openPackage(this) });
+
   function updatePage(param) {
     if ( window.location.href.match(/#.+::.+$/) ) { openNode(window.location); }
     else if ( window.location.href.match(/#.+$/) ) { openPackage(window.location); }
   };
+
+  $("a.package").click(function () { openPackage(this) });
   $(window).on('hashchange', updatePage);
+  if ( window.location.hash ) { updatePage(); } else {
+    $.getJSON(bucket+'Packages.json', function(data) {
+      updateSidebar(data, '#'); });
+  };
 </script>

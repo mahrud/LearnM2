@@ -73,6 +73,11 @@ end
 restart
 needs "generate-json.m2"
 
+packages = {"Saturation", "Truncations"}
+H = hashTable apply(packages, pkgname -> pkgname => headline pkgname)
+elapsedTime ("static/Packages.json") << format'(toJSON H, Indent => 2) << flush << close
+
+
 pkgname = "Saturation"
 pkgname = "Truncations"
 pkgname = "Macaulay2Doc"

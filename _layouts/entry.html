@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="main-wrapper">
+{% if page.layout == "entry" %}
+  {%- include sidebar.html -%}
+{%- endif %}
+
+  <main class="main-content">
+    <article class="main-page-content">
+{{ content }}
+    </article>
+  </main>
+</div>

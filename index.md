@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Learn Macaulay2
 parse: true
 ---
