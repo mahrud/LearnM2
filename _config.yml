@@ -49,6 +49,7 @@ exclude:
   - proof.gemspec
   - Makefile
   - docs
+  - examples
   - _outputs
 
 # Theme

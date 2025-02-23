@@ -88,6 +88,12 @@
     margin: 0;
 }
 
+.sidebar-container li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @media (min-width: 769px) and (min-height: 44rem) {
     .sidebar-container {
         display: flex;
@@ -153,7 +159,6 @@
 
 .main-page-content {
     overflow-wrap: break-word;
-    padding: 3rem 1rem 1rem;
 }
 
 /******************************************************************************/

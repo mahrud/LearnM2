@@ -65,11 +65,12 @@ toJSON(JSONEncoder, TO2)  := o -> (e, x) -> (
 
 toJSON(JSONEncoder, VisibleList) := o -> (e, L) -> new Array from apply(L, x -> toJSON(e, x))
 toJSON(JSONEncoder, HashTable)   := o -> (e, H) -> applyPairs(H, (k, v) -> (toJSON(e, k), toJSON(e, v)))
+toJSON(JSONEncoder, DocumentTag) := o -> (e, t) -> replace(" :: ", "::", format toString t)
 
 --elapsedTime L = apply(makeDocumentTag methods resolution, fetchRawDocumentation);
 --Macaulay2Doc#"raw documentation"#"resolution(Ideal)"
 
-end
+end--
 restart
 needs "generate-json.m2"
 
@@ -77,18 +78,18 @@ packages = {"Saturation", "Truncations"}
 H = hashTable apply(packages, pkgname -> pkgname => headline pkgname)
 elapsedTime ("static/Packages.json") << format'(toJSON H, Indent => 2) << flush << close
 
-
 pkgname = "Saturation"
 pkgname = "Truncations"
 pkgname = "Macaulay2Doc"
 elapsedTime pkg = loadPackage(pkgname, Reload => true, LoadDocumentation => true)
 
 L = new HashTable from pkg#"raw documentation";
-L = selectKeys(L, k -> match("basis", k) or match("module", k) or match("comodule", k));
 L = selectValues(L, x -> not x#?PrimaryTag and not x#?"undocumented");
 elapsedTime ("static/"|pkgname|".json") << format'(toJSON L, Indent => 2) << flush << close
 
-format'(toJSON L#"annihilator", Indent => 2)
+beginDocumentation()
+errorDepth=1
+format'(toJSON TOH symbol TEST, Indent => 2)
 
 format' toJSON { TO2{ res, "res" }, TOH res, TO res }
 

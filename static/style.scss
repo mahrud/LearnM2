@@ -15,10 +15,11 @@ body { background-color: white; }
 .container { max-width: 800px; }
 
 #x-projnav {
-    min-height: 20px;
-    margin-bottom: 20px;
+    min-height: 2rem;
+    max-width: 1800px;
     background-color: #eee;
     padding: 9px;
+    margin: auto;
     border-radius: 3px;
 }
 
