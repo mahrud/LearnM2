@@ -2,17 +2,22 @@
 ---
 
 Handlebars.registerHelper('displayHTML',function(inputData){
-    return new Handlebars.SafeString(inputData);
+    data = new Handlebars.SafeString(inputData);
+    return ( data == "undefined" ? "" : data );
 });
 
 {% raw %}
 var template = Handlebars.compile(`
-<!--{{ "Headline" }}-->
-{{ displayHTML Usage }}
-{{#each Description }}
-  {{ displayHTML this }}
-{{/each}}
-{{ displayHTML SeeAlso }}`);
+{{ displayHTML Synopsis }}
+{{ displayHTML Description }}
+{{ displayHTML SourceCode }}
+{{ displayHTML Acknowledgement }}
+{{ displayHTML Contributors }}
+{{ displayHTML References }}
+{{ displayHTML Caveat }}
+{{ displayHTML SeeAlso }}
+{{ displayHTML Subnodes }}
+{{ displayHTML WaysToUse }}`);
 {% endraw %}
 
 var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
@@ -60,6 +65,13 @@ function updateSidebar(data, pkgname) {
         </li>`).join(''))
 }
 
+function updateNavbar(param, pkgname, title) {
+    $('#pkgname').html(pkgname);
+    $('#pkgname').attr("href", "#"+pkgname);
+    $('#headline').html(title);
+    $('#headline').attr("href", param);
+}
+
 function openNode(param) {
     var regex = /#(.+)::(.+?)(#.*)?$/.exec(param);
     if (regex === null) return openPackage(param);
@@ -68,12 +80,11 @@ function openNode(param) {
     // TODO: sanitize this url
     $.getJSON(bucket+pkgname+'.json', function(data) {
 	updateSidebar(data, pkgname);
-	$('#pkgname').html(pkgname);
-	$('#pkgname').attr("href", "#"+pkgname);
-	$('#headline').html(data[node]["Headline"]);
-	$('#headline').attr("href", param);
-	$('#content').html(template(data[node]));
+	updateNavbar(param, pkgname, data[node]["Headline"])
 	updateTOC('{{ site.url }}{{ site.baseurl }}/packages/', '#'+pkgname+'::'+node, regex[3]);
+	$('#content').html(template(data[node]));
+	Prism.highlightAll()
+	renderKaTeX();
     });
 }
 
@@ -83,12 +94,11 @@ function openPackage(param) {
     var pkgname = regex[1];
     $.getJSON(bucket+pkgname+'.json', function(data) {
 	updateSidebar(data, pkgname);
-	$('#pkgname').html(pkgname);
-	$('#pkgname').attr("href", "#"+pkgname);
-	$('#headline').html(pkgname);
-	$('#headline').attr("href", param);
-	$('#content').html(template(data[pkgname]));
+	updateNavbar(param, pkgname, pkgname)
 	updateTOC('{{ site.url }}{{ site.baseurl }}/packages/', '#'+pkgname, regex[2]);
+	$('#content').html(template(data[pkgname]));
+	Prism.highlightAll()
+	renderKaTeX();
     });
 }
 
@@ -97,11 +107,14 @@ function updatePage(param) {
     else if ( window.location.href.match(/#.+$/) ) { openPackage(window.location); }
 }
 
-$("a.package").click(function () { openPackage(this) });
+$("a.package").click(function() { openPackage(this) });
 
 $(window).on('hashchange', updatePage);
 
 if ( window.location.hash ) { updatePage(); } else {
+    //openPackage("#Truncations");
+    //openPackage("#Macaulay2Doc");
+    openNode("#Macaulay2Doc::packages provided with Macaulay2");
     $.getJSON(bucket+'Packages.json', function(data) {
-	updateSidebar(data, null); });
+        updateSidebar(data, null); });
 };

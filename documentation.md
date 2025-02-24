@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Docs
-category: links
-order: 2
+#category: links
+#order: 2
 ---
 
 <iframe src="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/"

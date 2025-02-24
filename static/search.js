@@ -3,6 +3,7 @@ var urlParams = new URLSearchParams(window.location.search);
 
 function doSearch() {
   var query = searchBox.val();
+  if (query == "") updatePage();
   var result = fuse.search(query);
   updateSearch(result);
   //var regex = new RegExp("<mark>(.*)</mark>", "gim");
