@@ -1,14 +1,15 @@
 ---
 layout: page
 title: Docs
-#category: links
-#order: 2
+category: links
+order: 4
 ---
 
+{% comment %}
 <iframe src="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/"
 	frameborder="0" style="width: 100%; height: 90vh;" title="Official Macaulay2 Documentation"></iframe>
+{% endcomment %}
 
-{% comment %}
 {% for item in site.docs -%}
 * [{{ item.title }}]({{ site.baseurl }}{{ item.url }})
 {% endfor %}
@@ -24,4 +25,3 @@ markdown MENU := x -> concatenate apply(x, markdown)
 << replace("common/share/Macaulay2/Style", "../static", markdown X#4)
 {% endM2D %}
 </div>
-{% endcomment %}

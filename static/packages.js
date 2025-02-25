@@ -21,10 +21,12 @@ var template = Handlebars.compile(`
 {% endraw %}
 
 var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
+var bucket = '{{ site.baseurl }}/static/';
 
 function updateSearch(results) {
+    $('#outline-list').attr('open', true);
     $('.outline-list').html(
-	results.slice(0, 5).map(elt => `
+	results.slice(0, 25).map(elt => `
         <li class="outline-item">
           <a class="outline-link" href="#${elt.item}">${elt.item}</a>
         </li>`).join(''));
@@ -48,7 +50,8 @@ function updateOutline(base, prefix, hash) {
 var database = new Set([]);
 const fuse = new Fuse([], { ignoreLocation: true, threshold: 0.2 });
 function updateFuse(index, prefix) {
-    if (!database.has(prefix + pkgname))
+    if (!database.has(prefix)) {
+	database.add(prefix);
 	Object.keys(index).forEach(key => {
             var fkey = prefix + key;
             if (!database.has(fkey)) {
@@ -56,6 +59,7 @@ function updateFuse(index, prefix) {
 		fuse.add(fkey);
             };
 	});
+    };
 }
 
 function makeSubmenu(toc, prefix, current) {
@@ -108,7 +112,7 @@ function openNode(param) {
 	updateNavbar(param, pkgname, data["nodes"][node]["Headline"])
 	$('#content').html(template(data["nodes"][node]));
 	$('html, body').scrollTop(0);
-	updateOutline('{{ site.url }}{{ site.baseurl }}/packages/', '#'+pkgname+'::'+node, regex[3]);
+	updateOutline('', '#'+pkgname+'::'+node, regex[3]);
 	Prism.highlightAll()
 	renderKaTeX();
     });
@@ -122,7 +126,7 @@ function openPackage(param) {
 	updateSidebar(data, pkgname, pkgname);
 	updateNavbar(param, pkgname, pkgname)
 	$('#content').html(template(data["nodes"][pkgname]));
-	updateOutline('{{ site.url }}{{ site.baseurl }}/packages/', '#'+pkgname, regex[2]);
+	updateOutline('', '#'+pkgname, regex[2]);
 	Prism.highlightAll()
 	renderKaTeX();
     });
@@ -136,11 +140,3 @@ function updatePage(param) {
 $("a.package").click(function() { openPackage(this) });
 
 $(window).on('hashchange', updatePage);
-
-if ( window.location.hash ) { updatePage(); } else {
-    //openPackage("#Truncations");
-    //openPackage("#Macaulay2Doc");
-    //openNode("#Macaulay2Doc::packages provided with Macaulay2");
-    $.getJSON(bucket+'Packages.json', function(data) {
-        updateSidebar(data, null, "Macaulay2Doc"); });
-};

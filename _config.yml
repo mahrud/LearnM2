@@ -22,8 +22,6 @@ encoding: utf-8
 collections:
   docs:
     output: true
-  packages:
-    output: true
 
 # Markdown specs
 markdown: kramdown
@@ -49,7 +47,7 @@ exclude:
   - proof.gemspec
   - Makefile
   - docs
-  - examples
+  - examples/
   - _outputs
 
 # Theme

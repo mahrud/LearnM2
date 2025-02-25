@@ -8,8 +8,8 @@ parse: true
 
 [_Macaulay2_](https://macaulay2.com/) is an interpreted, dynamically typed programming language intended to support research in [algebraic geometry] and [commutative algebra] through open sourced software.
 
-[algebraic geometry]: http://en.wikipedia.org/wiki/Algebraic_geometry
-[commutative algebra]: http://en.wikipedia.org/wiki/Commutative_algebra
+[algebraic geometry]: https://en.wikipedia.org/wiki/Algebraic_geometry
+[commutative algebra]: https://en.wikipedia.org/wiki/Commutative_algebra
 
 ---
 
@@ -56,7 +56,7 @@ C = res I
 <div class="row">
  <div class="col-12" style="text-align: center">
   <a class="btn btn-sm btn-outline-primary" href="download">Download Macaulay2</a>
-  <a class="btn btn-sm btn-outline-primary" href="http://www.unimelb-macaulay2.cloud.edu.au">Try M2 in a Browser</a>
+  <a class="btn btn-sm btn-outline-primary" href="https://www.unimelb-macaulay2.cloud.edu.au">Try M2 in a Browser</a>
  </div>
 </div>
 
@@ -65,9 +65,9 @@ C = res I
 <div class="row justify-content-around">
  <div class="col-auto feature">
   <h4>Learn by Reading</h4>
-  - [Beginning Macaulay2](BeginningMacaulay2) <!-- TODO: [a first Macaulay2 session](a first Macaulay2 session)? -->
+  - [Beginning Macaulay2]({{ site.baseurl }}/packages/#BeginningMacaulay2) <!-- TODO: [a first Macaulay2 session](a first Macaulay2 session)? -->
   - [Computations Book](book)
-  - [Cheat Sheet](cheatsheat)
+  - [Cheat Sheet](cheatsheet)
  </div>
 
  <div class="col-auto feature">
@@ -93,12 +93,12 @@ C = res I
   <h4>Research</h4>
   - [Books and Articles](https://faculty.math.illinois.edu/Macaulay2/Publications)
   - [Citing Macaulay2](citing)
-  - [JSAG](http://j-sag.org/)
+  - [JSAG](https://j-sag.org/)
  </div>
 
  <div class="col-auto feature">
   <h4>Community</h4>
-  - [Workshops]({{ site.baseurl }}/workshops)
+  - [Workshops]({{ site.baseurl }}/events)
   - [Slack Workspace](https://m2internals.slack.com/)
   - [Google Groups](https://groups.google.com/group/macaulay2)
  </div>
@@ -138,17 +138,19 @@ C = res I
   Development of Macaulay2 by [Daniel R. Grayson](https://faculty.math.illinois.edu/~dan/)
   and [Michael E. Stillman](https://math.cornell.edu/michael-e-stillman) has been funded
   by the National Science Foundation since 1992. We also acknowledge our many
-  [contributors](contributors), [software libraries](libraries) used by Macaulay2,
-  as well as [Macaulay](http://www.math.columbia.edu/~bayer/Macaulay/),
+  [contributors](contributors), [software libraries] used by Macaulay2,
+  as well as [Macaulay](https://www.math.columbia.edu/~bayer/Macaulay/),
   the predecessor of Macaulay2 written by Dave Bayer and Michael Stillman.
 
-  The namesake of Macaulay2 is [Francis Macaulay FRS](http://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay).
+  The namesake of Macaulay2 is [Francis Macaulay FRS](https://en.wikipedia.org/wiki/Francis_Sowerby_Macaulay).
  </div>
 
  <div class="col-2 feature">
   [![](https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg){:.feature}](https://www.nsf.gov/)
  </div>
 </div>
+
+[software libraries]: {{site.baseurl }}/packages/#Macaulay2Doc::Copyright and license
 
 <!--
 ---

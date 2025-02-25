@@ -5,7 +5,7 @@ author: Mahrud Sayrafi
 parse: true
 ---
 
-Let's first define the coordinate ring of $ \\P^3 $, where the twisted cubic lies:
+Let's first define the coordinate ring of $ \\PP^3 $, where the twisted cubic lies:
 {% M2 example %}
 kk = ZZ/32003;
 R = kk[w, x, y, z]; -- this is a ring
@@ -58,7 +58,7 @@ kernel map(kk[s,t], R, {s^3, s^2*t, s*t^2, t^3})
 ## Resolution and Betti Table
 
 A minimal free resolution of the ideal defining the twisted cubic:
-\\[ 0 \gets \mathcal O_C \gets \mathcal O_{\\P^3} \gets 3\mathcal O_{\\P^3}(-2) \gets 2\mathcal O_{\\P^3}(-3) \gets 0 \\]
+\\[ 0 \gets \mathcal O_C \gets \mathcal O_{\\PP^3} \gets 3\mathcal O_{\\PP^3}(-2) \gets 2\mathcal O_{\\PP^3}(-3) \gets 0 \\]
 
 {% M2 example %}
 res oo
