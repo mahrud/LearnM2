@@ -1,27 +1,17 @@
 debug Core
 debug needsPackage("JSON", FileName => "./JSON.m2")
 
-format' = s -> replace("\n", "\\\\n", format s)
---    if 1 < #s and s#0 == "\"" and s#-1 == "\"" then s else format s)
+-- changes behavior of htmlFilename and html(TO)
+documentMode = "Markdown"
 
-toJSON String      := o -> format'
-toJSON Hypertext   := o -> format' @@ html
+net DocumentTag := tag -> pad(concatenate (tag.Package, " :: ", format tag), 70) | net locate tag
+
 toJSON DocumentTag := o -> t -> replace(" :: ", "::", format toString t)
+toJSON ForestNode := o -> x -> ( s := toJSON(toList x, o); concatenate("{", s_(1,#s-2), "}") )
+toJSON   TreeNode := o -> x -> concatenate(toJSON(format x#0, o), o.NameSeparator, toJSON(x#1, o))
 
-html TO2  := x -> (
-    tag := getPrimaryTag fixup x#0;
-    -- TODO: add this to htmlLiteral?
-    name := if match("^ +$", x#1) then #x#1 : "&nbsp;&nbsp;" else x#1;
-    if isUndocumented tag or isMissingDoc tag then concatenate(
-	html TT name, " (missing documentation)",
-	html COMMENT("tag: ", toString tag.Key)) else
-    concatenate(html ANCHOR{"title" => htmlLiteral headline tag,
-	    --"href"  => toURL htmlFilename tag, name}))
-	    "href"  => "#" | toString package tag | "::" | format tag, name }))
-
-
-pkgname = "SimpleDoc"
-pkgname = "Truncations"
+testpkgs = { "SimpleDoc", "Saturation", "Truncations", "VirtualResolutions", "Varieties" }
+pkgname = "Varieties"
 pkgname = "Macaulay2Doc"
 pkgname = "Saturation"
 elapsedTime pkg = loadPackage(pkgname, Reload => true, LoadDocumentation => true)
@@ -30,9 +20,25 @@ end--
 restart
 needs "generate-json.m2"
 
-packages = {"Saturation", "Truncations"}
-H = hashTable apply(packages, pkgname -> pkgname => headline pkgname)
-elapsedTime ("static/Packages.json") << format'(toJSON H, Indent => 2) << flush << close
+errorDepth=1
+--elapsedTime package' \ methods(); -- ~18s cache warming
+for pkgname in testpkgs do
+elapsedTime installPackage(pkgname, -- down to ~11s
+    Verbose => false,
+    RerunExamples => false,
+    CheckDocumentation => true,
+    IgnoreExampleErrors => false,
+    RemakeAllDocumentation => true,
+    MakeHTML => false,
+    MakeInfo => false,
+    MakeJSON => true,
+    InstallPrefix => "/home/mahrud/Projects/M2/quickfix/M2/BUILD/build/usr-dist/",
+    UserMode => false,
+    SeparateExec => true,
+    DebuggingMode => true)
+
+toc = unbag Saturation#"table of contents"
+json(toc, Indent => 2)
 
 L = new HashTable from pkg#"raw documentation";
 L = selectValues(L, x -> not x#?PrimaryTag and not x#?"undocumented" and not instance(x.DocumentTag.Key, Array));
@@ -50,19 +56,3 @@ elapsedTime ("static/Packages.json") << toJSON(H, Indent => 2) << flush << close
 
 elapsedTime L = apply(makeDocumentTag methods resolution, fetchRawDocumentation);
 Macaulay2Doc#"raw documentation"#"resolution(Ideal)"
-
-H = select(1, L, x -> true)
-fromJSON toJSON(H, Indent => 2)
-
-beginDocumentation()
-errorDepth=1
-toJSON TOH symbol TEST
-
-format' toJSON { TO2{ res, "res" }, TOH res, TO res }
-
-code(html, Symbol)
-toJSON(L#0, Indent => 2)
-html L#0#Description
-toJSON Ideal
-
-"resolution.json" << toJSON(L, Indent => 2) << flush << close
