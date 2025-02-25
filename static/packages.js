@@ -21,7 +21,6 @@ var template = Handlebars.compile(`
 {% endraw %}
 
 var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
-var bucket = '{{ site.baseurl }}/static/';
 
 function updateSearch(results) {
     $('.outline-list').html(

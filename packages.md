@@ -2,7 +2,7 @@
 layout: entry
 title: Packages
 category: links
-order: 3
+order: 2
 ---
 
 <div id="content"></div>
