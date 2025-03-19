@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Docs
-category: links
-order: 4
+#category: links
+#order: 4
 ---
 
 {% comment %}

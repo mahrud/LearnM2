@@ -84,20 +84,20 @@ C = res I
 
  <div class="col-auto feature">
   <h4>Documentation</h4>
-  - [Language Reference](reference)
+  - [Language Reference](reference) <!-- ({{ site.baseurl }}/packages/#Macaulay2Doc::The Macaulay2 language) -->
   - [Internal Notes](https://github.com/Macaulay2/M2/wiki/Internals%3A-Meeting-Notes)
   - [Source Code](https://github.com/Macaulay2/M2)
  </div>
 
  <div class="col-auto feature">
-  <h4>Research</h4>
+  <h4>M2 for Research</h4>
   - [Books and Articles](https://faculty.math.illinois.edu/Macaulay2/Publications)
   - [Citing Macaulay2](citing)
   - [JSAG](https://j-sag.org/)
  </div>
 
  <div class="col-auto feature">
-  <h4>Community</h4>
+  <h4>Events & Community</h4>
   - [Workshops]({{ site.baseurl }}/events)
   - [Slack Workspace](https://m2internals.slack.com/)
   - [Google Groups](https://groups.google.com/group/macaulay2)

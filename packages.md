@@ -11,9 +11,9 @@ order: 2
 <script>
 if ( window.location.hash ) { updatePage(); } else {
     //openPackage("#Truncations");
-    //openPackage("#Macaulay2Doc");
+    openPackage("#Macaulay2Doc");
     //openNode("#Macaulay2Doc::packages provided with Macaulay2");
-    $.getJSON(bucket+'Packages.json', function(data) {
-        updateSidebar(data, null, "Macaulay2Doc"); });
+    //$.getJSON(bucket+'Packages.json', function(data) {
+    //    updateSidebar(data, null, "Macaulay2Doc"); });
 };
 </script>

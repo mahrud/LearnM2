@@ -10,8 +10,7 @@ toJSON DocumentTag := o -> t -> replace(" :: ", "::", format toString t)
 toJSON ForestNode := o -> x -> ( s := toJSON(toList x, o); concatenate("{", s_(1,#s-2), "}") )
 toJSON   TreeNode := o -> x -> concatenate(toJSON(format x#0, o), o.NameSeparator, toJSON(x#1, o))
 
-testpkgs = { "SimpleDoc", "Saturation", "Truncations", "VirtualResolutions", "Varieties" }
-pkgname = "Varieties"
+testpkgs = { "SimpleDoc", "Saturation", "Truncations", "VirtualResolutions", "Varieties", "BeginningMacaulay2", "Complexes" }
 pkgname = "Macaulay2Doc"
 pkgname = "Saturation"
 elapsedTime pkg = loadPackage(pkgname, Reload => true, LoadDocumentation => true)

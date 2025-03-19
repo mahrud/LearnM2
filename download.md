@@ -33,7 +33,7 @@ For introductions to version control see:
 - [Git for Macaulay2 Contributors](https://github.com/Macaulay2/M2/wiki/Git-for-Macaulay2-Contributors)
 - [Git for Workshop Participants](https://github.com/Macaulay2/M2/wiki/Git-for-Workshop-participants)
 
-See the [install guide] for detailed instructions on how to build Macaulay2 from source.
+See the [wiki] for detailed instructions on how to build Macaulay2 from source.
 A quick build using CMake and Ninja involves the following steps:
 ```shell
 git clone https://github.com/Macaulay2/M2.git --branch development
@@ -46,6 +46,8 @@ ninja M2-emacs
 
 A list of common issues involving the CMake build is available on the [GitHub Wiki](https://github.com/Macaulay2/M2/wiki/FAQ%3A-CMake-Build-Problems). If you run into a problem not listed there or among the list of issues labeled ["build system"](https://github.com/Macaulay2/M2/labels/build%20system), please open a [new issue](https://github.com/Macaulay2/M2/issues/new) on GitHub.
 
+[wiki]: https://github.com/Macaulay2/M2/wiki
+
 ---
 
 #### Using Macaulay2 with Docker
@@ -56,7 +58,6 @@ on how to use Docker for running, developing, debugging, testing, or packaging M
 
 [release badge]: https://img.shields.io/github/v/release/Macaulay2/M2?label=stable&style=flat-square
 [nightly badge]: https://github.com/Macaulay2/M2/actions/workflows/test_build.yml/badge.svg?branch=master
-[install guide]: https://github.com/Macaulay2/M2/blob/master/M2/INSTALL-CMake.md
 
 ---
 
