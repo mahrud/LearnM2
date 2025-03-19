@@ -104,7 +104,7 @@ function updateNavbar(param, pkgname, title) {
 function openNode(param) {
     var regex = /#(.+)::(.+?)(#.*)?$/.exec(param);
     if (regex === null) return openPackage(param);
-    var node = decodeURI(regex[2]);
+    var node = decodeURIComponent(regex[2]);
     var pkgname = regex[1];
     // TODO: sanitize this url
     $.getJSON(bucket+pkgname+'.json', function(data) {
@@ -140,3 +140,4 @@ function updatePage(param) {
 $("a.package").click(function() { openPackage(this) });
 
 $(window).on('hashchange', updatePage);
+//window.onpopstate = updatePage
