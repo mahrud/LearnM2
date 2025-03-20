@@ -1,0 +1,46 @@
+{
+  "index": {
+    "BIBasis": "BIBasis::BIBasis",
+    "biBasis": "BIBasis::biBasis",
+    "biBasis(...,toGroebner=>...)": "BIBasis::biBasis",
+    "biBasis(Ideal)": "BIBasis::biBasis",
+    "toGroebner": "BIBasis::toGroebner"
+  },
+  "nodes": {
+    "biBasis": {
+      "Caveat": "<div><h2>Caveat</h2><ul><li>biBasis assumes coefficient Ring of the given Ideal is ZZ/2</li><li>biBasis always treats the given Ideal as a Boolean one</li><li>biBasis assumes the following monomials orders: Lex, GLex, GRevLex</li></ul></div>",
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = ZZ/2[x, y, MonomialOrder => GRevLex]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(x*y + x + 1)\n\no2 = ideal(x*y + x + 1)\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : P = biBasis(I, toGroebner => true)\n\no3 = ideal (x + 1, y)\n\no3 : Ideal of R</code></pre></td></tr></table></div>",
+      "Headline": [
+        "biBasis",
+        " -- constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise."
+      ],
+      "Location": "../../../../Macaulay2/packages/BIBasis.m2:83:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"compute a Gröbner basis\" href=\"#Macaulay2Doc::gb\">gb</a> -- compute a Gröbner basis</span></li><li><span><span class=\"tt\">gbBoolean</span> (missing documentation)<!--tag: gbBoolean-->\n</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">biBasis(I, toGroebner => true)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">I</span>, <span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li><li><a href=\"#Macaulay2Doc::using%20functions%20with%20optional%20inputs\">Optional inputs</a>:<ul><li><span><span class=\"tt\">toGroebner</span><span class=\"tt\"> => </span><span class=\"tt\">...</span>, <span>default value true</span></span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">P</span>, <span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">biBasis</span>:</h2><ul><li><kbd>biBasis(Ideal)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.\" href=\"#BIBasis::biBasis\">biBasis</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/BIBasis.m2\">BIBasis.m2:83:0</a>.</p></div></div>"
+    },
+    "BIBasis": {
+      "Description": "<div><h2>Description</h2><em>BIBasis</em> is the package which implements the methods for constructing the reduced Pommaret and Gr\\&quot;obner bases in a Boolean ring for a given polynomial Ideal.<p>Some references:</p><ul><li>V. P. Gerdt and M. V. Zinin, Involutive Method for Computing Gr\\&quot;obner Bases over F_2. Programming and Computer Software, Vol. 34, No. 4, 2008, 191-203.</li><li>V.P.Gerdt and M.V.Zinin. A Pommaret Division Algorithm for Computing Gr\\&quot;obner Bases in Boolean Rings. Proceedings of ISSAC 2008, ACM Press, 2008, pp.95–102.</li><li>Vladimir Gerdt, Mikhail Zinin and Yuri Blinkov. On computation of Boolean involutive bases. Programming and Computer Software, Vol. 36, No. 2, 2010, 117-123.</li></ul></div>",
+      "Headline": [
+        "BIBasis",
+        " -- Involutive Pommaret basis in a Boolean ring"
+      ],
+      "Location": "../../../../Macaulay2/packages/BIBasis.m2:57:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li>Mikhail Zinin<span> &lt;<a href=\"mailto:mzinin%40gmail.com\">mzinin@gmail.com</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.6.3</b> of BIBasis.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.\" href=\"#BIBasis::biBasis\">biBasis</a> -- constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.</span></li></ul></li><li>Methods<ul><li><span><kbd>biBasis(Ideal)</kbd> -- see <span><a title=\"constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.\" href=\"#BIBasis::biBasis\">biBasis</a> -- constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.</span></span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">toGroebner</span> (missing documentation)<!--tag: toGroebner-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Involutive Pommaret basis in a Boolean ring\" href=\"#BIBasis::BIBasis\">BIBasis</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/BIBasis.m2\">BIBasis.m2</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/BIBasis.m2\">BIBasis.m2:57:0</a>.</p></div></div>"
+    },
+    "toGroebner": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "toGroebner",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div><h2>Functions with optional argument named <span class=\"tt\">toGroebner</span>:</h2><ul><li><span><kbd>biBasis(...,toGroebner=>...)</kbd> -- see <span><a title=\"constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.\" href=\"#BIBasis::biBasis\">biBasis</a> -- constructs a reduced Boolean Gröbner basis for the given Ideal, if the second argument is true (default), and reduced Boolean Pommaret basis otherwise.</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">toGroebner</span> (missing documentation)<!--tag: toGroebner-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "BIBasis":{},
+    "biBasis":{},
+    "toGroebner":{}
+  }
+}

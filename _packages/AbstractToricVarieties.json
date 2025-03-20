@@ -1,0 +1,107 @@
+{
+  "index": {
+    "abstractPrimeToricDivisor": "AbstractToricVarieties::abstractPrimeToricDivisor",
+    "AbstractToricVarieties": "AbstractToricVarieties::AbstractToricVarieties",
+    "Ambient": "AbstractToricVarieties::Ambient",
+    "CI": "AbstractToricVarieties::CI",
+    "completeIntersection": "AbstractToricVarieties::completeIntersection",
+    "CompleteIntersectionInToric": "AbstractToricVarieties::CompleteIntersectionInToric",
+    "intersectionRingIdeal": "AbstractToricVarieties::intersectionRingIdeal",
+    "liftClToWDiv": "AbstractToricVarieties::liftClToWDiv",
+    "liftPicToCDiv": "AbstractToricVarieties::liftPicToCDiv"
+  },
+  "nodes": {
+    "abstractPrimeToricDivisor": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "abstractPrimeToricDivisor",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">abstractPrimeToricDivisor</span>:</h2><ul><li><span><span class=\"tt\">abstractPrimeToricDivisor(NormalToricVariety,AbstractVariety,ZZ)</span> (missing documentation)<!--tag: (abstractPrimeToricDivisor,NormalToricVariety,AbstractVariety,ZZ)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">abstractPrimeToricDivisor</span> (missing documentation)<!--tag: abstractPrimeToricDivisor-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "AbstractToricVarieties": {
+      "Description": "<div><h2>Description</h2><div><p>This package is experimental.</p></div></div>",
+      "Headline": [
+        "AbstractToricVarieties",
+        " -- links abstract simplicial (normal) toric varieties to Schubert2"
+      ],
+      "Location": "../../../../Macaulay2/packages/AbstractToricVarieties.m2:229:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://www.math.cornell.edu/~mike\">Mike Stillman</a><span> &lt;<a href=\"mailto:mike%40math.cornell.edu\">mike@math.cornell.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of AbstractToricVarieties.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><span class=\"tt\">CompleteIntersectionInToric</span> (missing documentation)<!--tag: CompleteIntersectionInToric-->\n</span></li></ul></li><li>Functions and commands<ul><li><span><span class=\"tt\">abstractPrimeToricDivisor</span> (missing documentation)<!--tag: abstractPrimeToricDivisor-->\n</span></li><li><span><span class=\"tt\">completeIntersection</span> (missing documentation)<!--tag: completeIntersection-->\n</span></li><li><span><span class=\"tt\">intersectionRingIdeal</span> (missing documentation)<!--tag: intersectionRingIdeal-->\n</span></li><li><span><span class=\"tt\">liftClToWDiv</span> (missing documentation)<!--tag: liftClToWDiv-->\n</span></li><li><span><span class=\"tt\">liftPicToCDiv</span> (missing documentation)<!--tag: liftPicToCDiv-->\n</span></li></ul></li><li>Methods<ul><li><span><span class=\"tt\">abstractPrimeToricDivisor(NormalToricVariety,AbstractVariety,ZZ)</span> (missing documentation)<!--tag: (abstractPrimeToricDivisor,NormalToricVariety,AbstractVariety,ZZ)-->\n</span></li><li><span><span class=\"tt\">abstractVariety(CompleteIntersectionInToric,AbstractVariety)</span> (missing documentation)<!--tag: (abstractVariety,CompleteIntersectionInToric,AbstractVariety)-->\n</span></li><li><span><span class=\"tt\">ambient(CompleteIntersectionInToric)</span> (missing documentation)<!--tag: (ambient,CompleteIntersectionInToric)-->\n</span></li><li><span><span class=\"tt\">completeIntersection(NormalToricVariety,List)</span> (missing documentation)<!--tag: (completeIntersection,NormalToricVariety,List)-->\n</span></li><li><span><span class=\"tt\">dim(CompleteIntersectionInToric)</span> (missing documentation)<!--tag: (dim,CompleteIntersectionInToric)-->\n</span></li><li><span><span class=\"tt\">intersectionRingIdeal(NormalToricVariety)</span> (missing documentation)<!--tag: (intersectionRingIdeal,NormalToricVariety)-->\n</span></li><li><span><span class=\"tt\">liftClToWDiv(NormalToricVariety)</span> (missing documentation)<!--tag: (liftClToWDiv,NormalToricVariety)-->\n</span></li><li><span><span class=\"tt\">liftPicToCDiv(NormalToricVariety)</span> (missing documentation)<!--tag: (liftPicToCDiv,NormalToricVariety)-->\n</span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">Ambient</span> (missing documentation)<!--tag: Ambient-->\n</span></li><li><span><span class=\"tt\">CI</span> (missing documentation)<!--tag: CI-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"links abstract simplicial (normal) toric varieties to Schubert2\" href=\"#AbstractToricVarieties::AbstractToricVarieties\">AbstractToricVarieties</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/AbstractToricVarieties.m2\">AbstractToricVarieties.m2</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/AbstractToricVarieties.m2\">AbstractToricVarieties.m2:229:0</a>.</p></div></div>"
+    },
+    "Ambient": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Ambient",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">Ambient</span> (missing documentation)<!--tag: Ambient-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "CI": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "CI",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">CI</span> (missing documentation)<!--tag: CI-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "completeIntersection": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "completeIntersection",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">completeIntersection</span>:</h2><ul><li><span><span class=\"tt\">completeIntersection(NormalToricVariety,List)</span> (missing documentation)<!--tag: (completeIntersection,NormalToricVariety,List)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">completeIntersection</span> (missing documentation)<!--tag: completeIntersection-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "CompleteIntersectionInToric": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "CompleteIntersectionInToric",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class CompleteIntersectionInToric:</h2><ul><li><span><span class=\"tt\">abstractVariety(CompleteIntersectionInToric,AbstractVariety)</span> (missing documentation)<!--tag: (abstractVariety,CompleteIntersectionInToric,AbstractVariety)-->\n</span></li><li><span><span class=\"tt\">ambient(CompleteIntersectionInToric)</span> (missing documentation)<!--tag: (ambient,CompleteIntersectionInToric)-->\n</span></li><li><span><span class=\"tt\">dim(CompleteIntersectionInToric)</span> (missing documentation)<!--tag: (dim,CompleteIntersectionInToric)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">CompleteIntersectionInToric</span> (missing documentation)<!--tag: CompleteIntersectionInToric-->\n is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "intersectionRingIdeal": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "intersectionRingIdeal",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">intersectionRingIdeal</span>:</h2><ul><li><span><span class=\"tt\">intersectionRingIdeal(NormalToricVariety)</span> (missing documentation)<!--tag: (intersectionRingIdeal,NormalToricVariety)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">intersectionRingIdeal</span> (missing documentation)<!--tag: intersectionRingIdeal-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "liftClToWDiv": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "liftClToWDiv",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">liftClToWDiv</span>:</h2><ul><li><span><span class=\"tt\">liftClToWDiv(NormalToricVariety)</span> (missing documentation)<!--tag: (liftClToWDiv,NormalToricVariety)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">liftClToWDiv</span> (missing documentation)<!--tag: liftClToWDiv-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "liftPicToCDiv": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "liftPicToCDiv",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">liftPicToCDiv</span>:</h2><ul><li><span><span class=\"tt\">liftPicToCDiv(NormalToricVariety)</span> (missing documentation)<!--tag: (liftPicToCDiv,NormalToricVariety)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">liftPicToCDiv</span> (missing documentation)<!--tag: liftPicToCDiv-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "AbstractToricVarieties":{},
+    "abstractPrimeToricDivisor":{},
+    "Ambient":{},
+    "CI":{},
+    "completeIntersection":{},
+    "CompleteIntersectionInToric":{},
+    "intersectionRingIdeal":{},
+    "liftClToWDiv":{},
+    "liftPicToCDiv":{}
+  }
+}

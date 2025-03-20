@@ -1,0 +1,30 @@
+{
+  "index": {
+    "Browse": "Browse::Browse",
+    "browse": "Browse::browse"
+  },
+  "nodes": {
+    "browse": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">browse x</span> -- provides an interactive mechanism that allows the user to explore the hash table or list <span class=\"tt\">x</span>.<p></p>A menu of numbered items is presented to the user that allow the user to inspect the <a title=\"class of an object\" href=\"#Macaulay2Doc::class\">class</a> or <a title=\"parent type of an object\" href=\"#Macaulay2Doc::parent\">parent</a> of <span class=\"tt\">x</span>.  For a hash table, the keys are presented so the user can visit the corresponding values, and for a list, the entries are presented so the user can visit them.  One of the menu items allows the user to go back to re-examine the previous item.</div>",
+      "Headline": [
+        "browse",
+        " -- browse the contents of an object"
+      ],
+      "Location": "../../../../Macaulay2/packages/Browse.m2:169:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"browse the contents of an object\" href=\"#Browse::browse\">browse</a> is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/Browse.m2\">Browse.m2:169:0</a>.</p></div></div>"
+    },
+    "Browse": {
+      "Description": "<div><h2>Description</h2>This package provides a method, <a title=\"browse the contents of an object\" href=\"#Browse::browse\">browse</a>, for browsing and examining Macaulay2 data structures.</div>",
+      "Headline": [
+        "Browse",
+        " -- a method for browsing and examining Macaulay2 data structures"
+      ],
+      "Location": "../../../../Macaulay2/packages/Browse.m2:155:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://www.math.uiuc.edu/~dan/\">Daniel R. Grayson</a><span> &lt;<a href=\"mailto:dan%40math.uiuc.edu\">dan@math.uiuc.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of Browse.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"browse the contents of an object\" href=\"#Browse::browse\">browse</a> -- browse the contents of an object</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a method for browsing and examining Macaulay2 data structures\" href=\"#Browse::Browse\">Browse</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/Browse.m2\">Browse.m2</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/Browse.m2\">Browse.m2:155:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Browse":{},
+    "browse":{}
+  }
+}

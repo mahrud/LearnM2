@@ -1,0 +1,19 @@
+{
+  "index": {
+    "Style": "Style::Style"
+  },
+  "nodes": {
+    "Style": {
+      "Description": "<div><h2>Description</h2>This package is simply a repository for the style sheets and images used by the html pages in the documentation.</div>",
+      "Headline": [
+        "Style",
+        " -- style sheets and images for the documentation"
+      ],
+      "Location": "../../../../Macaulay2/packages/Style.m2:16:0",
+      "WaysToUse": "<div><div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of Style.</p></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"style sheets and images for the documentation\" href=\"#Style::Style\">Style</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/Style.m2\">Style.m2</a>, with auxiliary files in <a href=\"../../Macaulay2/Style/\">Style/</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/Style.m2\">Style.m2:16:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Style":{}
+  }
+}

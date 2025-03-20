@@ -1,0 +1,110 @@
+{
+  "index": {
+    "Example: Calculating a Stanley simplicial poset ring": "SimplicialPosets::Example: Calculating a Stanley simplicial poset ring",
+    "fromFVector": "SimplicialPosets::fromFVector",
+    "fromFVector(List)": "SimplicialPosets::fromFVector",
+    "getFVector": "SimplicialPosets::getFVector",
+    "getFVector(Poset)": "SimplicialPosets::getFVector",
+    "isBoolean": "SimplicialPosets::isBoolean",
+    "isBoolean(Poset)": "SimplicialPosets::isBoolean",
+    "isSimplicial": "SimplicialPosets::isSimplicial",
+    "isSimplicial(Poset)": "SimplicialPosets::isSimplicial",
+    "SimplicialPosets": "SimplicialPosets::SimplicialPosets",
+    "stanleyPosetIdeal": "SimplicialPosets::stanleyPosetIdeal",
+    "stanleyPosetIdeal(Poset)": "SimplicialPosets::stanleyPosetIdeal",
+    "testFVector": "SimplicialPosets::testFVector",
+    "testFVector(List)": "SimplicialPosets::testFVector"
+  },
+  "nodes": {
+    "Example: Calculating a Stanley simplicial poset ring": {
+      "Description": "<div><div><p>The following is an example of the basic task that this package was written to accomplish.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : P = fromFVector({1,6,5,1});</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = stanleyPosetIdeal(P);\n\no2 : Ideal of QQ[x   , x   , x   , x   , x   , x   , x   , x   , x , x , x , x , x ]\n                  000   001   010   011   100   101   110   111   1   2   3   4   5</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : R = ring(I)/I;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : getFVector(P)\n\no4 = {1, 6, 5, 1}\n\no4 : List</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : isSimplicial(P)\n\no5 = true</code></pre></td></tr></table></div>",
+      "Headline": [
+        "Example: Calculating a Stanley simplicial poset ring",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:271:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Returns ideal that defines the simplicial poset ring of the given simplicial poset.\" href=\"#SimplicialPosets::stanleyPosetIdeal\">stanleyPosetIdeal</a> -- Returns ideal that defines the simplicial poset ring of the given simplicial poset.</span></li></ul></div>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:271:0</a>.</p></div></div>"
+    },
+    "fromFVector": {
+      "Description": "<div><h2>Description</h2><div><p>This method is provided as a way to construct an example of a simplicial poset with a given f-vector.</p><p>It implements a construction due to Richard Stanley.</p><p>For details about this construction and a description of what f-vectors can be constructed, see <a href=\"https://www.semanticscholar.org/paper/f-vectors-and-h-vectors-of-simplicial-posets-Stanley/2787117152700af2abce3126dd7ba2325685d78b\">Stanley's original paper.</a></p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : P = fromFVector({1,6,5,1});</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : isSimplicial(P)\n\no2 = true</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : getFVector(P)\n\no3 = {1, 6, 5, 1}\n\no3 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "fromFVector",
+        " -- If possible, returns a simplicial poset with the given f-vector."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:359:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">P = fromFVector(L)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">L</span>, <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, The desired F-vector.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">P</span>, <span>an instance of the type <a title=\"a class for partially ordered sets (posets)\" href=\"#Posets::Poset\">Poset</a></span>, A simplicial poset with f-vector L.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">fromFVector</span>:</h2><ul><li><kbd>fromFVector(List)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"If possible, returns a simplicial poset with the given f-vector.\" href=\"#SimplicialPosets::fromFVector\">fromFVector</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:359:0</a>.</p></div></div>"
+    },
+    "getFVector": {
+      "Description": "<div><h2>Description</h2><div><p>This is a wrapper around the <a title=\"computes the rank generating function of a ranked poset\" href=\"#Posets::rankGeneratingFunction\">rankGeneratingFunction</a> method from the <a title=\"a package for working with partially ordered sets\" href=\"#Posets::Posets\">Posets</a> package.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : P = fromFVector({1,6,5,1});</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : L = getFVector(P)\n\no2 = {1, 6, 5, 1}\n\no2 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "getFVector",
+        " -- Returns the f-vector {f_{-1},f_0,...,f_{d-1}} of the given poset."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:407:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">L = getFVector(P)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">P</span>, <span>an instance of the type <a title=\"a class for partially ordered sets (posets)\" href=\"#Posets::Poset\">Poset</a></span>, A poset.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">L</span>, <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, The f-vector {f_-1,f_0,...,f_{d-1}} of the poset P.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">getFVector</span>:</h2><ul><li><kbd>getFVector(Poset)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Returns the f-vector {f_{-1},f_0,...,f_{d-1}} of the given poset.\" href=\"#SimplicialPosets::getFVector\">getFVector</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:407:0</a>.</p></div></div>"
+    },
+    "isBoolean": {
+      "Description": "<div><h2>Description</h2><div><p>Every finite boolean algebra is atomic and the number of atoms determines its isomorphism class.</p><p>This makes it possible to use the <a title=\"computes the list of elements covering the minimal elements of a poset\" href=\"#Posets::atoms\">atoms</a> method to determine the necessary isomorphism class of P and use the <a title=\"determines if two posets are isomorphic\" href=\"#Posets::areIsomorphic\">areIsomorphic</a> method to check if the required isomorphism holds.</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : P = booleanLattice(3);</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : isBoolean(P)\n\no2 = true</code></pre></td></tr></table></div>",
+      "Headline": [
+        "isBoolean",
+        " -- Determine if a poset is a boolean algebra."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:327:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">r = isBoolean(P)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">P</span>, <span>an instance of the type <a title=\"a class for partially ordered sets (posets)\" href=\"#Posets::Poset\">Poset</a></span>, The poset to be tested</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">r</span>, <span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, Whether the given poset is a boolean algebra or not</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">isBoolean</span>:</h2><ul><li><kbd>isBoolean(Poset)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Determine if a poset is a boolean algebra.\" href=\"#SimplicialPosets::isBoolean\">isBoolean</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:327:0</a>.</p></div></div>"
+    },
+    "isSimplicial": {
+      "Description": "<div><h2>Description</h2><div><p>This method uses the <a title=\"Determine if a poset is a boolean algebra.\" href=\"#SimplicialPosets::isBoolean\">isBoolean</a> method to check that every closed interval of P is a boolean algebra.</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : P = booleanLattice(3);</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : isSimplicial(P)\n\no2 = true</code></pre></td></tr></table></div>",
+      "Headline": [
+        "isSimplicial",
+        " -- Determine if a poset is simplicial."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:297:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">r = isSimplicial(P)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">P</span>, <span>an instance of the type <a title=\"a class for partially ordered sets (posets)\" href=\"#Posets::Poset\">Poset</a></span>, The poset to be tested</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">r</span>, <span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, Whether the given poset is simplicial or not</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">isSimplicial</span>:</h2><ul><li><span><kbd>isSimplicial(PolyhedralObject)</kbd> -- see <span><a title=\" checks if a polyhedral object is simplicial\" href=\"#Polyhedra::isSimplicial\">isSimplicial</a> --  checks if a polyhedral object is simplicial</span></span></li><li><kbd>isSimplicial(Poset)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\" checks if a polyhedral object is simplicial\" href=\"#Polyhedra::isSimplicial\">isSimplicial</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:297:0</a>.</p></div></div>"
+    },
+    "SimplicialPosets": {
+      "Acknowledgement": "<div><h2>Acknowledgement</h2><div><p>This package uses some code from the  <a title=\"a package for working with partially ordered sets\" href=\"#Posets::Posets\">Posets</a> package.</p><p>Thanks to <a href=\"http://www-users.math.umn.edu/~reiner/\">Victor Reiner</a>. This project was his idea.</p></div></div>",
+      "Description": "<div><h2>Description</h2><div><p></p><p>The primary purpose of this package is to implement the simplicial poset ring as defined by Richard P. Stanley in 1989.</p><p><a href=\"https://www.semanticscholar.org/paper/f-vectors-and-h-vectors-of-simplicial-posets-Stanley/2787117152700af2abce3126dd7ba2325685d78b\">Stanley's original paper.</a></p><p></p></div></div>",
+      "Headline": [
+        "SimplicialPosets",
+        " -- A package for working with simplicial posets."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:254:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li>Nathan Nichols<span> &lt;<a href=\"mailto:nicho997%40umn.edu\">nicho997@umn.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of SimplicialPosets.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"If possible, returns a simplicial poset with the given f-vector.\" href=\"#SimplicialPosets::fromFVector\">fromFVector</a> -- If possible, returns a simplicial poset with the given f-vector.</span></li><li><span><a title=\"Returns the f-vector {f_{-1},f_0,...,f_{d-1}} of the given poset.\" href=\"#SimplicialPosets::getFVector\">getFVector</a> -- Returns the f-vector {f_{-1},f_0,...,f_{d-1}} of the given poset.</span></li><li><span><a title=\"Determine if a poset is a boolean algebra.\" href=\"#SimplicialPosets::isBoolean\">isBoolean</a> -- Determine if a poset is a boolean algebra.</span></li><li><span><a title=\"Returns ideal that defines the simplicial poset ring of the given simplicial poset.\" href=\"#SimplicialPosets::stanleyPosetIdeal\">stanleyPosetIdeal</a> -- Returns ideal that defines the simplicial poset ring of the given simplicial poset.</span></li><li><span><a title=\"Tests if it is possible for a simplicial poset to have a given f-vector.\" href=\"#SimplicialPosets::testFVector\">testFVector</a> -- Tests if it is possible for a simplicial poset to have a given f-vector.</span></li></ul></li><li>Methods<ul><li><span><kbd>fromFVector(List)</kbd> -- see <span><a title=\"If possible, returns a simplicial poset with the given f-vector.\" href=\"#SimplicialPosets::fromFVector\">fromFVector</a> -- If possible, returns a simplicial poset with the given f-vector.</span></span></li><li><span><kbd>getFVector(Poset)</kbd> -- see <span><a title=\"Returns the f-vector {f_{-1},f_0,...,f_{d-1}} of the given poset.\" href=\"#SimplicialPosets::getFVector\">getFVector</a> -- Returns the f-vector {f_{-1},f_0,...,f_{d-1}} of the given poset.</span></span></li><li><span><kbd>isBoolean(Poset)</kbd> -- see <span><a title=\"Determine if a poset is a boolean algebra.\" href=\"#SimplicialPosets::isBoolean\">isBoolean</a> -- Determine if a poset is a boolean algebra.</span></span></li><li><span><kbd>isSimplicial(Poset)</kbd> -- see <span><a title=\"Determine if a poset is simplicial.\" href=\"#SimplicialPosets::isSimplicial\">isSimplicial</a> -- Determine if a poset is simplicial.</span></span></li><li><span><kbd>stanleyPosetIdeal(Poset)</kbd> -- see <span><a title=\"Returns ideal that defines the simplicial poset ring of the given simplicial poset.\" href=\"#SimplicialPosets::stanleyPosetIdeal\">stanleyPosetIdeal</a> -- Returns ideal that defines the simplicial poset ring of the given simplicial poset.</span></span></li><li><span><kbd>testFVector(List)</kbd> -- see <span><a title=\"Tests if it is possible for a simplicial poset to have a given f-vector.\" href=\"#SimplicialPosets::testFVector\">testFVector</a> -- Tests if it is possible for a simplicial poset to have a given f-vector.</span></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"A package for working with simplicial posets.\" href=\"#SimplicialPosets::SimplicialPosets\">SimplicialPosets</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:254:0</a>.</p></div></div>"
+    },
+    "stanleyPosetIdeal": {
+      "Description": "<div><h2>Description</h2><div><p>For details about the definition of this ideal, refer to <a href=\"https://www.semanticscholar.org/paper/f-vectors-and-h-vectors-of-simplicial-posets-Stanley/2787117152700af2abce3126dd7ba2325685d78b\">Stanley's original paper,</a> specifically definition 3.3.</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : P = booleanLattice(3);</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = stanleyPosetIdeal(P);\n\no2 : Ideal of QQ[x   , x   , x   , x   , x   , x   , x   , x   ]\n                  000   001   010   011   100   101   110   111</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : SPR := ring(I)/I;</code></pre></td></tr></table></div>",
+      "Headline": [
+        "stanleyPosetIdeal",
+        " -- Returns ideal that defines the simplicial poset ring of the given simplicial poset."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:434:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">I = stanleyPosetIdeal(P)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">P</span>, <span>an instance of the type <a title=\"a class for partially ordered sets (posets)\" href=\"#Posets::Poset\">Poset</a></span>, A simplicial poset.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">I</span>, <span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, An ideal such that ring(I)/I is the simplicial poset ring of P.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">stanleyPosetIdeal</span>:</h2><ul><li><kbd>stanleyPosetIdeal(Poset)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Returns ideal that defines the simplicial poset ring of the given simplicial poset.\" href=\"#SimplicialPosets::stanleyPosetIdeal\">stanleyPosetIdeal</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:434:0</a>.</p></div></div>"
+    },
+    "testFVector": {
+      "Description": "<div><h2>Description</h2><div><p>See <a href=\"https://www.semanticscholar.org/paper/f-vectors-and-h-vectors-of-simplicial-posets-Stanley/2787117152700af2abce3126dd7ba2325685d78b\">Stanley's paper</a> for more details about what f-vectors a simplicial poset can have.</p><p>This is useful for validating the arguments of a function that takes an f-vector.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : testFVector({1,4,6,4,1})\n\no1 = true</code></pre></td></tr></table></div>",
+      "Headline": [
+        "testFVector",
+        " -- Tests if it is possible for a simplicial poset to have a given f-vector."
+      ],
+      "Location": "../../../../Macaulay2/packages/SimplicialPosets.m2:383:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">B = testFVector(L)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">L</span>, <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, The f-vector to test.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">B</span>, <span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, Whether a poset with the given f-vector exists.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">testFVector</span>:</h2><ul><li><kbd>testFVector(List)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Tests if it is possible for a simplicial poset to have a given f-vector.\" href=\"#SimplicialPosets::testFVector\">testFVector</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/SimplicialPosets.m2\">SimplicialPosets.m2:383:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "SimplicialPosets":{},
+    "Example: Calculating a Stanley simplicial poset ring":{},
+    "fromFVector":{},
+    "getFVector":{},
+    "isBoolean":{},
+    "isSimplicial":{},
+    "stanleyPosetIdeal":{},
+    "testFVector":{}
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "index": {
+    "ColumnNums": "NonminimalComplexes::ColumnNums",
+    "constantStrand": "NonminimalComplexes::constantStrand",
+    "constantStrand(ChainComplex,ZZ)": "NonminimalComplexes::constantStrand",
+    "Entries": "NonminimalComplexes::Entries",
+    "newSparseMatrix": "NonminimalComplexes::newSparseMatrix",
+    "NonminimalComplexes": "NonminimalComplexes::NonminimalComplexes",
+    "RowNums": "NonminimalComplexes::RowNums",
+    "SparseMatrix": "NonminimalComplexes::SparseMatrix",
+    "sparseMatrix": "NonminimalComplexes::sparseMatrix"
+  },
+  "nodes": {
+    "ColumnNums": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ColumnNums",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">ColumnNums</span> (missing documentation)<!--tag: ColumnNums-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "constantStrand": {
+      "Caveat": "<div><h2>Caveat</h2><div><p>This function should be defined for any graded chain complex, not just ones created using <span class=\"tt\">res(I, Strategy=>4)</span>.</p></div></div>",
+      "Description": "<div><h2>Description</h2><div><p>Warning! This function is very rough currently.  It works if one uses it in the intended manner, as in the example below.  But it should be much more general, handling other rings with grace, and also it should handle arbitrary (graded) chain complexes.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = ZZ/101[a..d]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(a^3, b^3, c^3, d^3, (a+3*b+7*c-4*d)^3)\n\n             3   3   3   3   3     2         2      3      2             \no2 = ideal (a , b , c , d , a  + 9a b + 27a*b  + 27b  + 21a c + 25a*b*c -\n     ------------------------------------------------------------------------\n        2         2        2      3      2                2             \n     13b c + 46a*c  + 37b*c  + 40c  - 12a d + 29a*b*d - 7b d + 34a*c*d +\n     ------------------------------------------------------------------------\n                2         2        2        2      3\n     b*c*d + 18c d + 48a*d  + 43b*d  + 33c*d  + 37d )\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : C = res(I, Strategy=>4)\n\n      1      9      25      31      18      4\no3 = R  &lt;-- R  &lt;-- R   &lt;-- R   &lt;-- R   &lt;-- R\n                                            \n     0      1      2       3       4       5\n\no3 : ChainComplex</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : betti C\n\n            0 1  2  3  4 5\no4 = total: 1 9 25 31 18 4\n         0: 1 .  .  .  . .\n         1: . .  .  .  . .\n         2: . 5  1  .  . .\n         3: . 1  3  1  . .\n         4: . 3 17 13  4 .\n         5: . .  4 13 10 3\n         6: . .  .  4  3 1\n         7: . .  .  .  1 .\n\no4 : BettiTally</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : CR = constantStrand(C, 5)\n\n             ZZ 3       ZZ 3\no5 = 0 &lt;-- (---)  &lt;-- (---)  &lt;-- 0 &lt;-- 0 &lt;-- 0\n            101        101                    \n     0                           3     4     5\n           1          2\n\no5 : ChainComplex</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : CR.dd_2\n\no6 = | -33 48  0   |\n     | 2   -15 5   |\n     | 2   0   -43 |\n\n              ZZ 3       ZZ 3\no6 : Matrix (---)  &lt;-- (---)\n             101        101</code></pre></td></tr></table></div>",
+      "Headline": [
+        "constantStrand",
+        " -- a constant strand of a chain complex"
+      ],
+      "Location": "../../../../Macaulay2/packages/NonminimalComplexes.m2:366:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">Cd = constantStrand(C, deg)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">C</span>, <span>a <a title=\"the class of all chain complexes\" href=\"#Macaulay2Doc::ChainComplex\">chain complex</a></span>, a chain complex created using (the unsupported) <span class=\"tt\">res(I, Strategy=>4.1)</span></span></li><li><span><span class=\"tt\">deg</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, the degree of the strand of the complex</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">Cd</span>, <span>a <a title=\"the class of all chain complexes\" href=\"#Macaulay2Doc::ChainComplex\">chain complex</a></span>, a chain complex over <span class=\"tt\">kk</span>, consisting of the submatrices of <span class=\"tt\">C</span> of degree <span class=\"tt\">deg</span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">constantStrand</span>:</h2><ul><li><kbd>constantStrand(ChainComplex,ZZ)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a constant strand of a chain complex\" href=\"#NonminimalComplexes::constantStrand\">constantStrand</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/NonminimalComplexes.m2\">NonminimalComplexes.m2:366:0</a>.</p></div></div>"
+    },
+    "Entries": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Entries",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">Entries</span> (missing documentation)<!--tag: Entries-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "newSparseMatrix": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "newSparseMatrix",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">newSparseMatrix</span>:</h2><ul><li><span><span class=\"tt\">newSparseMatrix(List,List,List)</span> (missing documentation)<!--tag: (newSparseMatrix,List,List,List)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">newSparseMatrix</span> (missing documentation)<!--tag: newSparseMatrix-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "NonminimalComplexes": {
+      "Caveat": "<div><h2>Caveat</h2><div><p>This package will be removed soon, with <span class=\"tt\">constantStrand</span> functionality moved elsewhere.  The undocumented features the rest of the package relied on have been removed in M2 version 1.23.</p></div></div>",
+      "Description": "<div><h2>Description</h2><div><p>Some functionality here should be moved elsewhere.</p></div></div>",
+      "Headline": [
+        "NonminimalComplexes",
+        " -- support for computing homology, ranks and SVD complexes, from a chain complex over the real numbers"
+      ],
+      "Location": "../../../../Macaulay2/packages/NonminimalComplexes.m2:332:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"http://www.math.uni-sb.de/ag/schreyer\">Frank-Olaf Schreyer</a><span> &lt;<a href=\"mailto:schreyer%40math.uni-sb.de\">schreyer@math.uni-sb.de</a>></span></li><li><a href=\"http://www.math.cornell.edu/~mike\">Mike Stillman</a><span> &lt;<a href=\"mailto:mike%40math.cornell.edu\">mike@math.cornell.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.2</b> of NonminimalComplexes.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><span class=\"tt\">SparseMatrix</span> (missing documentation)<!--tag: SparseMatrix-->\n</span></li></ul></li><li>Functions and commands<ul><li><span><a title=\"a constant strand of a chain complex\" href=\"#NonminimalComplexes::constantStrand\">constantStrand</a> -- a constant strand of a chain complex</span></li><li><span><span class=\"tt\">newSparseMatrix</span> (missing documentation)<!--tag: newSparseMatrix-->\n</span></li><li><span><span class=\"tt\">sparseMatrix</span> (missing documentation)<!--tag: sparseMatrix-->\n</span></li></ul></li><li>Methods<ul><li><span><kbd>constantStrand(ChainComplex,ZZ)</kbd> -- see <span><a title=\"a constant strand of a chain complex\" href=\"#NonminimalComplexes::constantStrand\">constantStrand</a> -- a constant strand of a chain complex</span></span></li><li><span><span class=\"tt\">net(SparseMatrix)</span> (missing documentation)<!--tag: (net,SparseMatrix)-->\n</span></li><li><span><span class=\"tt\">newSparseMatrix(List,List,List)</span> (missing documentation)<!--tag: (newSparseMatrix,List,List,List)-->\n</span></li><li><span><span class=\"tt\">numColumns(SparseMatrix)</span> (missing documentation)<!--tag: (numColumns,SparseMatrix)-->\n</span></li><li><span><span class=\"tt\">numRows(SparseMatrix)</span> (missing documentation)<!--tag: (numRows,SparseMatrix)-->\n</span></li><li><span><span class=\"tt\">sparseMatrix(Matrix)</span> (missing documentation)<!--tag: (sparseMatrix,Matrix)-->\n</span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">ColumnNums</span> (missing documentation)<!--tag: ColumnNums-->\n</span></li><li><span><span class=\"tt\">Entries</span> (missing documentation)<!--tag: Entries-->\n</span></li><li><span><span class=\"tt\">RowNums</span> (missing documentation)<!--tag: RowNums-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"support for computing homology, ranks and SVD complexes, from a chain complex over the real numbers\" href=\"#NonminimalComplexes::NonminimalComplexes\">NonminimalComplexes</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/NonminimalComplexes.m2\">NonminimalComplexes.m2</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/NonminimalComplexes.m2\">NonminimalComplexes.m2:332:0</a>.</p></div></div>"
+    },
+    "RowNums": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "RowNums",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">RowNums</span> (missing documentation)<!--tag: RowNums-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "SparseMatrix": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "SparseMatrix",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Functions and methods returning an object of class SparseMatrix:</h2><ul><li><span><span class=\"tt\">newSparseMatrix(List,List,List)</span> (missing documentation)<!--tag: (newSparseMatrix,List,List,List)-->\n</span></li><li><span><span class=\"tt\">sparseMatrix(Matrix)</span> (missing documentation)<!--tag: (sparseMatrix,Matrix)-->\n</span></li></ul><h2>Methods that use an object of class SparseMatrix:</h2><ul><li><span><span class=\"tt\">net(SparseMatrix)</span> (missing documentation)<!--tag: (net,SparseMatrix)-->\n</span></li><li><span><span class=\"tt\">numColumns(SparseMatrix)</span> (missing documentation)<!--tag: (numColumns,SparseMatrix)-->\n</span></li><li><span><span class=\"tt\">numRows(SparseMatrix)</span> (missing documentation)<!--tag: (numRows,SparseMatrix)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">SparseMatrix</span> (missing documentation)<!--tag: SparseMatrix-->\n is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "sparseMatrix": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "sparseMatrix",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">sparseMatrix</span>:</h2><ul><li><span><span class=\"tt\">sparseMatrix(Matrix)</span> (missing documentation)<!--tag: (sparseMatrix,Matrix)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">sparseMatrix</span> (missing documentation)<!--tag: sparseMatrix-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "NonminimalComplexes":{},
+    "ColumnNums":{},
+    "constantStrand":{},
+    "Entries":{},
+    "newSparseMatrix":{},
+    "RowNums":{},
+    "SparseMatrix":{},
+    "sparseMatrix":{}
+  }
+}

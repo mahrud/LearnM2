@@ -1,0 +1,30 @@
+{
+  "index": {
+    "checkLicense": "Licenses::checkLicense",
+    "Licenses": "Licenses::Licenses"
+  },
+  "nodes": {
+    "checkLicense": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "checkLicense",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">checkLicense</span> (missing documentation)<!--tag: checkLicense-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    },
+    "Licenses": {
+      "Description": "<div><h2>Description</h2><div><p>This package examines the version number of the various packages compiled with Macaulay2 to determine under which licenses Macaulay2 may be offered.</p></div></div>",
+      "Headline": [
+        "Licenses",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/Licenses.m2:161:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://dangrayson.com/\">Daniel R. Grayson</a><span> &lt;<a href=\"mailto:danielrichardgrayson%40gmail.com\">danielrichardgrayson@gmail.com</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1</b> of Licenses.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><span class=\"tt\">checkLicense</span> (missing documentation)<!--tag: checkLicense-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a href=\"#Licenses::Licenses\">Licenses</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/Licenses.m2\">Licenses.m2</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/Licenses.m2\">Licenses.m2:161:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Licenses":{},
+    "checkLicense":{}
+  }
+}

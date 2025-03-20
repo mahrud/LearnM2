@@ -1,0 +1,49 @@
+{
+  "index": {
+    "OpenMath": "OpenMath::OpenMath",
+    "openMath": "OpenMath::openMath",
+    "openMath(Thing)": "OpenMath::openMath",
+    "val": "OpenMath::val",
+    "val(XMLnode)": "OpenMath::val",
+    "value(XMLnode)": "OpenMath::val"
+  },
+  "nodes": {
+    "OpenMath": {
+      "Description": "<div><h2>Description</h2>This package provides methods  for representing Macaulay2 objects using the <a href=\"https://openmath.org/\">OpenMath</a> standard and vice versa.</div>",
+      "Headline": [
+        "OpenMath",
+        " -- OpenMath support"
+      ],
+      "Location": "../../../../Macaulay2/packages/OpenMath.m2:85:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Evaluate an XMLnode containing OpenMath\" href=\"#OpenMath::val\">val(XMLnode)</a> -- Evaluate an XMLnode containing OpenMath</span></li></ul></div>",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://magma.maths.usyd.edu.au/~danr\">Dan Roozemond</a><span> &lt;<a href=\"mailto:dan.roozemond%40gmail.com\">dan.roozemond@gmail.com</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.2.2</b> of OpenMath.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"Turn an arbitrary Macaulay2 object into OpenMath (if possible)\" href=\"#OpenMath::openMath\">openMath</a> -- Turn an arbitrary Macaulay2 object into OpenMath (if possible)</span></li><li><span><a title=\"Evaluate an XMLnode containing OpenMath\" href=\"#OpenMath::val\">val</a> -- Evaluate an XMLnode containing OpenMath</span></li></ul></li><li>Methods<ul><li><span><kbd>openMath(Thing)</kbd> -- see <span><a title=\"Turn an arbitrary Macaulay2 object into OpenMath (if possible)\" href=\"#OpenMath::openMath\">openMath</a> -- Turn an arbitrary Macaulay2 object into OpenMath (if possible)</span></span></li><li><span><kbd>val(XMLnode)</kbd> -- see <span><a title=\"Evaluate an XMLnode containing OpenMath\" href=\"#OpenMath::val\">val</a> -- Evaluate an XMLnode containing OpenMath</span></span></li><li><span><kbd>value(XMLnode)</kbd> -- see <span><a title=\"Evaluate an XMLnode containing OpenMath\" href=\"#OpenMath::val\">val</a> -- Evaluate an XMLnode containing OpenMath</span></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"OpenMath support\" href=\"#OpenMath::OpenMath\">OpenMath</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/OpenMath.m2\">OpenMath.m2</a>, with auxiliary files in <a href=\"../../Macaulay2/OpenMath/\">OpenMath/</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/OpenMath.m2\">OpenMath.m2:85:0</a>.</p></div></div>"
+    },
+    "openMath": {
+      "Description": "<div><h2>Description</h2>We show how to convert a random integer to OpenMath and print it as XML<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : v = openMath 42\n\no1 = &lt;OMI &quot;42&quot;\n\no1 : XMLnode</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : toLibxmlNode v\n\no2 = &lt;OMI>42&lt;/OMI>\n\no2 : LibxmlNode (xmlTypeDescription)</code></pre></td></tr></table>We show how to represent 2*3 in OpenMath<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i3 : v = openMath (hold 2*3)\n\no3 = &lt;OMA\n       &lt;OMS cd=&quot;arith1&quot; name=&quot;times&quot;\n       &lt;OMI &quot;2&quot;\n       &lt;OMI &quot;3&quot;\n\no3 : XMLnode</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : toLibxmlNode v\n\no4 = &lt;OMA>\n           &lt;OMS cd=&quot;arith1&quot; name=&quot;times&quot;/>\n           &lt;OMI>2&lt;/OMI>\n           &lt;OMI>3&lt;/OMI>\n         &lt;/OMA>\n\no4 : LibxmlNode (xmlTypeDescription)</code></pre></td></tr></table></div>",
+      "Headline": [
+        "openMath",
+        " -- Turn an arbitrary Macaulay2 object into OpenMath (if possible)"
+      ],
+      "Location": "../../../../Macaulay2/packages/OpenMath.m2:133:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Evaluate an XMLnode containing OpenMath\" href=\"#OpenMath::val\">val(XMLnode)</a> -- Evaluate an XMLnode containing OpenMath</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">openMath x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span></span></li></ul></li><li>Outputs:<ul><li><span>an XMLnode describing x</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">openMath</span>:</h2><ul><li><kbd>openMath(Thing)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Turn an arbitrary Macaulay2 object into OpenMath (if possible)\" href=\"#OpenMath::openMath\">openMath</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/OpenMath.m2\">OpenMath.m2:133:0</a>.</p></div></div>"
+    },
+    "val": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : t = parse ///&lt;OMA>&lt;OMS cd=&quot;arith1&quot; name=&quot;plus&quot;/>&lt;OMI>1&lt;/OMI>&lt;OMI>2&lt;/OMI>&lt;/OMA>///\n\no1 = &lt;OMA\n       &lt;OMS cd=&quot;arith1&quot; name=&quot;plus&quot;\n       &lt;OMI &quot;1&quot;\n       &lt;OMI &quot;2&quot;\n\no1 : XMLnode</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : val t\n\no2 = 3</code></pre></td></tr></table></div>",
+      "Headline": [
+        "val",
+        " -- Evaluate an XMLnode containing OpenMath"
+      ],
+      "Location": "../../../../Macaulay2/packages/OpenMath.m2:109:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Turn an arbitrary Macaulay2 object into OpenMath (if possible)\" href=\"#OpenMath::openMath\">openMath</a> -- Turn an arbitrary Macaulay2 object into OpenMath (if possible)</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">val x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span></span></li></ul></li><li>Outputs:<ul><li><span>the value of the OpenMath object described by x</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">val</span>:</h2><ul><li><kbd>val(XMLnode)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Evaluate an XMLnode containing OpenMath\" href=\"#OpenMath::val\">val</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/OpenMath.m2\">OpenMath.m2:109:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "OpenMath":{},
+    "openMath":{},
+    "val":{}
+  }
+}

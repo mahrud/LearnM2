@@ -1,0 +1,34 @@
+{
+  "index": {
+    "MergeTeX": "MergeTeX::MergeTeX",
+    "mergeTeX": "MergeTeX::MergeTeX",
+    "mergeTeX(...,Path=>...)": "MergeTeX::MergeTeX",
+    "mergeTeXFile": "MergeTeX::MergeTeX",
+    "Path": "MergeTeX::MergeTeX",
+    "TeX": "MergeTeX::TeX"
+  },
+  "nodes": {
+    "MergeTeX": {
+      "Description": "<div><h2>Description</h2><div><p>This packages parses a LaTeX file, looking for Macaulay2 code. The latter must follow the syntax of the LaTeX package &quot;listings&quot;, namely, if must be enclosed in <span class=\"tt\">\\begin{lstlisting}[language=Macaulay2]...\\end{lstlisting}</span>, or must be taken from an external M2 file via <span class=\"tt\">\\begin{lstinputlisting}[language=Macaulay2]{filename.m2}</span>; one can also insert inline code with <span class=\"tt\">\\lstinline[language=Macaulay2]!...!</span>, but it is not parsed. See the example file <span class=\"tt\">ex.tex</span>.</p><p>It then produces a new file where the output of the code has been inserted in place of the input. The LaTeX file should contain <span class=\"tt\">\\usepackage{listings}</span> and should include a definition of the Macaulay2 language; this can be found in the auxiliary file <span class=\"tt\">lst-Macaulay2.tex</span>.</p><p>It also replaces automatically commands of the form <span class=\"tt\">\\macoutput{n}</span> with the nth output of Macaulay2.</p><p><span class=\"tt\">mergeTeX</span> takes as input the TeX source as a string and returns the output as a string, whereas <span class=\"tt\">mergeTeXFile</span> takes as arguments the names of the source LaTeX file and of the target LaTeX file (the two can be identical; <span class=\"tt\">mergeTeXFile</span> acts idempotently).</p></div></div>",
+      "Headline": [
+        "MergeTeX",
+        " -- Run Macaulay2 code inside a LaTeX file"
+      ],
+      "Location": "../../../../Macaulay2/packages/MergeTeX.m2:201:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://blogs.unimelb.edu.au/paul-zinn-justin/\">Paul Zinn-Justin</a><span> &lt;<a href=\"mailto:pzinn%40unimelb.edu.au\">pzinn@unimelb.edu.au</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.6</b> of MergeTeX.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><kbd>mergeTeX</kbd></li><li><kbd>mergeTeXFile</kbd></li></ul></li><li>Symbols<ul><li><kbd>Path</kbd></li><li><span><span class=\"tt\">TeX</span> (missing documentation)<!--tag: TeX-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Run Macaulay2 code inside a LaTeX file\" href=\"#MergeTeX::MergeTeX\">MergeTeX</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <a href=\"../../Macaulay2/MergeTeX.m2\">MergeTeX.m2</a>, with auxiliary files in <a href=\"../../Macaulay2/MergeTeX/\">MergeTeX/</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/MergeTeX.m2\">MergeTeX.m2:201:0</a>.</p></div></div>"
+    },
+    "TeX": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "TeX",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">TeX</span> (missing documentation)<!--tag: TeX-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <a href=\"../../Macaulay2/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString\">/home/runner/work/M2/M2/M2/BUILD/build/Macaulay2/packages/currentString:2:0</a>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "MergeTeX":{},
+    "TeX":{}
+  }
+}
