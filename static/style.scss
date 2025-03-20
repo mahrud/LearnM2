@@ -14,13 +14,46 @@ html { background-color: whitesmoke; }
 body { background-color: white; }
 .container { max-width: 800px; }
 
-#x-projnav {
+img.feature {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.navbar {
     min-height: 2rem;
     max-width: 1800px;
     background-color: #eee;
     padding: 9px;
     margin: auto;
     border-radius: 3px;
+}
+
+@media (min-width: 769px) {
+    .headline-wrapper {
+	display: grid;
+	grid-template-areas: "headline search";
+	grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+	padding-right: 3rem;
+    }
+}
+@media (min-width: 1200px) {
+    .headline-wrapper {
+	display: grid;
+	grid-template-areas: "headline search";
+	grid-template-columns: minmax(0, 4fr) minmax(0, 1fr);
+	padding-right: 1rem;
+    }
+}
+
+
+.headline {
+    // max-width: auto;
+    text-wrap: wrap;
+}
+
+#x-search {
+    // min-width: 20%
 }
 
 #x-footer {

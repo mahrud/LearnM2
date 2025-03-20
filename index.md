@@ -146,7 +146,7 @@ C = res I
  </div>
 
  <div class="col-2 feature">
-  [![](https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo_thumb.jpg){:.feature}](https://www.nsf.gov/)
+  [![]({{ site.url }}{{ site.baseurl }}/static/NSF.jpg){:.feature}](https://www.nsf.gov/)
  </div>
 </div>
 
@@ -170,3 +170,9 @@ C = res I
 </div>
 
 -->
+
+<script src="{{ site.url }}{{ site.baseurl }}/static/packages.js"></script>
+<script>
+var bucket = '{{ site.baseurl }}/packages/';
+$.getJSON(bucket+'index.json', function(data) { updateFuse(data, '') })
+</script>

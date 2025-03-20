@@ -55,3 +55,22 @@ elapsedTime ("static/Packages.json") << toJSON(H, Indent => 2) << flush << close
 
 elapsedTime L = apply(makeDocumentTag methods resolution, fetchRawDocumentation);
 Macaulay2Doc#"raw documentation"#"resolution(Ideal)"
+
+
+debug Core
+getFullIndex = () -> (
+    fullindex := new MutableHashTable;
+    for pkg in getPackageInfoList() do (
+	pkgname := pkg#"name";
+	if fullindex#?(pkgname | "::" | pkgname) then continue;
+	dbname := pkg#"doc db file name";
+	dbkeys := pkg#"doc keys"();
+	db := openDatabase dbname;
+	re := "PrimaryTag => new DocumentTag from \\{.+?,\"(.+?)\",\"" | pkgname | "\"\\}";
+	-- TODO: order by type, put the package first?
+	scan(dbkeys, key -> fullindex#(fkey := pkgname | "::" | key) =
+	    if 0 < #(m := select(re, pkgname | "::\\1", db#key)) then m#0 else fkey));
+    new HashTable from fullindex)
+fullindex = getFullIndex();
+#fullindex
+"_packages/index.json" << json(Sort => true, Indent => 2, fullindex) << endl << flush

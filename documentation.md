@@ -1,15 +1,24 @@
 ---
-layout: page
-title: Docs
-#category: links
-#order: 4
+layout: entry
+title: Learn
+category: links
+order: 2
 ---
 
-{% comment %}
-<iframe src="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/"
-	frameborder="0" style="width: 100%; height: 90vh;" title="Official Macaulay2 Documentation"></iframe>
-{% endcomment %}
+<div id="content"></div>
 
+<script src="{{ site.url }}{{ site.baseurl }}/static/packages.js"></script>
+<script>
+if ( window.location.hash ) { updatePage(); } else {
+    //openPackage("#Truncations");
+    openPackage("#Macaulay2Doc");
+    //openNode("#Macaulay2Doc::packages provided with Macaulay2");
+    //$.getJSON(bucket+'Packages.json', function(data) {
+    //    updateSidebar(data, null, "Macaulay2Doc"); });
+};
+</script>
+
+{% comment %}
 {% for item in site.docs -%}
 * [{{ item.title }}]({{ site.baseurl }}{{ item.url }})
 {% endfor %}
@@ -25,3 +34,4 @@ markdown MENU := x -> concatenate apply(x, markdown)
 << replace("common/share/Macaulay2/Style", "../static", markdown X#4)
 {% endM2D %}
 </div>
+{% endcomment %}

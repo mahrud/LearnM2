@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div id="x-projnav">
-  <span>
+<nav class="navbar justify-content-between navbar-expand-lg navbar-light bg-light headline-wrapper">
+  <span class="navbar-brand headline">
     <a id="pkgname" href="#Macaulay2Doc"></a>
     <span class="text-muted">::</span>
     <a id="headline" href="#Macaulay2Doc"></a>
@@ -15,7 +15,10 @@ layout: default
     <a id="pkg-toc">toc</a>
   </span>
   -->
-</div>
+  <form class="form-inline my-2 my-lg-0 search" id="x-search" role="search">
+    <input class="form-control mr-sm-2" id="x-search-query" type="text" name="q" placeholder="Search" />
+  </form>
+</nav>
 
 <div class="main-wrapper">
 {% if page.layout == "entry" %}
