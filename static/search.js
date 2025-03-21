@@ -4,13 +4,19 @@ var urlParams = new URLSearchParams(window.location.search);
 function doSearch() {
   var query = searchBox.val();
   if (query == "") updatePage();
-  var result = fuse.search(query);
-  updateSearch(result);
+  var results = fuse.search(query);
+  updateSearch(results);
   //var regex = new RegExp("<mark>(.*)</mark>", "gim");
   //var content = document.getElementById("main").innerHTML;
   //document.getElementById("main").innerHTML = content.replace(regex, "$1");
   //doHighlight();
 }
+
+var timeout = null;
+searchBox.on("keyup", function(event) {
+    clearTimeout(timeout);
+    timeout = setTimeout(doSearch, 100);
+});
 
 // Highlight search Query
 // function doHighlight() {
@@ -32,5 +38,4 @@ $(document).ready(function () {
     searchBox.val(urlParams.get("q"));
     doSearch();
   }
-  searchBox.on("keyup", doSearch);
 });

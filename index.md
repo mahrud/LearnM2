@@ -174,5 +174,5 @@ C = res I
 <script src="{{ site.url }}{{ site.baseurl }}/static/packages.js"></script>
 <script>
 var bucket = '{{ site.baseurl }}/packages/';
-$.getJSON(bucket+'index.json', function(data) { updateFuse(data, '') })
+$.getJSON(bucket+'fullindex.json', function(data) { updateFuse(data, '') })
 </script>

@@ -26,12 +26,14 @@ var bucket = '{{ site.baseurl }}/packages/';
 var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/_packages/';
 {% endif -%}
 
+var database = new Map([]);
+
 function updateSearch(results) {
     $('#outline-list').attr('open', true);
     $('.outline-list').html(
 	results.slice(0, 25).map(elt => `
         <li class="outline-item">
-          <a class="outline-link" href="#${elt.item}">${elt.item}</a>
+          <a class="outline-link" href="#${database.get(elt.item)}">${elt.item}</a>
         </li>`).join(''));
 }
 
@@ -50,22 +52,21 @@ function updateOutline(base, prefix, hash) {
         </li>`).join(''));
 }
 
-var database = new Set([]);
-const fuse = new Fuse([], { ignoreLocation: true, threshold: 0.2 });
-function updateFuse(index, prefix) {
-    if (!database.has(prefix)) {
-	database.add(prefix);
+const fuse = new Fuse([], { ignoreLocation: true, threshold: 0.4 });
+function updateFuse(index, pkgname) {
+    if (!database.has(pkgname)) {
+	database.set(pkgname, pkgname);
 	Object.keys(index).forEach(key => {
-            var fkey = prefix + key;
+            var fkey = pkgname + '::' + key;
             if (!database.has(fkey)) {
-		database.add(fkey);
+		database.set(fkey, index[key]);
 		fuse.add(fkey);
             };
 	});
     };
 }
 
-function makeSubmenu(toc, prefix, current) {
+function makeSubmenu(toc, pkgname, current) {
     var open = false;
     var menu = Object.entries(toc).map(function([key, subtoc]) {
 	open = open || key == current;
@@ -73,15 +74,15 @@ function makeSubmenu(toc, prefix, current) {
 	var style = key == current ? `background-color: yellow` : "";
 	if (Object.keys(subtoc).length == 0) return `
         <li class="index-item">
-          <a style="${style}" href="#${prefix}${key}" onclick="openNode(this)"><tt>${key}</tt></a>
+          <a style="${style}" href="#${pkgname}::${key}" onclick="openNode(this)"><tt>${key}</tt></a>
         </li>`;
-	var [submenu, subopen] = makeSubmenu(subtoc, prefix, current);
+	var [submenu, subopen] = makeSubmenu(subtoc, pkgname, current);
 	var openattr = (subopen || key == current) ? "open" : "";
 	open = open || subopen;
 	return `
         <li class="index-item toggle">
           <details ${openattr}>
-            <summary><a style="${style}" href="#${prefix}${key}" onclick="openNode(this)"><tt>${key}</tt></a></summary>
+            <summary><a style="${style}" href="#${pkgname}::${key}" onclick="openNode(this)"><tt>${key}</tt></a></summary>
             <ol>${submenu}
             </ol>
           </details>
@@ -91,10 +92,9 @@ function makeSubmenu(toc, prefix, current) {
 }
 
 function updateSidebar(data, pkgname, current) {
-    var prefix = pkgname ? pkgname + '::' : '';
-    updateFuse(data["index"], prefix);
+    updateFuse(data["index"], pkgname);
     $('.index-list').html(
-	makeSubmenu(data["toc"], prefix, current)[0]);
+	makeSubmenu(data["toc"], pkgname, current)[0]);
 }
 
 function updateNavbar(param, pkgname, title) {
