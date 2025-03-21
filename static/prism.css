@@ -50,9 +50,21 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+table.examples {
+    width: 100%;
+    table-layout:fixed;
+}
+
+/* front page blocks */
+figure > pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
+	overflow: auto;
+}
+
+/* documentation blocks */
+:not(figure) > pre[class*="language-"] {
+	margin: .05em 0;
 	overflow: auto;
 }
 
@@ -62,10 +74,17 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
+dl { margin-bottom: 5px }
+dt { margin-bottom: 5px }
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
+    display: flex;
+    padding: 0.5em;
+    width: 80%;
+    margin: 0 0 0px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    white-space: pre;
 }
 
 .token.comment,
