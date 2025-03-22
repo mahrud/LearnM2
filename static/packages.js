@@ -113,7 +113,8 @@ function openNode(param) {
     $.getJSON(bucket+pkgname+'.json', function(data) {
 	updateSidebar(data, pkgname, node);
 	updateNavbar(param, pkgname, data["nodes"][node]["Headline"])
-	$('#content').html(template(data["nodes"][node]));
+	var content = template(data["nodes"][node]).replaceAll("../../Macaulay2/Style", "/LearnM2/static");
+	$('#content').html(content);
 	$('html, body').scrollTop(0);
 	updateOutline('', '#'+pkgname+'::'+node, regex[3]);
 	Prism.highlightAll()
@@ -128,7 +129,8 @@ function openPackage(param) {
     $.getJSON(bucket+pkgname+'.json', function(data) {
 	updateSidebar(data, pkgname, pkgname);
 	updateNavbar(param, pkgname, pkgname)
-	$('#content').html(template(data["nodes"][pkgname]));
+	var content = template(data["nodes"][pkgname]).replaceAll("../../Macaulay2/Style", "/LearnM2/static");
+	$('#content').html(content);
 	updateOutline('', '#'+pkgname, regex[2]);
 	Prism.highlightAll()
 	renderKaTeX();
