@@ -22,6 +22,8 @@ encoding: utf-8
 collections:
   docs:
     output: true
+  packages:
+    output: true
 
 # Markdown specs
 markdown: kramdown

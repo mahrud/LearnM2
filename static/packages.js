@@ -20,8 +20,11 @@ var template = Handlebars.compile(`
 {{ displayHTML WaysToUse }}`);
 {% endraw %}
 
-var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/static/';
-var bucket = '{{ site.baseurl }}/static/';
+{%- if site.url == "http://localhost:4000" %}
+var bucket = '{{ site.baseurl }}/packages/';
+{% else %}
+var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/_packages/';
+{% endif -%}
 
 function updateSearch(results) {
     $('#outline-list').attr('open', true);

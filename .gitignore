@@ -3,3 +3,4 @@ vendor
 Gemfile.lock
 .jekyll-cache
 .sass-cache
+docs/packages/*.json

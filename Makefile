@@ -12,8 +12,8 @@ clean:; rm -rf _outputs/*.{input,output,tmp}
 build:	clean
 	bundle exec jekyll build -s . -d docs/
 
-push: build
-	git add docs && git commit -m "generated on `date`" && git push
+push:	build
+	git add docs && git commit -m "generated on `date`" && git push --force && git reset HEAD~1
 
 install:
 	gem install jekyll
