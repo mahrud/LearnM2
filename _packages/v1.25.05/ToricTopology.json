@@ -1,0 +1,226 @@
+{
+  "index": {
+    "bettiQTM": "ToricTopology::bettiQTM",
+    "bettiQTM(QuasiToricManifold)": "ToricTopology::bettiQTM",
+    "bettiQTM(ZZ,QuasiToricManifold)": "ToricTopology::bettiQTM",
+    "bettiSmallCover": "ToricTopology::bettiSmallCover",
+    "bettiSmallCover(SmallCover)": "ToricTopology::bettiSmallCover",
+    "bettiSmallCover(ZZ,SmallCover)": "ToricTopology::bettiSmallCover",
+    "chern": "ToricTopology::chern",
+    "chern(QuasiToricManifold)": "ToricTopology::chern",
+    "cohomologyRing": "ToricTopology::cohomologyRing",
+    "cohomologyRing(QuasiToricManifold)": "ToricTopology::cohomologyRing",
+    "cohomologyRing(SmallCover)": "ToricTopology::cohomologyRing",
+    "complexProjectiveSpace": "ToricTopology::complexProjectiveSpace",
+    "complexProjectiveSpace(ZZ)": "ToricTopology::complexProjectiveSpace",
+    "hessenbergVariety": "ToricTopology::hessenbergVariety",
+    "hessenbergVariety(ZZ)": "ToricTopology::hessenbergVariety",
+    "isValidChar": "ToricTopology::isValidChar",
+    "isValidChar(SimplicialComplex,Matrix)": "ToricTopology::isValidChar",
+    "QTMCharacteristicMatrix": "ToricTopology::QTMCharacteristicMatrix",
+    "QTMDimension": "ToricTopology::QTMDimension",
+    "QTMSimplicialComplex": "ToricTopology::QTMSimplicialComplex",
+    "QuasiToricManifold": "ToricTopology::QuasiToricManifold",
+    "quasiToricManifold": "ToricTopology::quasiToricManifold",
+    "quasiToricManifold(SimplicialComplex,Matrix)": "ToricTopology::quasiToricManifold",
+    "realProjectiveSpace": "ToricTopology::realProjectiveSpace",
+    "realProjectiveSpace(ZZ)": "ToricTopology::realProjectiveSpace",
+    "SmallCover": "ToricTopology::SmallCover",
+    "smallCover": "ToricTopology::smallCover",
+    "smallCover(SimplicialComplex,Matrix)": "ToricTopology::smallCover",
+    "stiefelWhitney": "ToricTopology::stiefelWhitney",
+    "stiefelWhitney(SmallCover)": "ToricTopology::stiefelWhitney",
+    "ToricTopology": "ToricTopology::ToricTopology"
+  },
+  "nodes": {
+    "bettiQTM": {
+      "Description": "<div><h2>Description</h2><div><p>Compute the betti numbers of a quasi-toric manifold. If a dimension k is specified, then only the k-th betti number of M is computed. If no dimension is specified, all the betti numbers between 0 and the dimension of M are computed.</p></div></div>",
+      "Headline": [
+        "bettiQTM",
+        " -- Compute the betti numbers of a quasi-toric manifold"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:581:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">bettiQTM(k,M)</code></dd><dd><code class=\"language-macaulay2\">bettiQTM(M)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">k</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">quasi-toric manifold</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li><li><span><span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">bettiQTM</span>:</h2><ul><li><kbd>bettiQTM(QuasiToricManifold)</kbd></li><li><kbd>bettiQTM(ZZ,QuasiToricManifold)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute the betti numbers of a quasi-toric manifold\" href=\"#ToricTopology::bettiQTM\">bettiQTM</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:581:0</span>.</p></div></div>"
+    },
+    "bettiSmallCover": {
+      "Description": "<div><h2>Description</h2><div><p>Compute the betti numbers of a small cover. If a dimension k is specified, then only the k-th betti number of N is computed. If no dimension is specified, all the betti numbers between 0 and the dimension of N are computed.</p></div></div>",
+      "Headline": [
+        "bettiSmallCover",
+        " -- Compute the betti numbers of a small cover"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:556:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">bettiSmallCover(k,N)</code></dd><dd><code class=\"language-macaulay2\">bettiSmallCover(N)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">k</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li><li><span><span class=\"tt\">N</span>, <span>a <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">small cover</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li><li><span><span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">bettiSmallCover</span>:</h2><ul><li><kbd>bettiSmallCover(SmallCover)</kbd></li><li><kbd>bettiSmallCover(ZZ,SmallCover)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute the betti numbers of a small cover\" href=\"#ToricTopology::bettiSmallCover\">bettiSmallCover</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:556:0</span>.</p></div></div>"
+    },
+    "chern": {
+      "Description": "<div><h2>Description</h2><div><p>Compute the Chern classes of a quasi-toric manifold. The output is a list of elements in the cohomology ring of M.</p></div></div>",
+      "Headline": [
+        "chern",
+        " -- Compute the Chern classes of a quasi-toric manifold"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:530:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">chern(M)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">quasi-toric manifold</a></span>, </span></li></ul></li><li><a href=\"#Macaulay2Doc::using%20functions%20with%20optional%20inputs\">Optional inputs</a>:<ul><li><span><span class=\"tt\">CoefficientRing</span> (missing documentation)<!--tag: [chern, CoefficientRing]-->\n<span class=\"tt\"> => </span><span class=\"tt\">...</span>, <span>default value ZZ</span>, <span></span></span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">chern</span>:</h2><ul><li><kbd>chern(QuasiToricManifold)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute the Chern classes of a quasi-toric manifold\" href=\"#ToricTopology::chern\">chern</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:530:0</span>.</p></div></div>"
+    },
+    "cohomologyRing": {
+      "Description": "<div><h2>Description</h2><div><p>Compute the cohomology ring of a small cover (over ZZ/2) or quasi-toric manifold (over ZZ).</p></div></div>",
+      "Headline": [
+        "cohomologyRing",
+        " -- Compute the cohomology ring of a small cover or quasi-toric manifold"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:489:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">cohomologyRing(N)</code></dd><dd><code class=\"language-macaulay2\">cohomologyRing(M)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">N</span>, <span>a <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">small cover</a></span>, </span></li><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">quasi-toric manifold</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all quotient rings\" href=\"#Macaulay2Doc::QuotientRing\">quotient ring</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">cohomologyRing</span>:</h2><ul><li><kbd>cohomologyRing(QuasiToricManifold)</kbd></li><li><kbd>cohomologyRing(SmallCover)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:489:0</span>.</p></div></div>"
+    },
+    "complexProjectiveSpace": {
+      "Description": "<div><h2>Description</h2><div><p>Complex projective space of dimension n, as small cover.</p></div></div>",
+      "Headline": [
+        "complexProjectiveSpace",
+        " -- Complex projective space of dimension n"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:619:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Real projective space of dimension n\" href=\"#ToricTopology::realProjectiveSpace\">realProjectiveSpace</a> -- Real projective space of dimension n</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">complexProjectiveSpace(n)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">n</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">quasi-toric manifold</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">complexProjectiveSpace</span>:</h2><ul><li><kbd>complexProjectiveSpace(ZZ)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Complex projective space of dimension n\" href=\"#ToricTopology::complexProjectiveSpace\">complexProjectiveSpace</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:619:0</span>.</p></div></div>"
+    },
+    "hessenbergVariety": {
+      "Description": "<div><h2>Description</h2><div><p>Hessenberg variety asscoiated to the n-permutahedron, as small cover.</p></div></div>",
+      "Headline": [
+        "hessenbergVariety",
+        " -- Hessenberg variety asscoiated to the n-permutahedron"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:639:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">hessenbergVariety(n)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">n</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">small cover</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">hessenbergVariety</span>:</h2><ul><li><kbd>hessenbergVariety(ZZ)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Hessenberg variety asscoiated to the n-permutahedron\" href=\"#ToricTopology::hessenbergVariety\">hessenbergVariety</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:639:0</span>.</p></div></div>"
+    },
+    "isValidChar": {
+      "Description": "<div><h2>Description</h2><div><p>Checks whether chi is characteristic for K.</p></div></div>",
+      "Headline": [
+        "isValidChar",
+        " -- Whether a matrix is characteristic for a simplicial complex"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:423:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">isValidChar(K,chi)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">K</span>, <span>an <a title=\"the class of all abstract simplicial complexes\" href=\"#SimplicialComplexes::SimplicialComplex\">abstract simplicial complex</a></span>, </span></li><li><span><span class=\"tt\">chi</span>, <span>a <a title=\"the class of all matrices\" href=\"#Macaulay2Doc::Matrix\">matrix</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Whether a matrix is characteristic for a simplicial complex\" href=\"#ToricTopology::isValidChar\">isValidChar</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:423:0</span>.</p></div></div>"
+    },
+    "QTMCharacteristicMatrix": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "QTMCharacteristicMatrix",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">QTMCharacteristicMatrix</span> (missing documentation)<!--tag: QTMCharacteristicMatrix-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "QTMDimension": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "QTMDimension",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">QTMDimension</span> (missing documentation)<!--tag: QTMDimension-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "QTMSimplicialComplex": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "QTMSimplicialComplex",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">QTMSimplicialComplex</span> (missing documentation)<!--tag: QTMSimplicialComplex-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "QuasiToricManifold": {
+      "Description": "<div><h2>Description</h2><div><p>A quasi-toric manifold is represented by a simplicial complex K and matrix which is characteristic for K.</p></div></div>",
+      "Headline": [
+        "QuasiToricManifold",
+        " -- the class of all quasi-toric manifolds"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:403:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">SmallCover</a> -- the class of all small covers</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Functions and methods returning a quasi-toric manifold:</h2><ul><li><span><a title=\"Complex projective space of dimension n\" href=\"#ToricTopology::complexProjectiveSpace\">complexProjectiveSpace</a> -- Complex projective space of dimension n</span></li><li><span><kbd>complexProjectiveSpace(ZZ)</kbd> -- see <span><a title=\"Complex projective space of dimension n\" href=\"#ToricTopology::complexProjectiveSpace\">complexProjectiveSpace</a> -- Complex projective space of dimension n</span></span></li><li><span><a title=\"Create a quasi-toric manifold\" href=\"#ToricTopology::quasiToricManifold\">quasiToricManifold</a> -- Create a quasi-toric manifold</span></li></ul><h2>Methods that use a quasi-toric manifold:</h2><ul><li><span><kbd>bettiQTM(QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the betti numbers of a quasi-toric manifold\" href=\"#ToricTopology::bettiQTM\">bettiQTM</a> -- Compute the betti numbers of a quasi-toric manifold</span></span></li><li><span><kbd>bettiQTM(ZZ,QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the betti numbers of a quasi-toric manifold\" href=\"#ToricTopology::bettiQTM\">bettiQTM</a> -- Compute the betti numbers of a quasi-toric manifold</span></span></li><li><span><kbd>chern(QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the Chern classes of a quasi-toric manifold\" href=\"#ToricTopology::chern\">chern</a> -- Compute the Chern classes of a quasi-toric manifold</span></span></li><li><span><kbd>cohomologyRing(QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">QuasiToricManifold</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:403:0</span>.</p></div></div>"
+    },
+    "quasiToricManifold": {
+      "Description": "<div><h2>Description</h2><div><p>Create a quasi-toric manifold over K with characteristic matrix chi. If chi is not characteristic for K, an error is returned.</p></div></div>",
+      "Headline": [
+        "quasiToricManifold",
+        " -- Create a quasi-toric manifold"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:466:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">quasiToricManifold(K,chi)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">K</span>, <span>an <a title=\"the class of all abstract simplicial complexes\" href=\"#SimplicialComplexes::SimplicialComplex\">abstract simplicial complex</a></span>, </span></li><li><span><span class=\"tt\">chi</span>, <span>a <a title=\"the class of all matrices\" href=\"#Macaulay2Doc::Matrix\">matrix</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">quasi-toric manifold</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Create a quasi-toric manifold\" href=\"#ToricTopology::quasiToricManifold\">quasiToricManifold</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:466:0</span>.</p></div></div>"
+    },
+    "realProjectiveSpace": {
+      "Description": "<div><h2>Description</h2><div><p>Real projective space of dimension n, as small cover.</p></div></div>",
+      "Headline": [
+        "realProjectiveSpace",
+        " -- Real projective space of dimension n"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:600:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Complex projective space of dimension n\" href=\"#ToricTopology::complexProjectiveSpace\">complexProjectiveSpace</a> -- Complex projective space of dimension n</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">realProjectiveSpace(n)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">n</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">small cover</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">realProjectiveSpace</span>:</h2><ul><li><kbd>realProjectiveSpace(ZZ)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Real projective space of dimension n\" href=\"#ToricTopology::realProjectiveSpace\">realProjectiveSpace</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:600:0</span>.</p></div></div>"
+    },
+    "SmallCover": {
+      "Description": "<div><h2>Description</h2><div><p>A small cover is represented by a simplicial complex K and matrix which is characteristic for K.</p></div></div>",
+      "Headline": [
+        "SmallCover",
+        " -- the class of all small covers"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:391:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">QuasiToricManifold</a> -- the class of all quasi-toric manifolds</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Functions and methods returning a small cover:</h2><ul><li><span><a title=\"Hessenberg variety asscoiated to the n-permutahedron\" href=\"#ToricTopology::hessenbergVariety\">hessenbergVariety</a> -- Hessenberg variety asscoiated to the n-permutahedron</span></li><li><span><kbd>hessenbergVariety(ZZ)</kbd> -- see <span><a title=\"Hessenberg variety asscoiated to the n-permutahedron\" href=\"#ToricTopology::hessenbergVariety\">hessenbergVariety</a> -- Hessenberg variety asscoiated to the n-permutahedron</span></span></li><li><span><a title=\"Real projective space of dimension n\" href=\"#ToricTopology::realProjectiveSpace\">realProjectiveSpace</a> -- Real projective space of dimension n</span></li><li><span><kbd>realProjectiveSpace(ZZ)</kbd> -- see <span><a title=\"Real projective space of dimension n\" href=\"#ToricTopology::realProjectiveSpace\">realProjectiveSpace</a> -- Real projective space of dimension n</span></span></li><li><span><a title=\"Create a small cover\" href=\"#ToricTopology::smallCover\">smallCover</a> -- Create a small cover</span></li></ul><h2>Methods that use a small cover:</h2><ul><li><span><kbd>bettiSmallCover(SmallCover)</kbd> -- see <span><a title=\"Compute the betti numbers of a small cover\" href=\"#ToricTopology::bettiSmallCover\">bettiSmallCover</a> -- Compute the betti numbers of a small cover</span></span></li><li><span><kbd>bettiSmallCover(ZZ,SmallCover)</kbd> -- see <span><a title=\"Compute the betti numbers of a small cover\" href=\"#ToricTopology::bettiSmallCover\">bettiSmallCover</a> -- Compute the betti numbers of a small cover</span></span></li><li><span><kbd>cohomologyRing(SmallCover)</kbd> -- see <span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></span></li><li><span><kbd>stiefelWhitney(SmallCover)</kbd> -- see <span><a title=\"Compute the Stiefel-Whitney classes of a small cover\" href=\"#ToricTopology::stiefelWhitney\">stiefelWhitney</a> -- Compute the Stiefel-Whitney classes of a small cover</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">SmallCover</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:391:0</span>.</p></div></div>"
+    },
+    "smallCover": {
+      "Description": "<div><h2>Description</h2><div><p>Create a small cover over K with characteristic matrix chi. If chi is not characteristic for K, then an error is returned. The entries of chi are automatically converted to ZZ/2 entries, if they not already so.</p></div></div>",
+      "Headline": [
+        "smallCover",
+        " -- Create a small cover"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:446:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">smallCover(K,chi)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">K</span>, <span>an <a title=\"the class of all abstract simplicial complexes\" href=\"#SimplicialComplexes::SimplicialComplex\">abstract simplicial complex</a></span>, </span></li><li><span><span class=\"tt\">chi</span>, <span>a <a title=\"the class of all matrices\" href=\"#Macaulay2Doc::Matrix\">matrix</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">small cover</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Create a small cover\" href=\"#ToricTopology::smallCover\">smallCover</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:446:0</span>.</p></div></div>"
+    },
+    "stiefelWhitney": {
+      "Description": "<div><h2>Description</h2><div><p>Compute the Stiefel-Whitney classes of a small cover. The output is a list of elements in the cohomology ring of N.</p></div></div>",
+      "Headline": [
+        "stiefelWhitney",
+        " -- Compute the Stiefel-Whitney classes of a small cover"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:510:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">stiefelWhitney(N)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">N</span>, <span>a <a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">small cover</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">stiefelWhitney</span>:</h2><ul><li><kbd>stiefelWhitney(SmallCover)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute the Stiefel-Whitney classes of a small cover\" href=\"#ToricTopology::stiefelWhitney\">stiefelWhitney</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:510:0</span>.</p></div></div>"
+    },
+    "ToricTopology": {
+      "Description": "<div><h2>Description</h2><div><p>ToricTopology is a package for computing with quasi-toric manifolds and small covers.</p><p>A quasi-toric manifold (or small cover) is entirely determined by a pair consisting of a simplicial complex K and a matrix chi which is characteristic for K.</p><p>If K has n vertices, we can think of its k-faces as sets of integers between 1 and n. A matrix chi is characteristic for K if all maximal minors of chi indexed by the facets of  K have determinant equal to 1 or -1.</p><p></p></div></div>",
+      "Headline": [
+        "ToricTopology",
+        " -- homological computations in toric topology"
+      ],
+      "Location": "../../../../Macaulay2/packages/ToricTopology.m2:378:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"http://www.enpicom.com\">Alvise Trevisan</a><span> &lt;<a href=\"mailto:a.trevisan%40enpicom.com\">a.trevisan@enpicom.com</a>></span></li><li>Alexander I. Suciu<span> &lt;<a href=\"mailto:a.suciu%40neu.edu\">a.suciu@neu.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of ToricTopology, released <b>September 1, 2015</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{ToricTopologySource,\n  title = {{ToricTopology: A \\emph{Macaulay2} package. Version~1.0}},\n  author = {Alvise Trevisan and Alexander I. Suciu},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><a title=\"the class of all quasi-toric manifolds\" href=\"#ToricTopology::QuasiToricManifold\">QuasiToricManifold</a> -- the class of all quasi-toric manifolds</span></li><li><span><a title=\"the class of all small covers\" href=\"#ToricTopology::SmallCover\">SmallCover</a> -- the class of all small covers</span></li></ul></li><li>Functions and commands<ul><li><span><a title=\"Compute the betti numbers of a quasi-toric manifold\" href=\"#ToricTopology::bettiQTM\">bettiQTM</a> -- Compute the betti numbers of a quasi-toric manifold</span></li><li><span><a title=\"Compute the betti numbers of a small cover\" href=\"#ToricTopology::bettiSmallCover\">bettiSmallCover</a> -- Compute the betti numbers of a small cover</span></li><li><span><a title=\"Compute the Chern classes of a quasi-toric manifold\" href=\"#ToricTopology::chern\">chern</a> -- Compute the Chern classes of a quasi-toric manifold</span></li><li><span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></li><li><span><a title=\"Complex projective space of dimension n\" href=\"#ToricTopology::complexProjectiveSpace\">complexProjectiveSpace</a> -- Complex projective space of dimension n</span></li><li><span><a title=\"Hessenberg variety asscoiated to the n-permutahedron\" href=\"#ToricTopology::hessenbergVariety\">hessenbergVariety</a> -- Hessenberg variety asscoiated to the n-permutahedron</span></li><li><span><a title=\"Whether a matrix is characteristic for a simplicial complex\" href=\"#ToricTopology::isValidChar\">isValidChar</a> -- Whether a matrix is characteristic for a simplicial complex</span></li><li><span><a title=\"Create a quasi-toric manifold\" href=\"#ToricTopology::quasiToricManifold\">quasiToricManifold</a> -- Create a quasi-toric manifold</span></li><li><span><a title=\"Real projective space of dimension n\" href=\"#ToricTopology::realProjectiveSpace\">realProjectiveSpace</a> -- Real projective space of dimension n</span></li><li><span><a title=\"Create a small cover\" href=\"#ToricTopology::smallCover\">smallCover</a> -- Create a small cover</span></li><li><span><a title=\"Compute the Stiefel-Whitney classes of a small cover\" href=\"#ToricTopology::stiefelWhitney\">stiefelWhitney</a> -- Compute the Stiefel-Whitney classes of a small cover</span></li></ul></li><li>Methods<ul><li><span><kbd>bettiQTM(QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the betti numbers of a quasi-toric manifold\" href=\"#ToricTopology::bettiQTM\">bettiQTM</a> -- Compute the betti numbers of a quasi-toric manifold</span></span></li><li><span><kbd>bettiQTM(ZZ,QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the betti numbers of a quasi-toric manifold\" href=\"#ToricTopology::bettiQTM\">bettiQTM</a> -- Compute the betti numbers of a quasi-toric manifold</span></span></li><li><span><kbd>bettiSmallCover(SmallCover)</kbd> -- see <span><a title=\"Compute the betti numbers of a small cover\" href=\"#ToricTopology::bettiSmallCover\">bettiSmallCover</a> -- Compute the betti numbers of a small cover</span></span></li><li><span><kbd>bettiSmallCover(ZZ,SmallCover)</kbd> -- see <span><a title=\"Compute the betti numbers of a small cover\" href=\"#ToricTopology::bettiSmallCover\">bettiSmallCover</a> -- Compute the betti numbers of a small cover</span></span></li><li><span><kbd>chern(QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the Chern classes of a quasi-toric manifold\" href=\"#ToricTopology::chern\">chern</a> -- Compute the Chern classes of a quasi-toric manifold</span></span></li><li><span><kbd>cohomologyRing(QuasiToricManifold)</kbd> -- see <span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></span></li><li><span><kbd>cohomologyRing(SmallCover)</kbd> -- see <span><a title=\"Compute the cohomology ring of a small cover or quasi-toric manifold\" href=\"#ToricTopology::cohomologyRing\">cohomologyRing</a> -- Compute the cohomology ring of a small cover or quasi-toric manifold</span></span></li><li><span><kbd>complexProjectiveSpace(ZZ)</kbd> -- see <span><a title=\"Complex projective space of dimension n\" href=\"#ToricTopology::complexProjectiveSpace\">complexProjectiveSpace</a> -- Complex projective space of dimension n</span></span></li><li><span><kbd>hessenbergVariety(ZZ)</kbd> -- see <span><a title=\"Hessenberg variety asscoiated to the n-permutahedron\" href=\"#ToricTopology::hessenbergVariety\">hessenbergVariety</a> -- Hessenberg variety asscoiated to the n-permutahedron</span></span></li><li><span><kbd>realProjectiveSpace(ZZ)</kbd> -- see <span><a title=\"Real projective space of dimension n\" href=\"#ToricTopology::realProjectiveSpace\">realProjectiveSpace</a> -- Real projective space of dimension n</span></span></li><li><span><kbd>stiefelWhitney(SmallCover)</kbd> -- see <span><a title=\"Compute the Stiefel-Whitney classes of a small cover\" href=\"#ToricTopology::stiefelWhitney\">stiefelWhitney</a> -- Compute the Stiefel-Whitney classes of a small cover</span></span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">QTMCharacteristicMatrix</span> (missing documentation)<!--tag: QTMCharacteristicMatrix-->\n</span></li><li><span><span class=\"tt\">QTMDimension</span> (missing documentation)<!--tag: QTMDimension-->\n</span></li><li><span><span class=\"tt\">QTMSimplicialComplex</span> (missing documentation)<!--tag: QTMSimplicialComplex-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"homological computations in toric topology\" href=\"#ToricTopology::ToricTopology\">ToricTopology</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">ToricTopology.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">ToricTopology.m2:378:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "ToricTopology":{},
+    "bettiQTM":{},
+    "bettiSmallCover":{},
+    "chern":{},
+    "cohomologyRing":{},
+    "complexProjectiveSpace":{},
+    "hessenbergVariety":{},
+    "isValidChar":{},
+    "QTMCharacteristicMatrix":{},
+    "QTMDimension":{},
+    "QTMSimplicialComplex":{},
+    "QuasiToricManifold":{},
+    "quasiToricManifold":{},
+    "realProjectiveSpace":{},
+    "SmallCover":{},
+    "smallCover":{},
+    "stiefelWhitney":{}
+  }
+}

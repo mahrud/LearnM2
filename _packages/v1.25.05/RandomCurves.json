@@ -1,0 +1,19 @@
+{
+  "index": {
+    "RandomCurves": "RandomCurves::RandomCurves"
+  },
+  "nodes": {
+    "RandomCurves": {
+      "Description": "<div><h2>Description</h2><div><p>This package loads the <a title=\"a Framework for the construction of random points of unirational moduli spaces\" href=\"#RandomObjects::RandomObjects\">RandomObjects</a>, <a title=\"Construction of random space curves of various kinds.\" href=\"#RandomSpaceCurves::RandomSpaceCurves\">RandomSpaceCurves</a>, <a title=\"random plane curves\" href=\"#RandomPlaneCurves::RandomPlaneCurves\">RandomPlaneCurves</a>, <a title=\"Construction of random curves of genus 14\" href=\"#RandomGenus14Curves::RandomGenus14Curves\">RandomGenus14Curves</a>, and <a title=\"Construction of canonical curves of genus less or equal to 14\" href=\"#RandomCanonicalCurves::RandomCanonicalCurves\">RandomCanonicalCurves</a> packages.</p></div></div>",
+      "Headline": [
+        "RandomCurves",
+        " -- random curves"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomCurves.m2:39:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"http://www.math.uni-sb.de/ag/schreyer/\">Frank-Olaf Schreyer</a><span> &lt;<a href=\"mailto:schreyer%40math.uni-sb.de\">schreyer@math.uni-sb.de</a>></span></li><li><a href=\"http://www.crcg.de/wiki/User:Bothmer\">Hans-Christian Graf v. Bothmer</a><span> &lt;<a href=\"mailto:bothmer%40uni-math.gwdg.de\">bothmer@uni-math.gwdg.de</a>></span></li><li><a href=\"http://www.math.uni-sb.de/ag/schreyer/\">Florian Geiss</a><span> &lt;<a href=\"mailto:fg%40math.uni-sb.de\">fg@math.uni-sb.de</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.6</b> of RandomCurves, released <b>July 5, 2011</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{RandomCurvesSource,\n  title = {{RandomCurves: A \\emph{Macaulay2} package. Version~0.6}},\n  author = {Frank-Olaf Schreyer and Hans-Christian Graf v. Bothmer and Florian Geiss},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"random curves\" href=\"#RandomCurves::RandomCurves\">RandomCurves</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">RandomCurves.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomCurves.m2:39:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "RandomCurves":{}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "index": {
+    "Benchmark": "Benchmark::Benchmark",
+    "runBenchmarks": "Benchmark::runBenchmarks"
+  },
+  "nodes": {
+    "Benchmark": {
+      "Description": "<div><h2>Description</h2><div><p>This package provides some standard benchmarks for gauging the speed of algorithms and machines.</p></div></div>",
+      "Headline": [
+        "Benchmark",
+        " -- standard Macaulay2 benchmarks"
+      ],
+      "Location": "../../../../Macaulay2/packages/Benchmark.m2:297:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"http://www.math.uiuc.edu/~dan/\">Daniel R. Grayson</a><span> &lt;<a href=\"mailto:dan%40math.uiuc.edu\">dan@math.uiuc.edu</a>></span></li><li><a href=\"http://www.math.cornell.edu/People/Faculty/stillman.html\">Michael E. Stillman</a><span> &lt;<a href=\"mailto:mike%40math.cornell.edu\">mike@math.cornell.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of Benchmark.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{BenchmarkSource,\n  title = {{Benchmark: standard \\emph{Macaulay2} benchmarks. Version~1.0}},\n  author = {Daniel R. Grayson and Michael E. Stillman},\n  howpublished = {A \\emph{Macaulay2} package available at\n    &quot;https://macaulay2.com/&quot;}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a href=\"#Benchmark::runBenchmarks\">runBenchmarks</a></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"standard Macaulay2 benchmarks\" href=\"#Benchmark::Benchmark\">Benchmark</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">Benchmark.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Benchmark.m2:297:0</span>.</p></div></div>"
+    },
+    "runBenchmarks": {
+      "Description": "<div><h2>Description</h2><div><p>The tests available are: <br>&quot;deg2generic&quot; -- gb of a generic ideal of codimension 2 and degree 2<br>&quot;gb4by4comm&quot; -- gb of the ideal of generic commuting 4 by 4 matrices over ZZ/101<br>&quot;gb3445&quot; -- gb of an ideal with elements of degree 3,4,4,5 in 8 variables<br>&quot;gbB148&quot; -- gb of Bayesian graph ideal #148<br>&quot;res39&quot; -- res of a generic 3 by 9 matrix over ZZ/101<br>&quot;resG25&quot; -- res of the coordinate ring of Grassmannian(2,5)<br>&quot;yang-gb1&quot; -- an example of Yang-Hui He arising in string theory<br>&quot;yang-subring&quot; -- an example of Yang-Hui He<br></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : runBenchmarks &quot;res39&quot;\n-- beginning computation Sun Jun  8 02:49:32 UTC 2025\n-- Linux fv-az1922-638 6.11.0-1015-azure #15~24.04.1-Ubuntu SMP Thu May  1 02:52:08 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux\n-- AMD EPYC 7763 64-Core Processor  AuthenticAMD  cpu MHz 3241.753  \n-- Macaulay2 1.25.06, compiled with gcc 13.3.0\n-- res39: res of a generic 3 by 9 matrix over ZZ/101: .148623 seconds</code></pre></td></tr></table></div>",
+      "Headline": [
+        "runBenchmarks",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/Benchmark.m2:297:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">runBenchmarks</code></dd><dd><code class=\"language-macaulay2\">runBenchmarks x</code></dd><dd><code class=\"language-macaulay2\">runBenchmarks all</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, a string or list of strings</span></li></ul></li><li><div>Consequences:<ul><li>the benchmarks whose names occur in <span class=\"tt\">x</span> are run.  The output is in a standard format that can be inserted into a Macaulay2 source file as a comment. If <span class=\"tt\">x</span> is omitted, then the &quot;res39&quot;, &quot;resG25&quot;, and &quot;gbB148&quot; are run. If <span class=\"tt\">x</span> is <span class=\"tt\">all</span>, then all the benchmarks are run.</li></ul></div></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a href=\"#Benchmark::runBenchmarks\">runBenchmarks</a> is <span>a <a title=\"the class of all commands\" href=\"#Macaulay2Doc::Command\">command</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Benchmark.m2:297:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Benchmark":{},
+    "runBenchmarks":{}
+  }
+}

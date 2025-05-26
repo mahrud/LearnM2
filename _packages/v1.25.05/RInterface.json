@@ -1,0 +1,19 @@
+{
+  "index": {
+    "RInterface": "RInterface::RInterface"
+  },
+  "nodes": {
+    "RInterface": {
+      "Description": "<div><h2>Description</h2>Warning: RInterface was loaded without key components.</div>",
+      "Headline": [
+        "RInterface",
+        " -- interface to R for statistical computing"
+      ],
+      "Location": "../../../../Macaulay2/packages/RInterface.m2:24:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"https://webwork.piedmont.edu/~dtorrance\">Doug Torrance</a><span> &lt;<a href=\"mailto:dtorrance%40piedmont.edu\">dtorrance@piedmont.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of RInterface, released <b>January 28, 2024</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{RInterfaceSource,\n  title = {{RInterface: interface to R for statistical computing. Version~0.1}},\n  author = {Doug Torrance},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"interface to R for statistical computing\" href=\"#RInterface::RInterface\">RInterface</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">RInterface.m2</span>, with auxiliary files in <span class=\"tt\">RInterface/</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RInterface.m2:24:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "RInterface":{}
+  }
+}
