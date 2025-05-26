@@ -21,9 +21,9 @@ var template = Handlebars.compile(`
 {% endraw %}
 
 {%- if site.url == "http://localhost:4000" %}
-var bucket = '{{ site.baseurl }}/packages/';
+var bucket = '{{ site.baseurl }}/packages/v1.25.05/';
 {% else %}
-var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/_packages/';
+var bucket = 'https://raw.githubusercontent.com/mahrud/LearnM2/refs/heads/learn/_packages/v1.25.05/';
 {% endif -%}
 
 var database = new Map([]);
