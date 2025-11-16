@@ -1,0 +1,129 @@
+{
+  "index": {
+    "checkEquation": "EllipticIntegrals::checkEquation",
+    "distance": "EllipticIntegrals::distance",
+    "EllipticCurve": "EllipticIntegrals::EllipticCurve",
+    "EllipticCurvePoint": "EllipticIntegrals::EllipticCurvePoint",
+    "EllipticIntegrals": "EllipticIntegrals::EllipticIntegrals",
+    "modPeriods": "EllipticIntegrals::modPeriods",
+    "Period": "EllipticIntegrals::Period",
+    "Period'": "EllipticIntegrals::Period'",
+    "periodCoordinates": "EllipticIntegrals::periodCoordinates",
+    "PointClass": "EllipticIntegrals::PointClass",
+    "test": "EllipticIntegrals::test"
+  },
+  "nodes": {
+    "checkEquation": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "checkEquation",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">checkEquation</span> (missing documentation)<!--tag: checkEquation-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "distance": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "distance",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">distance</span> (missing documentation)<!--tag: distance-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "EllipticCurve": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "EllipticCurve",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class EllipticCurve:</h2><ul><li><span><span class=\"tt\">EllipticCurve List</span> (missing documentation)<!--tag: (SPACE,EllipticCurve,List)-->\n</span></li><li><span><span class=\"tt\">Function _ EllipticCurve</span> (missing documentation)<!--tag: (_,Function,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">isReal(EllipticCurve)</span> (missing documentation)<!--tag: (isReal,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">net(EllipticCurve)</span> (missing documentation)<!--tag: (net,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">new EllipticCurve from List</span> (missing documentation)<!--tag: (NewFromMethod,EllipticCurve,List)-->\n</span></li><li><span><span class=\"tt\">precision(EllipticCurve)</span> (missing documentation)<!--tag: (precision,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">toString(EllipticCurve)</span> (missing documentation)<!--tag: (toString,EllipticCurve)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">EllipticCurve</span> (missing documentation)<!--tag: EllipticCurve-->\n is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all projective varieties\" href=\"#Varieties::ProjectiveVariety\">ProjectiveVariety</a> &lt; <a title=\"the class of all algebraic varieties\" href=\"#Varieties::Variety\">Variety</a> &lt; <a title=\"the class of all mutable hash tables\" href=\"#Macaulay2Doc::MutableHashTable\">MutableHashTable</a> &lt; <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "EllipticCurvePoint": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "EllipticCurvePoint",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class EllipticCurvePoint:</h2><ul><li><span><span class=\"tt\">- EllipticCurvePoint</span> (missing documentation)<!--tag: (-,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">conjugate(EllipticCurvePoint)</span> (missing documentation)<!--tag: (conjugate,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">EllipticCurvePoint + EllipticCurvePoint</span> (missing documentation)<!--tag: (+,EllipticCurvePoint,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">EllipticCurvePoint - EllipticCurvePoint</span> (missing documentation)<!--tag: (-,EllipticCurvePoint,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">isReal(EllipticCurvePoint)</span> (missing documentation)<!--tag: (isReal,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">net(EllipticCurvePoint)</span> (missing documentation)<!--tag: (net,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">toString(EllipticCurvePoint)</span> (missing documentation)<!--tag: (toString,EllipticCurvePoint)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">EllipticCurvePoint</span> (missing documentation)<!--tag: EllipticCurvePoint-->\n is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">List</a> &lt; <a title=\"the class of all visible lists\" href=\"#Macaulay2Doc::VisibleList\">VisibleList</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "EllipticIntegrals": {
+      "Description": "<div><h2>Description</h2><div><p>This package provides some functions for computing elliptic integrals and elliptic functions. The basis for the computations is the arithmetic geometric mean, and the notation we use comes from the paper <a href=\"http://dangrayson.com/cv.xhtml#agm\">The arithogeometric mean</a>, Archiv der Mathematik, volume 52, 1989, pages 507-512.</p></div></div>",
+      "Headline": [
+        "EllipticIntegrals",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/EllipticIntegrals.m2:474:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://www.math.uiuc.edu/~dan/\">Daniel R. Grayson</a><span> &lt;<a href=\"mailto:dan%40math.uiuc.edu\">dan@math.uiuc.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of EllipticIntegrals, released <b>February, 2008</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{EllipticIntegralsSource,\n  title = {{EllipticIntegrals: uniformization of elliptic curves. Version~1.0}},\n  author = {Daniel R. Grayson},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><span class=\"tt\">EllipticCurve</span> (missing documentation)<!--tag: EllipticCurve-->\n</span></li><li><span><span class=\"tt\">EllipticCurvePoint</span> (missing documentation)<!--tag: EllipticCurvePoint-->\n</span></li></ul></li><li>Functions and commands<ul><li><span><span class=\"tt\">distance</span> (missing documentation)<!--tag: distance-->\n</span></li></ul></li><li>Methods<ul><li><span><span class=\"tt\">- EllipticCurvePoint</span> (missing documentation)<!--tag: (-,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">conjugate(EllipticCurvePoint)</span> (missing documentation)<!--tag: (conjugate,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">EllipticCurve List</span> (missing documentation)<!--tag: (SPACE,EllipticCurve,List)-->\n</span></li><li><span><span class=\"tt\">EllipticCurvePoint + EllipticCurvePoint</span> (missing documentation)<!--tag: (+,EllipticCurvePoint,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">EllipticCurvePoint - EllipticCurvePoint</span> (missing documentation)<!--tag: (-,EllipticCurvePoint,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">Function _ EllipticCurve</span> (missing documentation)<!--tag: (_,Function,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">isReal(EllipticCurve)</span> (missing documentation)<!--tag: (isReal,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">isReal(EllipticCurvePoint)</span> (missing documentation)<!--tag: (isReal,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">net(EllipticCurve)</span> (missing documentation)<!--tag: (net,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">net(EllipticCurvePoint)</span> (missing documentation)<!--tag: (net,EllipticCurvePoint)-->\n</span></li><li><span><span class=\"tt\">new EllipticCurve from List</span> (missing documentation)<!--tag: (NewFromMethod,EllipticCurve,List)-->\n</span></li><li><span><span class=\"tt\">precision(EllipticCurve)</span> (missing documentation)<!--tag: (precision,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">toString(EllipticCurve)</span> (missing documentation)<!--tag: (toString,EllipticCurve)-->\n</span></li><li><span><span class=\"tt\">toString(EllipticCurvePoint)</span> (missing documentation)<!--tag: (toString,EllipticCurvePoint)-->\n</span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">checkEquation</span> (missing documentation)<!--tag: checkEquation-->\n</span></li><li><span><span class=\"tt\">modPeriods</span> (missing documentation)<!--tag: modPeriods-->\n</span></li><li><span><span class=\"tt\">Period</span> (missing documentation)<!--tag: Period-->\n</span></li><li><span><span class=\"tt\">Period'</span> (missing documentation)<!--tag: Period'-->\n</span></li><li><span><span class=\"tt\">periodCoordinates</span> (missing documentation)<!--tag: periodCoordinates-->\n</span></li><li><span><span class=\"tt\">PointClass</span> (missing documentation)<!--tag: PointClass-->\n</span></li><li><span><span class=\"tt\">test</span> (missing documentation)<!--tag: test-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a href=\"#EllipticIntegrals::EllipticIntegrals\">EllipticIntegrals</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">EllipticIntegrals.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">EllipticIntegrals.m2:474:0</span>.</p></div></div>"
+    },
+    "modPeriods": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "modPeriods",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">modPeriods</span> (missing documentation)<!--tag: modPeriods-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "Period": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Period",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">Period</span> (missing documentation)<!--tag: Period-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "Period'": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Period'",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">Period'</span> (missing documentation)<!--tag: Period'-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "periodCoordinates": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "periodCoordinates",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">periodCoordinates</span> (missing documentation)<!--tag: periodCoordinates-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "PointClass": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "PointClass",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">PointClass</span> (missing documentation)<!--tag: PointClass-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "test": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "test",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">test</span> (missing documentation)<!--tag: test-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "EllipticIntegrals":{},
+    "checkEquation":{},
+    "distance":{},
+    "EllipticCurve":{},
+    "EllipticCurvePoint":{},
+    "modPeriods":{},
+    "Period":{},
+    "Period'":{},
+    "periodCoordinates":{},
+    "PointClass":{},
+    "test":{}
+  }
+}

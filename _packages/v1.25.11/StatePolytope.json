@@ -1,0 +1,80 @@
+{
+  "index": {
+    "initialIdeals": "StatePolytope::initialIdeals",
+    "initialIdeals(Ideal)": "StatePolytope::initialIdeals",
+    "isStable": "StatePolytope::isStable",
+    "isStable(ZZ,Ideal)": "StatePolytope::isStable",
+    "polymakeStatePolytope": "StatePolytope::polymakeStatePolytope",
+    "polymakeStatePolytope(Ideal)": "StatePolytope::polymakeStatePolytope(Ideal)",
+    "polymakeStatePolytope(ZZ,Ideal)": "StatePolytope::polymakeStatePolytope(ZZ,Ideal)",
+    "StatePolytope": "StatePolytope::StatePolytope"
+  },
+  "nodes": {
+    "initialIdeals": {
+      "Description": "<div><h2>Description</h2>Given an ideal <span class=\"tt\">I</span> in <span class=\"tt\">M2</span>, this function calls <span class=\"tt\">gfan</span> and returns the list of initial ideals of <span class=\"tt\">I</span>. <table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[a,b];</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(a^2+b^2,a*b);\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : initialIdeals(I)  \n\n             2   3     3        2\no3 = {{a*b, a , b }, {a , a*b, b }}\n\no3 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "initialIdeals",
+        " -- calls gfan and returns the list of initial ideals"
+      ],
+      "Location": "../../../../Macaulay2/packages/StatePolytope.m2:140:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">initialIdeals(I)</code></dd></dl></li><li>Inputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, the ideal</span></li></ul></li><li>Outputs:<ul><li><span>the list of initial ideals of I.  Note that each initial ideal is given as a list of monomial generators in ring(I), not as a monomial ideal.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">initialIdeals</span>:</h2><ul><li><kbd>initialIdeals(Ideal)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"calls gfan and returns the list of initial ideals\" href=\"#StatePolytope::initialIdeals\">initialIdeals</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">StatePolytope.m2:140:0</span>.</p></div></div>"
+    },
+    "isStable": {
+      "Description": "<div><h2>Description</h2>Bayer and Morrison showed that GIT stability of the mth Hilbert point of I with respect to the maximal torus acting on a polynomial ring by scaling the variables can be tested by whether <i>State</i><sub>m</sub>(I) contains a certain point.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[a..d];</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(a*c-b^2,a*d-b*c,b*d-c^2);\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : isStable(3,I)\n\no3 = true</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : I = ideal(a^2,b^2,b*c);\n\no4 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : isStable(3,I) \n\no5 = false</code></pre></td></tr></table></div>",
+      "Headline": [
+        "isStable",
+        " -- determines whether the mth Hilbert point of I is GIT stable"
+      ],
+      "Location": "../../../../Macaulay2/packages/StatePolytope.m2:240:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">isStable(3,I)</code></dd></dl></li><li>Inputs:<ul><li><span><span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, specifies which Hilbert point to test</span></li><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, the ideal</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">isStable</span>:</h2><ul><li><kbd>isStable(ZZ,Ideal)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"determines whether the mth Hilbert point of I is GIT stable\" href=\"#StatePolytope::isStable\">isStable</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">StatePolytope.m2:240:0</span>.</p></div></div>"
+    },
+    "polymakeStatePolytope": {
+      "Description": "<div><h2>Description</h2>Computes <i>State</i><sub>m</sub>(I) or <i>State</i>(I), as defined in Sturmfels's book <i>Groebner bases and convex polytopes</i>, page 14.</div>",
+      "Headline": [
+        "polymakeStatePolytope",
+        " -- computes state polytopes of ideals"
+      ],
+      "Location": "../../../../Macaulay2/packages/StatePolytope.m2:155:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">polymakeStatePolytope</span>:</h2><ul><li><span><a title=\"computes the state polytope of an ideal\" href=\"#StatePolytope::polymakeStatePolytope%28Ideal%29\">polymakeStatePolytope(Ideal)</a> -- computes the state polytope of an ideal</span></li><li><span><a title=\"computes the mth state polytope of an ideal\" href=\"#StatePolytope::polymakeStatePolytope%28ZZ%2CIdeal%29\">polymakeStatePolytope(ZZ,Ideal)</a> -- computes the mth state polytope of an ideal</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"computes state polytopes of ideals\" href=\"#StatePolytope::polymakeStatePolytope\">polymakeStatePolytope</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">StatePolytope.m2:155:0</span>.</p></div></div>"
+    },
+    "polymakeStatePolytope(Ideal)": {
+      "Description": "<div><h2>Description</h2>See Sturmfels's book <i>Groebner bases and convex polytopes</i>, page 14 for the definition of <i>State</i>(I).  (The difference between this and <i>State</i><sub>m</sub>(I) is that for all sufficiently large m, <i>State</i><sub>m</sub>(I) does not distinguish between initial ideals which have the same saturation with regard to the irrelevant ideal, whereas in <i>State</i>(I), these are separated.) <table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[a..d];</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(a*c-b^2,a*d-b*c,b*d-c^2);  \n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : polymakeStatePolytope(I)\n\no3 = {{11, 7, 7, 11}, {7, 15, 3, 11}, {4, 18, 6, 8}, {3, 18, 9, 6}, {11, 3, 15, 7}, {8, 6, 18, 4}, {6, 9, 18, 3}, {3, 15, 15, 3}}\n\no3 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "polymakeStatePolytope(Ideal)",
+        " -- computes the state polytope of an ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/StatePolytope.m2:180:0",
+      "Synopsis": "<ul><li><span>Function: <a title=\"computes state polytopes of ideals\" href=\"#StatePolytope::polymakeStatePolytope\">polymakeStatePolytope</a></span></li><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">statePolytope(I)</code></dd></dl></li><li>Inputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, the ideal</span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, the list of vertices of the state polytope</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a title=\"computes the state polytope of an ideal\" href=\"#StatePolytope::polymakeStatePolytope%28Ideal%29\">polymakeStatePolytope(Ideal)</a> -- computes the state polytope of an ideal</span></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">StatePolytope.m2:180:0</span>.</p></div></div>"
+    },
+    "polymakeStatePolytope(ZZ,Ideal)": {
+      "Description": "<div><h2>Description</h2>See Sturmfels's book <i>Groebner bases and convex polytopes</i>, page 14 for the definition of <i>State</i><sub>m</sub>(I).  (The difference between this and <i>State</i>(I) is that for all sufficiently large m, <i>State</i><sub>m</sub>(I) does not distinguish between initial ideals which have the same saturation with regard to the irrelevant ideal, whereas in <i>State</i>(I), these are separated.) <table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[a..d];</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(a*c-b^2,a*d-b*c,b*d-c^2);\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : polymakeStatePolytope(3,I)\n\no3 = {{9, 6, 6, 9}, {6, 12, 3, 9}, {4, 14, 5, 7}, {3, 14, 8, 5}, {9, 3, 12, 6}, {7, 5, 14, 4}, {5, 8, 14, 3}, {3, 12, 12, 3}}\n\no3 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "polymakeStatePolytope(ZZ,Ideal)",
+        " -- computes the mth state polytope of an ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/StatePolytope.m2:206:0",
+      "Synopsis": "<ul><li><span>Function: <a title=\"computes state polytopes of ideals\" href=\"#StatePolytope::polymakeStatePolytope\">polymakeStatePolytope</a></span></li><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">statePolytope(m,I)</code></dd></dl></li><li>Inputs:<ul><li><span><span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, specifies to compute the mth state polytope</span></li><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, the ideal</span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, the list of vertices of the state polytope</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a title=\"computes the mth state polytope of an ideal\" href=\"#StatePolytope::polymakeStatePolytope%28ZZ%2CIdeal%29\">polymakeStatePolytope(ZZ,Ideal)</a> -- computes the mth state polytope of an ideal</span></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">StatePolytope.m2:206:0</span>.</p></div></div>"
+    },
+    "StatePolytope": {
+      "Description": "<div><h2>Description</h2><em>StatePolytope</em> computes state polytopes of ideals using the programs <span class=\"tt\">gfan</span>, <span class=\"tt\">M2</span>, and <span class=\"tt\">polymake</span>.  Specifically, it computes <i>State</i><sub>m</sub>(I) or <i>State</i>(I) as defined in Sturmfels's book <i>Groebner bases and convex polytopes</i>, page 14.  There is also a function for testing GIT stability of an ideal in a polynomial ring with respect to action of the maximal torus scaling the variables.<p></p>We assume that the user has <span class=\"tt\">gfan</span> version 0.3 or higher on his or her system.  The default assumption is that the command to run <span class=\"tt\">gfan</span> is <span class=\"tt\">gfan</span>, but this can be changed in the package configuration if necessary.  The user also needs <span class=\"tt\">polymake</span> version 2.3-1 or higher installed on his or her system, and it must be run by this command.   Finally, the user is responsible for making sure the ideal of study is supported by <span class=\"tt\">gfan</span>.  In version 0.3 this means the ideal must be in a polynomial ring over <span class=\"tt\">QQ</span> or <span class=\"tt\">ZZ/p</span> with p &lt; 32749, and no variable's name should be a substring of another's.</div>",
+      "Headline": [
+        "StatePolytope",
+        " -- computes state polytopes of ideals"
+      ],
+      "Location": "../../../../Macaulay2/packages/StatePolytope.m2:117:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li>Dave Swinarski<span> &lt;<a href=\"mailto:swinarsk%40math.columbia.edu\">swinarsk@math.columbia.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.2</b> of StatePolytope, released <b>October 6, 2008</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{StatePolytopeSource,\n  title = {{StatePolytope: the state polytope of an ideal. Version~1.2}},\n  author = {Dave Swinarski},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"calls gfan and returns the list of initial ideals\" href=\"#StatePolytope::initialIdeals\">initialIdeals</a> -- calls gfan and returns the list of initial ideals</span></li><li><span><a title=\"determines whether the mth Hilbert point of I is GIT stable\" href=\"#StatePolytope::isStable\">isStable</a> -- determines whether the mth Hilbert point of I is GIT stable</span></li><li><span><a title=\"computes state polytopes of ideals\" href=\"#StatePolytope::polymakeStatePolytope\">polymakeStatePolytope</a> -- computes state polytopes of ideals</span></li></ul></li><li>Methods<ul><li><span><kbd>initialIdeals(Ideal)</kbd> -- see <span><a title=\"calls gfan and returns the list of initial ideals\" href=\"#StatePolytope::initialIdeals\">initialIdeals</a> -- calls gfan and returns the list of initial ideals</span></span></li><li><span><kbd>isStable(ZZ,Ideal)</kbd> -- see <span><a title=\"determines whether the mth Hilbert point of I is GIT stable\" href=\"#StatePolytope::isStable\">isStable</a> -- determines whether the mth Hilbert point of I is GIT stable</span></span></li><li><span><a title=\"computes the state polytope of an ideal\" href=\"#StatePolytope::polymakeStatePolytope%28Ideal%29\">polymakeStatePolytope(Ideal)</a> -- computes the state polytope of an ideal</span></li><li><span><a title=\"computes the mth state polytope of an ideal\" href=\"#StatePolytope::polymakeStatePolytope%28ZZ%2CIdeal%29\">polymakeStatePolytope(ZZ,Ideal)</a> -- computes the mth state polytope of an ideal</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"computes state polytopes of ideals\" href=\"#StatePolytope::StatePolytope\">StatePolytope</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">StatePolytope.m2</span>, with auxiliary files in <span class=\"tt\">StatePolytope/</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">StatePolytope.m2:117:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "StatePolytope":{},
+    "initialIdeals":{},
+    "isStable":{},
+    "polymakeStatePolytope":{},
+    "polymakeStatePolytope(Ideal)":{},
+    "polymakeStatePolytope(ZZ,Ideal)":{}
+  }
+}

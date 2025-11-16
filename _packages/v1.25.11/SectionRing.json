@@ -1,0 +1,101 @@
+{
+  "index": {
+    "convertScalarVect": "SectionRing::convertScalarVect",
+    "dualToIdeal": "SectionRing::dualToIdeal",
+    "globallyGenerated": "SectionRing::globallyGenerated",
+    "isMRegular": "SectionRing::isMRegular",
+    "isVectScalar": "SectionRing::isVectScalar",
+    "mRegular": "SectionRing::mRegular",
+    "SectionRing": "SectionRing::SectionRing",
+    "sectionRing": "SectionRing::sectionRing"
+  },
+  "nodes": {
+    "convertScalarVect": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "convertScalarVect",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">convertScalarVect</span> (missing documentation)<!--tag: convertScalarVect-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "dualToIdeal": {
+      "Description": "<div><h2>Description</h2><div><p>Takes an ideal I as input, dualizes the ideal, and maps it back into the ring, producing Hom_R(I,R) ~ J &lt; R.  Used to produce the global sections H^0(mD), where D is an integral divisor defined by I.</p><p></p></div></div>",
+      "Headline": [
+        "dualToIdeal",
+        " -- dual ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/SectionRing.m2:395:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">dualToIdeal(I)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">I</span>, <span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, the dual of I</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"dual ideal\" href=\"#SectionRing::dualToIdeal\">dualToIdeal</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">SectionRing.m2:395:0</span>.</p></div></div>"
+    },
+    "globallyGenerated": {
+      "Description": "<div><h2>Description</h2><div><p>Takes a divisor as input.  It then uses a binary search to check for the smallest integer a with the property that |aD| is a basepoint-free linear series.  In this case, the corresponding line bundle is globally generated.</p><p></p></div></div>",
+      "Headline": [
+        "globallyGenerated",
+        " -- globallyGenerated(D) produces a smallest integer a such that O_X(aD) is globally generated."
+      ],
+      "Location": "../../../../Macaulay2/packages/SectionRing.m2:416:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">globallyGenerated(D)</code></dd><dd><code class=\"language-macaulay2\">globallyGenerated(I)</code></dd><dd><code class=\"language-macaulay2\">globallyGenerated(M)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">D</span>, <span>an instance of the type <a title=\"the Types of divisors\" href=\"#WeilDivisors::BasicDivisor\">WeilDivisor</a></span>, </span></li><li><span><span class=\"tt\">I</span>, <span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, </span></li><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all numbers\" href=\"#Macaulay2Doc::Number\">number</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">globallyGenerated</span>:</h2><ul><li><span><span class=\"tt\">globallyGenerated(Ideal)</span> (missing documentation)<!--tag: (globallyGenerated,Ideal)-->\n</span></li><li><span><span class=\"tt\">globallyGenerated(Module)</span> (missing documentation)<!--tag: (globallyGenerated,Module)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"globallyGenerated(D) produces a smallest integer a such that O_X(aD) is globally generated.\" href=\"#SectionRing::globallyGenerated\">globallyGenerated</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">SectionRing.m2:416:0</span>.</p></div></div>"
+    },
+    "isMRegular": {
+      "Description": "<div><h2>Description</h2><div><p>isMRegular(F,G,m) tests definition 1.8.4 of Lazarsfeld's Positivity in Algebraic Geometry I, which is to say whether H^i(F \\otimes G^(m-i)) = 0 for every i>0.  It tests (in this order) H^1, H^2, \\ldots, H^dim(X), and stops as soon as a non-zero cohomology is found.  If none is found, F is m-G-regular, and it outputs true.</p><p></p></div></div>",
+      "Headline": [
+        "isMRegular",
+        " -- isMRegular(F,G,m) tests where F is m-regular with respect to G (globally generated) in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1)."
+      ],
+      "Location": "../../../../Macaulay2/packages/SectionRing.m2:436:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">isMRegular(F,G,m)</code></dd><dd><code class=\"language-macaulay2\">isMRegular(F,m)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">F</span>, <span>a <a title=\"the class of all coherent sheaves\" href=\"#Varieties::CoherentSheaf\">coherent sheaf</a></span>, </span></li><li><span><span class=\"tt\">G</span>, <span>a <a title=\"the class of all coherent sheaves\" href=\"#Varieties::CoherentSheaf\">coherent sheaf</a></span>, </span></li><li><span><span class=\"tt\">m</span>, <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"isMRegular(F,G,m) tests where F is m-regular with respect to G (globally generated) in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1).\" href=\"#SectionRing::isMRegular\">isMRegular</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">SectionRing.m2:436:0</span>.</p></div></div>"
+    },
+    "isVectScalar": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "isVectScalar",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">isVectScalar</span> (missing documentation)<!--tag: isVectScalar-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "mRegular": {
+      "Description": "<div><h2>Description</h2><div><p>mRegular(F,G) utilizes a binary search to compute the smallest m such that F is m-regular with respect to G, utilizing the function isMRegular.  mRegular(I) computes the regularity of O_X(D), where D is the associated divisor to I.</p><p></p></div></div>",
+      "Headline": [
+        "mRegular",
+        " -- mRegular(F,G) computes the regularity of F with respect to G (globally generated), in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1)."
+      ],
+      "Location": "../../../../Macaulay2/packages/SectionRing.m2:455:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">mRegular(F,G)</code></dd><dd><code class=\"language-macaulay2\">mRegular(F)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">F</span>, <span>a <a title=\"the class of all coherent sheaves\" href=\"#Varieties::CoherentSheaf\">coherent sheaf</a></span>, </span></li><li><span><span class=\"tt\">G</span>, <span>a <a title=\"the class of all coherent sheaves\" href=\"#Varieties::CoherentSheaf\">coherent sheaf</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">mRegular</span>:</h2><ul><li><span><span class=\"tt\">mRegular(Ideal)</span> (missing documentation)<!--tag: (mRegular,Ideal)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"mRegular(F,G) computes the regularity of F with respect to G (globally generated), in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1).\" href=\"#SectionRing::mRegular\">mRegular</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">SectionRing.m2:455:0</span>.</p></div></div>"
+    },
+    "sectionRing": {
+      "Description": "<div><h2>Description</h2><div><p>sectionRing(I) begins by computing the regularity m of O_X, O_X(D), O_X(2D), ..., O_X((l-1)D) with respect to O_X(lD), where l is the output of globallyGenerated(D).  By Mumford's Thm (1.8.5 in Positivity) yields that each of the maps O_X(iD)\\otimes O_X(lD)^\\otimes m -> O_X((i+ml)D) is surjective.  Thus, all generators for the section ring can be assumed in lower degree than bound.  Thus it forms a polynomial ring S over the base field with h^0(iD)-many generators in degree i, for i=1,2,...,bound-1.  Next, relations in degree d are computing by considering the total maps \\oplus_{partitions P of d} \\otimes_{i\\in P} O_X(i D) -> O_X(dD).  Each of these relations is then quotiented, until the point that a domain of the correct dimension is produced.  Some steps are then performed to make the output more readable and standard.</p><p></p></div></div>",
+      "Headline": [
+        "sectionRing",
+        " -- sectionRing(I) produces the section ring of an ample divisor.  If I is an ideal, one can input I to get the section ring of the corresponding divisor."
+      ],
+      "Location": "../../../../Macaulay2/packages/SectionRing.m2:474:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">sectionRing(I)</code></dd><dd><code class=\"language-macaulay2\">sectionRing(D)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">I</span>, <span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span>, </span></li><li><span><span class=\"tt\">D</span>, <span>an instance of the type <a title=\"the Types of divisors\" href=\"#WeilDivisors::BasicDivisor\">WeilDivisor</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all rings\" href=\"#Macaulay2Doc::Ring\">ring</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">sectionRing</span>:</h2><ul><li><span><span class=\"tt\">sectionRing(Ideal)</span> (missing documentation)<!--tag: (sectionRing,Ideal)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"sectionRing(I) produces the section ring of an ample divisor.  If I is an ideal, one can input I to get the section ring of the corresponding divisor.\" href=\"#SectionRing::sectionRing\">sectionRing</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">SectionRing.m2:474:0</span>.</p></div></div>"
+    },
+    "SectionRing": {
+      "Description": "<div><h2>Description</h2><div><p>This package provides a method for computing the section ring of a Weil divisor.</p></div></div>",
+      "Headline": [
+        "SectionRing",
+        " -- computing the section ring of a Weil Divisor"
+      ],
+      "Location": "../../../../Macaulay2/packages/SectionRing.m2:377:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://www.math.utah.edu/~bydlon/\">Andrew Bydlon</a><span> &lt;<a href=\"mailto:thelongdivider%40gmail.com\">thelongdivider@gmail.com</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.2</b> of SectionRing, released <b>September 21 2016</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{SectionRingSource,\n  title = {{SectionRing: the section ring of a Weil Divisor. Version~0.2}},\n  author = {Andrew Bydlon},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><span class=\"tt\">convertScalarVect</span> (missing documentation)<!--tag: convertScalarVect-->\n</span></li><li><span><a title=\"globallyGenerated(D) produces a smallest integer a such that O_X(aD) is globally generated.\" href=\"#SectionRing::globallyGenerated\">globallyGenerated</a> -- globallyGenerated(D) produces a smallest integer a such that O_X(aD) is globally generated.</span></li><li><span><a title=\"isMRegular(F,G,m) tests where F is m-regular with respect to G (globally generated) in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1).\" href=\"#SectionRing::isMRegular\">isMRegular</a> -- isMRegular(F,G,m) tests where F is m-regular with respect to G (globally generated) in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1).</span></li><li><span><span class=\"tt\">isVectScalar</span> (missing documentation)<!--tag: isVectScalar-->\n</span></li><li><span><a title=\"mRegular(F,G) computes the regularity of F with respect to G (globally generated), in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1).\" href=\"#SectionRing::mRegular\">mRegular</a> -- mRegular(F,G) computes the regularity of F with respect to G (globally generated), in the sense of Castelnuovo-Mumford.  Omitting G assumes G=O_X(1).</span></li><li><span><a title=\"sectionRing(I) produces the section ring of an ample divisor.  If I is an ideal, one can input I to get the section ring of the corresponding divisor.\" href=\"#SectionRing::sectionRing\">sectionRing</a> -- sectionRing(I) produces the section ring of an ample divisor.  If I is an ideal, one can input I to get the section ring of the corresponding divisor.</span></li></ul></li><li>Methods<ul><li><span><span class=\"tt\">globallyGenerated(Ideal)</span> (missing documentation)<!--tag: (globallyGenerated,Ideal)-->\n</span></li><li><span><span class=\"tt\">globallyGenerated(Module)</span> (missing documentation)<!--tag: (globallyGenerated,Module)-->\n</span></li><li><span><span class=\"tt\">mRegular(Ideal)</span> (missing documentation)<!--tag: (mRegular,Ideal)-->\n</span></li><li><span><span class=\"tt\">sectionRing(Ideal)</span> (missing documentation)<!--tag: (sectionRing,Ideal)-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"computing the section ring of a Weil Divisor\" href=\"#SectionRing::SectionRing\">SectionRing</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">SectionRing.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">SectionRing.m2:377:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "SectionRing":{},
+    "convertScalarVect":{},
+    "dualToIdeal":{},
+    "globallyGenerated":{},
+    "isMRegular":{},
+    "isVectScalar":{},
+    "mRegular":{},
+    "sectionRing":{}
+  }
+}

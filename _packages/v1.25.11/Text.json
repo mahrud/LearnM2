@@ -1,0 +1,940 @@
+{
+  "index": {
+    "ANCHOR": "Text::ANCHOR",
+    "BLOCKQUOTE": "Text::BLOCKQUOTE",
+    "BODY": "Text::BODY",
+    "BOLD": "Text::BOLD",
+    "BR": "Text::BR",
+    "BUTTON": "Text::BUTTON",
+    "CDATA": "Text::CDATA",
+    "CODE": "Text::CODE",
+    "COMMENT": "Text::COMMENT",
+    "DD": "Text::DD",
+    "DIV": "Text::DIV",
+    "DL": "Text::DL",
+    "DT": "Text::DT",
+    "EM": "Text::EM",
+    "ExampleItem": "Text::ExampleItem",
+    "HEAD": "Text::HEAD",
+    "HEADER1": "Text::HEADER1",
+    "HEADER2": "Text::HEADER2",
+    "HEADER3": "Text::HEADER3",
+    "HEADER4": "Text::HEADER4",
+    "HEADER5": "Text::HEADER5",
+    "HEADER6": "Text::HEADER6",
+    "HR": "Text::HR",
+    "HREF": "Text::HREF",
+    "HTML": "Text::HTML",
+    "html(TEX)": "Text::html(TEX)",
+    "Hypertext": "Text::Hypertext",
+    "HypertextContainer": "Text::HypertextContainer",
+    "HypertextParagraph": "Text::HypertextParagraph",
+    "HypertextVoid": "Text::HypertextVoid",
+    "IFRAME": "Text::IFRAME",
+    "IMG": "Text::IMG",
+    "INDENT": "Text::INDENT",
+    "INPUT": "Text::INPUT",
+    "IntermediateMarkUpType": "Text::IntermediateMarkUpType",
+    "ITALIC": "Text::ITALIC",
+    "KBD": "Text::KBD",
+    "LABEL": "Text::LABEL",
+    "LATER": "Text::LATER",
+    "LI": "Text::LI",
+    "LINK": "Text::LINK",
+    "LITERAL": "Text::LITERAL",
+    "M2CODE": "Text::M2CODE",
+    "M2CODE(Thing)": "Text::M2CODE",
+    "MarkUpType": "Text::MarkUpType",
+    "MENU": "Text::MENU",
+    "META": "Text::META",
+    "new TEX from BasicList": "Text::TEX",
+    "new TEX from String": "Text::TEX",
+    "new TO from Thing": "Text::TO",
+    "new TOH from Thing": "Text::TOH",
+    "OL": "Text::OL",
+    "options(MarkUpType)": "Text::options(MarkUpType)",
+    "PARA": "Text::PARA",
+    "PRE": "Text::PRE",
+    "SAMP": "Text::SAMP",
+    "SCRIPT": "Text::SCRIPT",
+    "show(Hypertext)": "Text::show(Hypertext)",
+    "show(TEX)": "Text::show(Hypertext)",
+    "SMALL": "Text::SMALL",
+    "SPAN": "Text::SPAN",
+    "STRONG": "Text::STRONG",
+    "STYLE": "Text::STYLE",
+    "style": "Text::style(Hypertext)",
+    "style(Hypertext)": "Text::style(Hypertext)",
+    "SUB": "Text::SUB",
+    "SUBSECTION": "Text::SUBSECTION",
+    "SUP": "Text::SUP",
+    "TABLE": "Text::TABLE",
+    "TD": "Text::TD",
+    "TEX": "Text::TEX",
+    "Text": "Text::Text",
+    "TH": "Text::TH",
+    "TITLE": "Text::TITLE",
+    "TO": "Text::TO",
+    "TO2": "Text::TO2",
+    "TOH": "Text::TOH",
+    "TR": "Text::TR",
+    "TT": "Text::TT",
+    "UL": "Text::UL",
+    "validate": "Text::validate",
+    "validate(Hypertext)": "Text::validate",
+    "VAR": "Text::VAR"
+  },
+  "nodes": {
+    "ANCHOR": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ANCHOR",
+        " -- hypertext anchor"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:720:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">ANCHOR{&quot;id&quot;=>u,p}</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">u</span>, the name of the anchor</span></li><li><span><span class=\"tt\">p</span>, some hypertext</span></li></ul></li><li><div>Consequences:<ul><li>When converted to <a title=\"convert to HTML format\" href=\"#Macaulay2Doc::html\">html</a>, the phrase <span class=\"tt\">p</span> will be enclosed in a hypertext anchor named <span class=\"tt\">u</span>.</li></ul></div></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext anchor\" href=\"#Text::ANCHOR\">ANCHOR</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:720:0</span>.</p></div></div>"
+    },
+    "BLOCKQUOTE": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">BLOCKQUOTE x</span> encloses <span class=\"tt\">x</span> in a hypertext BLOCKQUOTE item.<p></p>The argument <span class=\"tt\">x</span> should be a string.<p></p>Here is an example.<blockquote><p>Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line. 1234   2345    4567    5678 34    345    3455       7 </p></blockquote><p></p></div>",
+      "Headline": [
+        "BLOCKQUOTE",
+        " -- hypertext BLOCKQUOTE item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:354:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">BLOCKQUOTE x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext BLOCKQUOTE item\" href=\"#Text::BLOCKQUOTE\">BLOCKQUOTE</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext BLOCKQUOTE item\" href=\"#Text::BLOCKQUOTE\">BLOCKQUOTE</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:354:0</span>.</p></div></div>"
+    },
+    "BODY": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">BODY x</span> encloses <span class=\"tt\">x</span> in a hypertext BODY item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p></div>",
+      "Headline": [
+        "BODY",
+        " -- hypertext BODY item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:177:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">BODY x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext BODY item\" href=\"#Text::BODY\">BODY</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext BODY item\" href=\"#Text::BODY\">BODY</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:177:0</span>.</p></div></div>"
+    },
+    "BOLD": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">BOLD x</span> encloses <span class=\"tt\">x</span> in a hypertext BOLD item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.  This corresponds to B in html format.<p></p>Here is an example.<p></p><b>Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.</b><p></p></div>",
+      "Headline": [
+        "BOLD",
+        " -- hypertext BOLD item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:674:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">BOLD x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext BOLD item\" href=\"#Text::BOLD\">BOLD</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext BOLD item\" href=\"#Text::BOLD\">BOLD</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:674:0</span>.</p></div></div>"
+    },
+    "BR": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "BR",
+        " -- line break"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:120:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">BR{}</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"line break\" href=\"#Text::BR\">BR</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:120:0</span>.</p></div></div>"
+    },
+    "BUTTON": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "BUTTON",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">BUTTON</span> (missing documentation)<!--tag: BUTTON-->\n is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "CDATA": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html CDATA &quot;hi there&quot;\n\no1 = &lt;![CDATA[hi there]]&gt;</code></pre></td></tr></table></div>",
+      "Headline": [
+        "CDATA",
+        " -- hypertext CDATA element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:750:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext CDATA element\" href=\"#Text::CDATA\">CDATA</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:750:0</span>.</p></div></div>"
+    },
+    "CODE": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">CODE x</span> encloses <span class=\"tt\">x</span> in a hypertext CODE item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.<p></p><code>Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.</code><p></p></div>",
+      "Headline": [
+        "CODE",
+        " -- hypertext CODE item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:692:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">CODE x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:692:0</span>.</p></div></div>"
+    },
+    "COMMENT": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html COMMENT &quot;hi there&quot;\n\no1 = &lt;!--hi there--></code></pre></td></tr></table></div>",
+      "Headline": [
+        "COMMENT",
+        " -- hypertext COMMENT element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:746:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext COMMENT element\" href=\"#Text::COMMENT\">COMMENT</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:746:0</span>.</p></div></div>"
+    },
+    "DD": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "DD",
+        " -- hypertext DD element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:738:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext DD element\" href=\"#Text::DD\">DD</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:738:0</span>.</p></div></div>"
+    },
+    "DIV": {
+      "Description": "<div><h2>Description</h2>This corresponds directly to an HTML DIV element.  It is sort of a general-purpose container for top-level blocks, such as paragraphs, lists, and tables.</div>",
+      "Headline": [
+        "DIV",
+        " -- a hypertext division"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:83:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">DIV x</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a hypertext division\" href=\"#Text::DIV\">DIV</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:83:0</span>.</p></div></div>"
+    },
+    "DL": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "DL",
+        " -- hypertext DL element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:734:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext DL element\" href=\"#Text::DL\">DL</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:734:0</span>.</p></div></div>"
+    },
+    "DT": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "DT",
+        " -- hypertext DT element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:736:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext DT element\" href=\"#Text::DT\">DT</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:736:0</span>.</p></div></div>"
+    },
+    "EM": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">EM x</span> encloses <span class=\"tt\">x</span> in a hypertext EM item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.<p></p><em>Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.</em><p></p></div>",
+      "Headline": [
+        "EM",
+        " -- hypertext EM item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:656:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">EM x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext EM item\" href=\"#Text::EM\">EM</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext EM item\" href=\"#Text::EM\">EM</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:656:0</span>.</p></div></div>"
+    },
+    "ExampleItem": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ExampleItem",
+        " -- a type of hypertext for holding example inputs awaiting outputs"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:845:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a type of hypertext for holding example inputs awaiting outputs\" href=\"#Text::ExampleItem\">ExampleItem</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:845:0</span>.</p></div></div>"
+    },
+    "HEAD": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEAD x</span> encloses <span class=\"tt\">x</span> in a hypertext HEAD item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p></div>",
+      "Headline": [
+        "HEAD",
+        " -- hypertext HEAD item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:163:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEAD x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEAD item\" href=\"#Text::HEAD\">HEAD</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEAD item\" href=\"#Text::HEAD\">HEAD</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:163:0</span>.</p></div></div>"
+    },
+    "HEADER1": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEADER1 x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER1 header item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>HEADER1 &quot;Interesting thing&quot;</pre> produces the following header.<h1>Interesting thing</h1></div>",
+      "Headline": [
+        "HEADER1",
+        " -- hypertext HEADER1 item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:233:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEADER1 x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER1 item\" href=\"#Text::HEADER1\">HEADER1</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEADER1 item\" href=\"#Text::HEADER1\">HEADER1</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:233:0</span>.</p></div></div>"
+    },
+    "HEADER2": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEADER2 x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER2 header item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>HEADER2 &quot;Interesting thing&quot;</pre> produces the following header.<h2>Interesting thing</h2><p></p></div>",
+      "Headline": [
+        "HEADER2",
+        " -- hypertext HEADER2 item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:250:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEADER2 x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:250:0</span>.</p></div></div>"
+    },
+    "HEADER3": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEADER3 x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER3 header item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>HEADER3 &quot;Interesting thing&quot;</pre> produces the following header.<h3>Interesting thing</h3><p></p></div>",
+      "Headline": [
+        "HEADER3",
+        " -- hypertext HEADER3 item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:284:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEADER3 x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER3 item\" href=\"#Text::HEADER3\">HEADER3</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEADER3 item\" href=\"#Text::HEADER3\">HEADER3</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:284:0</span>.</p></div></div>"
+    },
+    "HEADER4": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEADER4 x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER4 header item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>HEADER4 &quot;Interesting thing&quot;</pre> produces the following header.<h4>Interesting thing</h4><p></p></div>",
+      "Headline": [
+        "HEADER4",
+        " -- hypertext HEADER4 item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:301:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEADER4 x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER4 item\" href=\"#Text::HEADER4\">HEADER4</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEADER4 item\" href=\"#Text::HEADER4\">HEADER4</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:301:0</span>.</p></div></div>"
+    },
+    "HEADER5": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEADER5 x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER5 header item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>HEADER5 &quot;Interesting thing&quot;</pre> produces the following header.<h5>Interesting thing</h5><p></p></div>",
+      "Headline": [
+        "HEADER5",
+        " -- hypertext HEADER5 item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:318:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEADER5 x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER5 item\" href=\"#Text::HEADER5\">HEADER5</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEADER5 item\" href=\"#Text::HEADER5\">HEADER5</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:318:0</span>.</p></div></div>"
+    },
+    "HEADER6": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">HEADER6 x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER6 header item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>HEADER6 &quot;Interesting thing&quot;</pre> produces the following header.<h6>Interesting thing</h6><p></p></div>",
+      "Headline": [
+        "HEADER6",
+        " -- hypertext HEADER6 item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:335:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HEADER6 x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER6 item\" href=\"#Text::HEADER6\">HEADER6</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HEADER6 item\" href=\"#Text::HEADER6\">HEADER6</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:335:0</span>.</p></div></div>"
+    },
+    "HR": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : DIV{&quot;hi there&quot;, HR{}, &quot;ho there&quot; }\n\no1 = hi thereho there</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : html oo\n\no2 = &lt;div>\n     hi there  &lt;hr>\n     ho there&lt;/div></code></pre></td></tr></table></div>",
+      "Headline": [
+        "HR",
+        " -- hypertext HR element (horizontal rule)"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:726:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext HR element (horizontal rule)\" href=\"#Text::HR\">HR</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:726:0</span>.</p></div></div>"
+    },
+    "HREF": {
+      "Description": "<div><h2>Description</h2><p><span class=\"tt\">HREF{u,p}</span> encloses the phrase <span class=\"tt\">p</span> in a hypertext HREF link pointing to the URL <span class=\"tt\">u</span>.  If <span class=\"tt\">p</span> is omitted, then <span class=\"tt\">u</span> is used as the phrase and as the URL.</p></div>",
+      "Headline": [
+        "HREF",
+        " -- hypertext link"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:708:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HREF{u,p}</code></dd><dd><code class=\"language-macaulay2\">HREF{u}</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">u</span>, a url</span></li><li><span><span class=\"tt\">p</span>, a phrase</span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:708:0</span>.</p></div></div>"
+    },
+    "HTML": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : HTML { HEAD { TITLE &quot;foo&quot; }, BODY { &quot;Hi there&quot; } }\n\no1 = \n\n     Hi there</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : html oo\n\no2 = &lt;!DOCTYPE html>\n     &lt;html lang=&quot;en&quot;>\n       &lt;head>\n         &lt;title>foo&lt;/title>\n       &lt;/head>\n       &lt;body>\n     Hi there  &lt;/body>\n\n     &lt;/html></code></pre></td></tr></table></div>",
+      "Headline": [
+        "HTML",
+        " -- hypertext item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:217:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">HTML x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span></span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext item\" href=\"#Text::HTML\">HTML</a></span>, <span class=\"tt\">x</span> enclosed in an HTML item</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext item\" href=\"#Text::HTML\">HTML</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:217:0</span>.</p></div></div>"
+    },
+    "html(TEX)": {
+      "Description": "<div><h2>Description</h2><p>This method produces an HTML string, mainly converting several simple text formatting environments, such as <b>bold face</b>, <i>italics</i>, etc. Rendering mathematical characters and equations is done by <a href=\"https://katex.org/\">$\\KaTeX$</a>, a JavaScript math typesetting library for browsers. See the list of <a href=\"https://katex.org/docs/supported.html\">supported functions and symbols</a> for more information, or <a href=\"https://en.wikibooks.org/wiki/LaTeX/Mathematics\">this page</a> for an introduction to math mode in $\\LaTeX$.</p>Equations in <kbd>$..$</kbd> or <kbd>\\(...\\)</kbd> appear in inline mode, such as $x^2-1$, while those in <kbd>$$..$$</kbd> or <kbd>\\[...\\]</kbd> appear in display mode:$$\\left(\\!\\begin{array}{cc} x&amp;z\\\\ y&amp;w \\end{array}\\!\\right).$$<p>In addition, <span class=\"tt\">{\\bf ...}</span>, <span class=\"tt\">{\\em ...}</span>, <span class=\"tt\">{\\it ...}</span>, <span class=\"tt\">{\\tt ...}</span>, and <span class=\"tt\">\\url{...}</span> are converted to <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> objects:</p><blockquote><p><span class=\"tt\">res(Module)</span> is the <i>method</i> for <em>making</em> <b>resolutions</b> (see <a href=\"https://macaulay2.com\">https://macaulay2.com</a>).</p></blockquote><p>Here are some examples designed to illustrate various other features of this function when viewed in a browser:</p><div style=\"display: flex\"><table style=\"margin: 1.5em\"><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\Gamma\\Omega\\pi$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\Gamma\\Omega\\pi$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\partial\\ell\\infty$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\partial\\ell\\infty$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\Re\\Im\\aleph\\beth$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\Re\\Im\\aleph\\beth$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\NN\\QQ\\RR\\CC\\ZZ\\PP$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\NN\\QQ\\RR\\CC\\ZZ\\PP$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\binom{n}{k}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\binom{n}{k}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\sqrt[2]{\\frac{a}{b}}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\sqrt[2]{\\frac{a}{b}}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\sum\\prod\\coprod$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\sum\\prod\\coprod$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\bigoplus\\bigotimes$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\bigoplus\\bigotimes$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\bigcup\\bigcap$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\bigcup\\bigcap$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\bigvee\\bigwedge$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\bigvee\\bigwedge$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\int\\oint\\iint\\iiint$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\int\\oint\\iint\\iiint$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\oint\\limits_{\\partial M}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\oint\\limits_{\\partial M}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\lim\\limits_{x\\to0}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\lim\\limits_{x\\to0}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\min\\limits_{x\\to\\infty}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\min\\limits_{x\\to\\infty}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\det\\limits_{x\\to0}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\det\\limits_{x\\to0}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\Pr\\limits_{x\\in\\RR}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\Pr\\limits_{x\\in\\RR}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\begin{pmatrix}\n a &amp; b \\\\\n c &amp; d\n\\end{pmatrix}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\begin{pmatrix} a &amp; b \\\\ c &amp; d \\end{pmatrix}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\begin{vmatrix}\n a &amp; b \\\\\n c &amp; d\n\\end{vmatrix}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\begin{vmatrix} a &amp; b \\\\ c &amp; d \\end{vmatrix}$</p></td></tr></table><table style=\"margin: 1.5em\"><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathnormal{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathnormal{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathrm{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathrm{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathit{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathit{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathbf{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathbf{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathsf{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathsf{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathtt{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathtt{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathfrak{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathfrak{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathcal{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathcal{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathbb{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathbb{ABCD \\; abcd \\; 123}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathscr{...}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathscr{ABCD \\; abcd \\; 123}$</p></td></tr></table><table style=\"margin: 1.5em\"><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\underline{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\underline{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\hat{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\hat{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\widehat{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\widehat{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\tilde{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\tilde{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\widetilde{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\widetilde{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\stackrel\\frown{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\stackrel\\frown{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\check{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\check{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\breve{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\breve{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\bar{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\bar{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\grave{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\grave{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\acute{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\acute{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\dot{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\dot{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\ddot{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\ddot{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\not{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\not{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\mathring{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\mathring{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\vec{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\vec{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\overrightarrow{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\overrightarrow{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\overleftarrow{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\overleftarrow{a}$</p></td></tr><tr><td style=\"padding-right:0.5em; border-right:1px black solid;\"><div><pre>$\\overline{a}$</pre></div></td><td style=\"padding-left:0.5em;\"><p>$\\overline{a}$</p></td></tr></table></div><p>Lastly, new macros can be defined using script tags. For instance, inserting the following <a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a> item in the documentation defines the structure sheaf:</p><blockquote><pre>LITERAL ///&lt;script> macros[&quot;\\\\OO&quot;] = &quot;\\\\mathcal{O}&quot; &lt;/script>/// </pre></blockquote><script> macros[\"\\\\OO\"] = \"\\\\mathcal{O}\" </script><p>The macro can be used at any point after: $$ 0 \\to 2\\OO_{\\PP^3}(-3) \\to 3\\OO_{\\PP^3}(-2) \\to \\OO_{\\PP^3} \\to \\OO_C \\to 0 $$</p></div>",
+      "Headline": [
+        "html(TEX)",
+        " -- conversion of $\\TeX$ to html"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:571:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"convert to $\\\\TeX$ format\" href=\"#Macaulay2Doc::tex\">tex</a> -- convert to $\\TeX$ format</span></li><li><span><a title=\"convert to TeX math format\" href=\"#Macaulay2Doc::texMath\">texMath</a> -- convert to TeX math format</span></li><li><span><a href=\"#Text::show%28Hypertext%29\">show(TEX)</a></span></li></ul></div>",
+      "Synopsis": "<ul><li><span>Function: <a title=\"convert to HTML format\" href=\"#Macaulay2Doc::html\">html</a></span></li><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">html t</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">t</span>, <span>an instance of the type <a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a></span></span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, a string containing the result of converting <span class=\"tt\">t</span> to html</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a title=\"conversion of $\\\\TeX$ to html\" href=\"#Text::html%28TEX%29\">html(TEX)</a> -- conversion of $\\TeX$ to html</span></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:571:0</span>.</p></div></div>"
+    },
+    "Hypertext": {
+      "Description": "<div><h2>Description</h2><p>Intended for internal use only.</p></div>",
+      "Headline": [
+        "Hypertext",
+        " -- the class of markup lists used with hypertext"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:39:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a></span></li><li><span><a href=\"#Text::style%28Hypertext%29\">style(Hypertext)</a></span></li><li><span><a title=\"validate a hypertext object\" href=\"#Text::validate\">validate</a> -- validate a hypertext object</span></li><li><span><a title=\"hypertext anchor\" href=\"#Text::ANCHOR\">ANCHOR</a> -- hypertext anchor</span></li><li><span><a title=\"hypertext BOLD item\" href=\"#Text::BOLD\">BOLD</a> -- hypertext BOLD item</span></li><li><span><span class=\"tt\">BUTTON</span> (missing documentation)<!--tag: BUTTON-->\n</span></li><li><span><a title=\"hypertext CDATA element\" href=\"#Text::CDATA\">CDATA</a> -- hypertext CDATA element</span></li><li><span><a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a> -- hypertext CODE item</span></li><li><span><a title=\"hypertext COMMENT element\" href=\"#Text::COMMENT\">COMMENT</a> -- hypertext COMMENT element</span></li><li><span><a title=\"hypertext EM item\" href=\"#Text::EM\">EM</a> -- hypertext EM item</span></li><li><span><a title=\"a type of hypertext for holding example inputs awaiting outputs\" href=\"#Text::ExampleItem\">ExampleItem</a> -- a type of hypertext for holding example inputs awaiting outputs</span></li><li><span><a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a> -- hypertext link</span></li><li><span><a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> -- the class of markup lists that can contain paragraphs</span></li><li><span><a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> -- the class of markup lists that constitute separate paragraphs</span></li><li><span><span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n</span></li><li><span><a title=\"hypertext italic font\" href=\"#Text::ITALIC\">ITALIC</a> -- hypertext italic font</span></li><li><span><a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> -- hypertext KBD item</span></li><li><span><a title=\"hypertext label item\" href=\"#Text::LABEL\">LABEL</a> -- hypertext label item</span></li><li><span><a title=\"a hypertext element for lazy evaluation\" href=\"#Text::LATER\">LATER</a> -- a hypertext element for lazy evaluation</span></li><li><span><a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a> -- hypertext literal text</span></li><li><span><a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> -- hypertext SAMP item</span></li><li><span><a title=\"hypertext SMALL item\" href=\"#Text::SMALL\">SMALL</a> -- hypertext SMALL item</span></li><li><span><a title=\"hypertext span\" href=\"#Text::SPAN\">SPAN</a> -- hypertext span</span></li><li><span><a title=\"hypertext STRONG item\" href=\"#Text::STRONG\">STRONG</a> -- hypertext STRONG item</span></li><li><span><a title=\"hypertext STYLE element\" href=\"#Text::STYLE\">STYLE</a> -- hypertext STYLE element</span></li><li><span><a title=\"hypertext subscript\" href=\"#Text::SUB\">SUB</a> -- hypertext subscript</span></li><li><span><a title=\"hypertext superscript\" href=\"#Text::SUP\">SUP</a> -- hypertext superscript</span></li><li><span><a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> -- hypertext TEX item</span></li><li><span><a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a> -- hypertext documentation link</span></li><li><span><a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a> -- labeled hypertext documentation link</span></li><li><span><a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> -- hypertext documentation link followed by a headline</span></li><li><span><a title=\"hypertext TT item\" href=\"#Text::TT\">TT</a> -- hypertext TT item</span></li><li><span><a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> -- hypertext VAR item</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Types of markup list:</h2><ul><li><span><a title=\"hypertext anchor\" href=\"#Text::ANCHOR\">ANCHOR</a> -- hypertext anchor</span></li><li><span><a title=\"hypertext BOLD item\" href=\"#Text::BOLD\">BOLD</a> -- hypertext BOLD item</span></li><li><span><span class=\"tt\">BUTTON</span> (missing documentation)<!--tag: BUTTON-->\n</span></li><li><span><a title=\"hypertext CDATA element\" href=\"#Text::CDATA\">CDATA</a> -- hypertext CDATA element</span></li><li><span><a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a> -- hypertext CODE item</span></li><li><span><a title=\"hypertext COMMENT element\" href=\"#Text::COMMENT\">COMMENT</a> -- hypertext COMMENT element</span></li><li><span><a title=\"hypertext EM item\" href=\"#Text::EM\">EM</a> -- hypertext EM item</span></li><li><span><a title=\"a type of hypertext for holding example inputs awaiting outputs\" href=\"#Text::ExampleItem\">ExampleItem</a> -- a type of hypertext for holding example inputs awaiting outputs</span></li><li><span><a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a> -- hypertext link</span></li><li><span><a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> -- the class of markup lists that can contain paragraphs</span></li><li><span><a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> -- the class of markup lists that constitute separate paragraphs</span></li><li><span><span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n</span></li><li><span><a title=\"hypertext italic font\" href=\"#Text::ITALIC\">ITALIC</a> -- hypertext italic font</span></li><li><span><a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> -- hypertext KBD item</span></li><li><span><a title=\"hypertext label item\" href=\"#Text::LABEL\">LABEL</a> -- hypertext label item</span></li><li><span><a title=\"a hypertext element for lazy evaluation\" href=\"#Text::LATER\">LATER</a> -- a hypertext element for lazy evaluation</span></li><li><span><a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a> -- hypertext literal text</span></li><li><span><a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> -- hypertext SAMP item</span></li><li><span><a title=\"hypertext SMALL item\" href=\"#Text::SMALL\">SMALL</a> -- hypertext SMALL item</span></li><li><span><a title=\"hypertext span\" href=\"#Text::SPAN\">SPAN</a> -- hypertext span</span></li><li><span><a title=\"hypertext STRONG item\" href=\"#Text::STRONG\">STRONG</a> -- hypertext STRONG item</span></li><li><span><a title=\"hypertext STYLE element\" href=\"#Text::STYLE\">STYLE</a> -- hypertext STYLE element</span></li><li><span><a title=\"hypertext subscript\" href=\"#Text::SUB\">SUB</a> -- hypertext subscript</span></li><li><span><a title=\"hypertext superscript\" href=\"#Text::SUP\">SUP</a> -- hypertext superscript</span></li><li><span><a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> -- hypertext TEX item</span></li><li><span><a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a> -- hypertext documentation link</span></li><li><span><a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a> -- labeled hypertext documentation link</span></li><li><span><a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> -- hypertext documentation link followed by a headline</span></li><li><span><a title=\"hypertext TT item\" href=\"#Text::TT\">TT</a> -- hypertext TT item</span></li><li><span><a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> -- hypertext VAR item</span></li></ul><h2>Functions and methods returning a markup list:</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li><li><span><a title=\"a standardized synopsis for use in documentation nodes\" href=\"#Macaulay2Doc::SYNOPSIS\">SYNOPSIS</a> -- a standardized synopsis for use in documentation nodes</span></li></ul><h2>Methods that use a markup list:</h2><ul><li><span><a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a></span></li><li><span><a href=\"#Text::style%28Hypertext%29\">style(Hypertext)</a></span></li><li><span><kbd>unique(Hypertext)</kbd> -- see <span><a title=\"eliminate duplicates from a list\" href=\"#Macaulay2Doc::unique\">unique</a> -- eliminate duplicates from a list</span></span></li><li><span><kbd>validate(Hypertext)</kbd> -- see <span><a title=\"validate a hypertext object\" href=\"#Text::validate\">validate</a> -- validate a hypertext object</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:39:0</span>.</p></div></div>"
+    },
+    "HypertextContainer": {
+      "Description": "<div><h2>Description</h2><p>Mark-up lists of this type get special handling when converted to nets by <a title=\"format for printing, as a net\" href=\"#Macaulay2Doc::net\">net</a>, because the paragraphs must be collected and wrapped.</p></div>",
+      "Headline": [
+        "HypertextContainer",
+        " -- the class of markup lists that can contain paragraphs"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:47:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a title=\"hypertext BODY item\" href=\"#Text::BODY\">BODY</a> -- hypertext BODY item</span></li><li><span><a title=\"a hypertext division\" href=\"#Text::DIV\">DIV</a> -- a hypertext division</span></li><li><span><a title=\"hypertext DL element\" href=\"#Text::DL\">DL</a> -- hypertext DL element</span></li><li><span><a title=\"hypertext HEAD item\" href=\"#Text::HEAD\">HEAD</a> -- hypertext HEAD item</span></li><li><span><a title=\"hypertext item\" href=\"#Text::HTML\">HTML</a> -- hypertext item</span></li><li><span><a title=\"HTML inline frame (iframe) element\" href=\"#Text::IFRAME\">IFRAME</a> -- HTML inline frame (iframe) element</span></li><li><span><span class=\"tt\">INDENT</span> (missing documentation)<!--tag: INDENT-->\n</span></li><li><span><a title=\"hypertext list item\" href=\"#Text::LI\">LI</a> -- hypertext list item</span></li><li><span><a title=\"hypertext menu item\" href=\"#Text::MENU\">MENU</a> -- hypertext menu item</span></li><li><span><a title=\"hypertext OL item\" href=\"#Text::OL\">OL</a> -- hypertext OL item</span></li><li><span><a title=\"hypertext table\" href=\"#Text::TABLE\">TABLE</a> -- hypertext table</span></li><li><span><a title=\"hypertext TD element\" href=\"#Text::TD\">TD</a> -- hypertext TD element</span></li><li><span><a title=\"hypertext TR element\" href=\"#Text::TR\">TR</a> -- hypertext TR element</span></li><li><span><a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a> -- hypertext UL item</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Types of markup list container:</h2><ul><li><span><a title=\"hypertext BODY item\" href=\"#Text::BODY\">BODY</a> -- hypertext BODY item</span></li><li><span><a title=\"a hypertext division\" href=\"#Text::DIV\">DIV</a> -- a hypertext division</span></li><li><span><a title=\"hypertext DL element\" href=\"#Text::DL\">DL</a> -- hypertext DL element</span></li><li><span><a title=\"hypertext HEAD item\" href=\"#Text::HEAD\">HEAD</a> -- hypertext HEAD item</span></li><li><span><a title=\"hypertext item\" href=\"#Text::HTML\">HTML</a> -- hypertext item</span></li><li><span><a title=\"HTML inline frame (iframe) element\" href=\"#Text::IFRAME\">IFRAME</a> -- HTML inline frame (iframe) element</span></li><li><span><span class=\"tt\">INDENT</span> (missing documentation)<!--tag: INDENT-->\n</span></li><li><span><a title=\"hypertext list item\" href=\"#Text::LI\">LI</a> -- hypertext list item</span></li><li><span><a title=\"hypertext menu item\" href=\"#Text::MENU\">MENU</a> -- hypertext menu item</span></li><li><span><a title=\"hypertext OL item\" href=\"#Text::OL\">OL</a> -- hypertext OL item</span></li><li><span><a title=\"hypertext table\" href=\"#Text::TABLE\">TABLE</a> -- hypertext table</span></li><li><span><a title=\"hypertext TD element\" href=\"#Text::TD\">TD</a> -- hypertext TD element</span></li><li><span><a title=\"hypertext TR element\" href=\"#Text::TR\">TR</a> -- hypertext TR element</span></li><li><span><a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a> -- hypertext UL item</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:47:0</span>.</p></div></div>"
+    },
+    "HypertextParagraph": {
+      "Description": "<div><h2>Description</h2><p>Intended for internal use only.</p></div>",
+      "Headline": [
+        "HypertextParagraph",
+        " -- the class of markup lists that constitute separate paragraphs"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:53:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a title=\"hypertext BLOCKQUOTE item\" href=\"#Text::BLOCKQUOTE\">BLOCKQUOTE</a> -- hypertext BLOCKQUOTE item</span></li><li><span><a title=\"hypertext DD element\" href=\"#Text::DD\">DD</a> -- hypertext DD element</span></li><li><span><a title=\"hypertext DT element\" href=\"#Text::DT\">DT</a> -- hypertext DT element</span></li><li><span><a title=\"hypertext HEADER1 item\" href=\"#Text::HEADER1\">HEADER1</a> -- hypertext HEADER1 item</span></li><li><span><a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a> -- hypertext HEADER2 item</span></li><li><span><a title=\"hypertext HEADER3 item\" href=\"#Text::HEADER3\">HEADER3</a> -- hypertext HEADER3 item</span></li><li><span><a title=\"hypertext HEADER4 item\" href=\"#Text::HEADER4\">HEADER4</a> -- hypertext HEADER4 item</span></li><li><span><a title=\"hypertext HEADER5 item\" href=\"#Text::HEADER5\">HEADER5</a> -- hypertext HEADER5 item</span></li><li><span><a title=\"hypertext HEADER6 item\" href=\"#Text::HEADER6\">HEADER6</a> -- hypertext HEADER6 item</span></li><li><span><a title=\"hypertext paragraph container\" href=\"#Text::PARA\">PARA</a> -- hypertext paragraph container</span></li><li><span><a title=\"preformatted text\" href=\"#Text::PRE\">PRE</a> -- preformatted text</span></li><li><span><a title=\"hypertext SCRIPT element\" href=\"#Text::SCRIPT\">SCRIPT</a> -- hypertext SCRIPT element</span></li><li><span><a title=\"hypertext SUBSECTION item\" href=\"#Text::SUBSECTION\">SUBSECTION</a> -- hypertext SUBSECTION item</span></li><li><span><a title=\"hypertext title\" href=\"#Text::TITLE\">TITLE</a> -- hypertext title</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Types of markup list paragraph:</h2><ul><li><span><a title=\"hypertext BLOCKQUOTE item\" href=\"#Text::BLOCKQUOTE\">BLOCKQUOTE</a> -- hypertext BLOCKQUOTE item</span></li><li><span><a title=\"hypertext DD element\" href=\"#Text::DD\">DD</a> -- hypertext DD element</span></li><li><span><a title=\"hypertext DT element\" href=\"#Text::DT\">DT</a> -- hypertext DT element</span></li><li><span><a title=\"hypertext HEADER1 item\" href=\"#Text::HEADER1\">HEADER1</a> -- hypertext HEADER1 item</span></li><li><span><a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a> -- hypertext HEADER2 item</span></li><li><span><a title=\"hypertext HEADER3 item\" href=\"#Text::HEADER3\">HEADER3</a> -- hypertext HEADER3 item</span></li><li><span><a title=\"hypertext HEADER4 item\" href=\"#Text::HEADER4\">HEADER4</a> -- hypertext HEADER4 item</span></li><li><span><a title=\"hypertext HEADER5 item\" href=\"#Text::HEADER5\">HEADER5</a> -- hypertext HEADER5 item</span></li><li><span><a title=\"hypertext HEADER6 item\" href=\"#Text::HEADER6\">HEADER6</a> -- hypertext HEADER6 item</span></li><li><span><a title=\"hypertext paragraph container\" href=\"#Text::PARA\">PARA</a> -- hypertext paragraph container</span></li><li><span><a title=\"preformatted text\" href=\"#Text::PRE\">PRE</a> -- preformatted text</span></li><li><span><a title=\"hypertext SCRIPT element\" href=\"#Text::SCRIPT\">SCRIPT</a> -- hypertext SCRIPT element</span></li><li><span><a title=\"hypertext title\" href=\"#Text::TITLE\">TITLE</a> -- hypertext title</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:53:0</span>.</p></div></div>"
+    },
+    "HypertextVoid": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "HypertextVoid",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Types of void markup:</h2><ul><li><span><a title=\"line break\" href=\"#Text::BR\">BR</a> -- line break</span></li><li><span><a title=\"hypertext HR element (horizontal rule)\" href=\"#Text::HR\">HR</a> -- hypertext HR element (horizontal rule)</span></li><li><span><a title=\"hypertext IMG item\" href=\"#Text::IMG\">IMG</a> -- hypertext IMG item</span></li><li><span><span class=\"tt\">INPUT</span> (missing documentation)<!--tag: INPUT-->\n</span></li><li><span><a title=\"a hypertext LINK element\" href=\"#Text::LINK\">LINK</a> -- a hypertext LINK element</span></li><li><span><a title=\"a hypertext META element\" href=\"#Text::META\">META</a> -- a hypertext META element</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "IFRAME": {
+      "Description": "<div><h2>Description</h2><p>An <code class=\"language-macaulay2\">IFRAME</code> object represents an inline frame in HTML, which allows embedding an independent browsing context (another HTML document) within the current one.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html IFRAME {&quot;src&quot; => &quot;https://example.com&quot;}\n\no1 = &lt;iframe src=&quot;https://example.com&quot;>\n     &lt;/iframe></code></pre></td></tr></table><p>This is rendered in the browser as:</p><iframe src=\"https://example.com\"></iframe></div>",
+      "Headline": [
+        "IFRAME",
+        " -- HTML inline frame (iframe) element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:870:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">IFRAME x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, specifying the iframe attributes</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"HTML inline frame (iframe) element\" href=\"#Text::IFRAME\">IFRAME</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:870:0</span>.</p></div></div>"
+    },
+    "IMG": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">IMG{&quot;src&quot; => x, &quot;alt&quot; => y}</span> creates a hypertext IMG item.<p></p>The argument <span class=\"tt\">x</span> should be a string containing the URL of the image, and <span class=\"tt\">y</span> should be a suitable string for the ALT attribute.<p></p></div>",
+      "Headline": [
+        "IMG",
+        " -- hypertext IMG item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:191:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">IMG{x,y}</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li><li><span><span class=\"tt\">y</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext IMG item\" href=\"#Text::IMG\">IMG</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext IMG item\" href=\"#Text::IMG\">IMG</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:191:0</span>.</p></div></div>"
+    },
+    "INDENT": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "INDENT",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">INDENT</span> (missing documentation)<!--tag: INDENT-->\n is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "INPUT": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "INPUT",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">INPUT</span> (missing documentation)<!--tag: INPUT-->\n is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "IntermediateMarkUpType": {
+      "Description": "<div><h2>Description</h2>An intermediate markup type is one that needs further processing to put it into final form. A good example of one is <a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a>, which represents a link to a documentation node, together with the headline of that node, which may not have been created yet at the time the <a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> link is encountered.  Another example is <a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a>, which creates a link using the HTML <span class=\"tt\">&lt;a></span> element: when the link is created, the relative path to the target page depends on the path to the page incorporating the link.</div>",
+      "Headline": [
+        "IntermediateMarkUpType",
+        " -- the class of intermediate markup types"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:76:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Protected objects of class <span class=\"tt\">IntermediateMarkUpType</span>:</h2><ul><li><span><a title=\"a type of hypertext for holding example inputs awaiting outputs\" href=\"#Text::ExampleItem\">ExampleItem</a> -- a type of hypertext for holding example inputs awaiting outputs</span></li><li><span><a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a> -- hypertext link</span></li><li><span><span class=\"tt\">INDENT</span> (missing documentation)<!--tag: INDENT-->\n</span></li><li><span><a title=\"a hypertext element for lazy evaluation\" href=\"#Text::LATER\">LATER</a> -- a hypertext element for lazy evaluation</span></li><li><span><a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a> -- hypertext literal text</span></li><li><span><a title=\"hypertext menu item\" href=\"#Text::MENU\">MENU</a> -- hypertext menu item</span></li><li><span><a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> -- hypertext TEX item</span></li><li><span><a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a> -- hypertext documentation link</span></li><li><span><a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a> -- labeled hypertext documentation link</span></li><li><span><a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> -- hypertext documentation link followed by a headline</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">IntermediateMarkUpType</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">MarkUpType</a> &lt; <a title=\"the class of all self initializing types\" href=\"#Macaulay2Doc::SelfInitializingType\">SelfInitializingType</a> &lt; <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">Type</a> &lt; <a title=\"the class of all mutable hash tables\" href=\"#Macaulay2Doc::MutableHashTable\">MutableHashTable</a> &lt; <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:76:0</span>.</p></div></div>"
+    },
+    "ITALIC": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">ITALIC x</span> encloses <span class=\"tt\">x</span> in a hypertext ITALIC item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.  The result corresponds to the html I command.<p></p>Here is an example.<p></p><i>Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.</i><p></p></div>",
+      "Headline": [
+        "ITALIC",
+        " -- hypertext italic font"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:494:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">ITALIC x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext italic font\" href=\"#Text::ITALIC\">ITALIC</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext italic font\" href=\"#Text::ITALIC\">ITALIC</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:494:0</span>.</p></div></div>"
+    },
+    "KBD": {
+      "Description": "<div><h2>Description</h2><p>This HTML tag is used to define keyboard input.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html KBD &quot;F11&quot;\n\no1 = &lt;kbd>F11&lt;/kbd></code></pre></td></tr></table><p>This is rendered in the browser as <kbd>F11</kbd>.</p></div>",
+      "Headline": [
+        "KBD",
+        " -- hypertext KBD item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:616:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> -- hypertext SAMP item</span></li><li><span><a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> -- hypertext VAR item</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">KBD x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">thing</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:616:0</span>.</p></div></div>"
+    },
+    "LABEL": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html LABEL { &quot;b&quot; }\n\no1 = &lt;label>b&lt;/label></code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : LABEL { &quot;title&quot; => &quot;a&quot;, &quot;b&quot; }\n\no2 = b</code></pre></td></tr></table></div>",
+      "Headline": [
+        "LABEL",
+        " -- hypertext label item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:463:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">LABEL x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span></span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext label item\" href=\"#Text::LABEL\">LABEL</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext label item\" href=\"#Text::LABEL\">LABEL</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:463:0</span>.</p></div></div>"
+    },
+    "LATER": {
+      "Description": "<div><h2>Description</h2>When the resulting hypertext element is processed later for conversion to html or for printing, the function f will be evaluated (with no arguments) and the hypertext it returns will be formatted.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : f = () -> DIV { &quot;hi there&quot; }\n\no1 = f\n\no1 : FunctionClosure</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : LATER {f}\n\no2 = hi there</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : peek oo\n\no3 = LATER{f}</code></pre></td></tr></table></div>",
+      "Headline": [
+        "LATER",
+        " -- a hypertext element for lazy evaluation"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:114:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">LATER {f}</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">f</span>, <span>a <a title=\"the class of all functions\" href=\"#Macaulay2Doc::Function\">function</a></span></span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"a hypertext element for lazy evaluation\" href=\"#Text::LATER\">LATER</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a hypertext element for lazy evaluation\" href=\"#Text::LATER\">LATER</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:114:0</span>.</p></div></div>"
+    },
+    "LI": {
+      "Description": "<div><h2>Description</h2><p>Entries in a <a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a> list should be of type <a title=\"hypertext list item\" href=\"#Text::LI\">LI</a>, but conversion to type <a title=\"hypertext list item\" href=\"#Text::LI\">LI</a> is done automatically for the user.</p></div>",
+      "Headline": [
+        "LI",
+        " -- hypertext list item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:451:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">LI x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span></span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext list item\" href=\"#Text::LI\">LI</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext list item\" href=\"#Text::LI\">LI</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:451:0</span>.</p></div></div>"
+    },
+    "LINK": {
+      "Description": "<div><h2>Description</h2>This corresponds directly to an html LINK element.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html LINK { &quot;title&quot; => &quot;Macaulay2&quot;, &quot;rel&quot; => &quot;Top&quot;, &quot;href&quot; => &quot;index.html&quot; }\n\no1 = &lt;link rel=&quot;Top&quot; title=&quot;Macaulay2&quot; href=&quot;index.html&quot;></code></pre></td></tr></table></div>",
+      "Headline": [
+        "LINK",
+        " -- a hypertext LINK element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:99:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">LINK x</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a hypertext LINK element\" href=\"#Text::LINK\">LINK</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:99:0</span>.</p></div></div>"
+    },
+    "LITERAL": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">LITERAL x</span> produces a special hypertext item which contains HTML text that should be left unchanged by <a title=\"convert to HTML format\" href=\"#Macaulay2Doc::html\">html</a>.</div>",
+      "Headline": [
+        "LITERAL",
+        " -- hypertext literal text"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:373:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">LITERAL x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:373:0</span>.</p></div></div>"
+    },
+    "M2CODE": {
+      "Description": "<div><h2>Description</h2>Returns a <code class=\"language-macaulay2\">CODE</code> object with its &quot;class&quot; attribute set to &quot;language-macaulay2&quot; so that it will appear with syntax highlighting in the html documentation.  For example, <pre><code class=\"language-macaulay2\">M2CODE &quot;ideal(x*z - y^2, y*w - z^2, x*w - y*z)&quot;</code></pre> will appear as <pre><code class=\"language-macaulay2\">ideal(x*z - y^2, y*w - z^2, x*w - y*z)</code></pre></div>",
+      "Headline": [
+        "M2CODE",
+        " -- CODE object with syntax highlighting"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:927:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">M2CODE x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">thing</a></span></span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">M2CODE</span>:</h2><ul><li><kbd>M2CODE(Thing)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"CODE object with syntax highlighting\" href=\"#Text::M2CODE\">M2CODE</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:927:0</span>.</p></div></div>"
+    },
+    "MarkUpType": {
+      "Description": "<div><h2>Description</h2>Some markup types allow options (attributes) to be inserted in their html tags.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : DIV ( &quot;class&quot; => &quot;waystouse&quot;, SUBSECTION {&quot;Ways to use &quot;, TT &quot;resolution&quot;, &quot;:&quot;},\n     \t     &quot;There are many ways to use &quot;, TO &quot;resolution&quot;, &quot;.&quot;\n     \t     )\n\no1 = Ways to use resolution:\n     =======================\n\n     There are many ways to use &quot;resolution&quot;.</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : html oo\n\no2 = &lt;div class=&quot;waystouse&quot;>\n       &lt;h2>Ways to use &lt;span class=&quot;tt&quot;>resolution&lt;/span>:&lt;/h2>\n     There are many ways to use &lt;a title=&quot;projective resolution&quot; href=&quot;../../doc/Macaulay2/OldChainComplexes/html/_resolution.html&quot;>resolution&lt;/a>.&lt;/div></code></pre></td></tr></table></div>",
+      "Headline": [
+        "MarkUpType",
+        " -- the class of markup types used with hypertext"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:65:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a href=\"#Text::options%28MarkUpType%29\">options(MarkUpType)</a></span></li><li><span><a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">IntermediateMarkUpType</a> -- the class of intermediate markup types</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Types of markup type:</h2><ul><li><span><a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">IntermediateMarkUpType</a> -- the class of intermediate markup types</span></li></ul><h2>Methods that use a markup type:</h2><ul><li><span><a href=\"#Text::options%28MarkUpType%29\">options(MarkUpType)</a></span></li></ul><h2>Protected objects of class <span class=\"tt\">MarkUpType</span>:</h2><ul><li><span><a title=\"hypertext anchor\" href=\"#Text::ANCHOR\">ANCHOR</a> -- hypertext anchor</span></li><li><span><a title=\"hypertext BLOCKQUOTE item\" href=\"#Text::BLOCKQUOTE\">BLOCKQUOTE</a> -- hypertext BLOCKQUOTE item</span></li><li><span><a title=\"hypertext BODY item\" href=\"#Text::BODY\">BODY</a> -- hypertext BODY item</span></li><li><span><a title=\"hypertext BOLD item\" href=\"#Text::BOLD\">BOLD</a> -- hypertext BOLD item</span></li><li><span><a title=\"line break\" href=\"#Text::BR\">BR</a> -- line break</span></li><li><span><span class=\"tt\">BUTTON</span> (missing documentation)<!--tag: BUTTON-->\n</span></li><li><span><a title=\"hypertext CDATA element\" href=\"#Text::CDATA\">CDATA</a> -- hypertext CDATA element</span></li><li><span><a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a> -- hypertext CODE item</span></li><li><span><a title=\"hypertext COMMENT element\" href=\"#Text::COMMENT\">COMMENT</a> -- hypertext COMMENT element</span></li><li><span><a title=\"hypertext DD element\" href=\"#Text::DD\">DD</a> -- hypertext DD element</span></li><li><span><a title=\"a hypertext division\" href=\"#Text::DIV\">DIV</a> -- a hypertext division</span></li><li><span><a title=\"hypertext DL element\" href=\"#Text::DL\">DL</a> -- hypertext DL element</span></li><li><span><a title=\"hypertext DT element\" href=\"#Text::DT\">DT</a> -- hypertext DT element</span></li><li><span><a title=\"hypertext EM item\" href=\"#Text::EM\">EM</a> -- hypertext EM item</span></li><li><span><a title=\"hypertext HEAD item\" href=\"#Text::HEAD\">HEAD</a> -- hypertext HEAD item</span></li><li><span><a title=\"hypertext HEADER1 item\" href=\"#Text::HEADER1\">HEADER1</a> -- hypertext HEADER1 item</span></li><li><span><a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a> -- hypertext HEADER2 item</span></li><li><span><a title=\"hypertext HEADER3 item\" href=\"#Text::HEADER3\">HEADER3</a> -- hypertext HEADER3 item</span></li><li><span><a title=\"hypertext HEADER4 item\" href=\"#Text::HEADER4\">HEADER4</a> -- hypertext HEADER4 item</span></li><li><span><a title=\"hypertext HEADER5 item\" href=\"#Text::HEADER5\">HEADER5</a> -- hypertext HEADER5 item</span></li><li><span><a title=\"hypertext HEADER6 item\" href=\"#Text::HEADER6\">HEADER6</a> -- hypertext HEADER6 item</span></li><li><span><a title=\"hypertext HR element (horizontal rule)\" href=\"#Text::HR\">HR</a> -- hypertext HR element (horizontal rule)</span></li><li><span><a title=\"hypertext item\" href=\"#Text::HTML\">HTML</a> -- hypertext item</span></li><li><span><a title=\"HTML inline frame (iframe) element\" href=\"#Text::IFRAME\">IFRAME</a> -- HTML inline frame (iframe) element</span></li><li><span><a title=\"hypertext IMG item\" href=\"#Text::IMG\">IMG</a> -- hypertext IMG item</span></li><li><span><span class=\"tt\">INPUT</span> (missing documentation)<!--tag: INPUT-->\n</span></li><li><span><a title=\"hypertext italic font\" href=\"#Text::ITALIC\">ITALIC</a> -- hypertext italic font</span></li><li><span><a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> -- hypertext KBD item</span></li><li><span><a title=\"hypertext label item\" href=\"#Text::LABEL\">LABEL</a> -- hypertext label item</span></li><li><span><a title=\"hypertext list item\" href=\"#Text::LI\">LI</a> -- hypertext list item</span></li><li><span><a title=\"a hypertext LINK element\" href=\"#Text::LINK\">LINK</a> -- a hypertext LINK element</span></li><li><span><a title=\"a hypertext META element\" href=\"#Text::META\">META</a> -- a hypertext META element</span></li><li><span><a title=\"hypertext OL item\" href=\"#Text::OL\">OL</a> -- hypertext OL item</span></li><li><span><a title=\"hypertext paragraph container\" href=\"#Text::PARA\">PARA</a> -- hypertext paragraph container</span></li><li><span><a title=\"preformatted text\" href=\"#Text::PRE\">PRE</a> -- preformatted text</span></li><li><span><a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> -- hypertext SAMP item</span></li><li><span><a title=\"hypertext SCRIPT element\" href=\"#Text::SCRIPT\">SCRIPT</a> -- hypertext SCRIPT element</span></li><li><span><a title=\"hypertext SMALL item\" href=\"#Text::SMALL\">SMALL</a> -- hypertext SMALL item</span></li><li><span><a title=\"hypertext span\" href=\"#Text::SPAN\">SPAN</a> -- hypertext span</span></li><li><span><a title=\"hypertext STRONG item\" href=\"#Text::STRONG\">STRONG</a> -- hypertext STRONG item</span></li><li><span><a title=\"hypertext STYLE element\" href=\"#Text::STYLE\">STYLE</a> -- hypertext STYLE element</span></li><li><span><a title=\"hypertext subscript\" href=\"#Text::SUB\">SUB</a> -- hypertext subscript</span></li><li><span><a title=\"hypertext superscript\" href=\"#Text::SUP\">SUP</a> -- hypertext superscript</span></li><li><span><a title=\"hypertext table\" href=\"#Text::TABLE\">TABLE</a> -- hypertext table</span></li><li><span><a title=\"hypertext TD element\" href=\"#Text::TD\">TD</a> -- hypertext TD element</span></li><li><span><a title=\"hypertext TH element\" href=\"#Text::TH\">TH</a> -- hypertext TH element</span></li><li><span><a title=\"hypertext title\" href=\"#Text::TITLE\">TITLE</a> -- hypertext title</span></li><li><span><a title=\"hypertext TR element\" href=\"#Text::TR\">TR</a> -- hypertext TR element</span></li><li><span><a title=\"hypertext TT item\" href=\"#Text::TT\">TT</a> -- hypertext TT item</span></li><li><span><a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a> -- hypertext UL item</span></li><li><span><a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> -- hypertext VAR item</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">MarkUpType</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all self initializing types\" href=\"#Macaulay2Doc::SelfInitializingType\">SelfInitializingType</a> &lt; <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">Type</a> &lt; <a title=\"the class of all mutable hash tables\" href=\"#Macaulay2Doc::MutableHashTable\">MutableHashTable</a> &lt; <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:65:0</span>.</p></div></div>"
+    },
+    "MENU": {
+      "Description": "<div><h2>Description</h2>This hyeprtext item is intended to be used at most once per page, at the end.  When converted by <a title=\"convert hypertext to info format\" href=\"#Macaulay2Doc::info\">info</a>, it produces the Menu at the end of the page.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : DIV { PARA &quot;Hi there.&quot;,\n         MENU { &quot;some topics&quot;, TO &quot;topic a&quot;, TO &quot;topic b&quot;, &quot;more topics&quot;, TO &quot;topic c&quot; } }\n\no1 = Hi there.\n\n     Menu\n     ----\n\n     some topics\n\n       * &quot;topic a&quot;\n       * &quot;topic b&quot;\n\n     more topics\n\n       * &quot;topic c&quot;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : info oo\n\no2 = Hi there.\n\n     * Menu:\n\n\n     some topics\n     * topic a::\n     * topic b::\n\n     more topics\n     * topic c::</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : html ooo\n\no3 = &lt;div>\n       &lt;p>Hi there.&lt;/p>\n       &lt;div>\n         &lt;h3>Menu&lt;/h3>\n         &lt;h4>some topics&lt;/h4>\n         &lt;ul>\n           &lt;li>&lt;span>&lt;span class=&quot;tt&quot;>topic a&lt;/span> (missing documentation)&lt;!--tag: topic a-->\n     &lt;/span>&lt;/li>\n           &lt;li>&lt;span>&lt;span class=&quot;tt&quot;>topic b&lt;/span> (missing documentation)&lt;!--tag: topic b-->\n     &lt;/span>&lt;/li>\n         &lt;/ul>\n         &lt;h4>more topics&lt;/h4>\n         &lt;ul>\n           &lt;li>&lt;span>&lt;span class=&quot;tt&quot;>topic c&lt;/span> (missing documentation)&lt;!--tag: topic c-->\n     &lt;/span>&lt;/li>\n         &lt;/ul>\n       &lt;/div>\n     &lt;/div></code></pre></td></tr></table></div>",
+      "Headline": [
+        "MENU",
+        " -- hypertext menu item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:475:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext menu item\" href=\"#Text::MENU\">MENU</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:475:0</span>.</p></div></div>"
+    },
+    "META": {
+      "Description": "<div><h2>Description</h2>This corresponds directly to an html META element.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html META { &quot;name&quot; => &quot;description&quot;,  &quot;content&quot; => &quot;Dan Grayson's home page.&quot; }\n\no1 = &lt;meta content=&quot;Dan Grayson's home page.&quot; name=&quot;description&quot;></code></pre></td></tr></table></div>",
+      "Headline": [
+        "META",
+        " -- a hypertext META element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:91:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">META x</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a hypertext META element\" href=\"#Text::META\">META</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:91:0</span>.</p></div></div>"
+    },
+    "OL": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">OL x</span> encloses the list x as a hypertext OL itemized list.<p></p>The argument <span class=\"tt\">x</span> should be a list of strings or hypertext items.<p></p>Here is an example. The expression <pre>OL {&quot;first&quot;,&quot;second&quot;,&quot;third&quot;}</pre>produces<ol start=\"0\"><li>first</li><li>second</li><li>third</li></ol><p></p></div>",
+      "Headline": [
+        "OL",
+        " -- hypertext OL item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:786:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">OL x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext OL item\" href=\"#Text::OL\">OL</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext OL item\" href=\"#Text::OL\">OL</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:786:0</span>.</p></div></div>"
+    },
+    "options(MarkUpType)": {
+      "Description": "<div><h2>Description</h2>Optional arguments of mark up types allow attributes to be added to html elements.<table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : DIV\n\no1 = DIV\n\no1 : MarkUpType</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : options DIV\n\no2 = OptionTable{&quot;accesskey&quot; => null      }\n                 &quot;class&quot; => null\n                 &quot;contenteditable&quot; => null\n                 &quot;dir&quot; => null\n                 &quot;draggable&quot; => null\n                 &quot;dropzone&quot; => null\n                 &quot;hidden&quot; => null\n                 &quot;id&quot; => null\n                 &quot;lang&quot; => null\n                 &quot;onafterprint&quot; => null\n                 &quot;onbeforeprint&quot; => null\n                 &quot;onbeforeunload&quot; => null\n                 &quot;onblur&quot; => null\n                 &quot;onchange&quot; => null\n                 &quot;onclick&quot; => null\n                 &quot;oncontextmenu&quot; => null\n                 &quot;ondblclick&quot; => null\n                 &quot;ondrag&quot; => null\n                 &quot;ondragend&quot; => null\n                 &quot;ondragenter&quot; => null\n                 &quot;ondragleave&quot; => null\n                 &quot;ondragover&quot; => null\n                 &quot;ondragstart&quot; => null\n                 &quot;ondrop&quot; => null\n                 &quot;onerror&quot; => null\n                 &quot;onfocusscript&quot; => null\n                 &quot;onhashchange&quot; => null\n                 &quot;oninputscript&quot; => null\n                 &quot;oninvalid&quot; => null\n                 &quot;onkeydown&quot; => null\n                 &quot;onkeypress&quot; => null\n                 &quot;onkeyup&quot; => null\n                 &quot;onload&quot; => null\n                 &quot;onmessage&quot; => null\n                 &quot;onmousedown&quot; => null\n                 &quot;onmousemove&quot; => null\n                 &quot;onmouseout&quot; => null\n                 &quot;onmouseover&quot; => null\n                 &quot;onmouseup&quot; => null\n                 &quot;onmousewheel&quot; => null\n                 &quot;onoffline&quot; => null\n                 &quot;ononline&quot; => null\n                 &quot;onpagehide&quot; => null\n                 &quot;onpageshow&quot; => null\n                 &quot;onpopstate&quot; => null\n                 &quot;onresetscript&quot; => null\n                 &quot;onresize&quot; => null\n                 &quot;onscroll&quot; => null\n                 &quot;onsearch&quot; => null\n                 &quot;onselect&quot; => null\n                 &quot;onstorage&quot; => null\n                 &quot;onsubmit&quot; => null\n                 &quot;ontoggle&quot; => null\n                 &quot;onunload&quot; => null\n                 &quot;onwheel&quot; => null\n                 &quot;spellcheck&quot; => null\n                 &quot;style&quot; => null\n                 &quot;tabindex&quot; => null\n                 &quot;title&quot; => null\n                 &quot;translate&quot; => null\n                 &quot;xmlns&quot; => null\n\no2 : OptionTable</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : d = DIV { &quot;class&quot; => &quot;examples&quot;, &quot;hi there&quot; }\n\no3 = hi there</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : html d\n\no4 = &lt;div class=&quot;examples&quot;>\n     hi there&lt;/div></code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : net d\n\no5 = hi there</code></pre></td></tr></table></div>",
+      "Headline": [
+        "options(MarkUpType)",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:881:0",
+      "Synopsis": "<ul><li><span>Function: <a title=\"get options\" href=\"#Macaulay2Doc::options\">options</a></span></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a href=\"#Text::options%28MarkUpType%29\">options(MarkUpType)</a></span></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:881:0</span>.</p></div></div>"
+    },
+    "PARA": {
+      "Description": "<div><h2>Description</h2>For an example, see <a href=\"#Macaulay2Doc::hypertext%20list%20format\">hypertext list format</a>.</div>",
+      "Headline": [
+        "PARA",
+        " -- hypertext paragraph container"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:857:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">PARA x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, , a <a href=\"#Macaulay2Doc::hypertext%20list%20format\">hypertext list</a></span></li></ul></li><li>Outputs:<ul><li><span> a <a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> paragraph containing <span class=\"tt\">x</span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext paragraph container\" href=\"#Text::PARA\">PARA</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:857:0</span>.</p></div></div>"
+    },
+    "PRE": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">PRE x</span> encloses <span class=\"tt\">x</span> in a hypertext PRE item.<p></p>The argument <span class=\"tt\">x</span> should be a string, possibly containing newlines.Here is an example.<pre>\n   1234   2345    4567    5678\n     34    345    3455       7\n</pre>If one wishes to use quotation marks in the preformatted text, then <a title=\"delineate a string with slashes\" href=\"#Macaulay2Doc::///\">///</a> should be used instead of quotation marks as delimiters.</div>",
+      "Headline": [
+        "PRE",
+        " -- preformatted text"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:135:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">PRE x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"preformatted text\" href=\"#Text::PRE\">PRE</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class PRE:</h2><ul><li><span><kbd>EXAMPLE(PRE)</kbd> -- see <span><a title=\"construct a hypertext item from a Macaulay2 input string\" href=\"#Macaulay2Doc::EXAMPLE\">EXAMPLE</a> -- construct a hypertext item from a Macaulay2 input string</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"preformatted text\" href=\"#Text::PRE\">PRE</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:135:0</span>.</p></div></div>"
+    },
+    "SAMP": {
+      "Description": "<div><h2>Description</h2><p>This HTML tag is used for sample output from a program</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html SAMP &quot;ideal x&quot;\n\no1 = &lt;samp>ideal x&lt;/samp></code></pre></td></tr></table><p>This is rendered in the browser as <samp>ideal x</samp>.</p></div>",
+      "Headline": [
+        "SAMP",
+        " -- hypertext SAMP item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:627:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> -- hypertext KBD item</span></li><li><span><a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> -- hypertext VAR item</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">SAMP x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">thing</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:627:0</span>.</p></div></div>"
+    },
+    "SCRIPT": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "SCRIPT",
+        " -- hypertext SCRIPT element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:742:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext SCRIPT element\" href=\"#Text::SCRIPT\">SCRIPT</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:742:0</span>.</p></div></div>"
+    },
+    "show(Hypertext)": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "show(Hypertext)",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:889:0",
+      "Synopsis": "<ul><li><span>Function: <a title=\"display various objects in an external viewer\" href=\"#Macaulay2Doc::show\">show</a></span></li><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">show x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">markup list</a></span>, <span>an instance of the type <a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a></span> or <span>a <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">markup list</a></span></span></li></ul></li><li><div>Consequences:<ul><li>displays x in the appropriate viewer</li></ul></div></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a></span></li><li><kbd>show(TEX)</kbd></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:889:0</span>.</p></div></div>"
+    },
+    "SMALL": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">SMALL x</span> encloses <span class=\"tt\">x</span> in a hypertext SMALL item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.<p></p><small>Here is some small text.</small><p></p></div>",
+      "Headline": [
+        "SMALL",
+        " -- hypertext SMALL item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:409:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">SMALL x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext SMALL item\" href=\"#Text::SMALL\">SMALL</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext SMALL item\" href=\"#Text::SMALL\">SMALL</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:409:0</span>.</p></div></div>"
+    },
+    "SPAN": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">SPAN x</span> encloses <span class=\"tt\">x</span> in a hypertext SPAN item.The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.  The result is that the entries in the list or sequence are displayed sequentially.</div>",
+      "Headline": [
+        "SPAN",
+        " -- hypertext span"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:204:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">SPAN x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext span\" href=\"#Text::SPAN\">SPAN</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext span\" href=\"#Text::SPAN\">SPAN</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:204:0</span>.</p></div></div>"
+    },
+    "STRONG": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">STRONG x</span> encloses <span class=\"tt\">x</span> in a hypertext STRONG item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.<p></p><strong>Here is strong text!</strong><p></p></div>",
+      "Headline": [
+        "STRONG",
+        " -- hypertext STRONG item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:391:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">STRONG x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext STRONG item\" href=\"#Text::STRONG\">STRONG</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext STRONG item\" href=\"#Text::STRONG\">STRONG</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:391:0</span>.</p></div></div>"
+    },
+    "STYLE": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "STYLE",
+        " -- hypertext STYLE element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:740:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext STYLE element\" href=\"#Text::STYLE\">STYLE</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:740:0</span>.</p></div></div>"
+    },
+    "style(Hypertext)": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : d = DIV { &quot;Hello&quot; }\n\no1 = Hello</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : d = style(d, &quot;font-weight&quot; => &quot;bold&quot;)\n\no2 = Hello</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : peek d\n\no3 = DIV{&quot;Hello&quot;, style => font-weight:bold;}</code></pre></td></tr></table></div>",
+      "Headline": [
+        "style(Hypertext)",
+        ""
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:912:0",
+      "Synopsis": "<ul><li><span>Function: <a href=\"#Text::style%28Hypertext%29\">style</a></span></li><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">style (x,opts)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">markup list</a></span>, <a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a></span></li></ul></li><li><div>Consequences:<ul><li>Returns a new Hypertext object with its style option updated.</li></ul></div></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a href=\"#Text::style%28Hypertext%29\">style(Hypertext)</a></span></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:912:0</span>.</p></div></div>"
+    },
+    "SUB": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">SUB x</span> encloses <span class=\"tt\">x</span> in a hypertext <span class=\"tt\">SUB</span> item, thereby making it a subscript.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p></div>",
+      "Headline": [
+        "SUB",
+        " -- hypertext subscript"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:424:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">SUB x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext subscript\" href=\"#Text::SUB\">SUB</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext subscript\" href=\"#Text::SUB\">SUB</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:424:0</span>.</p></div></div>"
+    },
+    "SUBSECTION": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">SUBSECTION x</span> encloses <span class=\"tt\">x</span> in a hypertext HEADER2 header item. It is often used in the Mathematical Overview section of the documentation.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.  The code <pre>SUBSECTION &quot;Interesting thing&quot;</pre> produces the following header.<h2>Interesting thing</h2><p></p></div>",
+      "Headline": [
+        "SUBSECTION",
+        " -- hypertext SUBSECTION item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:267:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a> -- hypertext HEADER2 item</span></li><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">SUBSECTION x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext SUBSECTION item\" href=\"#Text::SUBSECTION\">SUBSECTION</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:267:0</span>.</p></div></div>"
+    },
+    "SUP": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">SUP x</span> encloses <span class=\"tt\">x</span> in a hypertext <span class=\"tt\">SUP</span> item, thereby making it a superscript.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p></div>",
+      "Headline": [
+        "SUP",
+        " -- hypertext superscript"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:439:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">SUP x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext superscript\" href=\"#Text::SUP\">SUP</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext superscript\" href=\"#Text::SUP\">SUP</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:439:0</span>.</p></div></div>"
+    },
+    "TABLE": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">TABLE x</span> produces a hypertext TABLE from a list of lists.</div>",
+      "Headline": [
+        "TABLE",
+        " -- hypertext table"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:363:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TABLE x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext table\" href=\"#Text::TABLE\">TABLE</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext table\" href=\"#Text::TABLE\">TABLE</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:363:0</span>.</p></div></div>"
+    },
+    "TD": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "TD",
+        " -- hypertext TD element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:730:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a title=\"hypertext TH element\" href=\"#Text::TH\">TH</a> -- hypertext TH element</span></li></ul></div>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Types of <span class=\"tt\">TD</span>:</h2><ul><li><span><a title=\"hypertext TH element\" href=\"#Text::TH\">TH</a> -- hypertext TH element</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext TD element\" href=\"#Text::TD\">TD</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:730:0</span>.</p></div></div>"
+    },
+    "TEX": {
+      "Description": "<div><h2>Description</h2><p>The constructor <span class=\"tt\">TEX x</span> returns an object which may contain one or more $\\LaTeX$ equations and matrices, several simple text formatting environments, as well as other <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> items. It is useful to use strings delimited by <a title=\"delineate a string with slashes\" href=\"#Macaulay2Doc::///\">///</a> because in strings delimited by <a title=\"delineate a string with quotation marks\" href=\"#Macaulay2Doc::%22\">&quot;</a> the backslashes often used in $\\LaTeX$ must be doubled. For details on conversion to HTML see <a title=\"conversion of $\\\\TeX$ to html\" href=\"#Text::html%28TEX%29\">html(TEX)</a>.</p></div>",
+      "Headline": [
+        "TEX",
+        " -- hypertext TEX item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:587:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a href=\"#Text::show%28Hypertext%29\">show(TEX)</a></span></li></ul></div>",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a title=\"conversion of $\\\\TeX$ to html\" href=\"#Text::html%28TEX%29\">html(TEX)</a> -- conversion of $\\TeX$ to html</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TEX x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span> or <span>a <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">basic list</a></span></span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class TEX:</h2><ul><li><span><a title=\"conversion of $\\\\TeX$ to html\" href=\"#Text::html%28TEX%29\">html(TEX)</a> -- conversion of $\\TeX$ to html</span></li><li><span><kbd>show(TEX)</kbd> -- see <span><a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a></span></span></li><li><kbd>new TEX from BasicList</kbd></li><li><kbd>new TEX from String</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:587:0</span>.</p></div></div>"
+    },
+    "Text": {
+      "Description": "<div><h2>Description</h2><p>This package is a repository for functions related to typesetting the documentation using $\\TeX$ and <a href=\"#Macaulay2Doc::hypertext%20list%20format\">hypertext list format</a>, usable with either <a title=\"create a documentation node\" href=\"#Macaulay2Doc::document\">document</a> or <a title=\"a simple documentation function\" href=\"#SimpleDoc::doc\">doc</a>. In particular, see <a title=\"conversion of $\\\\TeX$ to html\" href=\"#Text::html%28TEX%29\">html(TEX)</a>, <a title=\"validate a hypertext object\" href=\"#Text::validate\">validate(Hypertext)</a>, and <a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a>.</p></div>",
+      "Headline": [
+        "Text",
+        " -- documentation and hypertext"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:30:0",
+      "WaysToUse": "<div><div><div><h2>Version</h2><p>This documentation describes version <b>0.0</b> of Text.</p></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><a title=\"hypertext anchor\" href=\"#Text::ANCHOR\">ANCHOR</a> -- hypertext anchor</span></li><li><span><a title=\"hypertext BLOCKQUOTE item\" href=\"#Text::BLOCKQUOTE\">BLOCKQUOTE</a> -- hypertext BLOCKQUOTE item</span></li><li><span><a title=\"hypertext BODY item\" href=\"#Text::BODY\">BODY</a> -- hypertext BODY item</span></li><li><span><a title=\"hypertext BOLD item\" href=\"#Text::BOLD\">BOLD</a> -- hypertext BOLD item</span></li><li><span><a title=\"line break\" href=\"#Text::BR\">BR</a> -- line break</span></li><li><span><span class=\"tt\">BUTTON</span> (missing documentation)<!--tag: BUTTON-->\n</span></li><li><span><a title=\"hypertext CDATA element\" href=\"#Text::CDATA\">CDATA</a> -- hypertext CDATA element</span></li><li><span><a title=\"hypertext CODE item\" href=\"#Text::CODE\">CODE</a> -- hypertext CODE item</span></li><li><span><a title=\"hypertext COMMENT element\" href=\"#Text::COMMENT\">COMMENT</a> -- hypertext COMMENT element</span></li><li><span><a title=\"hypertext DD element\" href=\"#Text::DD\">DD</a> -- hypertext DD element</span></li><li><span><a title=\"a hypertext division\" href=\"#Text::DIV\">DIV</a> -- a hypertext division</span></li><li><span><a title=\"hypertext DL element\" href=\"#Text::DL\">DL</a> -- hypertext DL element</span></li><li><span><a title=\"hypertext DT element\" href=\"#Text::DT\">DT</a> -- hypertext DT element</span></li><li><span><a title=\"hypertext EM item\" href=\"#Text::EM\">EM</a> -- hypertext EM item</span></li><li><span><a title=\"a type of hypertext for holding example inputs awaiting outputs\" href=\"#Text::ExampleItem\">ExampleItem</a> -- a type of hypertext for holding example inputs awaiting outputs</span></li><li><span><a title=\"hypertext HEAD item\" href=\"#Text::HEAD\">HEAD</a> -- hypertext HEAD item</span></li><li><span><a title=\"hypertext HEADER1 item\" href=\"#Text::HEADER1\">HEADER1</a> -- hypertext HEADER1 item</span></li><li><span><a title=\"hypertext HEADER2 item\" href=\"#Text::HEADER2\">HEADER2</a> -- hypertext HEADER2 item</span></li><li><span><a title=\"hypertext HEADER3 item\" href=\"#Text::HEADER3\">HEADER3</a> -- hypertext HEADER3 item</span></li><li><span><a title=\"hypertext HEADER4 item\" href=\"#Text::HEADER4\">HEADER4</a> -- hypertext HEADER4 item</span></li><li><span><a title=\"hypertext HEADER5 item\" href=\"#Text::HEADER5\">HEADER5</a> -- hypertext HEADER5 item</span></li><li><span><a title=\"hypertext HEADER6 item\" href=\"#Text::HEADER6\">HEADER6</a> -- hypertext HEADER6 item</span></li><li><span><a title=\"hypertext HR element (horizontal rule)\" href=\"#Text::HR\">HR</a> -- hypertext HR element (horizontal rule)</span></li><li><span><a title=\"hypertext link\" href=\"#Text::HREF\">HREF</a> -- hypertext link</span></li><li><span><a title=\"hypertext item\" href=\"#Text::HTML\">HTML</a> -- hypertext item</span></li><li><span><a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> -- the class of markup lists used with hypertext</span></li><li><span><a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> -- the class of markup lists that can contain paragraphs</span></li><li><span><a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> -- the class of markup lists that constitute separate paragraphs</span></li><li><span><span class=\"tt\">HypertextVoid</span> (missing documentation)<!--tag: HypertextVoid-->\n</span></li><li><span><a title=\"HTML inline frame (iframe) element\" href=\"#Text::IFRAME\">IFRAME</a> -- HTML inline frame (iframe) element</span></li><li><span><a title=\"hypertext IMG item\" href=\"#Text::IMG\">IMG</a> -- hypertext IMG item</span></li><li><span><span class=\"tt\">INDENT</span> (missing documentation)<!--tag: INDENT-->\n</span></li><li><span><span class=\"tt\">INPUT</span> (missing documentation)<!--tag: INPUT-->\n</span></li><li><span><a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">IntermediateMarkUpType</a> -- the class of intermediate markup types</span></li><li><span><a title=\"hypertext italic font\" href=\"#Text::ITALIC\">ITALIC</a> -- hypertext italic font</span></li><li><span><a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> -- hypertext KBD item</span></li><li><span><a title=\"hypertext label item\" href=\"#Text::LABEL\">LABEL</a> -- hypertext label item</span></li><li><span><a title=\"a hypertext element for lazy evaluation\" href=\"#Text::LATER\">LATER</a> -- a hypertext element for lazy evaluation</span></li><li><span><a title=\"hypertext list item\" href=\"#Text::LI\">LI</a> -- hypertext list item</span></li><li><span><a title=\"a hypertext LINK element\" href=\"#Text::LINK\">LINK</a> -- a hypertext LINK element</span></li><li><span><a title=\"hypertext literal text\" href=\"#Text::LITERAL\">LITERAL</a> -- hypertext literal text</span></li><li><span><a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">MarkUpType</a> -- the class of markup types used with hypertext</span></li><li><span><a title=\"hypertext menu item\" href=\"#Text::MENU\">MENU</a> -- hypertext menu item</span></li><li><span><a title=\"a hypertext META element\" href=\"#Text::META\">META</a> -- a hypertext META element</span></li><li><span><a title=\"hypertext OL item\" href=\"#Text::OL\">OL</a> -- hypertext OL item</span></li><li><span><a title=\"hypertext paragraph container\" href=\"#Text::PARA\">PARA</a> -- hypertext paragraph container</span></li><li><span><a title=\"preformatted text\" href=\"#Text::PRE\">PRE</a> -- preformatted text</span></li><li><span><a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> -- hypertext SAMP item</span></li><li><span><a title=\"hypertext SCRIPT element\" href=\"#Text::SCRIPT\">SCRIPT</a> -- hypertext SCRIPT element</span></li><li><span><a title=\"hypertext SMALL item\" href=\"#Text::SMALL\">SMALL</a> -- hypertext SMALL item</span></li><li><span><a title=\"hypertext span\" href=\"#Text::SPAN\">SPAN</a> -- hypertext span</span></li><li><span><a title=\"hypertext STRONG item\" href=\"#Text::STRONG\">STRONG</a> -- hypertext STRONG item</span></li><li><span><a title=\"hypertext STYLE element\" href=\"#Text::STYLE\">STYLE</a> -- hypertext STYLE element</span></li><li><span><a title=\"hypertext subscript\" href=\"#Text::SUB\">SUB</a> -- hypertext subscript</span></li><li><span><a title=\"hypertext SUBSECTION item\" href=\"#Text::SUBSECTION\">SUBSECTION</a> -- hypertext SUBSECTION item</span></li><li><span><a title=\"hypertext superscript\" href=\"#Text::SUP\">SUP</a> -- hypertext superscript</span></li><li><span><a title=\"hypertext table\" href=\"#Text::TABLE\">TABLE</a> -- hypertext table</span></li><li><span><a title=\"hypertext TD element\" href=\"#Text::TD\">TD</a> -- hypertext TD element</span></li><li><span><a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> -- hypertext TEX item</span></li><li><span><a title=\"hypertext TH element\" href=\"#Text::TH\">TH</a> -- hypertext TH element</span></li><li><span><a title=\"hypertext title\" href=\"#Text::TITLE\">TITLE</a> -- hypertext title</span></li><li><span><a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a> -- hypertext documentation link</span></li><li><span><a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a> -- labeled hypertext documentation link</span></li><li><span><a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> -- hypertext documentation link followed by a headline</span></li><li><span><a title=\"hypertext TR element\" href=\"#Text::TR\">TR</a> -- hypertext TR element</span></li><li><span><a title=\"hypertext TT item\" href=\"#Text::TT\">TT</a> -- hypertext TT item</span></li><li><span><a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a> -- hypertext UL item</span></li><li><span><a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> -- hypertext VAR item</span></li></ul></li><li>Functions and commands<ul><li><span><a title=\"CODE object with syntax highlighting\" href=\"#Text::M2CODE\">M2CODE</a> -- CODE object with syntax highlighting</span></li><li><span><kbd>style</kbd> -- see <span><a href=\"#Text::style%28Hypertext%29\">style(Hypertext)</a></span></span></li><li><span><a title=\"validate a hypertext object\" href=\"#Text::validate\">validate</a> -- validate a hypertext object</span></li></ul></li><li>Methods<ul><li><span><a title=\"conversion of $\\\\TeX$ to html\" href=\"#Text::html%28TEX%29\">html(TEX)</a> -- conversion of $\\TeX$ to html</span></li><li><span><kbd>M2CODE(Thing)</kbd> -- see <span><a title=\"CODE object with syntax highlighting\" href=\"#Text::M2CODE\">M2CODE</a> -- CODE object with syntax highlighting</span></span></li><li><span><a href=\"#Text::options%28MarkUpType%29\">options(MarkUpType)</a></span></li><li><span><a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a></span></li><li><span><kbd>show(TEX)</kbd> -- see <span><a href=\"#Text::show%28Hypertext%29\">show(Hypertext)</a></span></span></li><li><span><a href=\"#Text::style%28Hypertext%29\">style(Hypertext)</a></span></li><li><span><kbd>new TEX from BasicList</kbd> -- see <span><a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> -- hypertext TEX item</span></span></li><li><span><kbd>new TEX from String</kbd> -- see <span><a title=\"hypertext TEX item\" href=\"#Text::TEX\">TEX</a> -- hypertext TEX item</span></span></li><li><span><kbd>new TO from Thing</kbd> -- see <span><a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a> -- hypertext documentation link</span></span></li><li><span><kbd>new TOH from Thing</kbd> -- see <span><a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> -- hypertext documentation link followed by a headline</span></span></li><li><span><kbd>validate(Hypertext)</kbd> -- see <span><a title=\"validate a hypertext object\" href=\"#Text::validate\">validate</a> -- validate a hypertext object</span></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"documentation and hypertext\" href=\"#Text::Text\">Text</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">Text.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:30:0</span>.</p></div></div>"
+    },
+    "TH": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "TH",
+        " -- hypertext TH element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:732:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext TH element\" href=\"#Text::TH\">TH</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"hypertext TD element\" href=\"#Text::TD\">TD</a> &lt; <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:732:0</span>.</p></div></div>"
+    },
+    "TITLE": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">TITLE x</span> encloses <span class=\"tt\">x</span> in a hypertext TITLE item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p></div>",
+      "Headline": [
+        "TITLE",
+        " -- hypertext title"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:149:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TITLE x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext title\" href=\"#Text::TITLE\">TITLE</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext title\" href=\"#Text::TITLE\">TITLE</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that constitute separate paragraphs\" href=\"#Text::HypertextParagraph\">HypertextParagraph</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:149:0</span>.</p></div></div>"
+    },
+    "TO": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">TO &quot;x&quot;</span> produces a hypertext link to the documentation page labeled <span class=\"tt\">x</span>.<p></p>See also <a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a>.  The word <i>hypertext</i> in the previous sentence is an example of the use of <span class=\"tt\">TO</span>.<p></p>The special form <span class=\"tt\">TO {&quot;x&quot;, &quot;s&quot;}</span> produces a hypertext link to the page labeled <span class=\"tt\">x</span>, but with the string &quot;s&quot; appended to the string &quot;x&quot; at the point where the reference occurs.  This form is needed because in some modes of output the link is indicated with a section number in brackets.<p></p>The special form <span class=\"tt\">TO (f,X)</span> produces a hypertext link to the page documenting the method used for applying the function <span class=\"tt\">f</span> to an argument of class <span class=\"tt\">X</span>.  For more arguments, use <span class=\"tt\">TO (f,X,Y)</span> or <span class=\"tt\">TO (f,X,Y,Z)</span>.<p></p>The special form <span class=\"tt\">TO [f,X]</span> produces a hypertext link to the page documenting the optional argument named <span class=\"tt\">X</span> for the function <span class=\"tt\">f</span>.<p></p>If <span class=\"tt\">TO x</span> is an entry in a <a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a>, then it is treated as <span class=\"tt\">TOH x</span>, and headlines are added automatically.</div>",
+      "Headline": [
+        "TO",
+        " -- hypertext documentation link"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:817:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"key of a documentation node\" href=\"#Macaulay2Doc::Key\">Key</a> -- key of a documentation node</span></li><li><span><a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a> -- labeled hypertext documentation link</span></li><li><span><a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> -- hypertext documentation link followed by a headline</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TO x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, a documentation key</span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class TO:</h2><ul><li><kbd>new TO from Thing</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext documentation link\" href=\"#Text::TO\">TO</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:817:0</span>.</p></div></div>"
+    },
+    "TO2": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">TO2 {x,&quot;p&quot;}</span> produces a hypertext link labeled &quot;p&quot; to the documentation page labeled <span class=\"tt\">x</span>.</div>",
+      "Headline": [
+        "TO2",
+        " -- labeled hypertext documentation link"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:829:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TO2 {x,p}</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, a documentation key</span></li><li><span><span class=\"tt\">p</span>, a phrase</span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"labeled hypertext documentation link\" href=\"#Text::TO2\">TO2</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:829:0</span>.</p></div></div>"
+    },
+    "TOH": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">TOH &quot;x&quot;</span> produces a hypertext link to the documentation page labeled <span class=\"tt\">x</span> followed by the <a title=\"headline of a documentation node\" href=\"#Macaulay2Doc::Headline\">Headline</a> for <span class=\"tt\">x</span>.  If <span class=\"tt\">TO x</span> is an entry in a <a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a>, then it is treated as <span class=\"tt\">TOH x</span>, and headlines are added automatically.</div>",
+      "Headline": [
+        "TOH",
+        " -- hypertext documentation link followed by a headline"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:840:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TOH x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, a documentation key</span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class TOH:</h2><ul><li><kbd>new TOH from Thing</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext documentation link followed by a headline\" href=\"#Text::TOH\">TOH</a> is <span>an <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">intermediate markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:840:0</span>.</p></div></div>"
+    },
+    "TR": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "TR",
+        " -- hypertext TR element"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:728:0",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext TR element\" href=\"#Text::TR\">TR</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:728:0</span>.</p></div></div>"
+    },
+    "TT": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">TT x</span> encloses <span class=\"tt\">x</span> in a hypertext <span class=\"tt\">TT</span> item.<p></p>The argument <span class=\"tt\">x</span> should be a string, or a list or sequence of strings or hypertext items.<p></p>Here is an example.<p></p><span class=\"tt\">Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.  Here is a long line.</span><p></p></div>",
+      "Headline": [
+        "TT",
+        " -- hypertext TT item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:605:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">TT x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext TT item\" href=\"#Text::TT\">TT</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext TT item\" href=\"#Text::TT\">TT</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:605:0</span>.</p></div></div>"
+    },
+    "UL": {
+      "Description": "<div><h2>Description</h2><span class=\"tt\">UL x</span> encloses the list x as a hypertext UL itemized list.<p></p>The argument <span class=\"tt\">x</span> should be a list of strings or hypertext items.<p></p>Here is an example. The expression <pre>UL {&quot;first&quot;,&quot;second&quot;,&quot;third&quot;}</pre>produces<ul><li>first</li><li>second</li><li>third</li></ul><p></p></div>",
+      "Headline": [
+        "UL",
+        " -- hypertext UL item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:768:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"prepare hypertext for display\" href=\"#Macaulay2Doc::hypertext\">hypertext</a> -- prepare hypertext for display</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">UL x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext UL item\" href=\"#Text::UL\">UL</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists that can contain paragraphs\" href=\"#Text::HypertextContainer\">HypertextContainer</a> &lt; <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:768:0</span>.</p></div></div>"
+    },
+    "validate": {
+      "Description": "<div><h2>Description</h2><p>This function is somewhat provisional.  In particular, it is hard to check everything, because our hypertext format includes some entities of class <a title=\"the class of intermediate markup types\" href=\"#Text::IntermediateMarkUpType\">IntermediateMarkUpType</a> that don't correspond directly to HTML.  Either those will have to be eliminated, or a more-final type of hypertext, convertible immediately to HTML, will have to be developed.</p></div>",
+      "Headline": [
+        "validate",
+        " -- validate a hypertext object"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:902:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">validate x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">markup list</a></span>, a hypertext object to validate</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">markup list</a></span>, the input hypertext object, possibly with errors fixed</span></li></ul></li><li><div>Consequences:<ul><li>The hypertext is checked for validity, to ensure that the HTML code returned by <span class=\"tt\">html validate x</span> is valid.</li></ul></div></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">validate</span>:</h2><ul><li><kbd>validate(Hypertext)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"validate a hypertext object\" href=\"#Text::validate\">validate</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:902:0</span>.</p></div></div>"
+    },
+    "VAR": {
+      "Description": "<div><h2>Description</h2><p>This HTML tag is used to represent a variable.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : html VAR &quot;x&quot;\n\no1 = &lt;var>x&lt;/var></code></pre></td></tr></table><p>This is rendered in the browser as <var>x</var>.</p></div>",
+      "Headline": [
+        "VAR",
+        " -- hypertext VAR item"
+      ],
+      "Location": "../../../../Macaulay2/packages/Text.m2:638:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"hypertext KBD item\" href=\"#Text::KBD\">KBD</a> -- hypertext KBD item</span></li><li><span><a title=\"hypertext SAMP item\" href=\"#Text::SAMP\">SAMP</a> -- hypertext SAMP item</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">VAR x</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">x</span>, <span>a <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">thing</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>an instance of the type <a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"hypertext VAR item\" href=\"#Text::VAR\">VAR</a> is <span>a <a title=\"the class of markup types used with hypertext\" href=\"#Text::MarkUpType\">markup type</a></span>, with ancestor classes <a title=\"the class of markup lists used with hypertext\" href=\"#Text::Hypertext\">Hypertext</a> &lt; <a title=\"the class of all basic lists\" href=\"#Macaulay2Doc::BasicList\">BasicList</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Text.m2:638:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Text":{},
+    "BR":{},
+    "HR":{},
+    "Hypertext":{
+      "show(Hypertext)":{},
+      "style(Hypertext)":{},
+      "validate":{},
+      "ANCHOR":{},
+      "BOLD":{},
+      "BUTTON":{},
+      "CDATA":{},
+      "CODE":{},
+      "COMMENT":{},
+      "EM":{},
+      "ExampleItem":{},
+      "HREF":{},
+      "HypertextContainer":{
+        "BODY":{},
+        "DIV":{},
+        "DL":{},
+        "HEAD":{},
+        "HTML":{},
+        "IFRAME":{},
+        "INDENT":{},
+        "LI":{},
+        "MENU":{},
+        "OL":{},
+        "TABLE":{},
+        "TD":{
+          "TH":{}
+        },
+        "TR":{},
+        "UL":{}
+      },
+      "HypertextParagraph":{
+        "BLOCKQUOTE":{},
+        "DD":{},
+        "DT":{},
+        "HEADER1":{},
+        "HEADER2":{},
+        "HEADER3":{},
+        "HEADER4":{},
+        "HEADER5":{},
+        "HEADER6":{},
+        "PARA":{},
+        "PRE":{},
+        "SCRIPT":{},
+        "SUBSECTION":{},
+        "TITLE":{}
+      },
+      "HypertextVoid":{},
+      "ITALIC":{},
+      "KBD":{},
+      "LABEL":{},
+      "LATER":{},
+      "LITERAL":{},
+      "SAMP":{},
+      "SMALL":{},
+      "SPAN":{},
+      "STRONG":{},
+      "STYLE":{},
+      "SUB":{},
+      "SUP":{},
+      "TEX":{
+        "html(TEX)":{}
+      },
+      "TO":{},
+      "TO2":{},
+      "TOH":{},
+      "TT":{},
+      "VAR":{}
+    },
+    "IMG":{},
+    "INPUT":{},
+    "LINK":{},
+    "M2CODE":{},
+    "MarkUpType":{
+      "options(MarkUpType)":{},
+      "IntermediateMarkUpType":{}
+    },
+    "META":{}
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "index": {
+    "Attempts": "RandomObjects::Attempts",
+    "Certify": "RandomObjects::Certify",
+    "Construction": "RandomObjects::Construction",
+    "random(RandomObject)": "RandomObjects::random(RandomObject)",
+    "RandomObject": "RandomObjects::RandomObject",
+    "RandomObjects": "RandomObjects::RandomObjects",
+    "randomObjectTemplate": "RandomObjects::randomObjectTemplate"
+  },
+  "nodes": {
+    "Attempts": {
+      "Description": "<div><h2>Description</h2><div><p><span class=\"tt\">Attempts</span> can be assigned a nonnegative integer or <span class=\"tt\">infinity</span></p></div></div>",
+      "Headline": [
+        "Attempts",
+        " -- number of attempts in the construction of a random object"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:262:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">(random randomObjectClass)(args,Attempts=>...)</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"number of attempts in the construction of a random object\" href=\"#RandomObjects::Attempts\">Attempts</a> is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:262:0</span>.</p></div></div>"
+    },
+    "Certify": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Certify",
+        " -- whether to certify the object"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:271:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">(random randomObjectClass)(args,Certify=>...)</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"whether to certify the object\" href=\"#RandomObjects::Certify\">Certify</a> is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:271:0</span>.</p></div></div>"
+    },
+    "Construction": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Construction",
+        " -- key of randomObject that contains the construction function"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:309:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">randomObject.Construction(args)</code></dd></dl></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">thing</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"key of randomObject that contains the construction function\" href=\"#RandomObjects::Construction\">Construction</a> is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:309:0</span>.</p></div></div>"
+    },
+    "random(RandomObject)": {
+      "Description": "<div><div><p>The returned function f takes the following options:</p><p>* <span class=\"tt\">Attempts => ... </span> a nonnegative integer or <span class=\"tt\">infinity</span> (default) that limits the maximal number of attempts for the construction of an object</p><p>* <span class=\"tt\">Certify => ... </span> <span class=\"tt\">true</span> or <span class=\"tt\">false</span> (default) whether the output is certified. The certifying properties are encoded in the Certification function of the randomObjectClass</p></div></div>",
+      "Headline": [
+        "random(RandomObject)",
+        " -- returns a function that constructs a random object"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:298:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"number of attempts in the construction of a random object\" href=\"#RandomObjects::Attempts\">Attempts</a> -- number of attempts in the construction of a random object</span></li><li><span><a title=\"whether to certify the object\" href=\"#RandomObjects::Certify\">Certify</a> -- whether to certify the object</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">f=random(randomObjectClass)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">randomObjectClass</span>, <span>an instance of the type <a title=\"framework for creation of random objects\" href=\"#RandomObjects::RandomObject\">RandomObject</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">f</span>, <span>a <a title=\"the class of all functions\" href=\"#Macaulay2Doc::Function\">function</a></span>, that constructs a random object</span></li></ul></li></ul>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:298:0</span>.</p></div></div>"
+    },
+    "RandomObject": {
+      "Description": "<div><h2>Description</h2><div><p>RandomObject bundles the necessary functions for the construction of certified random objects parametrized by a unirational moduli space $M$.</p><p>RandomObject is a MutableHashTable as ancestor and needs to have the following keys:</p><p>* Construction: the method function assigned to this key contains a unirationality construction.</p><p>* Certification: the method function assigned to this key checks whether the constructed object fulfills certain conditions.</p><p>In the following example we construct plane curves of degree $d$. The Certification checks whether they are irreducible over the coefficient field.</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : constructPlaneCurve = method(TypicalValue=>Ideal, Options=>{Certify=>false})\n\no1 = constructPlaneCurve\n\no1 : MethodFunctionWithOptions</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : constructPlaneCurve(ZZ,PolynomialRing):=opt->(d,R) -> ideal random(R^1,R^{1:-d})\n\no2 = FunctionClosure[currentString:2:40-2:80]\n\no2 : FunctionClosure</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : certifyPlaneCurve = method(TypicalValue=>Boolean)\n\no3 = certifyPlaneCurve\n\no3 : MethodFunction</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : certifyPlaneCurve(Ideal,ZZ,PolynomialRing):=(I,d,R)-> #decompose I==1\n\no4 = FunctionClosure[currentString:4:44-4:69]\n\no4 : FunctionClosure</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : planeCurve = new RandomObject from {\n          Construction => constructPlaneCurve,\n          Certification => certifyPlaneCurve\n          }\n\no5 = planeCurve\n\no5 : RandomObject</code></pre></td></tr></table><div><p>We construct a curve of degree $2$ as follows</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i6 : setRandomSeed(&quot;alpha&quot;);\n -- setting random seed to 10206284518</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i7 : R=ZZ/3[x_0..x_2];</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i8 : (random planeCurve)(2,R)\n\n              2\no8 = ideal(- x  - x x  + x x  - x x )\n              0    0 1    0 2    1 2\n\no8 : Ideal of R</code></pre></td></tr></table><div><p>We can certify the curve by using the option Certify</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i9 : (random planeCurve)(2,R,Certify=>true)\n\n              2    2           2\no9 = ideal(- x  + x  + x x  + x )\n              0    1    0 2    2\n\no9 : Ideal of R</code></pre></td></tr></table><div><p>We have chosen a small finite field as ground field. Hence, there is a certain chance that the curve is not irreducible. We can check this if we limit the number of attempts to $1$. If the curve is then reducible, <span class=\"tt\">null</span> is returned.</p><p></p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i10 : tally apply(3^4,i->(random planeCurve)(2,R,Certify=>true,Attempts=>1) === null)\n\no10 = Tally{false => 66}\n            true => 15\n\no10 : Tally</code></pre></td></tr></table></div>",
+      "Headline": [
+        "RandomObject",
+        " -- framework for creation of random objects"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:250:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class RandomObject:</h2><ul><li><span><a title=\"returns a function that constructs a random object\" href=\"#RandomObjects::random%28RandomObject%29\">random(RandomObject)</a> -- returns a function that constructs a random object</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"framework for creation of random objects\" href=\"#RandomObjects::RandomObject\">RandomObject</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all mutable hash tables\" href=\"#Macaulay2Doc::MutableHashTable\">MutableHashTable</a> &lt; <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:250:0</span>.</p></div></div>"
+    },
+    "RandomObjects": {
+      "Description": "<div><h2>Description</h2><div><p>This package provides the framework for the implementation of unirationality constructions.</p><p>A moduli space $M$ of objects is unirational if there exists a dominant rational map $\\phi:\\mathbb{P}^n --> M$. If the function $\\phi$ is explicitly given it can be translated into a construction function that computes $\\phi(P)$ for a given $P \\in \\mathbb{P}^n$. If $P$ is chosen randomly (over a finite field $F_q$ or over a subset of $\\mathbb{Q}$ limited by a given height) it may not lie in the open subset of $\\mathbb{P}^n$ where $\\phi$ is defined. This can be remedied by calling the function several times, i.e. allowing a certain number of Attempts. One is also interested in certifying the constructed object meaning that it satisfies certain reasonable properties.</p></div></div>",
+      "Headline": [
+        "RandomObjects",
+        " -- a Framework for the construction of random points of unirational moduli spaces"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:193:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"http://www.crcg.de/wiki/User:Bothmer\">Hans-Christian Graf v. Bothmer</a><span> &lt;<a href=\"mailto:bothmer%40uni-math.gwdg.de\">bothmer@uni-math.gwdg.de</a>></span></li><li><a href=\"http://www.math.uni-sb.de/ag/schreyer/\">Florian Geiss</a><span> &lt;<a href=\"mailto:fg%40math.uni-sb.de\">fg@math.uni-sb.de</a>></span></li><li><a href=\"http://www.math.uiuc.edu/~dan/\">Daniel R. Grayson</a><span> &lt;<a href=\"mailto:dan%40math.uiuc.edu\">dan@math.uiuc.edu</a>></span></li><li><a href=\"http://www.math.uni-sb.de/ag/schreyer/\">Frank-Olaf Schreyer</a><span> &lt;<a href=\"mailto:schreyer%40math.uni-sb.de\">schreyer@math.uni-sb.de</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.2</b> of RandomObjects, released <b>June 19, 2011</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{RandomObjectsSource,\n  title = {{RandomObjects: a framework for making random objects in algebraic geometry. Version~0.2}},\n  author = {Hans-Christian Graf v. Bothmer and Florian Geiss and Daniel R. Grayson and Frank-Olaf Schreyer},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><a title=\"framework for creation of random objects\" href=\"#RandomObjects::RandomObject\">RandomObject</a> -- framework for creation of random objects</span></li></ul></li><li>Functions and commands<ul><li><span><a title=\"a template for the implementation of a random object\" href=\"#RandomObjects::randomObjectTemplate\">randomObjectTemplate</a> -- a template for the implementation of a random object</span></li></ul></li><li>Methods<ul><li><span><a title=\"returns a function that constructs a random object\" href=\"#RandomObjects::random%28RandomObject%29\">random(RandomObject)</a> -- returns a function that constructs a random object</span></li><li><span><span class=\"tt\">randomObjectTemplate(String)</span> (missing documentation)<!--tag: (randomObjectTemplate,String)-->\n</span></li></ul></li><li>Symbols<ul><li><span><a title=\"number of attempts in the construction of a random object\" href=\"#RandomObjects::Attempts\">Attempts</a> -- number of attempts in the construction of a random object</span></li><li><span><a title=\"whether to certify the object\" href=\"#RandomObjects::Certify\">Certify</a> -- whether to certify the object</span></li><li><span><a title=\"key of randomObject that contains the construction function\" href=\"#RandomObjects::Construction\">Construction</a> -- key of randomObject that contains the construction function</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a Framework for the construction of random points of unirational moduli spaces\" href=\"#RandomObjects::RandomObjects\">RandomObjects</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">RandomObjects.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:193:0</span>.</p></div></div>"
+    },
+    "randomObjectTemplate": {
+      "Description": "<div><h2>Description</h2><div><p>A template for the implementation of a new random object. Remember to document what Certify => true actually certifies.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : randomObjectTemplate(&quot;foo&quot;)\n\no1 = export {\n       constructFoo,\n       certifyFoo,\n       foo\n       }\n\n     constructFoo=method(Options=>{Certify=>false})\n     constructFoo(Thing):=opt->(args)->(\n        )\n\n     undocumented constructFoo\n\n     certifyFoo=method()\n     certifyFoo(Thing,Thing)->(object,args)->(\n        )\n\n     undocumented certifyFoo\n\n     foo = new RandomObject from {\n\n                    Construction  => constructFoo,\n\n                    Certification => certifyFoo}\n\n     doc /// \n        Key\n         foo\n        Headline\n        Usage\n         (random foo)(args)\n        Inputs\n         args : Thing\n        Outputs\n       Consequences\n         Item\n       Description\n         Text\n         Tree\n         Code\n         Pre\n         Example\n         CannedExample\n       ExampleFiles\n       Acknowledgement\n       Contributors\n       References\n       Caveat\n       SeeAlso\n       Subnodes\n     ///</code></pre></td></tr></table></div>",
+      "Headline": [
+        "randomObjectTemplate",
+        " -- a template for the implementation of a random object"
+      ],
+      "Location": "../../../../Macaulay2/packages/RandomObjects.m2:172:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">t=randomObjectTemplate(name)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">name</span>, <span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, name of the object</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">t</span>, <span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, template for the implementation of &quot;(random name)&quot;</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">randomObjectTemplate</span>:</h2><ul><li><span><span class=\"tt\">randomObjectTemplate(String)</span> (missing documentation)<!--tag: (randomObjectTemplate,String)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a template for the implementation of a random object\" href=\"#RandomObjects::randomObjectTemplate\">randomObjectTemplate</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">RandomObjects.m2:172:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "RandomObjects":{},
+    "Attempts":{},
+    "Certify":{},
+    "Construction":{},
+    "random(RandomObject)":{},
+    "RandomObject":{},
+    "randomObjectTemplate":{}
+  }
+}
