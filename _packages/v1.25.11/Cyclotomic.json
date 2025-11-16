@@ -1,0 +1,72 @@
+{
+  "index": {
+    "Cyclotomic": "Cyclotomic::Cyclotomic",
+    "cyclotomicField": "Cyclotomic::cyclotomicField",
+    "cyclotomicPoly": "Cyclotomic::cyclotomicPoly",
+    "findRootPower": "Cyclotomic::findRootPower",
+    "joinCyclotomic": "Cyclotomic::joinCyclotomic"
+  },
+  "nodes": {
+    "Cyclotomic": {
+      "Description": "<div><h2>Description</h2><em>Cyclotomic</em> is a package for cyclotomic fields.  It is used in to construct extensions of the coefficient field during binomial primary decomposition using the package <a title=\"a package for binomial ideals\" href=\"#Binomials::Binomials\">Binomials</a>.</div>",
+      "Headline": [
+        "Cyclotomic",
+        " -- cyclotomic fields"
+      ],
+      "Location": "../../../../Macaulay2/packages/Cyclotomic.m2:155:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://thomas-kahle.de\">Thomas Kahle</a><span> &lt;<a href=\"mailto:thomas.kahle%40jpberlin.de\">thomas.kahle@jpberlin.de</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of Cyclotomic, released <b>February 2012</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{CyclotomicSource,\n  title = {{Cyclotomic: cyclotomic fields. Version~1.0}},\n  author = {Thomas Kahle},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"cyclotomic field construction\" href=\"#Cyclotomic::cyclotomicField\">cyclotomicField</a> -- cyclotomic field construction</span></li><li><span><a title=\"Cyclotomic Polynomial\" href=\"#Cyclotomic::cyclotomicPoly\">cyclotomicPoly</a> -- Cyclotomic Polynomial</span></li><li><span><a title=\"Find the order of the root in the coefficients of polynomial ring over a cyclotomic field\" href=\"#Cyclotomic::findRootPower\">findRootPower</a> -- Find the order of the root in the coefficients of polynomial ring over a cyclotomic field</span></li><li><span><a title=\"Join ideals in polynomial rings over different cyclotomic fields\" href=\"#Cyclotomic::joinCyclotomic\">joinCyclotomic</a> -- Join ideals in polynomial rings over different cyclotomic fields</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"cyclotomic fields\" href=\"#Cyclotomic::Cyclotomic\">Cyclotomic</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">Cyclotomic.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Cyclotomic.m2:155:0</span>.</p></div></div>"
+    },
+    "cyclotomicField": {
+      "Caveat": "<div><h2>Caveat</h2>Strange things can happen with the reduction of the coefficients. In M2 v &lt;= 1.2 dimension is off by one.</div>",
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : S = cyclotomicField (5)\n\no1 = S\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : isField S\n\no2 = true</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : r = S_0\n\no3 = ww\n       5\n\no3 : S</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : (r^9, r^10, r^11)\n\n          3     2\no4 = (- ww  - ww  - ww  - 1, 1, ww )\n          5     5     5           5\n\no4 : Sequence</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : T = S[x,y]\n\no5 = T\n\no5 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : I = ideal (x-r)\n\no6 = ideal(x - ww )\n                 5\n\no6 : Ideal of T</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i7 : dim I\n\no7 = 1</code></pre></td></tr></table></div>",
+      "Headline": [
+        "cyclotomicField",
+        " -- cyclotomic field construction"
+      ],
+      "Location": "../../../../Macaulay2/packages/Cyclotomic.m2:176:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Cyclotomic Polynomial\" href=\"#Cyclotomic::cyclotomicPoly\">cyclotomicPoly</a> -- Cyclotomic Polynomial</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">cyclotomicField (i)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">i</span>, an integer, the power of the root to be adjoined.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">S</span>, A cyclotomic field with $1^(1/i)$ adjoined</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"cyclotomic field construction\" href=\"#Cyclotomic::cyclotomicField\">cyclotomicField</a> is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Cyclotomic.m2:176:0</span>.</p></div></div>"
+    },
+    "cyclotomicPoly": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[ww]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : f = cyclotomicPoly (6,ww)\n\n       2\no2 = ww  - ww + 1\n\no2 : R</code></pre></td></tr></table></div>",
+      "Headline": [
+        "cyclotomicPoly",
+        " -- Cyclotomic Polynomial"
+      ],
+      "Location": "../../../../Macaulay2/packages/Cyclotomic.m2:192:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"cyclotomic field construction\" href=\"#Cyclotomic::cyclotomicField\">cyclotomicField</a> -- cyclotomic field construction</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">cyclotomicPoly (i,v)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">i</span>, an integer, the power of a root of unity.</span></li><li><span><span class=\"tt\">v</span>, a variable name in which the polynomial is returned.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">f</span>, The minimal polynomial of the i-th root of unity.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Cyclotomic Polynomial\" href=\"#Cyclotomic::cyclotomicPoly\">cyclotomicPoly</a> is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Cyclotomic.m2:192:0</span>.</p></div></div>"
+    },
+    "findRootPower": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : S = cyclotomicField 5\n\no1 = S\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : T = S[x,y]\n\no2 = T\n\no2 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : findRootPower T\n\no3 = 5</code></pre></td></tr></table></div>",
+      "Headline": [
+        "findRootPower",
+        " -- Find the order of the root in the coefficients of polynomial ring over a cyclotomic field"
+      ],
+      "Location": "../../../../Macaulay2/packages/Cyclotomic.m2:208:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"cyclotomic field construction\" href=\"#Cyclotomic::cyclotomicField\">cyclotomicField</a> -- cyclotomic field construction</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">findRootPower R</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">R</span>, a polynomial ring over a cyclotomic field</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">i</span>, The order of the adjoined root of unity, or 2 if the coefficient field is QQ</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Find the order of the root in the coefficients of polynomial ring over a cyclotomic field\" href=\"#Cyclotomic::findRootPower\">findRootPower</a> is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Cyclotomic.m2:208:0</span>.</p></div></div>"
+    },
+    "joinCyclotomic": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : F = cyclotomicField 3; G = cyclotomicField 4;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : R = F[t]; I = ideal (t-F_0^2)\n\no4 = ideal(t + ww  + 1)\n                 3\n\no4 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : S = G[t]; J = ideal (t^2-G_0)\n\n            2\no6 = ideal(t  - ww )\n                  4\n\no6 : Ideal of S</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i7 : joinCyclotomic {I,J}\n\n                  2           2     3\no7 = {ideal(t + ww  ), ideal(t  - ww  )}\n                  12                12\n\no7 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "joinCyclotomic",
+        " -- Join ideals in polynomial rings over different cyclotomic fields"
+      ],
+      "Location": "../../../../Macaulay2/packages/Cyclotomic.m2:225:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"cyclotomic field construction\" href=\"#Cyclotomic::cyclotomicField\">cyclotomicField</a> -- cyclotomic field construction</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">joinCyclotomic l</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">li</span>, a list of ideals in polynomial rings over cyclotomic fields</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">li2</span>, The list of ideals in a common ring.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Join ideals in polynomial rings over different cyclotomic fields\" href=\"#Cyclotomic::joinCyclotomic\">joinCyclotomic</a> is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Cyclotomic.m2:225:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Cyclotomic":{},
+    "cyclotomicField":{},
+    "cyclotomicPoly":{},
+    "findRootPower":{},
+    "joinCyclotomic":{}
+  }
+}
