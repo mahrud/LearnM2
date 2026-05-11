@@ -1,0 +1,416 @@
+{
+  "index": {
+    "EngineTests": "EngineTests::EngineTests",
+    "fields": "EngineTests::fields",
+    "fieldsFFPACK": "EngineTests::fieldsFFPACK",
+    "fieldsFLINT": "EngineTests::fieldsFLINT",
+    "fieldsGF": "EngineTests::fieldsGF",
+    "finitefields": "EngineTests::finitefields",
+    "hasFFPACK": "EngineTests::hasFFPACK",
+    "jordanForm": "EngineTests::jordanForm",
+    "maxFFPACKPrime": "EngineTests::maxFFPACKPrime",
+    "maxFLINTPrime": "EngineTests::maxFLINTPrime",
+    "ringsCC": "EngineTests::ringsCC",
+    "ringsPID": "EngineTests::ringsPID",
+    "ringsRR": "EngineTests::ringsRR",
+    "runTests": "EngineTests::runTests",
+    "testClean": "EngineTests::testClean",
+    "testDeterminant": "EngineTests::testDeterminant",
+    "testGF": "EngineTests::testGF",
+    "testGFGenerator": "EngineTests::testGFGenerator",
+    "testGFpromote": "EngineTests::testGFpromote",
+    "testHasEngineLinearAlgebra": "EngineTests::testHasEngineLinearAlgebra",
+    "testInverse": "EngineTests::testInverse",
+    "testLinearAlgebra": "EngineTests::testLinearAlgebra",
+    "testLinearAlgebraSet": "EngineTests::testLinearAlgebraSet",
+    "testLUBoundaryCases": "EngineTests::testLUBoundaryCases",
+    "testMonomialOrderingToMatrix": "EngineTests::testMonomialOrderingToMatrix",
+    "testMult": "EngineTests::testMult",
+    "testMutableMatrices": "EngineTests::testMutableMatrices",
+    "testNorm": "EngineTests::testNorm",
+    "testNullspace": "EngineTests::testNullspace",
+    "testPromote": "EngineTests::testPromote",
+    "testPromoteLift": "EngineTests::testPromoteLift",
+    "testRank": "EngineTests::testRank",
+    "testRankProfile": "EngineTests::testRankProfile",
+    "testRingMapEval": "EngineTests::testRingMapEval",
+    "testSolve": "EngineTests::testSolve",
+    "ZZpFFPACK": "EngineTests::ZZpFFPACK",
+    "ZZpFlint": "EngineTests::ZZpFlint"
+  },
+  "nodes": {
+    "EngineTests": {
+      "Caveat": "<div><h2>Caveat</h2><div></div></div>",
+      "Description": "<div><h2>Description</h2><div></div></div>",
+      "Headline": [
+        "EngineTests",
+        " -- a test suite for the Macaulay2 engine"
+      ],
+      "Location": "../../../../Macaulay2/packages/EngineTests.m2:479:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"http://www.math.cornell.edu/People/Faculty/stillman.html\">Michael E. Stillman</a><span> &lt;<a href=\"mailto:mike%40math.cornell.edu\">mike@math.cornell.edu</a>></span></li><li><a href=\"\">Jakob Kröker</a><span> &lt;<a href=\"mailto:kroeker%40math.uni-hannover.de\">kroeker@math.uni-hannover.de</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of EngineTests, released <b>29 Aug 2011</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{EngineTestsSource,\n  title = {{EngineTests: a test suite for the \\emph{Macaulay2} engine. Version~0.1}},\n  author = {Michael E. Stillman and Jakob Kröker},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><span class=\"tt\">jordanForm</span> (missing documentation)<!--tag: jordanForm-->\n</span></li><li><span><span class=\"tt\">runTests</span> (missing documentation)<!--tag: runTests-->\n</span></li><li><span><span class=\"tt\">testClean</span> (missing documentation)<!--tag: testClean-->\n</span></li><li><span><span class=\"tt\">testDeterminant</span> (missing documentation)<!--tag: testDeterminant-->\n</span></li><li><span><span class=\"tt\">testGF</span> (missing documentation)<!--tag: testGF-->\n</span></li><li><span><span class=\"tt\">testGFGenerator</span> (missing documentation)<!--tag: testGFGenerator-->\n</span></li><li><span><span class=\"tt\">testGFpromote</span> (missing documentation)<!--tag: testGFpromote-->\n</span></li><li><span><span class=\"tt\">testHasEngineLinearAlgebra</span> (missing documentation)<!--tag: testHasEngineLinearAlgebra-->\n</span></li><li><span><span class=\"tt\">testInverse</span> (missing documentation)<!--tag: testInverse-->\n</span></li><li><span><span class=\"tt\">testLinearAlgebra</span> (missing documentation)<!--tag: testLinearAlgebra-->\n</span></li><li><span><span class=\"tt\">testLinearAlgebra$FLINT</span> (missing documentation)<!--tag: testLinearAlgebra$FLINT-->\n</span></li><li><span><span class=\"tt\">testLinearAlgebraSet</span> (missing documentation)<!--tag: testLinearAlgebraSet-->\n</span></li><li><span><span class=\"tt\">testLUBoundaryCases</span> (missing documentation)<!--tag: testLUBoundaryCases-->\n</span></li><li><span><span class=\"tt\">testMonomialOrderingToMatrix</span> (missing documentation)<!--tag: testMonomialOrderingToMatrix-->\n</span></li><li><span><span class=\"tt\">testMult</span> (missing documentation)<!--tag: testMult-->\n</span></li><li><span><span class=\"tt\">testMutableMatrices</span> (missing documentation)<!--tag: testMutableMatrices-->\n</span></li><li><span><span class=\"tt\">testNorm</span> (missing documentation)<!--tag: testNorm-->\n</span></li><li><span><span class=\"tt\">testNullspace</span> (missing documentation)<!--tag: testNullspace-->\n</span></li><li><span><span class=\"tt\">testPromote</span> (missing documentation)<!--tag: testPromote-->\n</span></li><li><span><span class=\"tt\">testPromoteLift</span> (missing documentation)<!--tag: testPromoteLift-->\n</span></li><li><span><span class=\"tt\">testRank</span> (missing documentation)<!--tag: testRank-->\n</span></li><li><span><span class=\"tt\">testRankProfile</span> (missing documentation)<!--tag: testRankProfile-->\n</span></li><li><span><span class=\"tt\">testRingMapEval</span> (missing documentation)<!--tag: testRingMapEval-->\n</span></li><li><span><span class=\"tt\">testSolve</span> (missing documentation)<!--tag: testSolve-->\n</span></li><li><span><span class=\"tt\">ZZpFFPACK</span> (missing documentation)<!--tag: ZZpFFPACK-->\n</span></li><li><span><span class=\"tt\">ZZpFlint</span> (missing documentation)<!--tag: ZZpFlint-->\n</span></li></ul></li><li>Methods<ul><li><span><span class=\"tt\">jordanForm(Ring,List)</span> (missing documentation)<!--tag: (jordanForm,Ring,List)-->\n</span></li></ul></li><li>Other things<ul><li><span><span class=\"tt\">fields</span> (missing documentation)<!--tag: fields-->\n</span></li><li><span><span class=\"tt\">fieldsFFPACK</span> (missing documentation)<!--tag: fieldsFFPACK-->\n</span></li><li><span><span class=\"tt\">fieldsFLINT</span> (missing documentation)<!--tag: fieldsFLINT-->\n</span></li><li><span><span class=\"tt\">fieldsGF</span> (missing documentation)<!--tag: fieldsGF-->\n</span></li><li><span><span class=\"tt\">finitefields</span> (missing documentation)<!--tag: finitefields-->\n</span></li><li><span><span class=\"tt\">hasFFPACK</span> (missing documentation)<!--tag: hasFFPACK-->\n</span></li><li><span><span class=\"tt\">maxFFPACKPrime</span> (missing documentation)<!--tag: maxFFPACKPrime-->\n</span></li><li><span><span class=\"tt\">maxFLINTPrime</span> (missing documentation)<!--tag: maxFLINTPrime-->\n</span></li><li><span><span class=\"tt\">ringsCC</span> (missing documentation)<!--tag: ringsCC-->\n</span></li><li><span><span class=\"tt\">ringsPID</span> (missing documentation)<!--tag: ringsPID-->\n</span></li><li><span><span class=\"tt\">ringsRR</span> (missing documentation)<!--tag: ringsRR-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"a test suite for the Macaulay2 engine\" href=\"#EngineTests::EngineTests\">EngineTests</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">EngineTests.m2</span>, with auxiliary files in <span class=\"tt\">EngineTests/</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">EngineTests.m2:479:0</span>.</p></div></div>"
+    },
+    "fields": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "fields",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">fields</span> (missing documentation)<!--tag: fields-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "fieldsFFPACK": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "fieldsFFPACK",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">fieldsFFPACK</span> (missing documentation)<!--tag: fieldsFFPACK-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "fieldsFLINT": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "fieldsFLINT",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">fieldsFLINT</span> (missing documentation)<!--tag: fieldsFLINT-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "fieldsGF": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "fieldsGF",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">fieldsGF</span> (missing documentation)<!--tag: fieldsGF-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "finitefields": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "finitefields",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">finitefields</span> (missing documentation)<!--tag: finitefields-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "hasFFPACK": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "hasFFPACK",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">hasFFPACK</span> (missing documentation)<!--tag: hasFFPACK-->\n is <span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "jordanForm": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "jordanForm",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">jordanForm</span>:</h2><ul><li><span><span class=\"tt\">jordanForm(Ring,List)</span> (missing documentation)<!--tag: (jordanForm,Ring,List)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">jordanForm</span> (missing documentation)<!--tag: jordanForm-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "maxFFPACKPrime": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "maxFFPACKPrime",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">maxFFPACKPrime</span> (missing documentation)<!--tag: maxFFPACKPrime-->\n is <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "maxFLINTPrime": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "maxFLINTPrime",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">maxFLINTPrime</span> (missing documentation)<!--tag: maxFLINTPrime-->\n is <span>an <a title=\"the class of all integers\" href=\"#Macaulay2Doc::ZZ\">integer</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "ringsCC": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ringsCC",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">ringsCC</span> (missing documentation)<!--tag: ringsCC-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "ringsPID": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ringsPID",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">ringsPID</span> (missing documentation)<!--tag: ringsPID-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "ringsRR": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ringsRR",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">ringsRR</span> (missing documentation)<!--tag: ringsRR-->\n is <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "runTests": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "runTests",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">runTests</span> (missing documentation)<!--tag: runTests-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testClean": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testClean",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testClean</span> (missing documentation)<!--tag: testClean-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testDeterminant": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testDeterminant",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testDeterminant</span> (missing documentation)<!--tag: testDeterminant-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testGF": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testGF",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testGF</span> (missing documentation)<!--tag: testGF-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testGFGenerator": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testGFGenerator",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testGFGenerator</span> (missing documentation)<!--tag: testGFGenerator-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testGFpromote": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testGFpromote",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testGFpromote</span> (missing documentation)<!--tag: testGFpromote-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testHasEngineLinearAlgebra": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testHasEngineLinearAlgebra",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testHasEngineLinearAlgebra</span> (missing documentation)<!--tag: testHasEngineLinearAlgebra-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testInverse": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testInverse",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testInverse</span> (missing documentation)<!--tag: testInverse-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testLinearAlgebra": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testLinearAlgebra",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testLinearAlgebra</span> (missing documentation)<!--tag: testLinearAlgebra-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testLinearAlgebraSet": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testLinearAlgebraSet",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testLinearAlgebraSet</span> (missing documentation)<!--tag: testLinearAlgebraSet-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testLUBoundaryCases": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testLUBoundaryCases",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testLUBoundaryCases</span> (missing documentation)<!--tag: testLUBoundaryCases-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testMonomialOrderingToMatrix": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testMonomialOrderingToMatrix",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testMonomialOrderingToMatrix</span> (missing documentation)<!--tag: testMonomialOrderingToMatrix-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testMult": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testMult",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testMult</span> (missing documentation)<!--tag: testMult-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testMutableMatrices": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testMutableMatrices",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testMutableMatrices</span> (missing documentation)<!--tag: testMutableMatrices-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testNorm": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testNorm",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testNorm</span> (missing documentation)<!--tag: testNorm-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testNullspace": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testNullspace",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testNullspace</span> (missing documentation)<!--tag: testNullspace-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testPromote": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testPromote",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testPromote</span> (missing documentation)<!--tag: testPromote-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testPromoteLift": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testPromoteLift",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testPromoteLift</span> (missing documentation)<!--tag: testPromoteLift-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testRank": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testRank",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testRank</span> (missing documentation)<!--tag: testRank-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testRankProfile": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testRankProfile",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testRankProfile</span> (missing documentation)<!--tag: testRankProfile-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testRingMapEval": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testRingMapEval",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testRingMapEval</span> (missing documentation)<!--tag: testRingMapEval-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testSolve": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "testSolve",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">testSolve</span> (missing documentation)<!--tag: testSolve-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "ZZpFFPACK": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ZZpFFPACK",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">ZZpFFPACK</span> (missing documentation)<!--tag: ZZpFFPACK-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "ZZpFlint": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "ZZpFlint",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">ZZpFlint</span> (missing documentation)<!--tag: ZZpFlint-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "EngineTests":{},
+    "fields":{},
+    "fieldsFFPACK":{},
+    "fieldsFLINT":{},
+    "fieldsGF":{},
+    "finitefields":{},
+    "hasFFPACK":{},
+    "jordanForm":{},
+    "maxFFPACKPrime":{},
+    "maxFLINTPrime":{},
+    "ringsCC":{},
+    "ringsPID":{},
+    "ringsRR":{},
+    "runTests":{},
+    "testClean":{},
+    "testDeterminant":{},
+    "testGF":{},
+    "testGFGenerator":{},
+    "testGFpromote":{},
+    "testHasEngineLinearAlgebra":{},
+    "testInverse":{},
+    "testLinearAlgebra":{},
+    "testLinearAlgebraSet":{},
+    "testLUBoundaryCases":{},
+    "testMonomialOrderingToMatrix":{},
+    "testMult":{},
+    "testMutableMatrices":{},
+    "testNorm":{},
+    "testNullspace":{},
+    "testPromote":{},
+    "testPromoteLift":{},
+    "testRank":{},
+    "testRankProfile":{},
+    "testRingMapEval":{},
+    "testSolve":{},
+    "ZZpFFPACK":{},
+    "ZZpFlint":{}
+  }
+}
