@@ -171,10 +171,10 @@ function openSearch(pkgname, query) {
     window.location.href = "{{ site.baseurl }}/search/?q=" + pkgname + "::" + query;
 }
 
-// hot-swapping the links for better online experience
+// hot-swapping the source links for better online experience
 function fixLinks(content) {
     return content
-	.replace(/href="..\/..\/Macaulay2\/.+">(.+):(.+):(.+)<\/a>/,
+	.replace(/href="..\/..\/Macaulay2\/packages\/.+?">([a-zA-Z0-9\/]+\.m2):([0-9]+):([0-9]+)<\/a>/,
 		 "href=\"" + repo + "M2/Macaulay2/packages/$1#L$2\">$1:$2:$3</a>")
 	.replaceAll("../../Macaulay2/Style", "/LearnM2/static");
 }
