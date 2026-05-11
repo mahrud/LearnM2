@@ -1,0 +1,175 @@
+{
+  "index": {
+    "add": "Miura::add",
+    "double": "Miura::double",
+    "Miura": "Miura::Miura",
+    "PR": "Miura::PR",
+    "QR": "Miura::QR",
+    "reduced": "Miura::reduced",
+    "scalarMultiplication": "Miura::scalarMultiplication",
+    "setPolynomialRing for GF": "Miura::setPolynomialRing for GF",
+    "setPolynomialRing for QQ": "Miura::setPolynomialRing for QQ",
+    "setPolynomialRing": "Miura::setPolynomialRing",
+    "setQuotientRing given Ideal": "Miura::setQuotientRing given Ideal",
+    "setQuotientRing given List of RingElements": "Miura::setQuotientRing given List of RingElements",
+    "setQuotientRing given RingElement": "Miura::setQuotientRing given RingElement",
+    "setQuotientRing": "Miura::setQuotientRing"
+  },
+  "nodes": {
+    "add": {
+      "Description": "<div><h2>Description</h2><p>The function add computes the reduced ideal of multiplication of two integral ideals. Each reduced ideal is a representative of its ideal class, and the addition is executed over the ideal class group.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing(GF 13, {x,y}, {2,3}); setQuotientRing(y^2-x^3-7*x)\n\no2 = QR\n\no2 : QuotientRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : J=ideal(x, y); K=ideal(x-2, y-3); add(J, K)\n\no3 : Ideal of QR\n\no4 : Ideal of QR\n\no5 = ideal (x + 3, y + 2)\n\no5 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : L=J*K; reduced(L)\n\no6 : Ideal of QR\n\no7 = ideal (x + 3, y + 2)\n\no7 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i8 : setPolynomialRing(GF 5,{x,y,z},{4,6,5})\n\no8 = PR\n\no8 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i9 : setQuotientRing({y^2-x^3-1, z^2-x*y-1})\n\no9 = QR\n\no9 : QuotientRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i10 : J=ideal(x-2,y-2,z)\n\no10 = ideal (x - 2, y - 2, z)\n\no10 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i11 : K=ideal(x-4,y,z-1)\n\no11 = ideal (x + 1, y, z - 1)\n\no11 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i12 : add(J, K)\n\n                                     2\no12 = ideal (z + 2x + 1, y + x + 1, x  - x - 2)\n\no12 : Ideal of QR</code></pre></td></tr></table></div>",
+      "Headline": [
+        "add",
+        " -- Add Reduced Ideals"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:176:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Compute Reduced Ideal\" href=\"#Miura::reduced\">reduced</a> -- Compute Reduced Ideal</span></li><li><span><a title=\"Double Reduced Ideal\" href=\"#Miura::double\">double</a> -- Double Reduced Ideal</span></li><li><span><a title=\"Add Reduced Ideal Multiple Times\" href=\"#Miura::scalarMultiplication\">scalarMultiplication</a> -- Add Reduced Ideal Multiple Times</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">L=add(J,K)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">J</span>, an integral ideal</span></li><li><span><span class=\"tt\">K</span>, an integral ideal</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">add</span>:</h2><ul><li><span><span class=\"tt\">add(Ideal,Ideal)</span> (missing documentation)<!--tag: (add,Ideal,Ideal)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Add Reduced Ideals\" href=\"#Miura::add\">add</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:176:0</span>.</p></div></div>"
+    },
+    "double": {
+      "Description": "<div><h2>Description</h2><p>The function double computes the reduced ideal of J*J given an integral ideal J. double(J) and add(J,J) outputs the same but double(J) is often more useful in practice.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing({x,y},{2,3}); setQuotientRing(y^2-x^3-7*x); J=ideal(x,y)\n\no3 = ideal (x, y)\n\no3 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : double J\n\no4 = ideal 1\n\no4 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : reduced(J*J)\n\no5 = ideal 1\n\no5 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : add(J,J)\n\no6 = ideal 1\n\no6 : Ideal of QR</code></pre></td></tr></table></div>",
+      "Headline": [
+        "double",
+        " -- Double Reduced Ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:188:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Add Reduced Ideals\" href=\"#Miura::add\">add</a> -- Add Reduced Ideals</span></li><li><span><a title=\"Add Reduced Ideal Multiple Times\" href=\"#Miura::scalarMultiplication\">scalarMultiplication</a> -- Add Reduced Ideal Multiple Times</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">K=double(J)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">J</span>, an integral ideal</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">double</span>:</h2><ul><li><span><span class=\"tt\">double(Ideal)</span> (missing documentation)<!--tag: (double,Ideal)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Double Reduced Ideal\" href=\"#Miura::double\">double</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:188:0</span>.</p></div></div>"
+    },
+    "Miura": {
+      "Description": "<div><h2>Description</h2><p>The Miura package realizes arithmetic on the curves such as hyper-elliptic curves (e.g., y^2=x^5+x+1), C_{ab} curves (e.g., y^3=x^4+2x+1), complete intersection (e.g. {y^2-x^3-1,z^2-x*y-1}). For the Miura form, the pole orders should be specified such as 2 and 3 for x and y of an elliptic curve. Currently, only divisor class group computation is available for the package. For the elliptic curves, [(P)-(O)]+[(Q)-(O)] = [(P+Q)-(O)] for two points P, Q and the point O at infinity. For the general nonsingular curves, any divisor class is uniquely expressed by E-g(O) with E a positive divisor of degree g (genus). This package reduces the divisor class  group addition to ideal class group multiplication, and utilizes Groebner basis computation. See http://arxiv.org/pdf/1512.08040v1.pdf for the detail</p></div>",
+      "Headline": [
+        "Miura",
+        " -- Miura curve arithmetic"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:90:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://suzuki.bayesnet.org\">Joe Suzuki</a><span> &lt;<a href=\"mailto:j-suzuki%40sigmath.es.osaka-u.ac.jp\">j-suzuki@sigmath.es.osaka-u.ac.jp</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.2</b> of Miura, released <b>5 October 2017</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{MiuraSource,\n  title = {{Miura: arithmetic of Miura curves. Version~0.2}},\n  author = {Joe Suzuki},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"Add Reduced Ideals\" href=\"#Miura::add\">add</a> -- Add Reduced Ideals</span></li><li><span><a title=\"Double Reduced Ideal\" href=\"#Miura::double\">double</a> -- Double Reduced Ideal</span></li><li><span><a title=\"Compute Reduced Ideal\" href=\"#Miura::reduced\">reduced</a> -- Compute Reduced Ideal</span></li><li><span><a title=\"Add Reduced Ideal Multiple Times\" href=\"#Miura::scalarMultiplication\">scalarMultiplication</a> -- Add Reduced Ideal Multiple Times</span></li><li><span><span class=\"tt\">setPolynomialRing</span> (missing documentation)<!--tag: setPolynomialRing-->\n</span></li><li><span><span class=\"tt\">setQuotientRing</span> (missing documentation)<!--tag: setQuotientRing-->\n</span></li></ul></li><li>Methods<ul><li><span><span class=\"tt\">add(Ideal,Ideal)</span> (missing documentation)<!--tag: (add,Ideal,Ideal)-->\n</span></li><li><span><span class=\"tt\">double(Ideal)</span> (missing documentation)<!--tag: (double,Ideal)-->\n</span></li><li><span><span class=\"tt\">reduced(Ideal)</span> (missing documentation)<!--tag: (reduced,Ideal)-->\n</span></li><li><span><span class=\"tt\">scalarMultiplication(Ideal,ZZ)</span> (missing documentation)<!--tag: (scalarMultiplication,Ideal,ZZ)-->\n</span></li><li><span><span class=\"tt\">setPolynomialRing(GaloisField,List,List)</span> (missing documentation)<!--tag: (setPolynomialRing,GaloisField,List,List)-->\n</span></li><li><span><span class=\"tt\">setPolynomialRing(List,List)</span> (missing documentation)<!--tag: (setPolynomialRing,List,List)-->\n</span></li><li><span><span class=\"tt\">setQuotientRing(Ideal)</span> (missing documentation)<!--tag: (setQuotientRing,Ideal)-->\n</span></li><li><span><span class=\"tt\">setQuotientRing(List)</span> (missing documentation)<!--tag: (setQuotientRing,List)-->\n</span></li><li><span><span class=\"tt\">setQuotientRing(RingElement)</span> (missing documentation)<!--tag: (setQuotientRing,RingElement)-->\n</span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">PR</span> (missing documentation)<!--tag: PR-->\n</span></li><li><span><span class=\"tt\">QR</span> (missing documentation)<!--tag: QR-->\n</span></li></ul></li><li>Mutable symbols<ul><li><span><span class=\"tt\">PR</span> (missing documentation)<!--tag: PR-->\n</span></li><li><span><span class=\"tt\">QR</span> (missing documentation)<!--tag: QR-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Miura curve arithmetic\" href=\"#Miura::Miura\">Miura</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">Miura.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:90:0</span>.</p></div></div>"
+    },
+    "PR": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "PR",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">PR</span> (missing documentation)<!--tag: PR-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "QR": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "QR",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">QR</span> (missing documentation)<!--tag: QR-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "reduced": {
+      "Description": "<div><h2>Description</h2><p>The function reduced computes the reduced ideal given an integral ideal by executing inverse twice. The reduced ideal is the ideal that minimizes the pole order among the ideals in the same class</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing({x,y},{2,3})\n\no1 = PR\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : setQuotientRing(y^2-x^3-7*x)\n\no2 = QR\n\no2 : QuotientRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : J=ideal(x,y); reduced(J)\n\no3 : Ideal of QR\n\no4 = ideal (x, y)\n\no4 : Ideal of QR</code></pre></td></tr></table></div>",
+      "Headline": [
+        "reduced",
+        " -- Compute Reduced Ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:163:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"compute the inverse\" href=\"#Macaulay2Doc::inverse\">inverse</a> -- compute the inverse</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">K=reduced(J)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">J</span>, an integral ideal</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">reduced</span>:</h2><ul><li><span><span class=\"tt\">reduced(Ideal)</span> (missing documentation)<!--tag: (reduced,Ideal)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute Reduced Ideal\" href=\"#Miura::reduced\">reduced</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:163:0</span>.</p></div></div>"
+    },
+    "scalarMultiplication": {
+      "Description": "<div><h2>Description</h2><p>The function scalarMultiplication computes the reduced ideal of an integral ideal scalarMultiplicationplied by a nonnegative integer</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing(GF 13,{x,y},{2,3}); setQuotientRing(y^2-x^3-7*x)\n\no2 = QR\n\no2 : QuotientRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : J=ideal(x,y)\n\no3 = ideal (x, y)\n\no3 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : scalarMultiplication(J,5)\n\no4 = ideal (x, y)\n\no4 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : setPolynomialRing({x,y}, {2,3})\n\no5 = PR\n\no5 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : setQuotientRing(y^2-x^3-7*x)\n\no6 = QR\n\no6 : QuotientRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i7 : J=ideal(x,y)\n\no7 = ideal (x, y)\n\no7 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i8 : K=ideal(x-2,y-3)\n\no8 = ideal (x - 2, y - 3)\n\no8 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i9 : add(J,K)\n\no9 = ideal (x, y)\n\no9 : Ideal of QR</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i10 : scalarMultiplication(K,5)\n\no10 = ideal 1\n\no10 : Ideal of QR</code></pre></td></tr></table></div>",
+      "Headline": [
+        "scalarMultiplication",
+        " -- Add Reduced Ideal Multiple Times"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:200:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"Add Reduced Ideals\" href=\"#Miura::add\">add</a> -- Add Reduced Ideals</span></li><li><span><a title=\"Double Reduced Ideal\" href=\"#Miura::double\">double</a> -- Double Reduced Ideal</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">K=scalarMultiplication(J,m)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">J</span>, an integral ideal</span></li><li><span><span class=\"tt\">m</span>, a nonnegative integer</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">scalarMultiplication</span>:</h2><ul><li><span><span class=\"tt\">scalarMultiplication(Ideal,ZZ)</span> (missing documentation)<!--tag: (scalarMultiplication,Ideal,ZZ)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Add Reduced Ideal Multiple Times\" href=\"#Miura::scalarMultiplication\">scalarMultiplication</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:200:0</span>.</p></div></div>"
+    },
+    "setPolynomialRing for GF": {
+      "Description": "<div><p>The function setPolynomialRing generates the polynomial ring kk[v] with the monomial order with respect to weights w over the variables v. The elements in w should be positive and mutually prime. The numbers of elements in v and w should coincide. The variable PR keeps the polynomial ring. The monomial order is specific in Miura. For example, for an elliptic curve, it is based on the pole order 2i+3j for x^iy^j</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing(GF 7, {x,y},{2,3})\n\no1 = PR\n\no1 : PolynomialRing</code></pre></td></tr></table></div>",
+      "Headline": [
+        "setPolynomialRing for GF",
+        " -- Set Polynomial Ring for Galois Field given Variables and their Weights"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:104:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">setPolynomialRing(kk,v,w)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">kk</span>, any field</span></li><li><span><span class=\"tt\">v</span>, a list of variables</span></li><li><span><span class=\"tt\">w</span>, a list of weights corresponding to<span class=\"tt\">v</span></span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all ordered monoid rings\" href=\"#Macaulay2Doc::PolynomialRing\">polynomial ring</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:104:0</span>.</p></div></div>"
+    },
+    "setPolynomialRing for QQ": {
+      "Description": "<div><p>The function setPolynomialRing generates the polynomial ring kk[v] with the monomial order with respect to weights w over the variables v. The elements in w should be positive and mutually prime. The numbers of elements in v and w coincide. The variable PR keeps the polynomial ring. The monomial order is specific in Miura. For example, for an elliptic curve, it is based on the pole order 2i+3j for x^iy^j</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing({x,y}, {2,3})\n\no1 = PR\n\no1 : PolynomialRing</code></pre></td></tr></table></div>",
+      "Headline": [
+        "setPolynomialRing for QQ",
+        " -- Set Polynomial Ring for QQ given Variables and their Weights"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:118:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">setPolynomialRing(v,w)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">v</span>, a list of variables</span></li><li><span><span class=\"tt\">w</span>, a list of weights corresponding to<span class=\"tt\">v</span></span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all ordered monoid rings\" href=\"#Macaulay2Doc::PolynomialRing\">polynomial ring</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:118:0</span>.</p></div></div>"
+    },
+    "setPolynomialRing": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "setPolynomialRing",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">setPolynomialRing</span>:</h2><ul><li><span><span class=\"tt\">setPolynomialRing(GaloisField,List,List)</span> (missing documentation)<!--tag: (setPolynomialRing,GaloisField,List,List)-->\n</span></li><li><span><span class=\"tt\">setPolynomialRing(List,List)</span> (missing documentation)<!--tag: (setPolynomialRing,List,List)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">setPolynomialRing</span> (missing documentation)<!--tag: setPolynomialRing-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "setQuotientRing given Ideal": {
+      "Description": "<div><p>The function setQuotientRing sets the quotient ring QR of PR over an ideal, where the ideal may be given by defining equations. The global variables PR and QR are specified when setting its polynomial ring and quotient ring, respectively.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing(GF 7,{x,y},{2,3})\n\no1 = PR\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : setQuotientRing(ideal(y^2-x^3-3*x))\n\no2 = QR\n\no2 : QuotientRing</code></pre></td></tr></table></div>",
+      "Headline": [
+        "setQuotientRing given Ideal",
+        " -- Set Quotient Ring given Ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:151:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">setQuotientRing(J)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">J</span>, ideal of the curve</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:151:0</span>.</p></div></div>"
+    },
+    "setQuotientRing given List of RingElements": {
+      "Description": "<div><p>The function setQuotientRing sets the quotient ring QR of PR over an ideal, where the ideal may be given by defining equations. The global variables PR and QR are specified when setting its polynomial ring and quotient ring, respectively.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing(GF 5,{x,y,z},{4,6,5})\n\no1 = PR\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : setQuotientRing({y^2-x^3-1, z^2-x*y-1})\n\no2 = QR\n\no2 : QuotientRing</code></pre></td></tr></table></div>",
+      "Headline": [
+        "setQuotientRing given List of RingElements",
+        " -- Set Quotient Ring given Multiple Defining Equations"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:140:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">setQuotientRing(LL)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">LL</span>, a list of generators of the curve</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:140:0</span>.</p></div></div>"
+    },
+    "setQuotientRing given RingElement": {
+      "Description": "<div><p>The function setQuotientRing sets the quotient ring QR of PR over an ideal, where the ideal may be given by defining equations. The global variables PR and QR are specified when setting its polynomial ring and quotient ring, respectively.</p><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setPolynomialRing(GF 7, {x,y}, {2,3})\n\no1 = PR\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : setQuotientRing(y^2-x^3-3*x)\n\no2 = QR\n\no2 : QuotientRing</code></pre></td></tr></table></div>",
+      "Headline": [
+        "setQuotientRing given RingElement",
+        " -- Set Quotient Ring given Single Defining Equation"
+      ],
+      "Location": "../../../../Macaulay2/packages/Miura.m2:129:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">setQuotientRing(p)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">p</span>, a generator of the curve</span></li></ul></li><li>Outputs:<ul><li><span><span>an <a title=\"the class of all ideals\" href=\"#Macaulay2Doc::Ideal\">ideal</a></span></span></li></ul></li></ul>",
+      "WaysToUse": "<div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Miura.m2:129:0</span>.</p></div></div>"
+    },
+    "setQuotientRing": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "setQuotientRing",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">setQuotientRing</span>:</h2><ul><li><span><span class=\"tt\">setQuotientRing(Ideal)</span> (missing documentation)<!--tag: (setQuotientRing,Ideal)-->\n</span></li><li><span><span class=\"tt\">setQuotientRing(List)</span> (missing documentation)<!--tag: (setQuotientRing,List)-->\n</span></li><li><span><span class=\"tt\">setQuotientRing(RingElement)</span> (missing documentation)<!--tag: (setQuotientRing,RingElement)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">setQuotientRing</span> (missing documentation)<!--tag: setQuotientRing-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Miura":{},
+    "add":{},
+    "double":{},
+    "PR":{},
+    "QR":{},
+    "reduced":{},
+    "scalarMultiplication":{},
+    "setPolynomialRing":{},
+    "setPolynomialRing for GF":{},
+    "setPolynomialRing for QQ":{},
+    "setQuotientRing":{},
+    "setQuotientRing given Ideal":{},
+    "setQuotientRing given List of RingElements":{},
+    "setQuotientRing given RingElement":{}
+  }
+}
