@@ -27,11 +27,11 @@ o5 : Ideal of R
 i6 : res oo
 
       1      3      2
-o6 = R  <-- R  <-- R  <-- 0
-                           
-     0      1      2      3
+o6 = R  <-- R  <-- R
+                    
+     0      1      2
 
-o6 : ChainComplex
+o6 : Complex
 
 i7 : betti oo
 

@@ -11,11 +11,11 @@ o2 : Ideal of R
 i3 : C = res I
 
       1      3      2
-o3 = R  <-- R  <-- R  <-- 0
-                           
-     0      1      2      3
+o3 = R  <-- R  <-- R
+                    
+     0      1      2
 
-o3 : ChainComplex
+o3 : Complex
 
 i4 : betti C
 

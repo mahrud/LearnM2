@@ -39,10 +39,10 @@ My Mac runs for hours without producing any result. Is there a more efficient ap
 
 ## Solution #1
 
-The [`Divisor`] package does a great job of this:
+The [`WeilDivisors`] package does a great job of this:
 
 {% M2 anticanonical-bundle %}
-loadPackage "Divisor";
+loadPackage "WeilDivisors";
 KX = canonicalDivisor(S/I, IsGraded => true)
 H = sheaf OO(-KX)
 {% endM2 %}
@@ -64,4 +64,4 @@ In general, for a non-complete-intersection, where adjunction doesn’t tell you
 
 
 [`TorAlgebra`]: https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2/share/doc/Macaulay2/TorAlgebra/html/index.html
-[`Divisor`]: https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2/share/doc/Macaulay2/Divisor/html/index.html
+[`WeilDivisors`]: https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2/share/doc/Macaulay2/Divisor/html/index.html
