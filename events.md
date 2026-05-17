@@ -4,6 +4,8 @@ title: Events
 category: links
 order: 5
 ---
+[Georgia Tech - Future of M2]: https://d-torrance.github.io/m2gt26/
+
 
 The Macaulay2 community regularly holds workshops and development meetings around the year.
 
