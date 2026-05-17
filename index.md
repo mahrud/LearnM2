@@ -5,7 +5,10 @@ title: Learn Macaulay2
 
 {::options parse_block_html="true" /}
 
-[_Macaulay2_](https://macaulay2.com/) is an interpreted, dynamically typed programming language intended to support research and experiments in [algebraic geometry] and [commutative algebra] through open sourced software.
+[_Macaulay2_](https://macaulay2.com/) is a community-based, open source project to create an interpreted, dynamically typed programming language intended to support research and experiments in [algebraic geometry] and [commutative algebra].
+
+Contributions are welcome!
+
 
 {% comment %}
 **Interested in contributing?** [Get in touch!](mailto:mahrud@fields.utoronto.ca)
