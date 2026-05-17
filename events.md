@@ -10,13 +10,16 @@ order: 5
 | [Macaulay2: Under the Hood] | Every 2~3 months, online.      |
 | [Macaulay2 Internals]       | Every 1~2 months, online.      |
 | [Macaulay2 Workshops]       | About 1~2 per year, see below. |
+
+At Georgia Tech! 
+[Future of M2](https://d-torrance.github.io/m2gt26/)
+
 {: style="width: 80%"}
 
 
 
 For a list of collaboration repositories for Macaulay2 workshops, see [here](https://github.com/Macaulay2).
 
-[Georgia Tech]: https://d-torrance.github.io/m2gt26/
 
 
 [Macaulay2: Under the Hood]: https://github.com/Macaulay2/M2/wiki/Internals%3A-Meeting-Notes
