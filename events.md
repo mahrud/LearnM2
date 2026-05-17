@@ -4,10 +4,6 @@ title: Events
 category: links
 order: 5
 ---
-[Georgia Tech - Future of M2]: https://d-torrance.github.io/m2gt26/
-
-
-The Macaulay2 community regularly holds workshops and development meetings around the year.
 
 | Description                 | Approximate Schedule           |
 |-----------------------------|--------------------------------|
@@ -16,7 +12,12 @@ The Macaulay2 community regularly holds workshops and development meetings aroun
 | [Macaulay2 Workshops]       | About 1~2 per year, see below. |
 {: style="width: 80%"}
 
+
+
 For a list of collaboration repositories for Macaulay2 workshops, see [here](https://github.com/Macaulay2).
+
+[Georgia Tech]: https://d-torrance.github.io/m2gt26/
+
 
 [Macaulay2: Under the Hood]: https://github.com/Macaulay2/M2/wiki/Internals%3A-Meeting-Notes
 [Macaulay2 Internals]: https://github.com/Macaulay2/M2/wiki/Macaulay2%3A-under-the-hood
