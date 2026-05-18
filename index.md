@@ -11,7 +11,7 @@ Contributions are welcome!
 
 
 {% comment %}
-**Interested in contributing?** [Get in touch!](mailto:mahrud@fields.utoronto.ca)
+**Interested in contributing?** The M2 community welcomes you! [Get in touch!](mailto:mahrud@fields.utoronto.ca)
 {: style="background-color: #fef5c4; border-left: 8px solid #FADF98; padding: 10px 30px;"}
 {% endcomment %}
 
