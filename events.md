@@ -11,7 +11,7 @@ order: 5
 | [Macaulay2 Internals]       | Every 1~2 months, online.      |
 | [Macaulay2 Workshops]       | About 1~2 per year, see below. |
 
-At Georgia Tech there is a great group of people! 
+At Georgia Tech there is a great group of people! You should all join! 
 
 [Future of M2](https://d-torrance.github.io/m2gt26/)
 
