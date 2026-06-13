@@ -1,0 +1,72 @@
+{
+  "index": {
+    "LanguageServer": "LanguageServer::LanguageServer",
+    "LSPServer": "LanguageServer::LSPServer",
+    "new LSPServer": "LanguageServer::LSPServer",
+    "setLogger": "LanguageServer::setLogger",
+    "setLogger(LSPServer,Function)": "LanguageServer::setLogger(LSPServer,Function)",
+    "start": "LanguageServer::start",
+    "start(LSPServer)": "LanguageServer::start"
+  },
+  "nodes": {
+    "LanguageServer": {
+      "Description": "<div><h2>Description</h2><div><p>This package provides a language server for Macaulay2 implementing the <a href=\"https://microsoft.github.io/language-server-protocol/\">Language Server Protocol (LSP)</a>. It is used via the <code>M2-language-server</code> script, which is distributed with Macaulay2 and starts the server with standard input and output as the communication channel.</p><p>The language server is supported out of the box by the following editors:</p></div><ul><li>the Macaulay2 major mode for <a href=\"https://github.com/Macaulay2/M2-emacs\">Emacs</a>, using eglot or lsp-mode</li><li>the Macaulay2 extension for <a href=\"https://github.com/Macaulay2/vscode-macaulay2\">VS Code</a></li><li>the Macaulay2 plugin for <a href=\"https://github.com/Macaulean/macaulay2.nvim\">Neovim</a></li></ul></div>",
+      "Headline": [
+        "LanguageServer",
+        " -- language server"
+      ],
+      "Location": "../../../../Macaulay2/packages/LanguageServer/doc.m2:28:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a title=\"LSP server class\" href=\"#LanguageServer::LSPServer\">LSPServer</a> -- LSP server class</span></li></ul></div>",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"https://d-torrance.github.io\">Doug Torrance</a><span> &lt;<a href=\"mailto:dtorrance9%40gatech.edu\">dtorrance9@gatech.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of LanguageServer, released <b>May 30, 2026</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{LanguageServerSource,\n  title = {{LanguageServer: A \\emph{Macaulay2} package. Version~0.1}},\n  author = {Doug Torrance},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><a title=\"LSP server class\" href=\"#LanguageServer::LSPServer\">LSPServer</a> -- LSP server class</span></li></ul></li><li>Functions and commands<ul><li><span><span class=\"tt\">setLogger</span> (missing documentation)<!--tag: setLogger-->\n</span></li><li><span><a title=\"start the language server\" href=\"#LanguageServer::start\">start</a> -- start the language server</span></li></ul></li><li>Methods<ul><li><span><kbd>new LSPServer</kbd> -- see <span><a title=\"LSP server class\" href=\"#LanguageServer::LSPServer\">LSPServer</a> -- LSP server class</span></span></li><li><span><a title=\"set up logging for an LSP server\" href=\"#LanguageServer::setLogger%28LSPServer%2CFunction%29\">setLogger(LSPServer,Function)</a> -- set up logging for an LSP server</span></li><li><span><kbd>start(LSPServer)</kbd> -- see <span><a title=\"start the language server\" href=\"#LanguageServer::start\">start</a> -- start the language server</span></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"language server\" href=\"#LanguageServer::LanguageServer\">LanguageServer</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">LanguageServer.m2</span>, with auxiliary files in <span class=\"tt\">LanguageServer/</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">LanguageServer/doc.m2:28:0</span>.</p></div></div>"
+    },
+    "LSPServer": {
+      "Description": "<div><h2>Description</h2><div><p><code>LSPServer</code> is the main class of the package.  It wraps a JSON-RPC server and handles the LSP lifecycle: initialize, text document synchronization, and shutdown.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : server = new LSPServer\n\no1 = server\n\no1 : LSPServer</code></pre></td></tr></table></div>",
+      "Headline": [
+        "LSPServer",
+        " -- LSP server class"
+      ],
+      "Location": "../../../../Macaulay2/packages/LanguageServer/doc.m2:48:0",
+      "Subnodes": "<div><h3>Menu</h3><ul><li><span><a title=\"start the language server\" href=\"#LanguageServer::start\">start</a> -- start the language server</span></li><li><span><a title=\"set up logging for an LSP server\" href=\"#LanguageServer::setLogger%28LSPServer%2CFunction%29\">setLogger(LSPServer,Function)</a></span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">new LSPServer</code></dd></dl></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use a LSP server:</h2><ul><li><kbd>new LSPServer</kbd></li><li><span><a title=\"set up logging for an LSP server\" href=\"#LanguageServer::setLogger%28LSPServer%2CFunction%29\">setLogger(LSPServer,Function)</a> -- set up logging for an LSP server</span></li><li><span><kbd>start(LSPServer)</kbd> -- see <span><a title=\"start the language server\" href=\"#LanguageServer::start\">start</a> -- start the language server</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"LSP server class\" href=\"#LanguageServer::LSPServer\">LSPServer</a> is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all mutable hash tables\" href=\"#Macaulay2Doc::MutableHashTable\">MutableHashTable</a> &lt; <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">LanguageServer/doc.m2:48:0</span>.</p></div></div>"
+    },
+    "setLogger": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "setLogger",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">setLogger</span>:</h2><ul><li><span><a title=\"set up logging for an LSP server\" href=\"#LanguageServer::setLogger%28LSPServer%2CFunction%29\">setLogger(LSPServer,Function)</a> -- set up logging for an LSP server</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">setLogger</span> (missing documentation)<!--tag: setLogger-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "setLogger(LSPServer,Function)": {
+      "Description": "<div><h2>Description</h2><div><p>Sets a custom logging function for <code>server</code>.  The function <code>f</code> should accept a single string.  For example, to log to standard error:</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : server = new LSPServer\n\no1 = server\n\no1 : LSPServer</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : setLogger(server, printerr)\n\no2 = printerr\n\no2 : FunctionClosure</code></pre></td></tr></table></div>",
+      "Headline": [
+        "setLogger(LSPServer,Function)",
+        " -- set up logging for an LSP server"
+      ],
+      "Location": "../../../../Macaulay2/packages/LanguageServer/doc.m2:86:0",
+      "Synopsis": "<ul><li><span>Function: <span class=\"tt\">setLogger</span> (missing documentation)<!--tag: setLogger-->\n</span></li><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">setLogger(server, f)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">server</span>, <span>a <a title=\"LSP server class\" href=\"#LanguageServer::LSPServer\">LSP server</a></span>, </span></li><li><span><span class=\"tt\">f</span>, <span>a <a title=\"the class of all functions\" href=\"#Macaulay2Doc::Function\">function</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use this method:</h2><ul><li><span><a title=\"set up logging for an LSP server\" href=\"#LanguageServer::setLogger%28LSPServer%2CFunction%29\">setLogger(LSPServer,Function)</a> -- set up logging for an LSP server</span></li></ul></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">LanguageServer/doc.m2:86:0</span>.</p></div></div>"
+    },
+    "start": {
+      "Description": "<div><h2>Description</h2><div><p>Starts the language server, reading LSP messages from <a title=\"the standard input output file\" href=\"#Macaulay2Doc::stdio\">stdio</a> and writing responses back to <a title=\"the standard input output file\" href=\"#Macaulay2Doc::stdio\">stdio</a>.  This is called automatically by the <code>M2-language-server</code> script and is not typically invoked directly by the user.</p></div></div>",
+      "Headline": [
+        "start",
+        " -- start the language server"
+      ],
+      "Location": "../../../../Macaulay2/packages/LanguageServer/doc.m2:66:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">start server</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">server</span>, <span>a <a title=\"LSP server class\" href=\"#LanguageServer::LSPServer\">LSP server</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">start</span>:</h2><ul><li><kbd>start(LSPServer)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"start the language server\" href=\"#LanguageServer::start\">start</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">LanguageServer/doc.m2:66:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "LanguageServer":{
+      "LSPServer":{
+        "start":{},
+        "setLogger(LSPServer,Function)":{}
+      }
+    },
+    "setLogger":{}
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "index": {
+    "getListProperty": "Polymake::getListProperty",
+    "getMatrixProperty": "Polymake::getMatrixProperty",
+    "getProperty": "Polymake::getProperty",
+    "getPropertyNames": "Polymake::getPropertyNames",
+    "getVectorProperty": "Polymake::getVectorProperty",
+    "makemat": "Polymake::makemat",
+    "makevec": "Polymake::makevec",
+    "NewtonPolytope": "Polymake::NewtonPolytope",
+    "Polymake": "Polymake::Polymake",
+    "PolymakeObject": "Polymake::PolymakeObject",
+    "polymakeObject": "Polymake::polymakeObject",
+    "removeComments": "Polymake::removeComments",
+    "runPolymake": "Polymake::runPolymake",
+    "toPolymakeFormat": "Polymake::toPolymakeFormat"
+  },
+  "nodes": {
+    "getListProperty": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "getListProperty",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">getListProperty</span>:</h2><ul><li><span><span class=\"tt\">getListProperty(List,String)</span> (missing documentation)<!--tag: (getListProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getListProperty(String,String)</span> (missing documentation)<!--tag: (getListProperty,String,String)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">getListProperty</span> (missing documentation)<!--tag: getListProperty-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "getMatrixProperty": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "getMatrixProperty",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">getMatrixProperty</span>:</h2><ul><li><span><span class=\"tt\">getMatrixProperty(List,String)</span> (missing documentation)<!--tag: (getMatrixProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getMatrixProperty(String,String)</span> (missing documentation)<!--tag: (getMatrixProperty,String,String)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">getMatrixProperty</span> (missing documentation)<!--tag: getMatrixProperty-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "getProperty": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "getProperty",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">getProperty</span>:</h2><ul><li><span><span class=\"tt\">getProperty(List,String)</span> (missing documentation)<!--tag: (getProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getProperty(String,String)</span> (missing documentation)<!--tag: (getProperty,String,String)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">getProperty</span> (missing documentation)<!--tag: getProperty-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "getPropertyNames": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "getPropertyNames",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">getPropertyNames</span>:</h2><ul><li><span><span class=\"tt\">getPropertyNames(List)</span> (missing documentation)<!--tag: (getPropertyNames,List)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">getPropertyNames</span> (missing documentation)<!--tag: getPropertyNames-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "getVectorProperty": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "getVectorProperty",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">getVectorProperty</span>:</h2><ul><li><span><span class=\"tt\">getVectorProperty(List,String)</span> (missing documentation)<!--tag: (getVectorProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getVectorProperty(String,String)</span> (missing documentation)<!--tag: (getVectorProperty,String,String)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">getVectorProperty</span> (missing documentation)<!--tag: getVectorProperty-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "makemat": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "makemat",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">makemat</span> (missing documentation)<!--tag: makemat-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "makevec": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "makevec",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">makevec</span> (missing documentation)<!--tag: makevec-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "NewtonPolytope": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "NewtonPolytope",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">NewtonPolytope</span>:</h2><ul><li><span><span class=\"tt\">NewtonPolytope(RingElement)</span> (missing documentation)<!--tag: (NewtonPolytope,RingElement)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">NewtonPolytope</span> (missing documentation)<!--tag: NewtonPolytope-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "Polymake": {
+      "Description": "<div><h2>Description</h2><em>Polymake</em> is a package for interfacing with polymake, and for reading and writing files in polymake's format.<p></p>Warning: this package is not complete, and is mostly undocumented, but it is used in <a title=\"interface to Anders Jensen's Gfan software\" href=\"#gfanInterface::gfanInterface\">gfanInterface</a>. It is expected that the interface will change in the (near) future.</div>",
+      "Headline": [
+        "Polymake",
+        " -- a package for interfacing with polymake"
+      ],
+      "Location": "../../../../Macaulay2/packages/Polymake.m2:190:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://www.math.mit.edu/~jyu/\">Josephine Yu</a><span> &lt;<a href=\"mailto:jyu%40math.mit.edu\">jyu@math.mit.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of Polymake, released <b>March 21, 2008</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{PolymakeSource,\n  title = {{Polymake: interfacing with polymake. Version~0.1}},\n  author = {Josephine Yu},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Types<ul><li><span><span class=\"tt\">PolymakeObject</span> (missing documentation)<!--tag: PolymakeObject-->\n</span></li></ul></li><li>Functions and commands<ul><li><span><span class=\"tt\">getListProperty</span> (missing documentation)<!--tag: getListProperty-->\n</span></li><li><span><span class=\"tt\">getMatrixProperty</span> (missing documentation)<!--tag: getMatrixProperty-->\n</span></li><li><span><span class=\"tt\">getProperty</span> (missing documentation)<!--tag: getProperty-->\n</span></li><li><span><span class=\"tt\">getPropertyNames</span> (missing documentation)<!--tag: getPropertyNames-->\n</span></li><li><span><span class=\"tt\">getVectorProperty</span> (missing documentation)<!--tag: getVectorProperty-->\n</span></li><li><span><span class=\"tt\">makemat</span> (missing documentation)<!--tag: makemat-->\n</span></li><li><span><span class=\"tt\">makevec</span> (missing documentation)<!--tag: makevec-->\n</span></li><li><span><span class=\"tt\">NewtonPolytope</span> (missing documentation)<!--tag: NewtonPolytope-->\n</span></li><li><span><span class=\"tt\">polymakeObject</span> (missing documentation)<!--tag: polymakeObject-->\n</span></li><li><span><span class=\"tt\">removeComments</span> (missing documentation)<!--tag: removeComments-->\n</span></li><li><span><span class=\"tt\">runPolymake</span> (missing documentation)<!--tag: runPolymake-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat</span> (missing documentation)<!--tag: toPolymakeFormat-->\n</span></li></ul></li><li>Methods<ul><li><span><span class=\"tt\">getListProperty(List,String)</span> (missing documentation)<!--tag: (getListProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getListProperty(String,String)</span> (missing documentation)<!--tag: (getListProperty,String,String)-->\n</span></li><li><span><span class=\"tt\">getMatrixProperty(List,String)</span> (missing documentation)<!--tag: (getMatrixProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getMatrixProperty(String,String)</span> (missing documentation)<!--tag: (getMatrixProperty,String,String)-->\n</span></li><li><span><span class=\"tt\">getProperty(List,String)</span> (missing documentation)<!--tag: (getProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getProperty(String,String)</span> (missing documentation)<!--tag: (getProperty,String,String)-->\n</span></li><li><span><span class=\"tt\">getPropertyNames(List)</span> (missing documentation)<!--tag: (getPropertyNames,List)-->\n</span></li><li><span><span class=\"tt\">getVectorProperty(List,String)</span> (missing documentation)<!--tag: (getVectorProperty,List,String)-->\n</span></li><li><span><span class=\"tt\">getVectorProperty(String,String)</span> (missing documentation)<!--tag: (getVectorProperty,String,String)-->\n</span></li><li><span><span class=\"tt\">NewtonPolytope(RingElement)</span> (missing documentation)<!--tag: (NewtonPolytope,RingElement)-->\n</span></li><li><span><span class=\"tt\">polymakeObject(String)</span> (missing documentation)<!--tag: (polymakeObject,String)-->\n</span></li><li><span><span class=\"tt\">polymakeObject(String,List)</span> (missing documentation)<!--tag: (polymakeObject,String,List)-->\n</span></li><li><span><span class=\"tt\">runPolymake(PolymakeObject,String)</span> (missing documentation)<!--tag: (runPolymake,PolymakeObject,String)-->\n</span></li><li><span><span class=\"tt\">runPolymake(String,String)</span> (missing documentation)<!--tag: (runPolymake,String,String)-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat(PolymakeObject)</span> (missing documentation)<!--tag: (toPolymakeFormat,PolymakeObject)-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat(String,Matrix)</span> (missing documentation)<!--tag: (toPolymakeFormat,String,Matrix)-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat(String,Vector)</span> (missing documentation)<!--tag: (toPolymakeFormat,String,Vector)-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"interfacing with polymake\" href=\"#Polymake::Polymake\">Polymake</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">Polymake.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">Polymake.m2:190:0</span>.</p></div></div>"
+    },
+    "PolymakeObject": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "PolymakeObject",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Methods that use an object of class PolymakeObject:</h2><ul><li><span><span class=\"tt\">runPolymake(PolymakeObject,String)</span> (missing documentation)<!--tag: (runPolymake,PolymakeObject,String)-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat(PolymakeObject)</span> (missing documentation)<!--tag: (toPolymakeFormat,PolymakeObject)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">PolymakeObject</span> (missing documentation)<!--tag: PolymakeObject-->\n is <span>a <a title=\"the class of all mutable types\" href=\"#Macaulay2Doc::Type\">type</a></span>, with ancestor classes <a title=\"the class of all mutable hash tables\" href=\"#Macaulay2Doc::MutableHashTable\">MutableHashTable</a> &lt; <a title=\"the class of all hash tables\" href=\"#Macaulay2Doc::HashTable\">HashTable</a> &lt; <a title=\"the class of all things\" href=\"#Macaulay2Doc::Thing\">Thing</a>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "polymakeObject": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "polymakeObject",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">polymakeObject</span>:</h2><ul><li><span><span class=\"tt\">polymakeObject(String)</span> (missing documentation)<!--tag: (polymakeObject,String)-->\n</span></li><li><span><span class=\"tt\">polymakeObject(String,List)</span> (missing documentation)<!--tag: (polymakeObject,String,List)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">polymakeObject</span> (missing documentation)<!--tag: polymakeObject-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "removeComments": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "removeComments",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">removeComments</span> (missing documentation)<!--tag: removeComments-->\n is <span>a <a title=\"the class of all function closures\" href=\"#Macaulay2Doc::FunctionClosure\">function closure</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "runPolymake": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "runPolymake",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">runPolymake</span>:</h2><ul><li><span><span class=\"tt\">runPolymake(PolymakeObject,String)</span> (missing documentation)<!--tag: (runPolymake,PolymakeObject,String)-->\n</span></li><li><span><span class=\"tt\">runPolymake(String,String)</span> (missing documentation)<!--tag: (runPolymake,String,String)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">runPolymake</span> (missing documentation)<!--tag: runPolymake-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "toPolymakeFormat": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "toPolymakeFormat",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">toPolymakeFormat</span>:</h2><ul><li><span><span class=\"tt\">toPolymakeFormat(PolymakeObject)</span> (missing documentation)<!--tag: (toPolymakeFormat,PolymakeObject)-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat(String,Matrix)</span> (missing documentation)<!--tag: (toPolymakeFormat,String,Matrix)-->\n</span></li><li><span><span class=\"tt\">toPolymakeFormat(String,Vector)</span> (missing documentation)<!--tag: (toPolymakeFormat,String,Vector)-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">toPolymakeFormat</span> (missing documentation)<!--tag: toPolymakeFormat-->\n is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "Polymake":{},
+    "getListProperty":{},
+    "getMatrixProperty":{},
+    "getProperty":{},
+    "getPropertyNames":{},
+    "getVectorProperty":{},
+    "makemat":{},
+    "makevec":{},
+    "NewtonPolytope":{},
+    "PolymakeObject":{},
+    "polymakeObject":{},
+    "removeComments":{},
+    "runPolymake":{},
+    "toPolymakeFormat":{}
+  }
+}

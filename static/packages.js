@@ -22,7 +22,7 @@ var template = Handlebars.compile(`
 
 //////////////////////////////////////////////////////////////////////
 
-var version = "v1.26.05"
+var version = "v1.26.06"
 {%- if site.url == "http://localhost:4000" %}
 var bucket = '{{ site.baseurl }}/packages/';
 {% else %}

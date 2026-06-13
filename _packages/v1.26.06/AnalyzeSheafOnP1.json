@@ -1,0 +1,89 @@
+{
+  "index": {
+    "analyze": "AnalyzeSheafOnP1::analyze",
+    "analyze(CoherentSheaf)": "AnalyzeSheafOnP1::analyze",
+    "analyze(Module)": "AnalyzeSheafOnP1::analyze",
+    "AnalyzeSheafOnP1": "AnalyzeSheafOnP1::AnalyzeSheafOnP1",
+    "doubleDualMap": "AnalyzeSheafOnP1::doubleDualMap",
+    "doubleDualMap(Module)": "AnalyzeSheafOnP1::doubleDualMap",
+    "isNZD": "AnalyzeSheafOnP1::isNZD",
+    "isNZD(RingElement,Module)": "AnalyzeSheafOnP1::isNZD",
+    "killH0": "AnalyzeSheafOnP1::killH0",
+    "killH0(Module)": "AnalyzeSheafOnP1::killH0",
+    "showSheafOnP1": "AnalyzeSheafOnP1::showSheafOnP1",
+    "showSheafOnP1(CoherentSheaf)": "AnalyzeSheafOnP1::showSheafOnP1",
+    "showSheafOnP1(Module)": "AnalyzeSheafOnP1::showSheafOnP1"
+  },
+  "nodes": {
+    "analyze": {
+      "Description": "<div><h2>Description</h2><div><p>The routine decomposes the sheaf associated to M into a direct of twists of the structure sheaf and cycle torsion part modules. It returns a list L ={freegens, anns, e, D} where:</p><p>freegens is the list of the twists;</p><p>anns is the list of annihilators;</p><p>e is the map from M' to its double dual, where M' = is the result of reducing M mod 0-dimensional torsion, if necessary;</p><p>D is a presentation of the torsion part in the appropriate version of Smith normal form.</p><p>To compute this Smith normal form, we dehomogenize with respect to a linear form that is a nonzerodivisor on M', use the routine smithNormalForm, and then rehomogenize. To find this nonzerodivisor we try first the first variable, then the second, then up to 100 random choices</p><p>The routine returns an error if the base ring is not a polynomial ring in 2 variables over a field or if after 100 tries it finds no linear form that is a nonzerodivisor on the module.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : setRandomSeed 0\n -- setting random seed to 0\n\no1 = 0</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : S = ZZ/101[a,b]\n\no2 = S\n\no2 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : mm = ideal vars S\n\no3 = ideal (a, b)\n\no3 : Ideal of S</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : M0 = mm^3*S^{3} ++ S^{-1};</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : M1 =S^1/ideal(a^3)++S^{-1}/(ideal b^2)++S^1/(ideal b^2) ;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : M = M0++M1;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i7 : L = analyze M0;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i8 : freegens = L_0\n\no8 = {1, -3}\n\no8 : List</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i9 : anns = L_1\n\no9 = {}\n\no9 : List</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i10 : e = L_2\n\no10 = {1}  | 0  0   0   0  1 |\n      {-3} | a3 a2b ab2 b3 0 |\n\n              2\no10 : Matrix S  &lt;-- M0</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i11 : D = L_3\n\no11 = 0\n\no11 : Matrix 0 &lt;-- 0</code></pre></td></tr></table></div>",
+      "Headline": [
+        "analyze",
+        " -- Compute the decomposition of a sheaf on P1"
+      ],
+      "Location": "../../../../Macaulay2/packages/AnalyzeSheafOnP1.m2:190:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"map from a module to its double dual\" href=\"#AnalyzeSheafOnP1::doubleDualMap\">doubleDualMap</a> -- map from a module to its double dual</span></li><li><span><a title=\"Prints the analysis of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::showSheafOnP1\">showSheafOnP1</a> -- Prints the analysis of a sheaf on P1</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">L=analyze M</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all coherent sheaves\" href=\"#Varieties::CoherentSheaf\">coherent sheaf</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">L</span>, <span>a <a title=\"the class of all lists -- {...}\" href=\"#Macaulay2Doc::List\">list</a></span>, a list {freegens, anns, e, D} where freegens is the list of twists, anns is the list of annihilators, e is the map from M (or its quotient by 0-dim torsion) to its double dual, and D is the Smith normal form presentation of the torsion</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">analyze</span>:</h2><ul><li><kbd>analyze(Module)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Compute the decomposition of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::analyze\">analyze</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">AnalyzeSheafOnP1.m2:190:0</span>.</p></div></div>"
+    },
+    "AnalyzeSheafOnP1": {
+      "Caveat": "<div><h2>Caveat</h2><div><p>The script uses a linear nonzerodivisor, which would not exist over a finite field in the case where every point of P1 is the support of one of the skyscraper components.</p><p></p></div></div>",
+      "Description": "<div><h2>Description</h2><div><p>Any sheaf on P1 is the direct sum of line bundles-- and cyclic skyscraper sheaves represented by modules of the form k[x,y]/(l^m) where l is an irreducible homogeneous polynomial and m is a non-negative integer. The routine &quot;analyze&quot; computes the twists and the annihilators l^m that appear in the decomposition, starting from a coherent sheaf on P1 or a graded module over a polynomial ring on 2 variables.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : k = ZZ/5\n\no1 = k\n\no1 : QuotientRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : S = k[a,b]\n\no2 = S\n\no2 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : M = S^1/ideal(a^3)++S^{-1}/(ideal b^2)++S^1/(ideal b^2)++ S^{-1,1}\n\no3 = cokernel {0}  | a3 0  0  |\n              {1}  | 0  b2 0  |\n              {0}  | 0  0  b2 |\n              {1}  | 0  0  0  |\n              {-1} | 0  0  0  |\n\n                            5\no3 : S-module, quotient of S</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : L = analyze M;</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i5 : twists = L_0\n\no5 = {1, -1}\n\no5 : List</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i6 : anns = L_1\n\n          2     3 2\no6 = {1, b , -2a b }\n\no6 : List</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i7 : analyze sheaf M\n\n                    2   3 2\no7 = {{1, -1}, {1, b , a b }, {1}  | 0 0 0 1 0 |, | 1 0  0    |}\n                              {-1} | 0 0 0 0 1 |  | 0 b2 0    |\n                                                  | 0 0  a3b2 |\n\no7 : List</code></pre></td></tr></table></div>",
+      "Headline": [
+        "AnalyzeSheafOnP1",
+        " -- Describe a graded module over k[x,y] without 0-dimensional torsion"
+      ],
+      "Location": "../../../../Macaulay2/packages/AnalyzeSheafOnP1.m2:129:0",
+      "WaysToUse": "<div><div><div><h2>Author</h2><ul><li><a href=\"http://www.msri.org/~de\">David Eisenbud</a><span> &lt;<a href=\"mailto:de%40msri.org\">de@msri.org</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of AnalyzeSheafOnP1, released <b>June 3, 2015</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{AnalyzeSheafOnP1Source,\n  title = {{AnalyzeSheafOnP1: decompose a Sheaf on P1. Version~0.1}},\n  author = {David Eisenbud},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"Compute the decomposition of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::analyze\">analyze</a> -- Compute the decomposition of a sheaf on P1</span></li><li><span><a title=\"map from a module to its double dual\" href=\"#AnalyzeSheafOnP1::doubleDualMap\">doubleDualMap</a> -- map from a module to its double dual</span></li><li><span><a title=\"tests whether a ring element is a non zerodivisor on a module\" href=\"#AnalyzeSheafOnP1::isNZD\">isNZD</a> -- tests whether a ring element is a non zerodivisor on a module</span></li><li><span><a title=\"removes 0-dimensional torsion\" href=\"#AnalyzeSheafOnP1::killH0\">killH0</a> -- removes 0-dimensional torsion</span></li><li><span><a title=\"Prints the analysis of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::showSheafOnP1\">showSheafOnP1</a> -- Prints the analysis of a sheaf on P1</span></li></ul></li><li>Methods<ul><li><span><kbd>analyze(Module)</kbd> -- see <span><a title=\"Compute the decomposition of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::analyze\">analyze</a> -- Compute the decomposition of a sheaf on P1</span></span></li><li><span><kbd>doubleDualMap(Module)</kbd> -- see <span><a title=\"map from a module to its double dual\" href=\"#AnalyzeSheafOnP1::doubleDualMap\">doubleDualMap</a> -- map from a module to its double dual</span></span></li><li><span><kbd>isNZD(RingElement,Module)</kbd> -- see <span><a title=\"tests whether a ring element is a non zerodivisor on a module\" href=\"#AnalyzeSheafOnP1::isNZD\">isNZD</a> -- tests whether a ring element is a non zerodivisor on a module</span></span></li><li><span><kbd>killH0(Module)</kbd> -- see <span><a title=\"removes 0-dimensional torsion\" href=\"#AnalyzeSheafOnP1::killH0\">killH0</a> -- removes 0-dimensional torsion</span></span></li><li><span><kbd>showSheafOnP1(Module)</kbd> -- see <span><a title=\"Prints the analysis of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::showSheafOnP1\">showSheafOnP1</a> -- Prints the analysis of a sheaf on P1</span></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"decompose a Sheaf on P1\" href=\"#AnalyzeSheafOnP1::AnalyzeSheafOnP1\">AnalyzeSheafOnP1</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">AnalyzeSheafOnP1.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">AnalyzeSheafOnP1.m2:129:0</span>.</p></div></div>"
+    },
+    "doubleDualMap": {
+      "Description": "<div><h2>Description</h2><div><p>provide the natural map M --> Hom(Hom(M,S),S), where S = ring M.</p></div></div>",
+      "Headline": [
+        "doubleDualMap",
+        " -- map from a module to its double dual"
+      ],
+      "Location": "../../../../Macaulay2/packages/AnalyzeSheafOnP1.m2:245:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">e = doubleDualMap M</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">e</span>, <span>a <a title=\"the class of all matrices\" href=\"#Macaulay2Doc::Matrix\">matrix</a></span>, map from M to double dual</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">doubleDualMap</span>:</h2><ul><li><kbd>doubleDualMap(Module)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"map from a module to its double dual\" href=\"#AnalyzeSheafOnP1::doubleDualMap\">doubleDualMap</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">AnalyzeSheafOnP1.m2:245:0</span>.</p></div></div>"
+    },
+    "isNZD": {
+      "Description": "<div><h2>Description</h2><div><p>returns true if &quot;0 == ker (X*id_M)&quot;</p></div></div>",
+      "Headline": [
+        "isNZD",
+        " -- tests whether a ring element is a non zerodivisor on a module"
+      ],
+      "Location": "../../../../Macaulay2/packages/AnalyzeSheafOnP1.m2:263:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">t = isNZD(X,M)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">X</span>, <span>a <a title=\"the class of all ring elements handled by the engine\" href=\"#Macaulay2Doc::RingElement\">ring element</a></span>, </span></li><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">t</span>, <span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">isNZD</span>:</h2><ul><li><kbd>isNZD(RingElement,Module)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"tests whether a ring element is a non zerodivisor on a module\" href=\"#AnalyzeSheafOnP1::isNZD\">isNZD</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">AnalyzeSheafOnP1.m2:263:0</span>.</p></div></div>"
+    },
+    "killH0": {
+      "Description": "<div><h2>Description</h2><div><p>&quot;M' = M/(saturate 0_M)&quot;</p></div></div>",
+      "Headline": [
+        "killH0",
+        " -- removes 0-dimensional torsion"
+      ],
+      "Location": "../../../../Macaulay2/packages/AnalyzeSheafOnP1.m2:207:0",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">M' = killH0 M</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">M'</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">killH0</span>:</h2><ul><li><kbd>killH0(Module)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"removes 0-dimensional torsion\" href=\"#AnalyzeSheafOnP1::killH0\">killH0</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">AnalyzeSheafOnP1.m2:207:0</span>.</p></div></div>"
+    },
+    "showSheafOnP1": {
+      "Description": "<div><h2>Description</h2><div><p>prints out the twists of the line bundle summands and the annihilators of the (cyclic) torsion components.</p></div></div>",
+      "Headline": [
+        "showSheafOnP1",
+        " -- Prints the analysis of a sheaf on P1"
+      ],
+      "Location": "../../../../Macaulay2/packages/AnalyzeSheafOnP1.m2:227:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"decompose a Sheaf on P1\" href=\"#AnalyzeSheafOnP1::AnalyzeSheafOnP1\">AnalyzeSheafOnP1</a> -- decompose a Sheaf on P1</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">showSheafOnP1 M</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all modules\" href=\"#Macaulay2Doc::Module\">module</a></span>, </span></li><li><span><span class=\"tt\">M</span>, <span>a <a title=\"the class of all coherent sheaves\" href=\"#Varieties::CoherentSheaf\">coherent sheaf</a></span>, </span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">showSheafOnP1</span>:</h2><ul><li><kbd>showSheafOnP1(Module)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Prints the analysis of a sheaf on P1\" href=\"#AnalyzeSheafOnP1::showSheafOnP1\">showSheafOnP1</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">AnalyzeSheafOnP1.m2:227:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "AnalyzeSheafOnP1":{},
+    "analyze":{},
+    "doubleDualMap":{},
+    "isNZD":{},
+    "killH0":{},
+    "showSheafOnP1":{}
+  }
+}

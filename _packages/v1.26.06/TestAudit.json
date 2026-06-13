@@ -1,0 +1,66 @@
+{
+  "index": {
+    "CommentReport": "TestAudit::testAudit",
+    "Experimental": "TestAudit::Experimental",
+    "ScoreReport": "TestAudit::testAudit",
+    "SpeedReport": "TestAudit::testAudit",
+    "TestAudit": "TestAudit::TestAudit",
+    "testAudit": "TestAudit::testAudit",
+    "testAudit(...,CommentReport=>...)": "TestAudit::testAudit",
+    "testAudit(...,ScoreReport=>...)": "TestAudit::testAudit",
+    "testAudit(...,SpeedReport=>...)": "TestAudit::testAudit",
+    "testAudit(Package)": "TestAudit::testAudit",
+    "testAudit(String)": "TestAudit::testAudit",
+    "testScore": "TestAudit::testScore",
+    "testScore(Package)": "TestAudit::testScore",
+    "testScore(String)": "TestAudit::testScore"
+  },
+  "nodes": {
+    "Experimental": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Experimental",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div><h2>Functions with optional argument named <span class=\"tt\">Experimental</span>:</h2><ul><li><span><span class=\"tt\">testAudit(...,Experimental=>...)</span> (missing documentation)<!--tag: [testAudit, Experimental]-->\n</span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">Experimental</span> (missing documentation)<!--tag: Experimental-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "testAudit": {
+      "Description": "<div><h2>Description</h2><div><p>Returns a string report about the tests of <span class=\"tt\">pkg</span>. The default report summarizes test sources, test organization, untested exported functions and options, silenced tests, and FIXME or TODO markers around test blocks.</p></div><div><p>Optional Boolean arguments add sections: <span class=\"tt\">CommentReport</span> includes comments attached to tests, <span class=\"tt\">SpeedReport</span> times tests with <a title=\"perform tests of a package\" href=\"#Macaulay2Doc::check\">check</a>, and <span class=\"tt\">ScoreReport</span> includes the heuristic score returned by <a title=\"compute the heuristic test score for a package\" href=\"#TestAudit::testScore\">testScore</a>.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : testAudit &quot;TestAudit&quot;\n\no1 = exported: 2 functions, 0 types, 4 other symbols\n     n_tests: 5\n     style: together\n\n     test sources:\n         - ../../../../Macaulay2/packages/TestAudit.m2:614\n\n     Report:\n\n     - untested functions (0):\n         none\n\n     - untested options (1):\n         - testAudit: Experimental\n\n     - silenced tests (0):\n         none\n\n     - FIXME/TODO markers (0):\n         none</code></pre></td></tr></table></div>",
+      "Headline": [
+        "testAudit",
+        " -- produce a test audit report for a package"
+      ],
+      "Location": "../../../../Macaulay2/packages/TestAudit.m2:588:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">testAudit pkg</code></dd><dd><code class=\"language-macaulay2\">testAudit(pkg, CommentReport => true, SpeedReport => true, ScoreReport => true)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">pkg</span>, <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span> or <span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, </span></li></ul></li><li><a href=\"#Macaulay2Doc::using%20functions%20with%20optional%20inputs\">Optional inputs</a>:<ul><li><span><span class=\"tt\">CommentReport</span><span class=\"tt\"> => </span><span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, <span>default value false</span></span></li><li><span><span class=\"tt\">SpeedReport</span><span class=\"tt\"> => </span><span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, <span>default value false</span></span></li><li><span><span class=\"tt\">ScoreReport</span><span class=\"tt\"> => </span><span>a <a title=\"the class of boolean values\" href=\"#Macaulay2Doc::Boolean\">Boolean value</a></span>, <span>default value false</span></span></li><li><span><span class=\"tt\">Experimental</span> (missing documentation)<!--tag: [testAudit, Experimental]-->\n<span class=\"tt\"> => </span><span class=\"tt\">...</span>, <span>default value false</span>, <span></span></span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, the audit report</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">testAudit</span>:</h2><ul><li><kbd>testAudit(Package)</kbd></li><li><kbd>testAudit(String)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">TestAudit.m2:588:0</span>.</p></div></div>"
+    },
+    "TestAudit": {
+      "Description": "<div><h2>Description</h2><div><p>The <span class=\"tt\">TestAudit</span> package provides a small report about the tests of a package. The report lists the number and location of tests, classifies how tests are organized, and gives simple textual checks for exported functions, options, silenced tests, and FIXME or TODO comments.</p></div></div>",
+      "Headline": [
+        "TestAudit",
+        " -- test audit functionality"
+      ],
+      "Location": "../../../../Macaulay2/packages/TestAudit.m2:553:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li><a href=\"https://sites.google.com/view/taylorbrysiewicz/home\">Taylor Brysiewicz</a><span> &lt;<a href=\"mailto:tbrysiew%40uwo.ca\">tbrysiew@uwo.ca</a>></span></li><li>Ashley Dean<span> &lt;<a href=\"mailto:amd069%40uark.edu\">amd069@uark.edu</a>></span></li><li>Connor Haynes</li><li><a href=\"https://sites.google.com/view/davidkjohnson\">David K. Johnson</a><span> &lt;<a href=\"mailto:djohn225%40uwo.ca\">djohn225@uwo.ca</a>></span></li><li><a href=\"https://sites.google.com/view/guanyu-li-math/home\">Guanyu Li</a><span> &lt;<a href=\"mailto:gl479%40cornell.edu\">gl479@cornell.edu</a>></span></li><li><a href=\"https://sites.google.com/view/kellervandebogert/home\">Keller VandeBogert</a><span> &lt;<a href=\"mailto:keller.v%40uky.edu\">keller.v@uky.edu</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>0.1</b> of TestAudit, released <b>May 19, 2026</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{TestAuditSource,\n  title = {{TestAudit: test audit functionality. Version~0.1}},\n  author = {Taylor Brysiewicz and Ashley Dean and Connor Haynes and David K. Johnson and Guanyu Li and Keller VandeBogert},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></li><li><span><a title=\"compute the heuristic test score for a package\" href=\"#TestAudit::testScore\">testScore</a> -- compute the heuristic test score for a package</span></li></ul></li><li>Methods<ul><li><span><kbd>testAudit(Package)</kbd> -- see <span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></span></li><li><span><kbd>testAudit(String)</kbd> -- see <span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></span></li><li><span><kbd>testScore(Package)</kbd> -- see <span><a title=\"compute the heuristic test score for a package\" href=\"#TestAudit::testScore\">testScore</a> -- compute the heuristic test score for a package</span></span></li><li><span><kbd>testScore(String)</kbd> -- see <span><a title=\"compute the heuristic test score for a package\" href=\"#TestAudit::testScore\">testScore</a> -- compute the heuristic test score for a package</span></span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">Experimental</span> (missing documentation)<!--tag: Experimental-->\n</span></li><li><span><kbd>CommentReport</kbd> -- see <span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></span></li><li><span><kbd>ScoreReport</kbd> -- see <span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></span></li><li><span><kbd>SpeedReport</kbd> -- see <span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"test audit functionality\" href=\"#TestAudit::TestAudit\">TestAudit</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">TestAudit.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">TestAudit.m2:553:0</span>.</p></div></div>"
+    },
+    "testScore": {
+      "Description": "<div><h2>Description</h2><div><p>This function returns only the numerical score that appears in the <span class=\"tt\">ScoreReport</span> section of <a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a>. The score is out of 100.</p></div><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : testScore &quot;TestAudit&quot;\n\no1 = 84\n\no1 : RR (of precision 53)</code></pre></td></tr></table></div>",
+      "Headline": [
+        "testScore",
+        " -- compute the heuristic test score for a package"
+      ],
+      "Location": "../../../../Macaulay2/packages/TestAudit.m2:612:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"produce a test audit report for a package\" href=\"#TestAudit::testAudit\">testAudit</a> -- produce a test audit report for a package</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">testScore pkg</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">pkg</span>, <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span> or <span>a <a title=\"the class of all strings\" href=\"#Macaulay2Doc::String\">string</a></span>, </span></li></ul></li><li>Outputs:<ul><li><span><span>a <a title=\"the class of all real numbers\" href=\"#Macaulay2Doc::RR\">real number</a></span>, the heuristic test score</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">testScore</span>:</h2><ul><li><kbd>testScore(Package)</kbd></li><li><kbd>testScore(String)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"compute the heuristic test score for a package\" href=\"#TestAudit::testScore\">testScore</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">TestAudit.m2:612:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "TestAudit":{},
+    "Experimental":{},
+    "testAudit":{},
+    "testScore":{}
+  }
+}

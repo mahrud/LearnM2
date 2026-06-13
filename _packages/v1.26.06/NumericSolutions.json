@@ -1,0 +1,90 @@
+{
+  "index": {
+    "compMatr": "NumericSolutions::compMatr",
+    "compMatr(Ideal,RingElement)": "NumericSolutions::compMatr",
+    "jordanForm": "NumericSolutions::jordanForm",
+    "jordanForm(...,Tolerance=>...)": "NumericSolutions::jordanForm",
+    "jordanForm(Matrix)": "NumericSolutions::jordanForm",
+    "NumericSolutions": "NumericSolutions::NumericSolutions",
+    "solveSystem": "NumericSolutions::solveSystem",
+    "solveSystem(...,Tolerance=>...)": "NumericSolutions::solveSystem",
+    "solveSystem(Ideal)": "NumericSolutions::solveSystem",
+    "Tolerance": "NumericSolutions::Tolerance",
+    "traceForm": "NumericSolutions::traceForm",
+    "traceForm(Ideal)": "NumericSolutions::traceForm"
+  },
+  "nodes": {
+    "compMatr": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[x,y,z]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : f = x^2+3*y-2*z\n\n      2\no2 = x  + 3y - 2z\n\no2 : R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : I = ideal(x+3*y^2-2*z, x^2-2*y-z, 3*x-4*y+5*z^2)\n\n              2            2             2\no3 = ideal (3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)\n\no3 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i4 : M = compMatr(I,f)\n\no4 = | 0  0  0     0      0    0    0      0    |\n     | 0  0  0     3/5    0    -5/3 -26/15 3/5  |\n     | 0  5  0     8/3    -4/5 0    3/5    0    |\n     | 0  0  -1    0      5    0    0      0    |\n     | 0  -1 10/3  -8/15  0    0    -5/3   0    |\n     | 5  0  -10/3 -24/5  6/5  0    8/3    -4/5 |\n     | 0  0  0     -41/15 0    -1   0      5    |\n     | -1 0  -5/3  -14/15 3/5  10/3 -8/15  0    |\n\n            /                     R                    \\8     /                     R                    \\8\no4 : Matrix |------------------------------------------|  &lt;-- |------------------------------------------|\n            |   2            2             2           |      |   2            2             2           |\n            \\(3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)/      \\(3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)/</code></pre></td></tr></table></div>",
+      "Headline": [
+        "compMatr",
+        " -- companion matrix"
+      ],
+      "Location": "../../../../Macaulay2/packages/NumericSolutions.m2:747:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"solutions to a system of equalities\" href=\"#NumericSolutions::solveSystem\">solveSystem</a> -- solutions to a system of equalities</span></li><li><span><a title=\"trace matrix of an ideal\" href=\"#NumericSolutions::traceForm\">traceForm</a> -- trace matrix of an ideal</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">compMatr(I,f)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">I</span>, a zero dimensional ideal.</span></li><li><span><span class=\"tt\">f</span>, a polynomial in R.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">M</span>, the companion matrix of the ideal I associated to the polynomial f.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">compMatr</span>:</h2><ul><li><kbd>compMatr(Ideal,RingElement)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"companion matrix\" href=\"#NumericSolutions::compMatr\">compMatr</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">NumericSolutions.m2:747:0</span>.</p></div></div>"
+    },
+    "jordanForm": {
+      "Caveat": "<div><h2>Caveat</h2>the procedure involves computation over inexact field and hence the results may be not reliable.</div>",
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[x,y,z]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : A = matrix{{1,2},{-1,3}}\n\no2 = | 1  2 |\n     | -1 3 |\n\n              2       2\no2 : Matrix ZZ  &lt;-- ZZ</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : (pCh,sepEigs,peigs,palgm,JF) = jordanForm(A)\n\no3 = (| .816497           .816497           |, {| .816497           |, | .816497           |}, {2+ii, 2-ii}, {1, 1}, | 2+ii 0    |)\n      | .408248+.408248ii .408248-.408248ii |   | .408248+.408248ii |  | .408248-.408248ii |                         | 0    2-ii |\n\no3 : Sequence</code></pre></td></tr></table></div>",
+      "Headline": [
+        "jordanForm",
+        " -- Jordan canonical form"
+      ],
+      "Location": "../../../../Macaulay2/packages/NumericSolutions.m2:814:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"companion matrix\" href=\"#NumericSolutions::compMatr\">compMatr</a> -- companion matrix</span></li><li><span><a title=\"solutions to a system of equalities\" href=\"#NumericSolutions::solveSystem\">solveSystem</a> -- solutions to a system of equalities</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">jordanForm(A)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">A</span>, a square matrix.</span></li></ul></li><li><a href=\"#Macaulay2Doc::using%20functions%20with%20optional%20inputs\">Optional inputs</a>:<ul><li><span><span class=\"tt\">Tolerance</span><span class=\"tt\"> => </span><span class=\"tt\">...</span>, <span>default value .001</span>, numerical tolerance.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">chBasMatr</span>, the matrix  that transforms A in Jordan form.</span></li><li><span><span class=\"tt\">sepEigen</span>, the generalized eigenvectors.</span></li><li><span><span class=\"tt\">eigNrep</span>, the eigenvalues of the matrix A.</span></li><li><span><span class=\"tt\">algMult</span>, the algebraic multiplicity of each eigenvalue.</span></li><li><span><span class=\"tt\">jorFor</span>, the Jordan form of A.</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">jordanForm</span>:</h2><ul><li><kbd>jordanForm(Matrix)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"Jordan canonical form\" href=\"#NumericSolutions::jordanForm\">jordanForm</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">NumericSolutions.m2:814:0</span>.</p></div></div>"
+    },
+    "NumericSolutions": {
+      "Description": "<div><h2>Description</h2><em>NumericSolutions</em> is a package for solving systems of polynomial equalities. It is used to compute the points in the affine variety V(I) of a zero dimensional ideal I. Note that this package can be used only to compute the solution to a system of polynomial equalities having a finite number of solutions (i.e., it can be used only if the ideal I is zero dimensional).</div>",
+      "Headline": [
+        "NumericSolutions",
+        " -- solving systems of polynomial equalities"
+      ],
+      "Location": "../../../../Macaulay2/packages/NumericSolutions.m2:726:0",
+      "WaysToUse": "<div><div><div><h2>Authors</h2><ul><li>Laura Menini<span> &lt;<a href=\"mailto:menini%40disp.uniroma2.it\">menini@disp.uniroma2.it</a>></span></li><li>Corrado Possieri<span> &lt;<a href=\"mailto:possieri%40ing.uniroma2.it\">possieri@ing.uniroma2.it</a>></span></li><li>Antonio Tornambe<span> &lt;<a href=\"mailto:tornambe%40disp.uniroma2.it\">tornambe@disp.uniroma2.it</a>></span></li></ul></div><div><h2>Version</h2><p>This documentation describes version <b>1.0</b> of NumericSolutions, released <b>Apr 3, 2017</b>.</p></div><div><h2>Citation</h2><p>If you have used this package in your research, please cite it as follows:</p><table class=\"examples\"><tr><td><pre><code class=\"language-bib\">@misc{NumericSolutionsSource,\n  title = {{NumericSolutions: solving systems of polynomial equalities. Version~1.0}},\n  author = {Laura Menini and Corrado Possieri and Antonio Tornambe},\n  howpublished = {A \\emph{Macaulay2} package available at\n    \\url{https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/packages}}\n}\n</code></pre></td></tr></table></div><div><h2>Exports</h2><div class=\"exports\"><ul><li>Functions and commands<ul><li><span><a title=\"companion matrix\" href=\"#NumericSolutions::compMatr\">compMatr</a> -- companion matrix</span></li><li><span><a title=\"Jordan canonical form\" href=\"#NumericSolutions::jordanForm\">jordanForm</a> -- Jordan canonical form</span></li><li><span><a title=\"solutions to a system of equalities\" href=\"#NumericSolutions::solveSystem\">solveSystem</a> -- solutions to a system of equalities</span></li><li><span><a title=\"trace matrix of an ideal\" href=\"#NumericSolutions::traceForm\">traceForm</a> -- trace matrix of an ideal</span></li></ul></li><li>Methods<ul><li><span><kbd>compMatr(Ideal,RingElement)</kbd> -- see <span><a title=\"companion matrix\" href=\"#NumericSolutions::compMatr\">compMatr</a> -- companion matrix</span></span></li><li><span><kbd>jordanForm(Matrix)</kbd> -- see <span><a title=\"Jordan canonical form\" href=\"#NumericSolutions::jordanForm\">jordanForm</a> -- Jordan canonical form</span></span></li><li><span><kbd>solveSystem(Ideal)</kbd> -- see <span><a title=\"solutions to a system of equalities\" href=\"#NumericSolutions::solveSystem\">solveSystem</a> -- solutions to a system of equalities</span></span></li><li><span><kbd>traceForm(Ideal)</kbd> -- see <span><a title=\"trace matrix of an ideal\" href=\"#NumericSolutions::traceForm\">traceForm</a> -- trace matrix of an ideal</span></span></li></ul></li><li>Symbols<ul><li><span><span class=\"tt\">Tolerance</span> (missing documentation)<!--tag: Tolerance-->\n</span></li></ul></li></ul></div></div></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"solving systems of polynomial equalities\" href=\"#NumericSolutions::NumericSolutions\">NumericSolutions</a> is <span>a <a title=\"the class of all packages\" href=\"#Macaulay2Doc::Package\">package</a></span>, defined in <span class=\"tt\">NumericSolutions.m2</span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">NumericSolutions.m2:726:0</span>.</p></div></div>"
+    },
+    "solveSystem": {
+      "Caveat": "<div><h2>Caveat</h2>the procedure involves computation over inexact fields. If numerical errors occur, then the multiplicities of the solutions may be not reliable.</div>",
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[x,y,z]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(x+3*y^2-2*z, x^2-2*y-z, 3*x-4*y+5*z^2)\n\n              2            2             2\no2 = ideal (3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : M = solveSystem(I)\n\no3 = Tally{{-.286867+1.04128*ii, -.106152-.664903*ii, -.789675+.732385*ii} => 1}\n           {-.286867-1.04128*ii, -.106152+.664903*ii, -.789675-.732385*ii} => 1\n           {-2.02148, 1.29357, 1.49925} => 1\n           {.2419+1.1525*ii, -.675624+.694806*ii, .081518-.832036*ii} => 1\n           {.2419-1.1525*ii, -.675624-.694806*ii, .081518+.832036*ii} => 1\n           {0, 0, 0} => 1\n           {1.05571+.941279*ii, .134991+.63069*ii, -.041468+.726052*ii} => 1\n           {1.05571-.941279*ii, .134991-.63069*ii, -.041468-.726052*ii} => 1\n\no3 : Tally</code></pre></td></tr></table></div>",
+      "Headline": [
+        "solveSystem",
+        " -- solutions to a system of equalities"
+      ],
+      "Location": "../../../../Macaulay2/packages/NumericSolutions.m2:770:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"companion matrix\" href=\"#NumericSolutions::compMatr\">compMatr</a> -- companion matrix</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">solveSystem(I)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">I</span>, a zero dimensional ideal.</span></li></ul></li><li><a href=\"#Macaulay2Doc::using%20functions%20with%20optional%20inputs\">Optional inputs</a>:<ul><li><span><span class=\"tt\">Tolerance</span><span class=\"tt\"> => </span><span class=\"tt\">...</span>, <span>default value .001</span>, numerical tolerance.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">S</span>, containing the solutions with their multiplicities</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">solveSystem</span>:</h2><ul><li><kbd>solveSystem(Ideal)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"solutions to a system of equalities\" href=\"#NumericSolutions::solveSystem\">solveSystem</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunctionWithOptions\">method function with options</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">NumericSolutions.m2:770:0</span>.</p></div></div>"
+    },
+    "Tolerance": {
+      "Description": "<div><!--empty documentation body-->\n</div>",
+      "Headline": [
+        "Tolerance",
+        ""
+      ],
+      "Location": "currentString:2:0",
+      "WaysToUse": "<div><div><h2>Functions with optional argument named <span class=\"tt\">Tolerance</span>:</h2><ul><li><span><kbd>jordanForm(...,Tolerance=>...)</kbd> -- see <span><a title=\"Jordan canonical form\" href=\"#NumericSolutions::jordanForm\">jordanForm</a> -- Jordan canonical form</span></span></li><li><span><kbd>solveSystem(...,Tolerance=>...)</kbd> -- see <span><a title=\"solutions to a system of equalities\" href=\"#NumericSolutions::solveSystem\">solveSystem</a> -- solutions to a system of equalities</span></span></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <span class=\"tt\">Tolerance</span> (missing documentation)<!--tag: Tolerance-->\n is <span>a <a title=\"the class of all symbols\" href=\"#Macaulay2Doc::Symbol\">symbol</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">currentString:2:0</span>.</p></div></div>"
+    },
+    "traceForm": {
+      "Description": "<div><h2>Description</h2><table class=\"examples\"><tr><td><pre><code class=\"language-macaulay2\">i1 : R = QQ[x,y,z]\n\no1 = R\n\no1 : PolynomialRing</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i2 : I = ideal(x+3*y^2-2*z, x^2-2*y-z, 3*x-4*y+5*z^2)\n\n              2            2             2\no2 = ideal (3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)\n\no2 : Ideal of R</code></pre></td></tr><tr><td><pre><code class=\"language-macaulay2\">i3 : T = traceForm(I)\n\no3 = | 8       0       -4       -112/15   -18/5   0       16/5      0       |\n     | 0       0       16/5     24/5      32/5    -4      -112/15   -18/5   |\n     | -4      16/5    122/15   2788/225  24/5    -12/5   -64/15    -112/15 |\n     | -112/15 24/5    2788/225 704/45    208/15  -64/15  -2186/225 -96/25  |\n     | -18/5   32/5    24/5     208/15    238/25  -112/15 -96/25    -16/5   |\n     | 0       -4      -12/5    -64/15    -112/15 0       6/5       16/5    |\n     | 16/5    -112/15 -64/15   -2186/225 -96/25  6/5     316/75    12/5    |\n     | 0       -18/5   -112/15  -96/25    -16/5   16/5    12/5      0       |\n\n            /                     R                    \\8     /                     R                    \\8\no3 : Matrix |------------------------------------------|  &lt;-- |------------------------------------------|\n            |   2            2             2           |      |   2            2             2           |\n            \\(3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)/      \\(3y  + x - 2z, x  - 2y - z, 5z  + 3x - 4y)/</code></pre></td></tr></table></div>",
+      "Headline": [
+        "traceForm",
+        " -- trace matrix of an ideal"
+      ],
+      "Location": "../../../../Macaulay2/packages/NumericSolutions.m2:789:0",
+      "SeeAlso": "<div><h2>See also</h2><ul><li><span><a title=\"companion matrix\" href=\"#NumericSolutions::compMatr\">compMatr</a> -- companion matrix</span></li></ul></div>",
+      "Synopsis": "<ul><li><dl class=\"element\"><dt>Usage: </dt><dd><code class=\"language-macaulay2\">traceForm(I)</code></dd></dl></li><li>Inputs:<ul><li><span><span class=\"tt\">I</span>, a zero dimensional ideal.</span></li></ul></li><li>Outputs:<ul><li><span><span class=\"tt\">S</span>, the trace form of the ideal I. The signature of such a form equals the number of real points in the variety V(I).</span></li></ul></li></ul>",
+      "WaysToUse": "<div><div class=\"waystouse\"><h2>Ways to use <span class=\"tt\">traceForm</span>:</h2><ul><li><kbd>traceForm(Ideal)</kbd></li></ul></div><div class=\"waystouse\"><h2>For the programmer</h2><p>The object <a title=\"trace matrix of an ideal\" href=\"#NumericSolutions::traceForm\">traceForm</a> is <span>a <a title=\"a type of method function\" href=\"#Macaulay2Doc::MethodFunction\">method function</a></span>.</p></div><hr><div class=\"waystouse\"><p>The source of this document is in <span class=\"tt\">NumericSolutions.m2:789:0</span>.</p></div></div>"
+    }
+  },
+  "toc": {
+    "NumericSolutions":{},
+    "compMatr":{},
+    "jordanForm":{},
+    "solveSystem":{},
+    "Tolerance":{},
+    "traceForm":{}
+  }
+}
