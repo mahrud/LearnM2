@@ -20,6 +20,11 @@ img.feature {
     object-fit: contain;
 }
 
+@font-face {
+  font-family: "Typewriter Serial";
+  src: url({{ site.baseurl }}/static/Typewriter-Serial.ttf);
+}
+
 .navbar {
     min-height: 2rem;
     max-width: 1800px;
@@ -29,7 +34,7 @@ img.feature {
 
 .navbar-dark {
     background-color: #000100 !important;
-    font-family: Monospace;
+    font-family: "Typewriter Serial";
     padding: 2px;
 }
 
