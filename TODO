@@ -3,3 +3,24 @@
 
 - http://115.146.94.251:8002/minimal.html a la https://www.haskell.org/
 - see https://julialang.org/
+
+- should this return anything?
+grep -R "common/share" _packages/
+YES! in documentation of "path"
+
+- Visualize and WeylGroups have html files
+- several packages have png or jpg files
+
+- add "copy" button, e.g. https://documenter.juliadocs.org/stable/man/doctests/
+- add "source" button, e.g. https://doc.sagemath.org/html/en/reference/power_series/sage/rings/puiseux_series_ring.html
+
+- See https://numpy.org/doc/stable/
+- https://yihui.org/knitr/demo/graphics/
+
+
+https://microsoft.github.io/monaco-editor/
+https://vscode.dev/
+https://quarto.org/
+
+- matrices in latex here: http://127.0.0.1:4000/LearnM2/help/#Complexes::cylinder
+- prioritize Macaulay2Doc so searching "adjoint" brings up the one in Core first
