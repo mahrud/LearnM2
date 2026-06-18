@@ -9,7 +9,7 @@ order: 1
 
 Depending on your operating system and machine architecture, you may be able to download a prebuilt distribution of Macaulay2:
 
-- [Homebrew tap](https://github.com/Macaulay2/homebrew-tap)
+- [Homebrew tap for macOS](https://github.com/Macaulay2/homebrew-tap)
 ```
 brew tap Macaulay2/tap
 brew install M2
